@@ -1,21 +1,28 @@
 <?php
-
 Auth::routes();
 
 Route::get('/', function () {
-    return redirect('/dashboard');
+    return redirect('/login');
 });
 
 Route::get('/dashboard', 'MainController@dashboard')->name('dashboard');
 Route::get('/dashboard/User Management', 'MainController@UserManagement')->name('UserManagement');
-Route::get('/dashboard/MAP', 'MainController@MAP')->name('MAP');
+Route::get('/dashboard/User/Create', 'UsersController@Create')->name('UserCreate');
+Route::get('/dashboard/User/Edit', 'UsersController@Edit')->name('UserEdit');
+Route::get('/dashboard/User/Edit', 'UsersController@Store')->name('admin.users.store');
+Route::get('/home', function (){ echo "itd's admin home"; })->name('admin.home');
+
+
+Route::get('/dashboard/Map', 'MainController@Map')->name('Map');
 Route::get('/dashboard/File Manager', 'MainController@File Manager')->name('File Manager');
 Route::get('/dashboard/Timeline', 'MainController@Timeline')->name('Timeline');
+Route::get('/dashboard/Calendar', 'MainController@Calendar')->name('calendar');
 
-Route::get('/dashboard/Contact Registration', 'MainController@ContactRegistration')->name('ContactRegistration');
-Route::get('/dashboard/Inquiries', 'MainController@Inquiries')->name('Inquiries');
-Route::get('/dashboard/Contact List', 'MainController@ContactList')->name('ContactList');
-Route::get('/dashboard/MakePostToTimeline', 'MainController@MakePostToTimeline')->name('MakePostToTimeline');
+Route::get('/dashboard/contacts/registration', 'MainController@ContactRegistration')->name('ContactRegistration');
+Route::get('/dashboard/contacts/list', 'MainController@ContactList')->name('ContactList');
+Route::get('/dashboard/contacts/inquiries', 'MainController@Inquiries')->name('Inquiries');
+
+Route::get('/dashboard/Timeline/MakePost', 'MainController@MakePostToTimeline')->name('MakePostToTimeline');
 
 Route::get('/email/inbox', 'MainController@emailInbox')->name('email-inbox');
 Route::get('/email/compose', 'MainController@emailCompose')->name('email-compose');
@@ -27,9 +34,6 @@ Route::get('/chart/d3', 'MainController@chartD3')->name('chart-d3');
 Route::get('/chart/apex', 'MainController@chartApex')->name('chart-apex');
 
 Route::get('/map/vector', 'MainController@mapVector')->name('map-vector');
-
-Route::get('/login', 'MainController@login')->name('login');
-Route::get('/register', 'MainController@register')->name('register');
 
 // Users Controller
 //Route::resources([

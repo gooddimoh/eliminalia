@@ -3,7 +3,7 @@
 @section('title', 'Basic Tables')
 
 @section('content')
-    <div class="col-xl-6">
+    <div class="col-xl-12">
         <div class="row">
             <div class="col-md-6">
                 <label class="col-form-label ">Email address</label>

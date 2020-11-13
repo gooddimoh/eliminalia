@@ -77,17 +77,22 @@ class MainController extends Controller
 
     public function CONTACTREGISTRATION()
     {
-        return view('dashboard/CONTACTS/CONTACT REGISTRATION');
+        return view('dashboard/Contacts/CONTACT REGISTRATION');
     }
 
     public function INQUIRIES()
     {
-        return view('dashboard/CONTACTS/INQUIRIES');
+        return view('dashboard/Contacts/INQUIRIES');
     }
 
     public function CONTACTLIST()
     {
-        return view('dashboard/CONTACTS/CONTACT LIST');
+        return view('dashboard/Contacts/CONTACT LIST');
+    }
+
+    public function Calendar()
+    {
+        return view('dashboard/calendar');
     }
 
     public function MAP()
@@ -340,11 +345,6 @@ class MainController extends Controller
         return view('pages/chart-apex');
     }
 
-    public function calendar()
-    {
-        return view('pages/calendar');
-    }
-
     public function mapVector()
     {
         return view('pages/map-vector');
@@ -485,12 +485,12 @@ class MainController extends Controller
         return view('pages/extra-cookie-acceptance-banner');
     }
 
-    public function login()
+    public function login_page()
     {
         return view('auth/login');
     }
 
-    public function register()
+    public function registration_page()
     {
         return view('auth/register');
     }

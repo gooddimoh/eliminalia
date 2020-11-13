@@ -3,7 +3,7 @@
 @section('title', 'Basic Tables')
 
 @section('content')
-    <div class="col-xl-6">
+    <div class="col-xl-12">
         <div class="row">
             <div class="col-md-6">
                 <label class="col-form-label ">Email address</label>
@@ -57,6 +57,35 @@
 
                     <input type="text" class="btn btn-green" value="MODIFY USER">
                     <input type="text" class="btn btn-red" value="DELETE USER">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-form-label col-md-3">Email address</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="Email">
+                    <span class="currency">€ {{-- Translate Currency Icon --}} </span>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-md-3">Payment method: </label>
+                    <select class="form-control form-control-sm">
+                        <option>Wire transfer</option>
+                        <option>Check</option>
+                        <option>Specie</option>
+                        <option>Other</option>
+                    </select>
+                    <span class="currency">€ {{-- Translate Currency Icon --}} </span>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label col-md-3">Case description made by the client:</label>
+                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:">
+                    </textarea>
+                    <label class="col-form-label col-md-3">Info for the manager:</label>
+                    <textarea class="form-control" rows="6" placeholder="Info for the manager:">
+                    </textarea>
+                    <label class="col-form-label col-md-3">Info for the commercial:</label>
+                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:">
+                    </textarea>
                 </div>
             </div>
         </div>

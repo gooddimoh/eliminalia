@@ -1,72 +1,86 @@
 @extends('layouts.default')
-
 @section('title', 'USER MANAGEMENT')
-
 @push('css')
-    <link href="/assets/plugins/summernote/dist/summernote.css" rel="stylesheet"/>
+    <link href="{{asset('assets/plugins/summernote/dist/summernote.css')}}" rel="stylesheet"/>
 @endpush
 
 @section('content')
-    <div class="row">
-        <div class="col-xl-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <label class="col-form-label ">Email address</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">Email address</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">Email address</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">Email address</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">Email address</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">Email address</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">Permissions Level:</label>
-                    <select class="form-control form-control-sm">
-                        <option value="">SUPERADMIN</option>
-                        <option value="">---</option>
-                        <option value="">MANAGER</option>
-                        <option value="">MANAGER</option>
-                        <option value="">MANAGER</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label class="col-form-label ">Username:</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">Name:</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">Phone:</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">DNI:</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">Address:</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label ">City</label>
-                    <input class="form-control form-control-sm" type="text"/>
-                    <label class="col-form-label form-control-sm"></label>
-                    <button type="button" class="form-control btn btn-green">USER REGISTER</button>
-                    <div class="modify-user-button-groups">
-                        <div class="checkbox checkbox-css">
-                            <input type="checkbox" id="cssCheckbox1" value="" checked="">
-                            <label for="cssCheckbox1">Banned</label>
+    <div class="modals">
+        <div class="modal fade" id="modal-dialog" aria-modal="true" role="dialog">
+            <div class="modal-dialog" style="max-width:60vw!important;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title font-weight-bold">New user data </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body content-flex">
+                        <div class="col-md-5">
+                            <label class="col-form-label font-weight-bolder">Email address</label>
+                            <input class="form-control form-control-sm" type="text"/>
+                            <label class="col-form-label font-weight-bolder">Email address</label>
+                            <input class="form-control form-control-sm" type="text"/>
+                            <label class="col-form-label font-weight-bolder">Email address</label>
+                            <input class="form-control form-control-sm" type="text"/>
+                            <label class="col-form-label font-weight-bolder">Email address</label>
+                            <input class="form-control form-control-sm" type="text"/>
+                            <label class="col-form-label font-weight-bolder">Email address</label>
+                            <input class="form-control form-control-sm" type="text"/>
+                            <label class="col-form-label font-weight-bolder">City</label>
+                            <input class="form-control form-control-sm" type="text"/>
+                            <label class="col-form-label font-weight-bolder"></label>
                         </div>
-                        <label class="col-form-label ">Permissions Level:</label>
-                        <select class="form-control form-control-sm">
-                            <option value="">GENERAL</option>
-                            <option value="">BARSELONA</option>
-                            <option value="">KIEV</option>
-                            <option value="">CONSULTOR</option>
-                        </select>
+                        <div class="col-md-5">
+                            <label class="col-form-label font-weight-bolder">Username:</label>
+                            <input class="form-control form-control-sm" type="text"/>
+                            <label class="col-form-label font-weight-bolder">Name:</label>
+                            <input class="form-control form-control-sm" type="text"/><
+                            <label class="col-form-label font-weight-bolder">Phone:</label>
+                            <input class="form-control form-control-sm" type="text"/>
+                            <label class="col-form-label font-weight-bolder">DNI:</label>
+                            <input class="form-control form-control-sm" type="text"/>
+                            <label class="col-form-label font-weight-bolder">Address:</label>
+                            <input class="form-control form-control-sm" type="text"/>
+                            <div class="inputs-group">
+                                <label class="col-form-label font-weight-bolder">Permissions Level:</label>
+                                <select class="form-control form-control-sm">
+                                    <option value="">SUPERADMIN</option>
+                                    <option value="">---</option>
+                                    <option value="">MANAGER</option>
+                                    <option value="">MANAGER</option>
+                                    <option value="">MANAGER</option>
+                                </select>
+                            </div>
+                            <label class="col-form-label font-weight-bolder"></label>
 
-                        <input type="text" class="btn btn-green" value="MODIFY USER">
-                        <input type="text" class="btn btn-red" VALUE="DELETE USER">
+                            <div class="modify-user-button-groups" hidden>
+                                <div class="checkbox checkbox-css">
+                                    <input type="checkbox" id="cssCheckbox1" value="" checked="">
+                                    <label for="cssCheckbox1">Banned</label>
+                                </div>
+                                <label class="col-form-label font-weight-bolder">Permissions Level:</label>
+                                <select class="form-control form-control-sm">
+                                    <option value="">GENERAL</option>
+                                    <option value="">BARSELONA</option>
+                                    <option value="">KIEV</option>
+                                    <option value="">CONSULTOR</option>
+                                </select>
+                                <div class="input-groups flex-lg-row">
+                                    <input type="text" class="btn btn-green" value="MODIFY USER">
+                                    <input type="text" class="btn btn-red" VALUE="DELETE USER">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+                        <a href="javascript:;" class="btn btn-success">USER REGISTER</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-6 ui-sortable">
+    </div>
+    <div class="row">
+        <div class="col-xl-12 ui-sortable">
             <div class="panel-body">
                 <div class="col-xl-12 ui-sortable">
                     <div class="panel panel-inverse" style="">
@@ -89,10 +103,20 @@
                                             </div>
                                         </div>
                                         <div class="col-xl-5 d-flex d-xl-block justify-content-center">
-                                            <div id="data-table-combine_filter" class="dataTables_filter"><label>Search:<input
-                                                            type="search" class="form-control form-control-sm"
-                                                            placeholder="" aria-controls="data-table-combine"></label>
+                                            <div id="data-table-combine_filter" class="dataTables_filter">
+                                                <label>Search:
+                                                    <input type="search" class="form-control form-control-sm"
+                                                           placeholder="" aria-controls="data-table-combine">
+                                                </label>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="d-block d-lg-inline-flex mr-sm-12">
+                                            <a href="#modal-dialog"
+                                               class="btn btn-sm btn-primary btn-green width-150 m-r-6"
+                                               data-toggle="modal" style="margin: 0px 0px 20px 10px;">New User
+                                                Register</a>
                                         </div>
                                     </div>
                                     <table id="data-table-responsive_wrapper"
@@ -116,12 +140,12 @@
                                             </th>
                                             <th class="text-nowrap sorting" tabindex="0"
                                                 aria-controls="data-table-combine" rowspan="1" colspan="1"
-                                                style="width: 270px;" data-column-index="3"
+                                                style="" data-column-index="3"
                                                 aria-label="Browser: activate to sort column ascending">Role
                                             </th>
                                             <th class="text-nowrap sorting" tabindex="0"
                                                 aria-controls="data-table-combine" rowspan="1" colspan="1"
-                                                style="width: 270px;" data-column-index="3"
+                                                style="" data-column-index="3"
                                                 aria-label="Browser: activate to sort column ascending">Approved
                                             </th>
                                             <th></th>
@@ -153,7 +177,9 @@
                                                     @endif
                                                 </td>
                                                 <td class="with-btn" nowrap="">
-                                                    <a href="#" class="btn btn-sm btn-primary width-60 m-r-2">Edit</a>
+                                                    <a href="#modal-dialog"
+                                                       class="btn btn-sm btn-primary width-60 m-r-2"
+                                                       data-toggle="modal">Edit</a>
                                                     <a href="#" class="btn btn-sm btn-white width-60">Delete</a>
                                                 </td>
                                             </tr>
@@ -221,42 +247,7 @@
     <script src="{{asset('/assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
     <script src="{{asset('/assets/js/demo/table-manage-default.demo.js')}}"></script>
 @endpush
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function () {
-        $('#data-table-combine').DataTable();
-    });
-</script>
-<script>
-    let name, email, phone, city, response, trline;
-    $.ajax({
-        url: "http://127.0.0.1:8000/UserResource?type=1",
-        type: "GET",
-        data: {
-            _token: $("#csrf").val(),
-            type: 1,
-            name: name,
-            email: email,
-            phone: phone,
-            city: city
-        },
-        success: function (response) {
-            $.each(response, function (i, item) {
-                trline +=
-                    "<td width=\"1%\" class=\"f-w-600 text-inverse dtr-control sorting_1\">" + item.id + "<td>" +
-                    "<td width=\"1%\" class=\"with-img\">" + item.name + "<td>" +
-                    "<td>" + item.email + "<td>" +
-                    "<td>" + item.password + "<td>";
-                    item.approved == 0 ? trline += "<td>no<td>" :
-                    item.approved == 1 ? trline += "<td>yes<td>" :
-
-                        $(".appendtd").append(trline);
-            });
-        }
-    });
-</script>
 @push('scripts')
-    <script src="/assets/plugins/summernote/dist/summernote.min.js"></script>
-    <script src="/assets/js/demo/form-summernote.demo.js"></script>
+    <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
+    <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
 @endpush

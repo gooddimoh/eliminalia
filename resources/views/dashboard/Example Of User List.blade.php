@@ -165,41 +165,6 @@
     <script src="{{asset('/assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
     <script src="{{asset('/assets/js/demo/table-manage-default.demo.js')}}"></script>
 @endpush
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function () {
-        $('#data-table-combine').DataTable();
-    });
-</script>
-<script>
-    let name, email, phone, city, response;
-    $.ajax({
-        url: "http://127.0.0.1:8000/UserResource?type=1",
-        type: "GET",
-        data: {
-            _token: $("#csrf").val(),
-            type: 1,
-            name: name,
-            email: email,
-            phone: phone,
-            city: city
-        },
-        success: function (response) {
-            response.forEach(myFunction);
-
-            function myFunction(item) {
-                item.id;
-                item.name;
-                item.email;
-                item.password;
-                item.approved;
-                item.id;
-
-            }
-        }
-    });
-</script>
 @push('scripts')
     <script src="/assets/plugins/summernote/dist/summernote.min.js"></script>
     <script src="/assets/js/demo/form-summernote.demo.js"></script>

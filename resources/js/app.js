@@ -1806,3 +1806,8 @@ var App = function () {
 $(document).ready(function() {
 	App.init();
 });
+
+
+$(document).ready(function () {
+	$('#data-table-combine').DataTable();
+});

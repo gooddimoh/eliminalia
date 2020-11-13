@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Notifications\UserApprovedNotification;
 use App\Models\Role;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,7 +19,7 @@ class UsersController extends Controller
     public function index()
     {
 //        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+        Carbon::now();
         return $users = User::all();
     }
 
@@ -33,11 +34,15 @@ class UsersController extends Controller
 
     public function store(StoreUserRequest $request)
     {
+        die("request is validated");
+
         $request->validate([
-            'name' => 'required',
+            'firstname' => 'required',
+            'lastname' => 'required',
             'password' => 'required',
             'email' => 'required',
         ]);
+
 
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));

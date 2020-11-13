@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -26,21 +25,7 @@ return [
             'sub_menu' => [[
                 'url' => '/login',
                 'title' => 'Login',
-                'route-name' => 'Login'
-            ], [
-                'url' => '/register',
-                'title' => 'Register',
-                'route-name' => 'register'
-            ]]
-        ],
-        ['icon' => 'fa fa-key',
-            'title' => 'Login & Register',
-            'url' => 'javascript:;',
-            'caret' => true,
-            'sub_menu' => [[
-                'url' => '/login',
-                'title' => 'Login',
-                'route-name' => 'Login'
+                'route-name' => 'login'
             ], [
                 'url' => '/register',
                 'title' => 'Register',
@@ -59,17 +44,17 @@ return [
             'caret' => true,
             'sub_menu' => [
                 [
-                    'url' => '/dashboard/Contact List',
+                    'url' => '/dashboard/contacts/list',
                     'title' => 'Contact List',
-                    'route-name' => 'Contact List'
+                    'route-name' => 'ContactList'
                 ],
                 [
-                    'url' => '/dashboard/Contact Registration',
+                    'url' => '/dashboard/contacts/registration',
                     'title' => 'Contact Registration',
-                    'route-name' => 'Contact Registration'
+                    'route-name' => 'ContactRegistration'
                 ],
                 [
-                    'url' => '/dashboard/Inquiries',
+                    'url' => '/dashboard/inquiries',
                     'title' => 'Inquiries',
                     'route-name' => 'Inquiries'
                 ],
@@ -82,27 +67,27 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => '/Customers/1',
+                'url' => '/Customers/Registration',
                 'title' => 'Customer Registration',
                 'route-name' => 'Customer Registration'
             ], [
-                'url' => '/Customerlist(ADMIN)',
+                'url' => '/Customer/list(ADMIN)',
                 'title' => 'Customerlist(ADMIN)',
                 'route-name' => 'Customerlist(ADMIN)'
             ], [
-                'url' => '/Customer List(MANAGER)',
+                'url' => '/Customer/List(MANAGER)',
                 'title' => 'Customer List(MANAGER)',
                 'route-name' => 'Customer List(MANAGER)'
             ], [
-                'url' => 'Customer List(PARTNER)',
+                'url' => 'Customer/List(PARTNER)',
                 'title' => 'Customer List(PARTNER)',
                 'route-name' => 'Customer List(PARTNER)'
             ], [
-                'url' => '/Customer List(REGISTRATOR)',
+                'url' => '/Customer/List(REGISTRATOR)',
                 'title' => 'Customer List(REGISTRATOR)',
                 'route-name' => 'Customer List(REGISTRATOR)'
             ], [
-                'url' => 'Customer List(SADMIN',
+                'url' => 'Customer/List(SADMIN',
                 'title' => 'Customer List(SADMIN)',
                 'route-name' => 'Customer List'
             ], [
@@ -179,7 +164,11 @@ return [
             'url' => '/dashboard/File Manager',
             'route-name' => 'File Manager'
         ],
-        ['icon' => 'fa fa-map',
+        ['icon' => 'fa fa-calendar',
+            'title' => 'Calendar',
+            'url' => '/dashboard/calendar',
+            'route-name' => 'Calendar'
+        ], ['icon' => 'fa fa-map',
             'title' => 'Map',
             'url' => '/dashboard/Map',
             'route-name' => 'Map'

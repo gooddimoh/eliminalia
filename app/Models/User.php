@@ -21,6 +21,24 @@ class User extends Model
         'email_verified_at',
     ];
 
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    protected $fillable = [
+        'firstname',
+        'lastname',
+        'email',
+        'password',
+        'approved',
+        'created_at',
+        'updated_at',
+        'deleted_at',
+        'remember_token',
+        'email_verified_at',
+    ];
+
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);

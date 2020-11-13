@@ -26,32 +26,33 @@
 			<!-- end register-header -->
 			<!-- begin register-content -->
 			<div class="register-content">
-				<form action="index.html" method="GET" class="margin-bottom-0">
+				<form action="{{ route('register') }}" method="POST" class="margin-bottom-0">
+					{{ csrf_field() }}
 					<label class="control-label">Name <span class="text-danger">*</span></label>
 					<div class="row row-space-10">
 						<div class="col-md-6 m-b-15">
-							<input type="text" class="form-control" placeholder="First name" required />
+							<input type="text" class="form-control" name="firstname" placeholder="First name" required />
 						</div>
 						<div class="col-md-6 m-b-15">
-							<input type="text" class="form-control" placeholder="Last name" required />
+							<input type="text" class="form-control" name="lastname" placeholder="Last name" required />
 						</div>
 					</div>
 					<label class="control-label">Email <span class="text-danger">*</span></label>
 					<div class="row m-b-15">
 						<div class="col-md-12">
-							<input type="text" class="form-control" placeholder="Email address" required />
+							<input type="email" class="form-control" name="email" placeholder="Email address" required />
 						</div>
 					</div>
 					<label class="control-label">Re-enter Email <span class="text-danger">*</span></label>
 					<div class="row m-b-15">
 						<div class="col-md-12">
-							<input type="text" class="form-control" placeholder="Re-enter email address" required />
+							<input type="text" class="form-control" name="email" placeholder="Re-enter email address" required />
 						</div>
 					</div>
 					<label class="control-label">Password <span class="text-danger">*</span></label>
 					<div class="row m-b-15">
 						<div class="col-md-12">
-							<input type="password" class="form-control" placeholder="Password" required />
+							<input type="password" class="form-control" name="password" placeholder="Password" required />
 						</div>
 					</div>
 					<div class="checkbox checkbox-css m-b-30">
