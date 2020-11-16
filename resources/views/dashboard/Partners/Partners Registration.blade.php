@@ -1,5 +1,33 @@
-<!-- begin #footer -->
-<div id="footer" class="footer">
-	&copy; 2020 Color Admin Responsive Admin Template - Sean Ngu All Rights Reserved
+<div class="content">
+    <h1>
+        Partner Data
+    </h1>
 </div>
-<!-- end #footer -->
+<div class="form">
+    <input type="text">
+    <div class="col-md-6">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <select multiple="" class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <select multiple="" class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+</div>

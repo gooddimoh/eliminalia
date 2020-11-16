@@ -1,11 +1,10 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Media_communicationBook extends Model
+class Media_Communication_Book extends Model
 {
     use HasFactory;
 

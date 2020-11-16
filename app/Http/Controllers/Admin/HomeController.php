@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -14,12 +13,12 @@ use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class UsersController extends Controller
+class HomeController extends Controller
 {
     public function index()
     {
 //        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        return $users = User::all()->jsonSerialize();
+        return $users = User::all();
     }
 
     public function create()
@@ -31,17 +30,14 @@ class UsersController extends Controller
         return view('admin.users.create', compact('roles'));
     }
 
-    public function store(StoreUserRequest $request, Response $response)
+    public function store(StoreUserRequest $request)
     {
         $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
             'password' => 'required',
-            'email' => 'required',
+            'email' => 'required'
         ]);
-
-//        $request->
-//        $response->
 
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));

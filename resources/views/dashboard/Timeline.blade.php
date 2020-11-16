@@ -18,7 +18,7 @@
         <li class="timeline-li-type1">
             <!-- begin timeline-time -->
             <div class="timeline-time">
-                <span class="date">{{  \Carbon\Carbon::now() }}</span>
+                {{--                <span class="date">{{ $date }}</span>--}}
             </div>
             <!-- end timeline-time -->
             <!-- begin timeline-icon -->
@@ -28,23 +28,31 @@
             <!-- end timeline-icon -->
             <!-- begin timeline-body -->
             <div class="timeline-body">
-
                 <div class="timeline-content">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis tincidunt
-                        luctus.
-                        Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
-                    </p>
+                    <div class="timeline-content-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis tincidunt
+                            luctus.
+                            Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum distinctio, eum quia.
+                            Excepturi illum itaque maxime, modi nihil suscipit.</p>
+                        <i class="fas fa-lg fa-fw m-r-10 fa-chevron-down"
+                           style="position: absolute; top:20px; right: 20px;"></i>
+                        <script>
+                            $(".fa-chevron-down").click(function () {
+                                alert(this).find('p');
+                                $(this).find('p').toggle();
+                            });
+                        </script>
+                    </div>
                 </div>
-
-
             </div>
             <!-- end timeline-body -->
         </li>
         <li class="timeline-li-type2">
             <!-- begin timeline-time -->
             <div class="timeline-time">
-                <span class="date">{{  \Carbon\Carbon::now() }}</span>
+                {{--<span class="date">{{ $date }}</span>--}}
             </div>
             <!-- end timeline-time -->
             <!-- begin timeline-icon -->
@@ -82,6 +90,8 @@
                         <span class="stats-text">259 Shares</span>
                         <span class="stats-text">21 Comments</span>
                     </div>
+                    <i class="fas fa-lg fa-fw m-r-10 fa-chevron-down"
+                       style="position: absolute; top:20px; right: 20px;"></i>
                 </div>
                 <div class="timeline-footer">
                     <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i

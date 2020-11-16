@@ -6,18 +6,22 @@
     <div class="col-xl-12">
         <div class="row">
             <div class="col-md-6">
-                <label class="col-form-label ">Email address</label>
-                <input class="form-control form-control-sm" type="text">
-                <label class="col-form-label ">Email address</label>
-                <input class="form-control form-control-sm" type="text">
-                <label class="col-form-label ">Email address</label>
-                <input class="form-control form-control-sm" type="text">
-                <label class="col-form-label ">Email address</label>
-                <input class="form-control form-control-sm" type="text">
-                <label class="col-form-label ">Email address</label>
-                <input class="form-control form-control-sm" type="text">
-                <label class="col-form-label ">Email address</label>
-                <input class="form-control form-control-sm" type="text">
+                <label class="col-form-label">Name*</label>
+                <input class="form-control form-control-sm" type="text" placeholder="{{$name}}">
+                <label class="col-form-label">Phone number 1*:</label>
+                <input class="form-control form-control-sm" type="text" placeholder="{{$phonenumber}}">
+                <label class="col-form-label">Email(main)*:</label>
+                <input class="form-control form-control-sm" type="text" placeholder="{{$email}}">
+                <label class="col-form-label">ID:</label>
+                <input class="form-control form-control-sm" type="text" placeholder="{{$id}}">
+                <label class="col-form-label">Address:</label>
+                <input class="form-control form-control-sm" type="text" placeholder="{{$address}}">
+                <label class="col-form-label">City:</label>
+                <input class="form-control form-control-sm" type="text" placeholder="{{$city}}">
+                <label class="col-form-label">Country*:</label>
+                <input class="form-control form-control-sm" type="text" placeholder="{{$country}}">
+                <label class="col-form-label">Commercial:*</label>
+                <input class="form-control form-control-sm" type="text" placeholder="{{$commercial}}">
                 <label class="col-form-label ">Permissions Level:</label>
                 <select class="form-control form-control-sm">
                     <option value="">SUPERADMIN</option>
@@ -91,6 +95,32 @@
         </div>
     </div>
 @endsection
+
+<div class="result-count">
+    <p>Result number: 58</p>
+</div>
+
+<table>
+    <tr>Contact ID</tr>
+    <tr>Date</tr>
+    <tr>Name and surname</tr>
+    <tr>Company</tr>
+    <tr>Commercial</tr>
+    <tr>Status</tr>
+    <tr>
+        <td>T</td>
+        <td>B</td>
+        <td>D</td>
+    </tr>
+</table>
+
+@section('inputs')
+    <input type="text" placeholder="FIRST CONTACT DONE">
+    <input type="text" placeholder="TRACKING DONE">
+    <input type="text" placeholder="BUDGET DONE">
+    <input type="text" placeholder="DOCUMENTATION SENDED">
+    <input type="text" placeholder="SIGNED">
+@endsection()
 
 @push('scripts')
     <script src="/assets/plugins/highlight.js/highlight.min.js"></script>

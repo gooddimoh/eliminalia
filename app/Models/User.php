@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use App\Models\Role; 
@@ -8,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Model
-{
+class User extends Model {
     use SoftDeletes, Notifiable, HasFactory;
 
     protected $table = 'users';
@@ -22,21 +20,18 @@ class User extends Model
     ];
 
     protected $hidden = [
-        'password',
         'remember_token',
     ];
 
     protected $fillable = [
         'firstname',
         'lastname',
-        'email',
         'password',
-        'approved',
+        'email',
+        'email',
         'created_at',
         'updated_at',
         'deleted_at',
-        'remember_token',
-        'email_verified_at',
     ];
 
     public function __construct(array $attributes = [])

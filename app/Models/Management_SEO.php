@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Management_seo extends Model
+class Management_SEO extends Model
 {
     use HasFactory;
 

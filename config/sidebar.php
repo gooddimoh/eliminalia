@@ -32,6 +32,24 @@ return [
                 'route-name' => 'register'
             ]]
         ],
+        ['icon' => 'fa fa-hdd',
+            'title' => 'Email',
+            'url' => 'javascript:;',
+            'caret' => true,
+            'sub_menu' => [[
+                'url' => '/dashboard/general/email/general/inbox',
+                'title' => 'inbox',
+                'route-name' => 'general inbox'
+            ], [
+                'url' => '/dashboard/email/compose',
+                'title' => 'compose',
+                'route-name' => 'withdraw compose'
+            ], [
+                'url' => '/dashboard/email/detail',
+                'title' => 'detail',
+                'route-name' => 'withdraw detail'
+            ]]
+        ],
         ['icon' => 'fa fa-users',
             'title' => 'User Management',
             'url' => '/dashboard/User Management',
@@ -168,7 +186,8 @@ return [
             'title' => 'Calendar',
             'url' => '/dashboard/calendar',
             'route-name' => 'Calendar'
-        ], ['icon' => 'fa fa-map',
+        ],
+        ['icon' => 'fa fa-map',
             'title' => 'Map',
             'url' => '/dashboard/Map',
             'route-name' => 'Map'

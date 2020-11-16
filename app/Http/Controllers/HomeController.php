@@ -1,11 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\User;
 use http\Env\Request;
-use http\Env\Response;
 
-class MainController extends Controller
+class HomeController extends Controller
 {
 
     public function index()

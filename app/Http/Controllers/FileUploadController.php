@@ -14,8 +14,7 @@ class FileUploadController extends Controller
 
     public function fileUpload(Request $request, $id)
     {
-        //print_r($request->file('photo'));
-        //exit;
+        print_r($request->file('photo'));
         $rules = [
             'photo' => 'image|mimes:jpeg,jpg,png|max:2048'
         ];
