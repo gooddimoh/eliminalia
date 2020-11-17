@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class attached_files extends Model
+class Attached_Files extends Model
 {
     use HasFactory;
     /**

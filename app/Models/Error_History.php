@@ -1,11 +1,10 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Error_history extends Model
+class Error_History extends Model
 {
     use HasFactory;
 

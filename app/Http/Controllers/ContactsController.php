@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -7,60 +6,49 @@ use App\Http\Requests\MassDestroyUserRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Notifications\UserApprovedNotification;
-use App\Models\Role;
-use App\Models\User;
-use Carbon\Carbon;
-use Illuminate\Auth\Access\Gate;
+use App\Role;
+use App\User;
+use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class UsersController extends Controller
+class ContactsController extends Controller
 {
     public function index()
     {
-//        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        return $users = User::all()->jsonSerialize();
+        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $users = User::all();
+
+        return view('admin.users.index', compact('users'));
     }
 
     public function create()
     {
-//        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $roles = Role::all()->pluck('title', 'id');
 
         return view('admin.users.create', compact('roles'));
     }
 
-    public function store(StoreUserRequest $request, Response $response)
+    public function store(StoreUserRequest $request)
     {
-        $request->validate([
-            'firstname' => 'required',
-            'lastname' => 'required',
-            'password' => 'required',
-            'email' => 'required',
-        ]);
 
+        $request->session()->flush();
+        die();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
 
-        redirect()->route('admin.users.index');
-
-        return response()->json("StatusCode", 200);
+        return redirect()->route('admin.users.index');
     }
-
-//    public function input(){
-//        $this->validate($request){
-//            $this->validate($request), [ 'product_name' => 'required|max:255' ]
-//        }
-//
-//        return view();
-//    });
-
 
     public function edit(User $user)
     {
-//        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         $roles = Role::all()->pluck('title', 'id');
+
         $user->load('roles');
 
         return view('admin.users.edit', compact('roles', 'user'));
@@ -79,16 +67,6 @@ class UsersController extends Controller
 
         return redirect()->route('admin.users.index');
     }
-
-    public function register($request)
-    {
-        var_dump($request);
-        die("");
-        $approved = $user->approved;
-
-        return redirect()->route('admin.users.index');
-    }
-
 
     public function show(User $user)
     {

@@ -39,10 +39,9 @@
                                     </div>
                                     <div class="row">
                                         <div class="d-block d-lg-inline-flex mr-sm-12">
-                                            <a href="#modal-dialog"
+                                            <a href="/dashboard/user/new"
                                                class="btn btn-sm btn-primary btn-green width-150 m-r-6"
-                                               data-toggle="modal" style="margin: 0px 0px 20px 10px;">New User
-                                                Register</a>
+                                               style="margin: 0px 0px 20px 10px;">New User Register</a>
                                         </div>
                                     </div>
                                     <table id="data-table-responsive_wrapper"
@@ -62,55 +61,23 @@
                                                 aria-controls="data-table-combine" rowspan="1" colspan="1"
                                                 style="width: 215px;" data-column-index="2"
                                                 aria-label="Rendering engine: activate to sort column ascending">
-                                                Name
+                                                Name*
                                             </th>
                                             <th class="text-nowrap sorting" tabindex="0"
                                                 aria-controls="data-table-combine" rowspan="1" colspan="1"
                                                 style="" data-column-index="3"
-                                                aria-label="Browser: activate to sort column ascending">Role
+                                                aria-label="Browser: activate to sort column ascending">
+                                                Phone number 1:
                                             </th>
                                             <th class="text-nowrap sorting" tabindex="0"
                                                 aria-controls="data-table-combine" rowspan="1" colspan="1"
                                                 style="" data-column-index="3"
-                                                aria-label="Browser: activate to sort column ascending">Approved
+                                                aria-label="Browser: activate to sort column ascending">
+                                                Approved
                                             </th>
                                             <th></th>
                                         </tr>
                                         </thead>
-                                        <tbody>
-                                        @foreach ($users as $user)
-                                            <tr class="gradeC even" role="row">
-                                                <td width="1%" class="f-w-600 text-inverse dtr-control sorting_1"
-                                                    tabindex="0">
-                                                    {{ $user->id }}
-                                                </td>
-                                                <td width="1%" class="with-img">
-                                                    <img src="{{'http://127.0.0.1:8000/assets/img/user/user-13.jpg'}}"
-                                                         class="img-rounded height-30">
-                                                </td>
-                                                <td>{{ $user->name }}</td>
-                                                <td>
-                                                    @foreach($user->roles as $key => $item)
-                                                        <span class="label label-info label-many">{{ $item->title }}</span>
-                                                    @endforeach
-                                                </td>
-                                                <td>
-                                                    @if($user->approved == 1)
-                                                        Yes
-                                                    @endif
-                                                    @if($user->approved == 0)
-                                                        No
-                                                    @endif
-                                                </td>
-                                                <td class="with-btn" nowrap="">
-                                                    <a href="#modal-dialog"
-                                                       class="btn btn-sm btn-primary width-60 m-r-2"
-                                                       data-toggle="modal">Edit</a>
-                                                    <a href="#" class="btn btn-sm btn-white width-60">Delete</a>
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
                                     </table>
                                 </div>
                             </div>

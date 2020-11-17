@@ -3,11 +3,11 @@
 @section('title', 'Calendar')
 
 @push('css')
-    <link href="/assets/plugins/@fullcalendar/common/main.min.css" rel="stylesheet" />
-    <link href="/assets/plugins/@fullcalendar/daygrid/main.min.css" rel="stylesheet" />
-    <link href="/assets/plugins/@fullcalendar/timegrid/main.min.css" rel="stylesheet" />
-    <link href="/assets/plugins/@fullcalendar/list/main.min.css" rel="stylesheet" />
-    <link href="/assets/plugins/@fullcalendar/bootstrap/main.min.css" rel="stylesheet" />
+    <link href="{{asset('/assets/plugins/@fullcalendar/common/main.min.css')}}" rel="stylesheet"/>
+    <link href="{{asset('/assets/plugins/@fullcalendar/daygrid/main.min.css')}}" rel="stylesheet"/>
+    <link href="{{asset('/assets/plugins/@fullcalendar/timegrid/main.min.css')}}" rel="stylesheet"/>
+    <link href="{{asset('/assets/plugins/@fullcalendar/list/main.min.css')}}" rel="stylesheet"/>
+    <link href="{{asset('/assets/plugins/@fullcalendar/bootstrap/main.min.css')}}" rel="stylesheet"/>
 @endpush
 
 @section('content')
@@ -20,7 +20,7 @@
     <!-- begin page-header -->
     <h1 class="page-header">Calendar <small>header small text goes here...</small></h1>
     <!-- end page-header -->
-    <hr />
+    <hr/>
     <!-- begin vertical-box -->
     <div class="vertical-box">
         <!-- begin event-list -->
@@ -47,7 +47,7 @@
                     <div class="fc-event-icon"><i class="fas fa-circle fa-fw f-s-9 text-inverse"></i></div>
                     Brainstorming
                 </div>
-                <hr class="bg-grey-lighter m-b-15" />
+                <hr class="bg-grey-lighter m-b-15"/>
                 <h5 class="m-t-0 m-b-15">Other Events</h5>
                 <div class="fc-event" data-color="#b6c2c9">
                     <div class="fc-event-icon"><i class="fas fa-circle fa-fw f-s-9 text-grey"></i></div>
@@ -80,12 +80,12 @@
 @endsection
 
 @push('scripts')
-    <script src="/assets/plugins/moment/moment.js"></script>
-    <script src="/assets/plugins/@fullcalendar/core/main.global.js"></script>
-    <script src="/assets/plugins/@fullcalendar/daygrid/main.global.js"></script>
-    <script src="/assets/plugins/@fullcalendar/timegrid/main.global.js"></script>
-    <script src="/assets/plugins/@fullcalendar/interaction/main.global.js"></script>
-    <script src="/assets/plugins/@fullcalendar/list/main.global.js"></script>
-    <script src="/assets/plugins/@fullcalendar/bootstrap/main.global.js"></script>
-    <script src="/assets/js/demo/calendar.demo.js"></script>
+    <script src="{{asset('/assets/plugins/moment/moment.js')}}"></script>
+    <script src="{{asset('/assets/plugins/@fullcalendar/core/main.global.js')}}"></script>
+    <script src="{{asset('/assets/plugins/@fullcalendar/daygrid/main.global.js')}}"></script>
+    <script src="{{asset('/assets/plugins/@fullcalendar/timegrid/main.global.js')}}"></script>
+    <script src="{{asset('/assets/plugins/@fullcalendar/interaction/main.global.js')}}"></script>
+    <script src="{{asset('/assets/plugins/@fullcalendar/list/main.global.js')}}"></script>
+    <script src="{{asset('/assets/plugins/@fullcalendar/bootstrap/main.global.js')}}"></script>
+    <script src="{{asset('/assets/js/demo/calendar.demo.js')}}"></script>
 @endpush

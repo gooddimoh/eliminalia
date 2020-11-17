@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User_contacts_book extends Model
+class User_Contacts_Book extends Model
 {
     use HasFactory;
 
@@ -13,7 +13,7 @@ class User_contacts_book extends Model
      *
      * @var array
      */
-    protected $table = 'User_contacts_book';
+    protected $table = 'User_Contacts_Book';
 
     protected $dates = [
         'updated_at',

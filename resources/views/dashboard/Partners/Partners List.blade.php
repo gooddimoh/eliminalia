@@ -1,5 +1,5 @@
-<!-- begin #footer -->
-<div id="footer" class="footer">
-	&copy; 2020 Color Admin Responsive Admin Template - Sean Ngu All Rights Reserved
-</div>
-<!-- end #footer -->
+<h1>Search Partner</h1>
+<input type="text" name="search" placeholder="Search Partner">
+<input type="checkbox" name="Active">
+<input type="checkbox" name="Inactive">
+<input type="checkbox" name="All">

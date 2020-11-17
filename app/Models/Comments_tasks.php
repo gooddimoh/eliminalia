@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Comments_tasks extends Model
+class Comments_Tasks extends Model
 {
     use HasFactory;
 

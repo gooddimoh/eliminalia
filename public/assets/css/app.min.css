@@ -56137,3 +56137,12 @@ li.timeline-li-type1:hover {
     margin-right: 0;
     font-weight: bold;
 }
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}

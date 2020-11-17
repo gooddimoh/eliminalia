@@ -50,33 +50,22 @@ return [
                 'route-name' => 'withdraw detail'
             ]]
         ],
-        ['icon' => 'fa fa-users',
-            'title' => 'User Management',
-            'url' => '/dashboard/User Management',
-            'route-name' => 'User Management'
-        ],
         [
             'icon' => 'fa fa-key',
-            'title' => 'Contacts',
+            'title' => 'User Management',
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [
                 [
-                    'url' => '/dashboard/contacts/list',
-                    'title' => 'Contact List',
-                    'route-name' => 'ContactList'
+                    'url' => '/dashboard/usermanagement/new',
+                    'title' => 'New',
+                    'route-name' => 'UserManagement/New'
                 ],
                 [
-                    'url' => '/dashboard/contacts/registration',
-                    'title' => 'Contact Registration',
-                    'route-name' => 'ContactRegistration'
-                ],
-                [
-                    'url' => '/dashboard/inquiries',
-                    'title' => 'Inquiries',
-                    'route-name' => 'Inquiries'
-                ],
-
+                    'url' => '/dashboard/usermanagement/list',
+                    'title' => 'List',
+                    'route-name' => 'UserManagement/List'
+                ]
             ]
         ],
         [

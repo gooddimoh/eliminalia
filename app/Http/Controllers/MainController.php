@@ -1,9 +1,8 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use http\Env\Request;
-use http\Env\Response;
 
 class MainController extends Controller
 {
@@ -75,7 +74,7 @@ class MainController extends Controller
         return view('dashboard/MakePostToTimeline');
     }
 
-    public function ContactRegistration()
+    public function Contact()
     {
         $user = User::all();
         return view('dashboard/contacts/Contact Registration')->with('users', $user);
@@ -83,10 +82,20 @@ class MainController extends Controller
 
     public function INQUIRIES()
     {
-        return view('dashboard/Contacts/INQUIRIES');
+        return view('dashboard/Contacts/inquiries');
     }
 
-    public function ContacList()
+    public function UserManagementlist()
+    {
+        return view('dashboard/User Management/new');
+    }
+
+    public function UserManagementnew()
+    {
+        return view('dashboard/User Management/list');
+    }
+
+    public function ContactList()
     {
         $users = User::all();
         return view('dashboard/Contacts/CONTACT LIST')->with('users', $users);

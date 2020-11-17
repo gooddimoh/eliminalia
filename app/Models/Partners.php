@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -18,14 +19,17 @@ class Partners extends Model
     ];
 
     protected $fillable = [
-        'id',
+        'Name',
         'fecha',
-        'nombre',
-        'pais',
-        'ciudad',
-        'provincia',
-        'direccion',
-        'codigo_postal',
+        'Phone number 1',
+        'Phone number 2',
+        'Email main',
+        'Email secondary',
+        'Address',
+        'Postal code',
+        'State',
+        'Country',
+        'Observations',
         'telefono',
         'telefono2',
         'email',

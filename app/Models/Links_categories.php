@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Links_categories extends Model
+class Links_Categories extends Model
 {
     use HasFactory;
 

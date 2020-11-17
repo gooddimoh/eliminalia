@@ -1,9 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use http\Env\Request;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -22,6 +21,12 @@ class HomeController extends Controller
             ->markAsRead();
 
         return response()->noContent();
+    }
+
+    public function login()
+    {
+        var_dump($this);
+        die(" ");
     }
 
     public function dashboard()
