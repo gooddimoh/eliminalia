@@ -9,11 +9,9 @@
         <li class="breadcrumb-item"><a href="javascript:;">Extra</a></li>
         <li class="breadcrumb-item active">Timeline</li>
     </ol>
-    <!-- end breadcrumb -->
     <!-- begin page-header -->
     <h1 class="page-header">Timeline <small>header small text goes here...</small></h1>
     <!-- end page-header -->
-    <!-- begin timeline -->
     <ul class="timeline">
         <li class="timeline-li-type1">
             <!-- begin timeline-time -->
@@ -130,7 +128,6 @@
             <!-- begin timeline-body -->
         </li>
     </ul>
-    <!-- end timeline -->
 @endsection
 
 @push('scripts')

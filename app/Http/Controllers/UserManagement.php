@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -6,8 +7,8 @@ use App\Http\Requests\MassDestroyUserRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Notifications\UserApprovedNotification;
-use App\Role;
-use App\User;
+use App\Models\Role;
+use App\Models\User;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,6 +22,19 @@ class UserManagement extends Controller
         $users = User::all();
 
         return view('admin.users.index', compact('users'));
+    }
+
+    public function UserManagementList()
+    {
+        return view('dashboard/usermanagement/list');
+    }
+
+    public function UserManagementNew(Request $request)
+    {
+        $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
+        var_dump($validatedData);
+        die("status");
+
     }
 
     public function create()

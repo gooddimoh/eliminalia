@@ -14,4 +14,10 @@ class AddApprovalFields extends Migration
             ]);
         });
     }
+
+
+    public function down()
+    {
+        Schema::drop('roles');
+    }
 }

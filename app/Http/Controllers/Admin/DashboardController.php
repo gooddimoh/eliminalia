@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
@@ -7,5 +8,14 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+
+    function action(Request $request)
+    {
+        if ($request->ajax()) {
+            $data = Full_text_search::search($request->get('full_text_search_query'))->get();
+
+            return response()->json($data);
+        }
+    }
 
 }

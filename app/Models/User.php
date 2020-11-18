@@ -29,7 +29,7 @@ class User extends Model
 //        $this->disk = $disk;
 //    }
 
-    protected $table = 'users';
+    protected $table = 'user';
 
     protected $dates = [
         'updated_at',

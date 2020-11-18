@@ -37,16 +37,16 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => '/dashboard/general/email/general/inbox',
-                'title' => 'inbox',
+                'url' => '/dashboard/email/inbox',
+                'title' => 'dashboard/email/inbox',
                 'route-name' => 'general inbox'
             ], [
                 'url' => '/dashboard/email/compose',
-                'title' => 'compose',
+                'title' => 'dashboard/email/compose',
                 'route-name' => 'withdraw compose'
             ], [
                 'url' => '/dashboard/email/detail',
-                'title' => 'detail',
+                'title' => 'dashboard/email/detail',
                 'route-name' => 'withdraw detail'
             ]]
         ],
@@ -57,15 +57,40 @@ return [
             'caret' => true,
             'sub_menu' => [
                 [
-                    'url' => '/dashboard/usermanagement/new',
-                    'title' => 'New',
-                    'route-name' => 'UserManagement/New'
+                    'url' => '/dashboard/usermanagement/list',
+                    'title' => 'Contact List',
+                    'route-name' => 'Contact List'
                 ],
                 [
-                    'url' => '/dashboard/usermanagement/list',
-                    'title' => 'List',
-                    'route-name' => 'UserManagement/List'
-                ]
+                    'url' => '/dashboard/usermanagement/new',
+                    'title' => 'Contact New',
+                    'route-name' => 'Contact New'
+                ],
+
+            ]
+        ],
+        [
+            'icon' => 'fa fa-key',
+            'title' => 'Contacts',
+            'url' => 'javascript:;',
+            'caret' => true,
+            'sub_menu' => [
+                [
+                    'url' => '/dashboard/contacts/list',
+                    'title' => 'Contact List',
+                    'route-name' => 'ContactList'
+                ],
+                [
+                    'url' => '/dashboard/contacts/registration',
+                    'title' => 'Contact Registration',
+                    'route-name' => 'ContactRegistration'
+                ],
+                [
+                    'url' => '/dashboard/inquiries',
+                    'title' => 'Inquiries',
+                    'route-name' => 'Inquiries'
+                ],
+
             ]
         ],
         [

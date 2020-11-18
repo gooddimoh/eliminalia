@@ -151,7 +151,6 @@
 	<!-- end vertical-box -->
 @endsection
 
-
 @push('scripts')
 	<script src="/assets/plugins/jquery-migrate/dist/jquery-migrate.min.js"></script>
 	<script src="/assets/plugins/tag-it/js/tag-it.min.js"></script>

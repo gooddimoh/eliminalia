@@ -5,135 +5,117 @@
 @endpush
 
 @section('content')
-    <div class="row">
-        <div class="col-xl-12 ui-sortable">
-            <div class="panel-body">
-                <div class="col-xl-12 ui-sortable">
-                    <div class="panel panel-inverse" style="">
-                        <!-- begin panel-body -->
-                        <div class="panel-body">
-                            <div id="data-table-combine_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                                <div class="dataTables_wrapper dt-bootstrap">
-                                    <div class="row">
-                                        <div class="col-xl-7 d-block d-sm-flex d-xl-block justify-content-center">
-                                            <div class="d-block d-lg-inline-flex mr-0 mr-sm-3">
-                                                <div class="dataTables_length" id="data-table-combine_length"><label>Show
-                                                        <select name="data-table-combine_length"
-                                                                aria-controls="data-table-combine"
-                                                                class="custom-select custom-select-sm form-control form-control-sm">
-                                                            <option value="10">10</option>
-                                                            <option value="25">25</option>
-                                                            <option value="50">50</option>
-                                                            <option value="100">100</option>
-                                                        </select> entries</label></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-5 d-flex d-xl-block justify-content-center">
-                                            <div id="data-table-combine_filter" class="dataTables_filter">
-                                                <label>Search:
-                                                    <input type="search" class="form-control form-control-sm"
-                                                           placeholder="" aria-controls="data-table-combine">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="d-block d-lg-inline-flex mr-sm-12">
-                                            <a href="/dashboard/user/new"
-                                               class="btn btn-sm btn-primary btn-green width-150 m-r-6"
-                                               style="margin: 0px 0px 20px 10px;">New User Register</a>
-                                        </div>
-                                    </div>
-                                    <table id="data-table-responsive_wrapper"
-                                           class="table table-striped table-bordered table-td-valign-middle dataTable nod-footer dtr-inline"
-                                           role="grid" aria-describedby="data-table-combine_info"
-                                           style="position: relative; width: auto;">
-                                        <thead>
-                                        <tr role="row">
-                                            <th width="1%" class="sorting_asc" tabindex="0"
-                                                aria-controls="data-table-combine" rowspan="1" colspan="1"
-                                                style="width: 0px;" data-column-index="0" aria-sort="ascending"
-                                                aria-label=": activate to sort column descending"></th>
-                                            <th width="1%" data-orderable="false" class="sorting_disabled" rowspan="1"
-                                                colspan="1" style="width: 30px;" data-column-index="1"
-                                                aria-label=""></th>
-                                            <th class="text-nowrap sorting" tabindex="0"
-                                                aria-controls="data-table-combine" rowspan="1" colspan="1"
-                                                style="width: 215px;" data-column-index="2"
-                                                aria-label="Rendering engine: activate to sort column ascending">
-                                                Name*
-                                            </th>
-                                            <th class="text-nowrap sorting" tabindex="0"
-                                                aria-controls="data-table-combine" rowspan="1" colspan="1"
-                                                style="" data-column-index="3"
-                                                aria-label="Browser: activate to sort column ascending">
-                                                Phone number 1:
-                                            </th>
-                                            <th class="text-nowrap sorting" tabindex="0"
-                                                aria-controls="data-table-combine" rowspan="1" colspan="1"
-                                                style="" data-column-index="3"
-                                                aria-label="Browser: activate to sort column ascending">
-                                                Approved
-                                            </th>
-                                            <th></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end panel-body -->
-                    </div>
+    <div class="col-md-6">
+        <p> New user data </p>
+        <div class="inputs">
+            <div class="col-md-6">
+                <div class="form-control">
+                    <label> Username: </label>
+                    <input type="text" placeholder="Username:">
                 </div>
+                <div class="form-control">
+                    <label> Name: </label>
+                    <input type="text" placeholder="Username:">
+                </div>
+                <div class="form-control">
+                    <label> Phone: </label>
+                    <input type="text" placeholder="Username:">
+                </div>
+                <div class="form-control">
+                    <label> DNI: </label>
+                    <input type="text" placeholder="Username:">
+                </div>
+                <div class="form-control">
+                    <label> Address: </label>
+                    <input type="text" placeholder="Username:">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-control">
+                    <label> Password: </label>
+                    <input type="text" placeholder="Username:">
+                </div>
+                <div class="form-control">
+                    <label> Surname: </label>
+                    <input type="text" placeholder="Username:">
+                </div>
+                <div class="form-control">
+                    <label> Email: </label>
+                    <input type="text" placeholder="Username:">
+                </div>
+                <div class="form-control">
+                    <label> ID: </label>
+                    <input type="text" placeholder="Username:">
+                </div>
+                <div class="form-control">
+                    <label> Postal code: </label>
+                    <input type="text" placeholder="Username:">
+                </div>
+                <div class="form-control">
+                    <label> State: </label>
+                    <input type="text" placeholder="Username:">
+                </div>
+                <input type="text" class="btn-green" placeholder="USER REGISTER">
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xl-12" style="margin:20px auto">
-            <div class="card border-0">
-                <div class="card-body">
-                    <h4 class="card-title">Legend</h4>
-                    <p class="card-text">
-                        <b>SUPERADMIN (BCN):</b> Usuario con restricciones de permisos, clientes unicamente del grupo de
-                        BARCELONA, sin acceso a las estadísticas, historal de acciones ni partners.
-                    </p>
-                    <p class="card-text">
-                        <b>ADMIN:</b> User with access to the contact section, requests for completion, SEO, partners,
-                        agenda and customer billing.
-                    </p>
-                    <p class="card-text">
-                        <b>GESTOR:</b> User with access only to the list of clients that he has assigned. He is in
-                        charge of managing the files.
-                    </p>
-                    <p class="card-text">
-                        <b>REGISTRADOR:</b> User with access to customer registration and modify customers.
-                    </p>
-                    <p class="card-text">
-                        <b>RECEPCION:</b> User with access to contact registration and modify contacts.
-                    </p>
-                    <p class="card-text">
-                        <b>COMERCIAL:</b> User with access only to the contact registration, modify contacts and
-                        requests for information section.
-                    </p>
-                    <p class="card-text">
-                        <b>SEO:</b> User who manages SEO cases with access to clients who have been opened an active SEO
-                        case.
-                    </p>
-                    <p class="card-text">
-                        <b>REGISTRADOR SEO:</b> User who can confirm or deny requests for a client to have an active SEO
-                        case.
-                    </p>
-                    <p class="card-text">
-                        <b> PARTNER:</b> User who has access only to customers whose partner is the same as the user.
-                    </p>
-                </div>
-            </div>
+    <div class="col-md-6">
+        <p> Search existent user </p>
+        <p><input type="text" placeholder="search"></p>
+        <p><input type="text" name="search_result"></p>
+    </div>
+    <div class="col-md-12">
+        <div class="legend">
+            <p>Legend</p>
+            <p>
+                SUPERADMIN(GENERAL): User with all permissions and access to all sections of the application. Is the
+                only
+                user able to delete users, clients, contacts, etc.
+                SUPERADMIN (BCN): Usuario con restricciones de permisos, clientes unicamente del grupo de BARCELONA, sin
+                acceso a las estadísticas, historal de acciones ni partners.
+                SUPERADMIN (KIEV): Usuario con restricciones de permisos, clientes unicamente del grupo de KIEV, sin
+                acceso
+                a las estadísticas, historal de acciones ni partners.
+                SUPERADMIN (CONSULTOR): Usuario con restricciones de permisos, sin acceso a las estadísticas, historal
+                de
+                acciones, partners ni los datos de facturación del cliente.
+                ADMIN: User with access to the contact section, requests for completion, SEO, partners, agenda and
+                customer
+                billing.
+                GESTOR: User with access only to the list of clients that he has assigned. He is in charge of managing
+                the
+                files.
+                REGISTRADOR: User with access to customer registration and modify customers.
+                RECEPCION: User with access to contact registration and modify contacts.
+                COMERCIAL: User with access only to the contact registration, modify contacts and requests for
+                information
+                section.
+                SEO: User who manages SEO cases with access to clients who have been opened an active SEO case.
+                REGISTRADOR SEO: User who can confirm or deny requests for a client to have an active SEO case.
+                PARTNER: User who has access only to customers whose partner is the same as the user.
+            </p>
         </div>
     </div>
 @endsection
 
+<script type="">
+    $("search").change(function () {
+        // this.val  parse search input //
+
+        var request = $.ajax({
+            url: "{{route("/usermanagement/new")}}",
+            method: "POST",
+            data: {view: 'view'},
+            dataType: "json"
+        });
+        request.done(function (view) {
+            $("#html").html(view);
+        });
+        request.fail(function (jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
+    });
+</script>
 @push('scripts')
     <script src="{{asset('/assets/plugins/jquery-migrate/dist/jquery-migrate.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>
@@ -141,8 +123,6 @@
     <script src="{{asset('/assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
     <script src="{{asset('/assets/js/demo/table-manage-default.demo.js')}}"></script>
-@endpush
-@push('scripts')
     <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
     <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
 @endpush

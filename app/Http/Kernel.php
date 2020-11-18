@@ -29,6 +29,7 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
             \App\Http\Middleware\AuthGates::class,
+            \Illuminate\Session\Middleware\StartSession::class,
         ],
         'web' => [
             \App\Http\Middleware\EncryptCookies::class,

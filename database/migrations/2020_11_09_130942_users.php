@@ -13,7 +13,27 @@ class Users extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('Users', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('Username:');
+            $table->string('Password:');
+            $table->string('Name:');
+            $table->string('Surname:');
+            $table->string('Phone:');
+            $table->string('Email:');
+            $table->string('DNI:');
+            $table->string('ID:');
+            $table->string('Address:');
+            $table->string('Postal code');
+            $table->string('City:');
+            $table->string('State:');
+            $table->integer('Permission Level:');
+            $table->morphs('notifiable');
+            $table->timestamp('file_created');
+            $table->timestamp('file_updated');
+            $table->timestamp('read_at')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +43,6 @@ class Users extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('flights');
     }
 }
