@@ -3,7 +3,7 @@
 @section('title', 'Basic Tables')
 {{--There output Contacts data --}}
 @section('content')
-    <form method="post" action="{{route('contactsstore')}}" class="col-xl-12">
+    <form method="post" action="{{route('contacts')}}" class="col-xl-12">
         @csrf
         <h4>Contact Data</h4>
         <div class="row">

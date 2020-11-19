@@ -17,29 +17,34 @@ class UserManagement extends Controller
 {
     public function index()
     {
-        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+//        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $users = User::all();
 
         return view('admin.users.index', compact('users'));
     }
 
-    public function UserManagementList()
+    public function UserManagementList(Request $request)
     {
-        return view('dashboard/usermanagement/list');
+        $users = User::all();
+
+        return view('dashboard.usermanagement.list')->with('users', $users);
     }
 
     public function UserManagementNew(Request $request)
     {
-        $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
-        var_dump($validatedData);
-        die("status");
+
+//        $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
+//        var_dump($validatedData);
+
+        return view('dashboard.usermanagement.new');
 
     }
 
     public function create()
     {
-        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+//        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $roles = Role::all()->pluck('title', 'id');
 
@@ -59,7 +64,7 @@ class UserManagement extends Controller
 
     public function edit(User $user)
     {
-        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+//        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $roles = Role::all()->pluck('title', 'id');
 
@@ -84,7 +89,7 @@ class UserManagement extends Controller
 
     public function show(User $user)
     {
-        abort_if(Gate::denies('user_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+//        abort_if(Gate::denies('user_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $user->load('roles');
 
@@ -93,7 +98,7 @@ class UserManagement extends Controller
 
     public function destroy(User $user)
     {
-        abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+//        abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $user->delete();
 

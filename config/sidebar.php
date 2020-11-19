@@ -38,15 +38,15 @@ return [
             'caret' => true,
             'sub_menu' => [[
                 'url' => '/dashboard/email/inbox',
-                'title' => 'dashboard/email/inbox',
+                'title' => 'Email Inbox',
                 'route-name' => 'general inbox'
             ], [
                 'url' => '/dashboard/email/compose',
-                'title' => 'dashboard/email/compose',
+                'title' => 'Email Compose',
                 'route-name' => 'withdraw compose'
             ], [
                 'url' => '/dashboard/email/detail',
-                'title' => 'dashboard/email/detail',
+                'title' => 'Email Detail',
                 'route-name' => 'withdraw detail'
             ]]
         ],
@@ -57,16 +57,15 @@ return [
             'caret' => true,
             'sub_menu' => [
                 [
-                    'url' => '/dashboard/usermanagement/list',
-                    'title' => 'Contact List',
-                    'route-name' => 'Contact List'
-                ],
-                [
                     'url' => '/dashboard/usermanagement/new',
                     'title' => 'Contact New',
                     'route-name' => 'Contact New'
                 ],
-
+                [
+                    'url' => '/dashboard/usermanagement/list',
+                    'title' => 'Contact List',
+                    'route-name' => 'Contact List'
+                ],
             ]
         ],
         [
@@ -86,7 +85,7 @@ return [
                     'route-name' => 'ContactRegistration'
                 ],
                 [
-                    'url' => '/dashboard/inquiries',
+                    'url' => '/dashboard/contacts/inquiries',
                     'title' => 'Inquiries',
                     'route-name' => 'Inquiries'
                 ],
@@ -99,31 +98,31 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => '/Customers/Registration',
+                'url' => 'dashboard/Customers/Registration',
                 'title' => 'Customer Registration',
                 'route-name' => 'Customer Registration'
             ], [
-                'url' => '/Customer/list(ADMIN)',
-                'title' => 'Customerlist(ADMIN)',
-                'route-name' => 'Customerlist(ADMIN)'
+                'url' => 'dashboard/Customer/list (ADMIN)',
+                'title' => 'Customerlist (ADMIN)',
+                'route-name' => 'Customerlist (ADMIN)'
             ], [
-                'url' => '/Customer/List(MANAGER)',
-                'title' => 'Customer List(MANAGER)',
-                'route-name' => 'Customer List(MANAGER)'
+                'url' => 'dashboard/Customer/List (MANAGER)',
+                'title' => 'Customer List (MANAGER)',
+                'route-name' => 'Customer List (MANAGER)'
             ], [
-                'url' => 'Customer/List(PARTNER)',
-                'title' => 'Customer List(PARTNER)',
-                'route-name' => 'Customer List(PARTNER)'
+                'url' => 'dashboard/Customer/List (PARTNER)',
+                'title' => 'Customer List (PARTNER)',
+                'route-name' => 'Customer List (PARTNER)'
             ], [
-                'url' => '/Customer/List(REGISTRATOR)',
-                'title' => 'Customer List(REGISTRATOR)',
-                'route-name' => 'Customer List(REGISTRATOR)'
+                'url' => 'dashboard/Customer/List (REGISTRATOR)',
+                'title' => 'Customer List (REGISTRATOR)',
+                'route-name' => 'Customer List (REGISTRATOR)'
             ], [
-                'url' => 'Customer/List(SADMIN',
-                'title' => 'Customer List(SADMIN)',
+                'url' => 'dashboard/Customer/List (SADMIN',
+                'title' => 'Customer List (SADMIN)',
                 'route-name' => 'Customer List'
             ], [
-                'url' => '/Pending Billing',
+                'url' => 'dashboard/Pending Billing',
                 'title' => 'Pending Billing',
                 'route-name' => 'Pending Billing'
             ]
@@ -135,11 +134,11 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => '/Partners/Registration',
+                'url' => 'dashboard/Partners/Registration',
                 'title' => 'Partner Registration',
                 'route-name' => 'Partner Registration'
             ], [
-                'url' => '/Partners/List',
+                'url' => 'dashboard/Partners/List',
                 'title' => 'Partners List',
                 'route-name' => 'Partners List'
             ]]
@@ -149,11 +148,11 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => '/Finalizate/Files',
+                'url' => 'dashboard/Finalizate/Files',
                 'title' => 'Finalizate Files',
                 'route-name' => 'Finalizate Files'
             ], [
-                'url' => '/Withdraw/Contracts',
+                'url' => 'dashboard/Withdraw/Contracts',
                 'title' => 'Withdraw/Contracts',
                 'route-name' => 'Withdraw Contracts'
             ]]
@@ -163,17 +162,17 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => '/General/Statistics',
+                'url' => 'dashboard/General/Statistics',
                 'title' => 'General Statistics',
                 'route-name' => 'General Statistics'
             ], [
-                'url' => '/Facturation/Statistics',
-                'title' => 'Withdraw Contracts',
+                'url' => 'dashboard/Facturation/Statistics',
+                'title' => 'Facturation Contracts',
                 'route-name' => 'Withdraw Contracts'
             ], [
-                'url' => '/Contact/Statistics',
-                'title' => 'Withdraw Contracts',
-                'route-name' => 'Withdraw Contracts'
+                'url' => 'dashboard/Contact/Statistics',
+                'title' => 'Contact Contracts',
+                'route-name' => 'Contact Statistics'
             ]]
         ],
         ['icon' => 'fa fa-hdd',

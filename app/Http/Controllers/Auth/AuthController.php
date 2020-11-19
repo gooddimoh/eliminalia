@@ -15,7 +15,7 @@ class AuthController extends Controller
 
     public function postLogin(Request $request)
     {
-        var_dump($request);
+        print_r($request->get(["name"]));
         echo "postLogin";
         die();
 
@@ -26,19 +26,23 @@ class AuthController extends Controller
         return response(['user' => $user, 'access_token' => $accessToken]);
     }
 
+    public function store()
+    {
+        echo "its store request";
+    }
+
     public function getLogout(Request $request)
     {
         echo 'getLogout';
         var_dump($request->validate());
-        echo "postLogin";
+        echo "getLogout";
         die();
     }
 
     public function getRegister(Request $request)
     {
-        var_dump($request);
-        echo "postLogin";
-        die();
+        $request->session(['key'=>'value']);
+        var_dump($request->all());
     }
 
     public function postRegister()

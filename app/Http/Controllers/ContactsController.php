@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -16,8 +17,10 @@ class ContactsController extends Controller
 {
     public function index()
     {
-        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+//        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+//        if (Auth::check()) {
+//            // The user is logged in...
+//        }
         $users = User::all();
 
         return view('admin.users.index', compact('users'));
@@ -35,7 +38,6 @@ class ContactsController extends Controller
     public function store(StoreUserRequest $request)
     {
 
-        $request->session()->flush();
         die();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));

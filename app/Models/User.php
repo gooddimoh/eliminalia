@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use App\Models\Role;
@@ -29,7 +28,7 @@ class User extends Model
 //        $this->disk = $disk;
 //    }
 
-    protected $table = 'user';
+    protected $table = 'Users';
 
     protected $dates = [
         'updated_at',

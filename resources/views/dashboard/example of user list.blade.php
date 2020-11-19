@@ -1,9 +1,9 @@
 @extends('layouts.default')
 
-@section('title', 'USER MANAGEMENT')
+@section('title', 'Example Of User List')
 
 @push('css')
-    <link href="/assets/plugins/summernote/dist/summernote.css" rel="stylesheet"/>
+    <link href="{{ asset('/assets/plugins/summernote/dist/summernote.css')}}" rel="stylesheet"/>
 @endpush
 
 @section('content')

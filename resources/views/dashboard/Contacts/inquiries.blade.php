@@ -47,7 +47,8 @@
                             <div class="col-sm-12 col-md-6">
                                 <div class="dataTables_length" id="data-table-default_length"><label>
                                         Show
-                                        <select name="data-table-default_length" aria-controls="data-table-default" class="custom-select custom-select-sm form-control form-control-sm">
+                                        <select name="data-table-default_length" aria-controls="data-table-default"
+                                                class="custom-select custom-select-sm form-control form-control-sm">
                                             <option value="10">10</option>
                                             <option value="25">25</option>
                                             <option value="50">50</option>
@@ -71,36 +72,40 @@
                                         <th width="1%" class="sorting_asc" tabindex="0"
                                             aria-controls="data-table-default" rowspan="1" colspan="1"
                                             style="width: 0px;" aria-sort="ascending"
-                                            aria-label=": activate to sort column descending"></th>
+                                            aria-label=": activate to sort column descending">
+                                            1
+                                        </th>
                                         <th width="1%" data-orderable="false" class="sorting_disabled" rowspan="1"
-                                            colspan="1" style="width: 30px;" aria-label=""></th>
+                                            colspan="1" style="width: 30px;" aria-label="">2
+                                        </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 272px;"
-                                            aria-label="Rendering engine: activate to sort column ascending">Rendering
-                                            engine
+                                            aria-label="Rendering engine: activate to sort column ascending">
+                                            name
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 339px;"
-                                            aria-label="Browser: activate to sort column ascending">Browser
+                                            aria-label="Browser: activate to sort column ascending">
+                                            Email
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 306px;"
-                                            aria-label="Platform(s): activate to sort column ascending">Platform(s)
+                                            aria-label="Platform(s): activate to sort column ascending">
+                                            Email
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 235px;"
-                                            aria-label="Engine version: activate to sort column ascending">Engine
-                                            version
+                                            aria-label="Engine version: activate to sort column ascending">
+                                            Email
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 176px;"
-                                            aria-label="CSS grade: activate to sort column ascending">CSS grade
+                                            aria-label="CSS grade: activate to sort column ascending">
+                                            Email
                                         </th>
                                     </tr>
                                     </thead>
                                     <tbody>
-
-
                                     <tr class="gradeX odd" role="row">
                                         <td width="1%" class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">
                                             1
@@ -112,86 +117,6 @@
                                         <td>Win 95+</td>
                                         <td>4</td>
                                         <td>X</td>
-                                    </tr>
-                                    <tr class="gradeC even" role="row">
-                                        <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">2</td>
-                                        <td class="with-img"><img src="../assets/img/user/user-2.jpg"
-                                                                  class="img-rounded height-30"></td>
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 5.0</td>
-                                        <td>Win 95+</td>
-                                        <td>5</td>
-                                        <td>C</td>
-                                    </tr>
-                                    <tr class="gradeA odd" role="row">
-                                        <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">3</td>
-                                        <td class="with-img"><img src="../assets/img/user/user-3.jpg"
-                                                                  class="img-rounded height-30"></td>
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 5.5</td>
-                                        <td>Win 95+</td>
-                                        <td>5.5</td>
-                                        <td>A</td>
-                                    </tr>
-                                    <tr class="gradeA even" role="row">
-                                        <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">4</td>
-                                        <td class="with-img"><img src="../assets/img/user/user-4.jpg"
-                                                                  class="img-rounded height-30"></td>
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 6</td>
-                                        <td>Win 98+</td>
-                                        <td>6</td>
-                                        <td>A</td>
-                                    </tr>
-                                    <tr class="gradeA odd" role="row">
-                                        <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">5</td>
-                                        <td class="with-img"><img src="../assets/img/user/user-5.jpg"
-                                                                  class="img-rounded height-30"></td>
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 7</td>
-                                        <td>Win XP SP2+</td>
-                                        <td>7</td>
-                                        <td>A</td>
-                                    </tr>
-                                    <tr class="gradeA even" role="row">
-                                        <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">6</td>
-                                        <td class="with-img"><img src="../assets/img/user/user-6.jpg"
-                                                                  class="img-rounded height-30"></td>
-                                        <td>Trident</td>
-                                        <td>AOL browser (AOL desktop)</td>
-                                        <td>Win XP</td>
-                                        <td>6</td>
-                                        <td>A</td>
-                                    </tr>
-                                    <tr class="gradeA odd" role="row">
-                                        <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">7</td>
-                                        <td class="with-img"><img src="../assets/img/user/user-7.jpg"
-                                                                  class="img-rounded height-30"></td>
-                                        <td>Gecko</td>
-                                        <td>Firefox 1.0</td>
-                                        <td>Win 98+ / OSX.2+</td>
-                                        <td>1.7</td>
-                                        <td>A</td>
-                                    </tr>
-                                    <tr class="gradeA even" role="row">
-                                        <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">8</td>
-                                        <td class="with-img"><img src="../assets/img/user/user-8.jpg"
-                                                                  class="img-rounded height-30"></td>
-                                        <td>Gecko</td>
-                                        <td>Firefox 1.5</td>
-                                        <td>Win 98+ / OSX.2+</td>
-                                        <td>1.8</td>
-                                        <td>A</td>
-                                    </tr>
-                                    <tr class="gradeA odd" role="row">
-                                        <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">9</td>
-                                        <td class="with-img"><img src="../assets/img/user/user-9.jpg"
-                                                                  class="img-rounded height-30"></td>
-                                        <td>Gecko</td>
-                                        <td>Firefox 2.0</td>
-                                        <td>Win 98+ / OSX.2+</td>
-                                        <td>1.8</td>
-                                        <td>A</td>
                                     </tr>
                                     <tr class="gradeA even" role="row">
                                         <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">10</td>

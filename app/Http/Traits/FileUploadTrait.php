@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Traits;
 
 use Illuminate\Support\Facades\Storage;
@@ -8,22 +9,23 @@ trait FileUploadTrait
 {
     /**
      * @var string
-     */
+     **/
     protected $uploadPath = 'uploads';
 
     /**
      * @var
-     */
+     **/
     public $folderName;
 
     /**
      * @var string
-     */
+     **/
     public $rule = 'image|max:2000';
 
     /**
      * @return bool
-     */
+     **/
+
     private function createUploadFolder(): bool
     {
         if (!file_exists(config('filesystems.disks.public.root') . '/' . $this->uploadPath . '/' . $this->folderName)) {
@@ -41,20 +43,16 @@ trait FileUploadTrait
      * @param $file
      * @return fileUploadTrait|\Illuminate\Http\RedirectResponse
      */
-    private function validateFileAction($file)
+    private function validateFileAction($file): string
     {
-
         $rules = array('fileupload' => $this->rule);
-        $file  = array('fileupload' => $file);
+        $file = array('fileupload' => $file);
 
         $fileValidator = Validator::make($file, $rules);
-
         if ($fileValidator->fails()) {
             $messages = $fileValidator->messages();
-
             return redirect()->back()->withInput(request()->all())
                 ->withErrors($messages);
-
         }
     }
 
@@ -66,7 +64,6 @@ trait FileUploadTrait
      */
     private function validateFile($files)
     {
-
         if (is_array($files)) {
             foreach ($files as $file) {
                 return $this->validateFileAction($file);
@@ -85,7 +82,7 @@ trait FileUploadTrait
     private function putFile($file)
     {
         $fileName = preg_replace('/\s+/', '_', time() . ' ' . $file->getClientOriginalName());
-        $path     = $this->uploadPath . '/' . $this->folderName . '/';
+        $path = $this->uploadPath . '/' . $this->folderName . '/';
 
         if (Storage::putFileAs('public/' . $path, $file, $fileName)) {
             return $path . $fileName;
@@ -104,7 +101,7 @@ trait FileUploadTrait
     {
         $data = [];
 
-        if($files != null){
+        if ($files != null) {
 
             $this->validateFile($files);
 

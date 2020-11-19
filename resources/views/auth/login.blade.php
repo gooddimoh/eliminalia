@@ -33,6 +33,7 @@
             <!-- begin login-content -->
             <div class="login-content">
                 <form action="/postLogin" method="post" class="margin-bottom-0">
+                    @csrf
                     <div class="form-group m-b-15">
                         <input type="text" class="form-control form-control-lg" placeholder="Email Address" required/>
                     </div>

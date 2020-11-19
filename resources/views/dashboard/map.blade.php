@@ -3,7 +3,7 @@
 @section('title', 'Vector Map')
 
 @push('css')
-    <link href="{{'/assets/plugins/jvectormap-next/jquery-jvectormap.css'}}" rel="stylesheet"/>
+    <link href="{{ asset('/assets/plugins/jvectormap-next/jquery-jvectormap.css')}}" rel="stylesheet"/>
 @endpush
 
 @section('content')
@@ -148,7 +148,7 @@
 @endsection
 
 @push('scripts')
-    <script src="{{'/assets/plugins/jvectormap-next/jquery-jvectormap.min.js'}}"></script>
-    <script src="{{'/assets/plugins/jvectormap-next/jquery-jvectormap-world-mill.js'}}"></script>
-    <script src="{{'/assets/js/demo/map-vector.demo.js'}}"></script>
+    <script src="{{ asset('/assets/plugins/jvectormap-next/jquery-jvectormap.min.js')}}"></script>
+    <script src="{{ asset('/assets/plugins/jvectormap-next/jquery-jvectormap-world-mill.js')}}"></script>
+    <script src="{{ asset('/assets/js/demo/map-vector.demo.js')}}"></script>
 @endpush

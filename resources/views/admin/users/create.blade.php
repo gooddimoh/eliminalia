@@ -20,9 +20,7 @@
                         </div>
                         <div class="form-group ">
                             <label for="email">{{ trans('cruds.user.fields.email') }}*</label>
-                            <input type="email" id="email" name="email" class="form-control"
-                                   value="{{ old('email', isset($user) ? $user->email : '') }}" required>
-
+                            <input type="email" id="email" name="email" class="form-control" value="{{ old('email', isset($user) ? $user->email : '') }}" required>
                             <p class="helper-block">
                                 {{ trans('cruds.user.fields.email_helper') }}
                             </p>
@@ -78,7 +76,6 @@
                                     <option value="{{ $id }}" {{ (in_array($id, old('roles', [])) || isset($user) && $user->roles->contains($id)) ? 'selected' : '' }}>{{ $roles }}</option>
                                 @endforeach
                             </select>
-
                             <p class="helper-block">
                                 {{ trans('cruds.user.fields.roles_helper') }}
                             </p>
