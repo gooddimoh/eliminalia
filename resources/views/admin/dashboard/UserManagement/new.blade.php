@@ -40,7 +40,7 @@
                     <input class="form-control form-control-sm" type="text" placeholder="Country*:">
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3">[]
                 <div class="form-group row">
                     <label class="col-form-label ">Password:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Surname:">
@@ -75,10 +75,11 @@
                     <table class="table table-td-valign-middle">
                         <tbody>
                         <tr>
-                            <td class="with-checkbox">Username1</td>
-                            <td class="with-radio">Username2</td>
-                            <td class="with-form-control">Username3</td>
-                            <td class="with-input-control">Username4</td>
+                            <td class="with-img">
+                                <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                            </td>
+                            <td>Nicky Almera</td>
+                            <td>nicky@hotmail.com</td>
                         </tr>
                         </tbody>
                     </table>

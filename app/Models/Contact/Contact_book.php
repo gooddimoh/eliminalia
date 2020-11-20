@@ -4,9 +4,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Management_SEO extends Model
+class Contact_Book extends Model
 {
     use HasFactory;
+
 
     /**
      * The attributes that are mass assignable.
@@ -14,7 +15,7 @@ class Management_SEO extends Model
      * @var array
      */
 
-    protected $table = 'management_seo';
+    protected $table = 'contact_book';
 
     protected $dates = [
         'updated_at',
@@ -24,13 +25,10 @@ class Management_SEO extends Model
     ];
 
     protected $fillable = [
-        'id ',
-        'fecha',
-        'hora',
-        'id_usuario ',
-        'id_cliente',
-        'contenido',
-        'accion'
+        'id', 'fecha', 'tipo_contacto', 'tipo_contacto', 'id_medio_comunicacion',
+        'nombre_empresa', 'cif', 'cargo', 'nombre', 'apellidos', 'dni', 'pais',
+        'ciudad', 'provincia', 'direccion', 'codigo_postal', 'telefono', 'telefono2',
+        'email', 'email2', 'web', 'observaciones', 'idioma', 'activo',
     ];
 
     /**
@@ -38,8 +36,8 @@ class Management_SEO extends Model
      *
      * @var array
      */
-
     protected $hidden = [
         'password', 'remember_token',
     ];
+
 }

@@ -17,7 +17,6 @@ class UserManagement extends Controller
 {
     public function index()
     {
-
 //        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $users = User::all();
@@ -55,10 +54,10 @@ class UserManagement extends Controller
     {
 
         $request->session()->flush();
-        die();
+        $request->flush();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
-
+        die();
         return redirect()->route('admin.users.index');
     }
 

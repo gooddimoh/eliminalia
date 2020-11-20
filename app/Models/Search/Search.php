@@ -1,32 +1,32 @@
 <?php
+
 namespace App\Models;
 
 use App\Models\Role;
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
 
-class User extends Model
+class Search extends Model
 {
     use SoftDeletes, Notifiable, HasFactory;
 
-//    public function __construct(UploadedFile  $uploadedFile, $disk = 'local')
-//    {
-//        parent::__construct($attributes);
-//        self::created(function (User $user) {
-//            $registrationRole = config('panel.registration_default_role');
-//
-//            if (!$user->roles()->get()->contains($registrationRole)) {
-//                $user->roles()->attach($registrationRole);
-//            }
-//        });
-//
-//        $this->uploadedFile = $uploadedFile;
-//        $this->originalName = $uploadedFile->getClientOriginalName();
-//        $this->disk = $disk;
-//    }
+    public function __construct(UploadedFile $uploadedFile, $disk = 'local')
+    {
+        parent::__construct($attributes);
+        self::created(function (User $user) {
+            $registrationRole = config('panel.registration_default_role');
+            if (!$user->roles()->get()->contains($registrationRole)) {
+                $user->roles()->attach($registrationRole);
+            }
+        });
+        $this->uploadedFile = $uploadedFile;
+        $this->originalName = $uploadedFile->getClientOriginalName();
+        $this->disk = $disk;
+    }
 
     protected $table = 'Users';
 
@@ -46,14 +46,15 @@ class User extends Model
         'lastname',
         'password',
         'email',
-        'email',
         'created_at',
         'updated_at',
         'deleted_at',
     ];
 
-    protected function create(array $data)
+    protected function create(Request $request, array $data)
     {
+        $request->valid();
+
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],

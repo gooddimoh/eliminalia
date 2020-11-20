@@ -37,14 +37,18 @@ class UsersController extends Controller
             'firstname' => 'required',
             'lastname' => 'required',
             'password' => 'required',
-            'email' => 'required',
+            'email' => 'required'
         ]);
+        $request->ajax();
 
+
+        $response->isOk();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
 
         redirect()->route('admin.users.index');
 
+        return view();
         return response()->json("StatusCode", 200);
     }
 

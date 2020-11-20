@@ -1,11 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Contacts;
 use Illuminate\Http\Request;
 
-class RegisterController extends Controller
+class RegistrationController extends Controller
 {
     public function index()
     {
