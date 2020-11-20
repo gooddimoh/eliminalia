@@ -40,7 +40,7 @@
                     <input class="form-control form-control-sm" type="text" placeholder="Country*:">
                 </div>
             </div>
-            <div class="col-md-3">[]
+            <div class="col-md-3">
                 <div class="form-group row">
                     <label class="col-form-label ">Password:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Surname:">
@@ -75,12 +75,15 @@
                     <table class="table table-td-valign-middle">
                         <tbody>
                         <tr>
-                            <td class="with-img">
-                                <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
-                            </td>
-                            <td>Nicky Almera</td>
-                            <td>nicky@hotmail.com</td>
+                            @foreach($users as $user)
+                                <td>{{$user->id}}</td>
+                                <td class="with-img">
+                                    <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                </td>
+                                <td>Nicky Almera</td>
+                                <td>nicky@hotmail.com</td>
                         </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -119,12 +122,12 @@
 
 <script type="">
     $("search").change(function () {
-        // this.val  parse search input //
+        let data = "data";
         var request = $.ajax({
             url: "{{route("usermanagementnew")}}",
-            method: "POST",
+            method: "post",
             data: {view: 'view'},
-            dataType: "json"
+            dataType: "html"
         });
         request.done(function (view) {
             $("#html").html(view);
