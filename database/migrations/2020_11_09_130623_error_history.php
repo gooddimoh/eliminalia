@@ -16,7 +16,6 @@ class HistoryError extends Migration
         Schema::create('history_error', function (Blueprint $table) {
             $table->unsignedInteger('user_id');
             $table->foreign('user_id', 'user_id_fk_466020')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('user_id', 'user_id_fk_466020')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedInteger('role_id');
             $table->foreign('role_id', 'role_id_fk_466020')->references('id')->on('roles')->onDelete('cascade');
         });
