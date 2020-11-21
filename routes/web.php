@@ -28,7 +28,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('dashboard/Timeline', 'MainController@Timeline')->name('Timeline');
     Route::get('dashboard/Calendar', 'MainController@Calendar')->name('calendar');
     Route::get('contacts', 'MainController@index')->name('contacts');
-
+    // change
     Route::get('dashboard/contacts/registration', 'MainController@ContactRegistration')->name('ContactRegistration');
     Route::get('dashboard/contacts/list', 'MainController@ContactList')->name('ContactList');
     Route::get('dashboard/contacts/inquiries', 'MainController@Inquiries')->name('Inquiries');
