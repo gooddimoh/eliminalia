@@ -7,5 +7,13 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    //
+
+    public static function login()
+    {
+
+    }
+    public static function register()
+    {
+
+    }
 }

@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -27,6 +26,24 @@ class Users extends Migration
             $table->string('Postal code');
             $table->string('City:');
             $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->string('State:');
+            $table->integer('payment')->comment("banned");
             $table->integer('Permission Level:');
             $table->morphs('notifiable');
             $table->timestamp('file_created');

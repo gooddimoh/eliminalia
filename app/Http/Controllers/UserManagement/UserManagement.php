@@ -9,46 +9,41 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Notifications\UserApprovedNotification;
 use App\Models\Role;
 use App\Models\User;
-use Gate;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class UserManagement extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-//        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $users = User::all();
-
         return view('admin.users.index', compact('users'));
     }
 
-    public function UserManagementList(Request $request)
+    public function show(Request $request)
     {
+        Gate::after(function ($user, $ability, $result, $arguments) {
+        });
         $users = User::all();
-
-        return view('dashboard.usermanagement.list')->with('users', $users);
+        return view('dashboard.Admin.UserManagement.index')->with('users', $users);
     }
 
-    public function UserManagementNew(Request $request)
+    public function create(Request $request)
     {
-
-//        $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
-//        var_dump($validatedData);
-
-        return view('dashboard.usermanagement.new');
-
-    }
-
-    public function create()
-    {
-//        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
 
         $roles = Role::all()->pluck('title', 'id');
+//        $user = User::whereIn('id', request('ids'))->delete();
+        $users = User::all();
 
-        return view('admin.users.create', compact('roles'));
+        // var_dump($validatedData);
+
+        //   return view('dashboard.Admin.UserManagement.create', compact('roles'));
+        return view('dashboard.Admin.UserManagement.create')->with('users', $users);
     }
+
 
     public function store(StoreUserRequest $request)
     {
@@ -61,7 +56,7 @@ class UserManagement extends Controller
         return redirect()->route('admin.users.index');
     }
 
-    public function edit(User $user)
+    public function edit(Request $request, User $user)
     {
 //        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
@@ -86,15 +81,6 @@ class UserManagement extends Controller
         return redirect()->route('admin.users.index');
     }
 
-    public function show(User $user)
-    {
-//        abort_if(Gate::denies('user_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
-        $user->load('roles');
-
-        return view('admin.users.show', compact('user'));
-    }
-
     public function destroy(User $user)
     {
 //        abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -107,7 +93,6 @@ class UserManagement extends Controller
     public function massDestroy(MassDestroyUserRequest $request)
     {
         User::whereIn('id', request('ids'))->delete();
-
         return response(null, Response::HTTP_NO_CONTENT);
     }
 }

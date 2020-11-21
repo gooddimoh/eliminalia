@@ -9,6 +9,7 @@ class EmailController extends Controller
     public function EmailInbox()
     {
         view('email.email-inbox');
+
     }
 
     public function EmailCompose()

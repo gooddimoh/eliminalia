@@ -2,75 +2,54 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\API\AuthController;
 use App\Models\User;
+use Illuminate\Http\Request;
+use phpDocumentor\Reflection\DocBlock\TagFactory;
 
 class MainController extends Controller
 {
 
 //    public function __construct()
 //    {
-//        $this->middleware('auth');
+//        $this->middleware('auth', 'role', 'permissions');
 //    }
 
     public function index()
     {
         if (auth()->check()) {
             $user = auth()->user();
+            $role = auth()->role();
         }
     }
 
-    public function markNotification(Request $request)
+    public function Dashboard(Request $request)
     {
-        auth()->user()->unreadNotifications->when($request->input('id'), function ($query) use ($request) {
-            return $query->where('id', $request->input('id'));
-        })->markAsRead();
-
-        return response()->noContent();
+        return view('dashboard.dashboard');
     }
 
-    public function dashboard()
+    public function MakePostToTimeline(Request $request)
     {
-        return view('dashboard/dashboard');
     }
 
-    public function UserManagement()
+    public function Contact(Request $request)
     {
-        $users = User::all();
-        return view('dashboard/contacts/Contact Registration')->with('users', $users);
+        Contact::class;
     }
 
-    public function Timeline()
+    public function Inquiries(Request $request)
     {
-        return view('dashboard/timeline');
+        Inquiries::class;
     }
 
-    public function MakePostToTimeline()
+    public function ContactRegistration(Request $request)
     {
-        return view('dashboard/makeposttotimeline');
+        ContactRegistration::class;
     }
 
-    public function Contact()
+    public function ContactList(Request $request)
     {
-        $user = User::all();
-        return view('dashboard/contacts/contact registration')->with('users', $user);
-    }
-
-    public function Inquiries()
-    {
-        return view('dashboard/Contacts/inquiries');
-    }
-
-    public function ContactRegistration()
-    {
-        return view('dashboard/contacts/contact registration');
-    }
-
-    public function ContactList()
-    {
-        return view('dashboard/contacts/contact list');
-
-//        $users = User::all();
-//        return view('dashboard/contacts/contact list')->with('users', $users);
+        ContactList::class;
     }
 
     public function SelectSearch(Request $request)
@@ -83,29 +62,25 @@ class MainController extends Controller
         return response()->json($movies);
     }
 
-    public function Calendar()
+    public function Calendar(Request $request)
     {
         return view('dashboard/calendar');
     }
 
-    public function Map()
+    public function Map(Request $request)
     {
         return view('dashboard/map');
     }
 
-    public function Filemanager()
+    public function FileManager(Request $request)
     {
-        return view('dashboard/file manager');
+        FileManager::Index();
     }
 
-    public function Login_page()
+    public function Auth()
     {
-        return view('auth/login');
-    }
-
-    public function Registration_page()
-    {
-        return view('auth/register');
+        AuthController::login();
+        AuthController::register();
     }
 
 }

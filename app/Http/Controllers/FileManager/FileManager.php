@@ -4,23 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class EmailController extends Controller
+class FileManager extends Controller
 {
-    public function EmailInbox()
+    public static function Index(Request $request)
     {
-        view('email.email-inbox');
+        $request->all()->Compose() ? view('email.email-compose') : '';
+        $request->all()->inbox() ? view('email.email-inbox') : '';
+        $request->all()->iDetail() ? view('email.email-idetail') : '';
 
     }
-
-    public function EmailCompose()
-    {
-        view('email.email-compose');
-
-    }
-
-    public function EmailDetail()
-    {
-        view('email.email-detail');
-    }
-
 }

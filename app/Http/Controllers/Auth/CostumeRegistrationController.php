@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Contacts;
 use Illuminate\Http\Request;
 
-class RegistrationController extends Controller
-{
+class CostumeRegistrationController extends Controller {
     public function index()
     {
         return view("dashboard.Contacts.Contact Registration");

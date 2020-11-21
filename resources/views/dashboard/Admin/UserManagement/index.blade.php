@@ -6,7 +6,7 @@
 @section('content')
     <div class="panel">
         <div class="panel-heading">
-            <h4 class="panel-title">Data Table - Default</h4>
+            <h4 class="panel-title">UserManagement List</h4>
             <div class="panel-heading-btn">
                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i
                             class="fa fa-expand"></i></a>
@@ -59,22 +59,12 @@
                                 <tr class="gradeA even" role="row">
                                     <td class="f-w-600 text-inverse dtr-control sorting_1"
                                         tabindex="0">{{$user->id}}</td>
-                                    {{--                                <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">{{$number}}</td>--}}
                                     <td class="with-img">
                                         <img src="../assets/img/user/user-10.jpg" class="img-rounded height-30">
                                     </td>
-                                    {{--                                    <img src="{{$imgsrc}}" class="img-rounded height-30">--}}
-                                    {{--                                </td>--}}
-                                    {{--                                <td>{{$number}}</td>--}}
-                                    {{--                                <td>{{$number}}</td>--}}
-                                    {{--                                <td>{{$number}}</td>--}}
-                                    {{--                                <td>{{$number}}</td>--}}
-                                    {{--                                <td>{{$number}}</td>--}}
-                                    <td>2</td>
-                                    <td>2</td>
-                                    <td>2</td>
-                                    <td>2</td>
-                                    <td>2</td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->password}}</td>
+                                    <td>{{$user->id}}</td>
                                 </tr>
                             @endforeach
                             </tbody>

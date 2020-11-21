@@ -80,8 +80,8 @@
                                 <td class="with-img">
                                     <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
                                 </td>
-                                <td>Nicky Almera</td>
-                                <td>nicky@hotmail.com</td>
+                                <td>{{$user->email}}</td>
+                                <td>{{$user->role}}</td>
                         </tr>
                         @endforeach
                         </tbody>
@@ -97,25 +97,29 @@
     <div class="legend">
         <h1>Legend</h1>
         <p>
-            SUPERADMIN(GENERAL): User with all permissions and access to all sections of the application. Is the only
-            user able to delete users, clients, contacts, etc.
-            SUPERADMIN (BCN): Usuario con restricciones de permisos, clientes unicamente del grupo de BARCELONA, sin
-            acceso a las estadísticas, historal de acciones ni partners.
-            SUPERADMIN (KIEV): Usuario con restricciones de permisos, clientes unicamente del grupo de KIEV, sin acceso
-            a las estadísticas, historal de acciones ni partners.
-            SUPERADMIN (CONSULTOR): Usuario con restricciones de permisos, sin acceso a las estadísticas, historal de
-            acciones, partners ni los datos de facturación del cliente.
-            ADMIN: User with access to the contact section, requests for completion, SEO, partners, agenda and customer
-            billing.
-            GESTOR: User with access only to the list of clients that he has assigned. He is in charge of managing the
-            files.
-            REGISTRADOR: User with access to customer registration and modify customers.
-            RECEPCION: User with access to contact registration and modify contacts.
-            COMERCIAL: User with access only to the contact registration, modify contacts and requests for information
-            section.
-            SEO: User who manages SEO cases with access to clients who have been opened an active SEO case.
-            REGISTRADOR SEO: User who can confirm or deny requests for a client to have an active SEO case.
-            PARTNER: User who has access only to customers whose partner is the same as the user.
+            SUPERADMIN; Acceso total a la app
+            ADMIN SUCURSAL: Puede ver clientes de esa sucursal, comerciales de esa sucursal, partners de esa sucursal y
+            facturación de de los clientes de esa sucursal. (Ver me refiero a ver y modificar) cualquier Eliminación que
+            quiera hacer llega siempre a SUPER ADMIN. El admin de sucursal puede ver toda la cola de rastreos que están
+            pedidas al rastreador.
+            ALTA CONTRATOS: Solo puede dar de clientes y generar contratos en .pdf, modificar clientes, pero
+            evidentemente solamente de la sucursal a a que está asignado.
+            RASTREADOR: Solo hacer rastreos y añadir rastreos al sistema. Es como una cola de pedidos, los comerciales
+            asignados a este rastreador, le piden rastros y el responde con los links. Esto tiene que funcionar como una
+            cola de pedidos; el comercial o rastreador piden un rastreo y llega el aviso al rastreador, cuando el
+            rastreador completa el rastreo le llega una viso a la persona que le había pedido el rastreo. Cuando doy de
+            alta un rastreador tengo que decir a que persona asigno ese rastreador. (A que comercial y parteras)
+            COMERCIAL: Puede añadir contactos y estos convertirlos a clientes, ver facturación de sus clientes, ver
+            estado de clientes como si fuera un manager, pero no puede ver las gestiones internas. Tiene que poder hacer
+            contactos y contratos y poner más de un contrato a un cliente. Tiene que poder hacer seguimiento a todos los
+            rastreos que el comercia envíe a usuario RASTREADOR.
+            PARTNER; Puede ver los clientes de sus comerciales, su facturación y cómo avanza el expediente como si fuera
+            manager pero sin ver gestiones internas.
+            MANAGER: Puede ver todos sus clientes, hacer gestiones internas, publicas, subir documentos. Finalizar un
+            cliente, Rescindir un cliente. No puede ver facturación, tampoco puede modificar los datos de un cliente, ni
+            eliminar un cliente. Cuando un cliente se pone pendiente de pago, tiene que llegar una aviso al "comercial
+            de ese cliente e Partner si lo tuviera" también al admin de la sucursal. ¿Quién puede decir si el pago ya
+            está recibido o no? Solo el SUPER ADMIN.
         </p>
     </div>
 @endsection
