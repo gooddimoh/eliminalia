@@ -7,6 +7,7 @@ Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 're
 Route::post('register', ['uses' => 'Auth\AuthController@postRegister', 'as' => 'login']);
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin', 'as' => 'login']);
 
+//ss
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', function () {
