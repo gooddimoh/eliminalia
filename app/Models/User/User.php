@@ -39,11 +39,17 @@ class User extends Model
 
     protected function create(array $data)
     {
-        $user = User::create(['name' => $data['name'], 'email' => $data['email'], 'password' => bcrypt($data['password'])]);
+        $user = User::create(
+            ['name' => $data['name'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password'])]
+        );
 
-        Storage::makeDirectory(__DIR__ . '/userassets/' . $user->id);
-        Storage::makeDirectory(__DIR__ . '/userassets/' . $user->id . "/link");
-        Storage::makeDirectory(__DIR__ . '/userassets/' . $user->id . "/videos");
+        Storage::makeDirectory(__DIR__ . '/Client_ID_/' . $user->id);
+        Storage::makeDirectory(__DIR__ . '/Client_ID_/' . $user->id . "/Internal/Client_Private_Documents/");
+        Storage::makeDirectory(__DIR__ . '/Client_ID_/' . $user->id . "/Links/Internal/Private_Documents/");
+        Storage::makeDirectory(__DIR__ . '/Client_ID_/' . $user->id . "/Links/Public_Documents/");
+        Storage::makeDirectory(__DIR__ . '/Client_ID_/' . $user->id . "/Public/Client_Documents/");
 
         return $user;
     }
