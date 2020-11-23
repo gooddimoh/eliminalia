@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -17,19 +18,20 @@ class Chores extends Model
         'email_verified_at',
     ];
 
-    protected $fillable = ['id',
-        'nombre',
-        'descripcion',
-        'creado_por',
-        'para',
-        'importancia',
-        'fecha_inicio',
-        'fecha_final',
-        'fecha_marca_finalizado',
+    protected $fillable = [
+        'id',
+        'name',
+        'description',
+        'created by',
+        'for',
+        'importance',
+        'start_date',
+        'final_date',
+        'finished_mark_date',
         'log',
-        'estado',
-        'grupo',
-        'orden'
+        'state',
+        'group',
+        'order'
     ];
 
     /**

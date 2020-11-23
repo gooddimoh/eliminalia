@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyUserRequest;
 use App\Http\Requests\StoreUserRequest;
@@ -10,8 +14,7 @@ use App\Notifications\UserApprovedNotification;
 use App\Models\Role;
 use App\Models\User;
 use Symfony\Component\HttpFoundation\Response;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
+
 
 class UserManagement extends Controller
 {
@@ -25,7 +28,7 @@ class UserManagement extends Controller
     {
         Gate::after(function ($user, $ability, $result, $arguments) {
         });
-        $users = User::all();
+        $users = User::all()->map;
         return view('dashboard.Admin.UserManagement.index')->with('users', $users);
     }
 
@@ -35,13 +38,13 @@ class UserManagement extends Controller
         // $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
 
         $roles = Role::all()->pluck('title', 'id');
-//        $user = User::whereIn('id', request('ids'))->delete();
+        $roles = Role::all()->sortByDesc();
+        $user = User::whereIn('id', request('ids'))->delete();
         $users = User::all();
 
         // var_dump($validatedData);
 
-        //   return view('dashboard.Admin.UserManagement.create', compact('roles'));
-        return view('dashboard.Admin.UserManagement.create')->with('users', $users);
+        return view('dashboard.Admin.UserManagement.create', compact('roles'))->with('users', $users);
     }
 
 
@@ -52,6 +55,8 @@ class UserManagement extends Controller
         $request->flush();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
+        Storage::
+
         die();
         return redirect()->route('admin.users.index');
     }

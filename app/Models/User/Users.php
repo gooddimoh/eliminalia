@@ -24,19 +24,19 @@ class Users extends Model
     ];
 
     protected $fillable = [
-        'id', 'fecha', 'nombre_usuario', 'nivel_permiso',
-        'password', 'id_gestor', 'nombre', 'apellidos',
-        'nombre_empresa', 'dni', 'cif', 'pais', 'ciudad',
-        'provincia', 'direccion', 'codigo_postal', 'telefono',
-        'telefono2', 'email', 'email2', 'bloqueado', 'estado',
-        'estado_facturacion', 'porcentaje_finalizados', 'observaciones_gestor',
-        'fecha_contrato', 'dias_cumplimiento_contrato', 'fecha_finalizacion',
-        'idioma', 'importe_contrato', 'pago_fraccionado', 'perfil_datos',
-        'fecha_contrato', 'dias_cumplimiento_contrato', 'fecha_finalizacion',
-        'perfil_enlaces', 'perfil_documentacion', 'perfil_facturacion', 'contrato_pagado',
-        'demo', 'id_contacto', 'tipo_cliente', 'seg_importe_mensual', 'seg_fecha_pago',
-        'seg_forma_pago', 'fecha_rescision', 'id_comercial', 'carpeta_finalizacion', 'estado_seo',
-        'parametros_busqueda', 'suscrito_notificaciones', 'id_partner'
+        'id', 'date', 'username', 'permission_level',
+        'password', 'manager_id', 'name', 'surnames',
+        'company_name', 'days', 'cif', 'parents', 'city',
+        'province', 'address', 'postal code', 'phone',
+        'phone2', 'email', 'email2', 'locked', 'state',
+        'billing_state', 'percentage_completed', 'manager_remarks',
+        'contract_date', 'contract_compliance_days', 'end_date',
+        'language', 'contract_amount', 'fractional_payment', 'data_profile',
+        'data_profile', 'contract_compliance_days', 'end_date',
+        'profile_links', 'profile_documentation', 'billing_profile', 'contract_paid',
+        'demo', 'contact_id', 'client_type', 'seg_monthly_import', 'seg_payment_date',
+        'payment_form_sec', 'date_rescision', 'commercial_id', 'completion_folder', 'state_seo',
+        'search_parameters', 'subscribed_notifications', 'id_partner'
     ];
 
     /**

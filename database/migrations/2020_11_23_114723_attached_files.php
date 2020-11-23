@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ClientInternetSeekers extends Migration
+class AttachedFiles extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class ClientInternetSeekers extends Migration
      */
     public function up()
     {
-        Schema::create('client_internet_seekers', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->string('user_id');
-            $table->string('user_id');
-            $table->string('user_id');
-            $table->string('user_id');
+        Schema::create('AttachedFilesLink', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('type');
+            $table->morphs('notifiable');
+            $table->text('data');
+            $table->timestamp('read_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +30,6 @@ class ClientInternetSeekers extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        //
     }
 }

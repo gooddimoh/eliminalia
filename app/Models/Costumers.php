@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -28,20 +29,20 @@ class Costumers extends Model
         'date',
         'permission_level',
         'commercial_id ',
-        'Name',
+        'name',
         'surnames',
         'company name',
-        'DNI',
+        'dni',
         'commercial_id ',
         'cif',
         'country',
         'city',
-        'Province',
+        'province',
         'address',
-        'Postal Code',
+        'postal code',
         'phone',
         'phone2',
-        'e-mail',
+        'email',
         'email2',
         'customer_remarks',
         'manager_remarks',

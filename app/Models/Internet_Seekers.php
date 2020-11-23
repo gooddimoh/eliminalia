@@ -24,7 +24,7 @@ class Internet_Seekers extends Model
     ];
 
     protected $fillable = [
-        'id', 'plataforma', 'pais'
+        'id', 'platform', 'country'
     ];
 
     /**

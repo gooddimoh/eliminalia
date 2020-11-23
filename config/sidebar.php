@@ -185,11 +185,11 @@ return [
             'url' => '/dashboard/Timeline',
             'route-name' => 'Timeline'
         ],
-        ['icon' => 'fa fa-edit',
-            'title' => 'MakePostToTimeline',
-            'url' => '/dashboard/MakePostToTimeline',
-            'route-name' => 'MakePostToTimeline'
-        ],
+//        ['icon' => 'fa fa-edit',
+//            'title' => 'MakePostToTimeline',
+//            'url' => '/dashboard/MakePostToTimeline',
+//            'route-name' => 'MakePostToTimeline'
+//        ],
         ['icon' => 'fa fa-hdd',
             'title' => 'File Manager',
             'url' => '/dashboard/File Manager',

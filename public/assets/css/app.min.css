@@ -56146,3 +56146,7 @@ li.timeline-li-type1:hover {
     align-items: flex-start;
     align-content: flex-start;
 }
+
+.legend {
+    padding: 20px;
+}

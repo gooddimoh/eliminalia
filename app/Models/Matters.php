@@ -21,9 +21,7 @@ class Matters extends Model
         'email_verified_at',
     ];
 
-    protected $fillable = [        'id', 'ultima_fecha', 'ultima_hora', 'id_ultimo_usuario',
-        'id_cliente', 'id_enlace', 'asunto', 'finalizado', 'visibilidad'
-    ];
+    protected $fillable = ['id', 'last_date', 'last_minute', 'last_user_id', 'client_id', 'link_id', 'affair', 'finalized', 'visibility'];
 
     /**
      * The attributes that should be hidden for arrays.

@@ -19,7 +19,7 @@ class Partners extends Model
 
     protected $fillable = [
         'Name',
-        'fecha',
+        'Date',
         'Phone number 1',
         'Phone number 2',
         'Email main',
@@ -29,8 +29,8 @@ class Partners extends Model
         'State',
         'Country',
         'Observations',
-        'telefono',
-        'telefono2',
+        'Telefono',
+        'Telefono2',
         'email',
         'email2',
         'observaciones',

@@ -12,7 +12,7 @@ class Attached_Files extends Model
      *
      * @var array
      */
-    protected $table = 'attached_files';
+    protected $table = 'Attached_Files';
 
     protected $dates = [
         'updated_at',
@@ -22,9 +22,9 @@ class Attached_Files extends Model
     ];
 
     protected $fillable = [
-        'id', 'fecha_subida', 'hora_subida', 'id_gestor',
-        'id_cliente', 'id_global', 'nombre_archivo', 'extension_archivo',
-        'ruta_archivo', 'tipo'
+        'id', 'upload_date', 'up_time', 'manager_id',
+        'client_id', 'global_id', 'filename', 'file_extension',
+        'file_path', 'tipo'
     ];
 
     /**

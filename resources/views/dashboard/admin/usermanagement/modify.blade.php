@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-    <form method="post" action="{{route('contacts')}}" class="col-xl-12">
+    <form method="post" action="{{route('contactsupdate')}}" class="col-xl-12">
         @csrf
         <h4>New user data</h4>
         <div class="row">
@@ -50,7 +50,7 @@
                     <input class="form-control form-control-sm" type="text" placeholder="Phone number 2:">
                 </div>
                 <div class="form-group row">
-                    <label class="col-form-label ">Email:</label>
+                    <label class="col-form-label">Email:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Email (secondary):">
                 </div>
                 <div class="form-group row">
@@ -58,12 +58,8 @@
                     <input class="form-control form-control-sm" type="text" value="" placeholder="Company ID:">
                 </div>
                 <div class="form-group row">
-                    <label class="col-form-label ">Postal code:</label>
+                    <label class="col-form-label">Postal code:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Postal code:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Address:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Commercial*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label ">State:</label>
@@ -71,21 +67,46 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="table-responsive">
-                    <table class="table table-td-valign-middle">
-                        <tbody>
-                        <tr>
-                            @foreach($users as $user)
-                                <td>{{$user->id}}</td>
-                                <td class="with-img">
-                                    <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
-                                </td>
-                                <td>{{$user->email}}</td>
-                                <td>{{$user->role}}</td>
-                        </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
+                <h1>Search existent user</h1>
+                <div class="panel" data-sortable-id="table-basic-7" data-init="true" style="">
+                    <!-- begin panel-heading -->
+                    <div class="panel-heading ui-sortable-handle">
+                        <h4 class="panel-title">List of all Users <span
+                                    class="label label-success m-l-5 t-minus-1">NEW</span>
+                        </h4>
+                        <div class="panel-heading-btn">
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
+                               data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
+                               data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
+                               data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
+                               data-click="panel-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </div>
+                    <!-- end panel-heading -->
+                    <!-- begin panel-body -->
+                    <div class="panel-body">
+                        <!-- begin table-responsive -->
+                        <div class="table-responsive">
+                            <table class="table table-striped m-b-0 overflow-hidden">
+                                <tbody>
+                                @foreach($users as $user)
+                                    <tr>
+                                        <td>{{$user->id}}</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>{{$user->email}}</td>
+                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->role}}</td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

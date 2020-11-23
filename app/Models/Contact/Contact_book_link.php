@@ -23,7 +23,7 @@ class Contact_Book_link extends Model
     ];
 
     protected $fillable = [
-        'id', 'fecha', 'id_contacto', 'id_enlace'
+        'id', 'date', 'contact_id', 'link_id'
     ];
 
     /**

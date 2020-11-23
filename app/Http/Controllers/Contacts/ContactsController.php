@@ -7,11 +7,11 @@ use App\Http\Requests\MassDestroyUserRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Notifications\UserApprovedNotification;
-use App\Role;
-use App\User;
-use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use App\Models\Role;
+use App\Models\User;
+use Illuminate\Auth\Access\Gate;
 
 class ContactsController extends Controller
 {

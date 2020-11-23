@@ -13,41 +13,44 @@ class Contacts extends Migration
      */
     public function up()
     {
-        Schema::create('flights', function (Blueprint $table) {
+        Schema::create('links', function (Blueprint $table) {
             $table->id();
-            $table->date('');
-            $table->permission_level('');
-            $table->commercial_id('name');
-            $table->name('airline');
-            $table->surnames('airline');
-            $table->company_name('airline');
-            $table->dni('airline');
-            $table->commercial_id('airline');
-            $table->cif('airline');
-            $table->country('airline');
-            $table->city('airline');
-            $table->province('airline');
-            $table->address('airline');
-            $table->postal_code('airline');
-            $table->phone('airline');
-            $table->phone2('airline');
-            $table->email('airline');
-            $table->email2('airline');
-            $table->customer_remarks('airline');
-            $table->manager_remarks('airline');
-            $table->commercial_remarks('airline');
-            $table->language('airline');
-            $table->budget('airline');
-            $table->form_pagos('airline');
-            $table->trace_done('airline');
-            $table->budget_done('airline');
-            $table->client_signed('airline');
-            $table->scrapped('airline');
-            $table->contact_making('airline');
-            $table->documentation_submitted('airline');
-            $table->discarded_reason('airline');
-            $table->date_signed('airline');
-            $table->discarded_date('airline');
+            $table->string('Name*:');
+            $table->string('Surname:');
+            $table->string('Phone number 1*:');
+            $table->string('Phone number 2*:');
+            $table->string('Email (main)*:');
+            $table->string('Email (secondary):');
+            $table->string('ID:');
+            $table->string('Company ID:');
+            $table->string('Address:');
+            $table->string('Postal code:');
+            $table->string('City:');
+            $table->string('State:');
+            $table->string('Country*:');
+            $table->string('Native language*:');
+            $table->string('Commercial*');
+            $table->string('Budget:');
+            $table->string('Payment method:');
+            $table->string('Case description made by the client:');
+            $table->string('Info for the manager:');
+            $table->string('Info for the commercial:');
+            $table->string('first contact done');
+            $table->string('tracking done');
+            $table->string('budget done');
+            $table->string('documentation sended');
+            $table->string('signed');
+            $table->string('airline');
+            $table->string('airline');
+            $table->string('airline');
+            $table->string('airline');
+            $table->string('airline');
+            $table->string('airline');
+            $table->string('airline');
+            $table->string('airline');
+            $table->string('airline');
+            $table->string('airline');
+            $table->string('airline');
             $table->timestamps();
         });
     }

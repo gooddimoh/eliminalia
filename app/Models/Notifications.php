@@ -19,12 +19,12 @@ class Notifications extends Model
 
     protected $fillable = [
         'id',
-        'id_usuario',
-        'nombre',
-        'descripcion',
-        'tipo',
-        'leida',
-        'fecha'
+        'user_id',
+        'name',
+        'description',
+        'type',
+        'read',
+        'date'
     ];
 
     /**

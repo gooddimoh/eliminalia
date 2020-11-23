@@ -13,11 +13,19 @@ class Partners extends Migration
      */
     public function up()
     {
-        Schema::create('role_user', function (Blueprint $table) {
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id', 'user_id_fk_466020')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedInteger('role_id');
-            $table->foreign('role_id', 'role_id_fk_466020')->references('id')->on('roles')->onDelete('cascade');
+        Schema::create('partners', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('Nombre');
+            $table->string('Phone number 1:');
+            $table->string('Phone number 2:');
+            $table->string('Email (main):');
+            $table->string('Email (secondary):');
+            $table->string('Address:');
+            $table->string('Postal code:');
+            $table->string('City:');
+            $table->string('State:');
+            $table->string('Country*:');
+            $table->string('Observations:');
         });
     }
 

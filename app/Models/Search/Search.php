@@ -13,20 +13,6 @@ class Search extends Model
 {
     use SoftDeletes, Notifiable, HasFactory;
 
-    public function __construct(UploadedFile $uploadedFile, $disk = 'local')
-    {
-        parent::__construct($attributes);
-        self::created(function (User $user) {
-            $registrationRole = config('panel.registration_default_role');
-            if (!$user->roles()->get()->contains($registrationRole)) {
-                $user->roles()->attach($registrationRole);
-            }
-        });
-        $this->uploadedFile = $uploadedFile;
-        $this->originalName = $uploadedFile->getClientOriginalName();
-        $this->disk = $disk;
-    }
-
     protected $table = 'Users';
 
     protected $dates = [

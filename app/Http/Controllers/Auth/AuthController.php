@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -7,30 +8,32 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    public function getLogin()
+    public function GetLogin()
     {
         return view('auth.login');
     }
 
-    public function postLogin(Request $request)
+    public function PostLogin(Request $request)
     {
         print_r($request->get(["name"]));
         echo "postLogin";
         die();
 
         $validatedData = $request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']);
+        var_dump($validatedData);
+        die();
         $validatedData['password'] = bcrypt($request->password);
-        $user = User::create($validatedData);
+        $user = User::created($validatedData);
         $accessToken = $user->createToken('authToken')->accessToken;
         return response(['user' => $user, 'access_token' => $accessToken]);
     }
 
-    public function store()
+    public function Store()
     {
         echo "its store request";
     }
 
-    public function getLogout(Request $request)
+    public function GetLogout(Request $request)
     {
         echo 'getLogout';
         var_dump($request->validate());
@@ -38,14 +41,23 @@ class AuthController extends Controller
         die();
     }
 
-    public function getRegister(Request $request)
+    public function GetRegister(Request $request)
     {
-        $request->session(['key'=>'value']);
+        $request->session(['key' => 'value']);
         var_dump($request->all());
     }
 
-    public function postRegister()
+    public function PostRegister()
     {
         echo "postRegister";
     }
 }
+
+$user = '';
+$user->role == 'SUPERADMIN';
+$user->role == 'ADMIN SUCURSAL';
+$user->role == 'ALTA CONTRATOS';
+$user->role == 'RASTREADOR';
+$user->role == 'COMERCIAL';
+$user->role == 'PARTNER';
+$user->role == 'MANAGER';

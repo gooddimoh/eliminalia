@@ -19,14 +19,14 @@ class Calls_Contacts extends Model
 
     protected $fillable = [
         'id ',
-        'fecha ',
-        'hora',
-        'id_comercial',
-        'id_contacto',
-        'observaciones',
-        'gestion_realizada',
-        'llamada_realizada',
-        'fecha_gestion'
+        'date',
+        'time',
+        'commercial_id',
+        'contact_id',
+        'observations',
+        'done',
+        'call_made',
+        'management_date'
     ];
 
     /**

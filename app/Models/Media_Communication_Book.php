@@ -23,11 +23,11 @@ class Media_Communication_Book extends Model
     ];
 
     protected $fillable = [
-        'id', 'fecha', 'tipo_medio_comunicacion', 'nombre ',
-        'nombre_empresa', 'cif', 'pais', 'ciudad', 'provincia',
-        'direccion', 'codigo_postal', 'telefono', 'telefono2',
-        'email', 'email2', 'telefono', 'web', 'observaciones',
-        'idioma', 'activo'
+        'id', 'date', 'media_type', 'Name',
+        'company name', 'cif', 'country', 'city', 'province',
+        'address', 'postal_code', 'phone', 'phone2',
+        'e-mail', 'email2', 'phone', 'web', 'observations',
+        'language', 'active'
     ];
 
     /**

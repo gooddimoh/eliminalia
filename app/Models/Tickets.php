@@ -19,11 +19,11 @@ class Tickets extends Model
 
     protected $fillable = [
         'id',
-        'fecha',
-        'hora',
-        'id_usuario',
-        'id_asunto',
-        'contenido'
+        'date',
+        'time',
+        'user_id',
+        'case_id',
+        'content'
     ];
 
     /**

@@ -13,7 +13,7 @@ class Tickets extends Migration
      */
     public function up()
     {
-        Schema::create('role_user', function (Blueprint $table) {
+        Schema::create('tickets', function (Blueprint $table) {
             $table->unsignedInteger('user_id');
             $table->foreign('user_id', 'user_id_fk_466020')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedInteger('role_id');

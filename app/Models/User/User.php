@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use App\Models\Role;
@@ -38,19 +39,14 @@ class User extends Model
 
     protected function create(array $data)
     {
-        $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        $user = User::create(['name' => $data['name'], 'email' => $data['email'], 'password' => bcrypt($data['password'])]);
 
-        Storage::makeDirectory('/userassets/' . $user->id);
-        Storage::makeDirectory('/userassets/' . $user->id . "/logo");
-        Storage::makeDirectory('/userassets/' . $user->id . "/videos");
+        Storage::makeDirectory(__DIR__ . '/userassets/' . $user->id);
+        Storage::makeDirectory(__DIR__ . '/userassets/' . $user->id . "/link");
+        Storage::makeDirectory(__DIR__ . '/userassets/' . $user->id . "/videos");
 
         return $user;
     }
-
 
     public function save(array $options = array())
     {
@@ -64,6 +60,13 @@ class User extends Model
             $this->getAttribute('name'),
             file_get_contents($this->uploadedFile->getRealPath())
         );
+    }
+
+    public function User()
+    {
+        return $this->belongsTo('App\Models\User')->withDefault(function ($user, $post) {
+            $user->name = 'Guest Author';
+        });
     }
 
     public function Roles()

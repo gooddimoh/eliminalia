@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\API\AuthController;
@@ -25,7 +24,7 @@ class MainController extends Controller
 
     public function Dashboard(Request $request)
     {
-        return view('dashboard.dashboard');
+        return view('dashboard.admin.dashboard');
     }
 
     public function MakePostToTimeline(Request $request)

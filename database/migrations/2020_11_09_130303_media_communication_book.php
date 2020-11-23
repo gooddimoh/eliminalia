@@ -13,11 +13,11 @@ class MediaCommunicationBook extends Migration
      */
     public function up()
     {
-        Schema::create('role_user', function (Blueprint $table) {
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id', 'user_id_fk_466020')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedInteger('role_id');
-            $table->foreign('role_id', 'role_id_fk_466020')->references('id')->on('roles')->onDelete('cascade');
+        Schema::create('media_communication_book', function (Blueprint $table) {
+            $table->string('user_id');
+            $table->string('user_id');
+            $table->string('user_id');
+            $table->string('user_id');
         });
     }
 

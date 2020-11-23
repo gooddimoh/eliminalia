@@ -1,8 +1,7 @@
 <?php
-
 namespace App\Http\Middleware;
 
-use App\Role;
+use App\Models\Role;
 use Closure;
 use Illuminate\Support\Facades\Gate;
 

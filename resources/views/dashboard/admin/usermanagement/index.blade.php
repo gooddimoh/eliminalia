@@ -60,11 +60,73 @@
                                     <td class="f-w-600 text-inverse dtr-control sorting_1"
                                         tabindex="0">{{$user->id}}</td>
                                     <td class="with-img">
-                                        <img src="../assets/img/user/user-10.jpg" class="img-rounded height-30">
+                                        <img src="../assets/img/user/user-10.jpg" class="img-rounded height-100">
                                     </td>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->password}}</td>
                                     <td>{{$user->id}}</td>
+                                    <td>{{1}}</td>
+                                    <td>{{2}}</td>
+                                </tr>
+                                <tr class="gradeA even" role="row">
+                                    <td class="f-w-600 text-inverse dtr-control sorting_1"
+                                        tabindex="0">{{$user->id}}</td>
+                                    <td class="with-img">
+                                        <img src="../assets/img/user/user-10.jpg" class="img-rounded height-100">
+                                    </td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->password}}</td>
+                                    <td>{{$user->id}}</td>
+                                    <td>{{1}}</td>
+                                    <td>{{2}}</td>
+                                </tr>
+                                <tr class="gradeA even" role="row">
+                                    <td class="f-w-600 text-inverse dtr-control sorting_1"
+                                        tabindex="0">{{$user->id}}</td>
+                                    <td class="with-img">
+                                        <img src="../assets/img/user/user-10.jpg" class="img-rounded height-100">
+                                    </td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->password}}</td>
+                                    <td>{{$user->id}}</td>
+                                    <td>{{1}}</td>
+                                    <td>{{2}}</td>
+                                </tr>
+                                <tr class="gradeA even" role="row">
+                                    <td class="f-w-600 text-inverse dtr-control sorting_1"
+                                        tabindex="0">{{$user->id}}</td>
+                                    <td class="with-img">
+                                        <img src="../assets/img/user/user-10.jpg" class="img-rounded height-100">
+                                    </td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->password}}</td>
+                                    <td>{{$user->id}}</td>
+                                    <td>{{1}}</td>
+                                    <td>{{2}}</td>
+                                </tr>
+                                <tr class="gradeA even" role="row">
+                                    <td class="f-w-600 text-inverse dtr-control sorting_1"
+                                        tabindex="0">{{$user->id}}</td>
+                                    <td class="with-img">
+                                        <img src="../assets/img/user/user-10.jpg" class="img-rounded height-100">
+                                    </td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->password}}</td>
+                                    <td>{{$user->id}}</td>
+                                    <td>{{1}}</td>
+                                    <td>{{2}}</td>
+                                </tr>
+                                <tr class="gradeA even" role="row">
+                                    <td class="f-w-600 text-inverse dtr-control sorting_1"
+                                        tabindex="0">{{$user->id}}</td>
+                                    <td class="with-img">
+                                        <img src="../assets/img/user/user-10.jpg" class="img-rounded height-100">
+                                    </td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->password}}</td>
+                                    <td>{{$user->id}}</td>
+                                    <td>{{1}}</td>
+                                    <td>{{2}}</td>
                                 </tr>
                             @endforeach
                             </tbody>

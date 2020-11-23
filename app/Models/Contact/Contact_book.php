@@ -25,10 +25,10 @@ class Contact_Book extends Model
     ];
 
     protected $fillable = [
-        'id', 'fecha', 'tipo_contacto', 'tipo_contacto', 'id_medio_comunicacion',
-        'nombre_empresa', 'cif', 'cargo', 'nombre', 'apellidos', 'dni', 'pais',
-        'ciudad', 'provincia', 'direccion', 'codigo_postal', 'telefono', 'telefono2',
-        'email', 'email2', 'web', 'observaciones', 'idioma', 'activo',
+        'id', 'fecha', 'contact_type', 'tipo_contacto', 'communication_media_id',
+        'company_name', 'cif', 'position', 'Name', 'surnames', 'dni', 'country',
+        'city', 'Province', 'address', 'postal_code', 'phone', 'phone2',
+        'e-mail', 'email2', 'web', 'observations', 'language', 'active',
     ];
 
     /**
