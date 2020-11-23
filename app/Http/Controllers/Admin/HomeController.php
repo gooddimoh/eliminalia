@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -9,10 +8,10 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Notifications\UserApprovedNotification;
 use App\Models\Role;
 use App\Models\User;
-use Carbon\Carbon;
 use Illuminate\Auth\Access\Gate;
+use Illuminate\Http\Client\Response;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {

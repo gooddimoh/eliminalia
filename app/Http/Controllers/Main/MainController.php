@@ -33,7 +33,7 @@ class MainController extends Controller
 
     public function Contact(Request $request)
     {
-        Contact::class;
+        return view('dashboard.admin.dashboard');
     }
 
     public function Inquiries(Request $request)

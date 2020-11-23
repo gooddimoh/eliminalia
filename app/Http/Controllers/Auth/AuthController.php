@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -16,15 +15,16 @@ class AuthController extends Controller
     public function PostLogin(Request $request)
     {
         print_r($request->get(["name"]));
-        echo "postLogin";
-        die();
 
         $validatedData = $request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']);
         var_dump($validatedData);
+        echo "postLogin";
         die();
+
         $validatedData['password'] = bcrypt($request->password);
         $user = User::created($validatedData);
         $accessToken = $user->createToken('authToken')->accessToken;
+
         return response(['user' => $user, 'access_token' => $accessToken]);
     }
 

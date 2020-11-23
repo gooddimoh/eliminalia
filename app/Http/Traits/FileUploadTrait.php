@@ -1,11 +1,13 @@
 <?php
+
 namespace App\Http\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
-trait FileUploadTrait {
+trait FileUploadTrait
+{
     /**
      * @var string
      **/
@@ -46,8 +48,8 @@ trait FileUploadTrait {
     {
         $rules = array('fileupload' => $this->rule);
         $file = array('fileupload' => $file);
-
         $fileValidator = Validator::make($file, $rules);
+
         if ($fileValidator->fails()) {
             $messages = $fileValidator->messages();
             return redirect()->back()->withInput(request()->all())
