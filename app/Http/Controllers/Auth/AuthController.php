@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -16,12 +17,12 @@ class AuthController extends Controller
     {
         print_r($request->get(["name"]));
 
-        $validatedData = $request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']);
-        var_dump($validatedData);
+        $validate = $request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']);
+        var_dump($validate);
         echo "postLogin";
         die();
 
-        $validatedData['password'] = bcrypt($request->password);
+        $validate['password'] = bcrypt($request->password);
         $user = User::created($validatedData);
         $accessToken = $user->createToken('authToken')->accessToken;
 

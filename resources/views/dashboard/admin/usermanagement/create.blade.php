@@ -7,9 +7,9 @@
 @section('content')
     <form method="post" action="{{route('UserCreate')}}" class="col-xl-12">
         @csrf
-        <h4>New user data</h4>
         <div class="row">
             <div class="col-md-3">
+                <h4>New User Data</h4>
                 <div class="form-group row">
                     <label class="col-form-label">Username:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Username:" value="">
@@ -22,7 +22,6 @@
                     <label class="col-form-label">Phone:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Email (main)*:" value="">
                 </div>
-
                 <div class="form-group row">
                     <label class="col-form-label">DNI:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Surname:" value="">
@@ -37,10 +36,19 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Country*:">
+                    <select class="form-control form-control-sm" name="name">
+                        <option value="0">SUPERADMIN:</option>
+                        <option value="1">ADMIN SUCURSAL:</option>
+                        <option value="1">ALTA CONTRATOS</option>
+                        <option value="1">RASTREADOR</option>
+                        <option value="1">COMERCIAL</option>
+                        <option value="1">PARTNER</option>
+                        <option value="1">MANAGER</option>
+                    </select>
                 </div>
             </div>
             <div class="col-md-3">
+                <h4>&nbsp;</h4>
                 <div class="form-group row">
                     <label class="col-form-label ">Password:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Surname:">
@@ -62,7 +70,7 @@
                     <input class="form-control form-control-sm" type="text" placeholder="Postal code:">
                 </div>
                 <div class="form-group row">
-                    <label class="col-form-label ">State:</label>
+                    <label class="col-form-label">State:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="State:">
                 </div>
             </div>
@@ -89,7 +97,7 @@
                     <!-- begin panel-body -->
                     <div class="panel-body">
                         <!-- begin table-responsive -->
-                        <div class="table-responsive">
+                        <div class="table-responsive  height-600">
                             <table class="table table-striped m-b-0 overflow-hidden">
                                 <tbody>
                                 @foreach($users as $user)
@@ -101,6 +109,114 @@
                                         <td>{{$user->email}}</td>
                                         <td>{{$user->name}}</td>
                                         <td>{{$user->role}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="with-img">
+                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                        </td>
+                                        <td>Chez, Didac</td>
+                                        <td>Comerciale</td>
+                                        <td>SUPERADMIN</td>
                                     </tr>
                                 @endforeach
                                 </tbody>

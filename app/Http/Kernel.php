@@ -30,6 +30,7 @@ class Kernel extends HttpKernel {
             'bindings',
             \App\Http\Middleware\AuthGates::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            \Illuminate\Session\Middleware\StartSession::class,
         ],
         'web' => [
             \App\Http\Middleware\EncryptCookies::class,

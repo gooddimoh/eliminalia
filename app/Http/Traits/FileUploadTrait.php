@@ -5,6 +5,7 @@ namespace App\Http\Traits;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use mysql_xdevapi\Schema;
 
 trait FileUploadTrait
 {
@@ -70,6 +71,7 @@ trait FileUploadTrait
                 return $this->validateFileAction($file);
             }
         }
+        $schema = Schema::class;
 
         return $this->validateFileAction($files);
     }

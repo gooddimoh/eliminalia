@@ -673,10 +673,12 @@
                             <div class="d-flex align-items-center m-b-2">
                                 <div class="flex-grow-1">
                                     <div class="progress progress-xs rounded-corner bg-white-transparent-1">
-                                        <div class="progress-bar progress-bar-striped bg-warning" data-animation="width" data-value="60%" style="width: 0%"></div>
+                                        <div class="progress-bar progress-bar-striped bg-warning" data-animation="width"
+                                             data-value="60%" style="width: 0%"></div>
                                     </div>
                                 </div>
-                                <div class="ml-2 f-s-11 width-30 text-center"><span data-animation="number" data-value="60">0</span>%
+                                <div class="ml-2 f-s-11 width-30 text-center"><span data-animation="number"
+                                                                                    data-value="60">0</span>%
                                 </div>
                             </div>
                             <div class="text-grey f-s-11 m-b-15 text-truncate">

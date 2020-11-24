@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -15,7 +13,6 @@ use App\Models\Role;
 use App\Models\User;
 use Symfony\Component\HttpFoundation\Response;
 
-
 class UserManagement extends Controller
 {
     public function index(Request $request)
@@ -24,12 +21,12 @@ class UserManagement extends Controller
         return view('admin.users.index', compact('users'));
     }
 
-    public function show(Request $request)
+    public function list(Request $request)
     {
-        Gate::after(function ($user, $ability, $result, $arguments) {
-        });
-        $users = User::all()->map;
-        return view('dashboard.Admin.UserManagement.index')->with('users', $users);
+        //  Gate::after(function ($user, $ability, $result, $arguments) { });
+
+        $users = User::all();
+        return view('dashboard.admin.usermanagement.index')->with('users', $users);
     }
 
     public function create(Request $request)
@@ -37,16 +34,16 @@ class UserManagement extends Controller
         // abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         // $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
 
-        $roles = Role::all()->pluck('title', 'id');
-        $roles = Role::all()->sortByDesc();
-        $user = User::whereIn('id', request('ids'))->delete();
+        $value = session('key', 'default');
+//        $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
+
+        var_dump($value);
 
         // var_dump($validatedData);
 
-        return view('dashboard.Admin.UserManagement.create', compact('roles'))->with('users', $users);
+        return view('dashboard.Admin.UserManagement.create')->with('users', $users);
     }
-
 
     public function store(StoreUserRequest $request)
     {
@@ -55,10 +52,8 @@ class UserManagement extends Controller
         $request->flush();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
-        Storage::
-
         die();
-        return redirect()->route('admin.users.index');
+        return redirect()->route('admin.users.index')->with('users', $user);
     }
 
     public function edit(Request $request, User $user)

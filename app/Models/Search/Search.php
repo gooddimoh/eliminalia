@@ -1,7 +1,9 @@
 <?php
+
 namespace App\Models;
 
 use App\Models\Role;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -38,7 +40,7 @@ class Search extends Model
 
     protected function create(Request $request, array $data)
     {
-        $request->valid();
+        $request->validate();
 
         $user = User::create([
             'name' => $data['name'],
@@ -56,18 +58,24 @@ class Search extends Model
     }
 
 
+    public function store(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|unique:posts|max:255',
+            'body' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('post/create')
+                ->withErrors($validator)
+                ->withInput();
+        }
+    }
+
     public function save(array $options = array())
     {
         $this->storeToDisk();
         return parent::save($options);
-    }
-
-    protected function storeToDisk()
-    {
-        Storage::disk($this->disk)->put(
-            $this->getAttribute('name'),
-            file_get_contents($this->uploadedFile->getRealPath())
-        );
     }
 
     public function Roles()

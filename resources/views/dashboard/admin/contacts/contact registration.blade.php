@@ -158,8 +158,8 @@
 @endsection
 <style type="text/css">
     .form-group {
-        margin-bottom: 0px !important;
-        margin-right: 10px !important;
+        margin-bottom: 0px!important;
+        margin-right: 10px!important;
     }
 </style>
 @push('scripts')
