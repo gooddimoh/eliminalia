@@ -5,21 +5,18 @@ use Illuminate\Http\Request;
 
 class EmailController extends Controller
 {
-    public function EmailInbox()
+    public static function inbox(Request $request)
     {
-        view('email.email-inbox');
-
+        $request->all()->Inbox() ? view('email.email-Inbox') : '';
     }
 
-    public function EmailCompose()
+    public static function compose(Request $request)
     {
-        view('email.email-compose');
-
+        $request->all()->Compose() ? view('email.email-Compose') : '';
     }
 
-    public function EmailDetail()
+    public static function Detail(Request $request)
     {
-        view('email.email-detail');
+        $request->all()->Detail() ? view('email.email-Detail') : '';
     }
-
 }

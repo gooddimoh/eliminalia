@@ -53,12 +53,3 @@ class AuthController extends Controller
         echo "postRegister";
     }
 }
-
-$user = '';
-$user->role == 'SUPERADMIN';
-$user->role == 'ADMIN SUCURSAL';
-$user->role == 'ALTA CONTRATOS';
-$user->role == 'RASTREADOR';
-$user->role == 'COMERCIAL';
-$user->role == 'PARTNER';
-$user->role == 'MANAGER';

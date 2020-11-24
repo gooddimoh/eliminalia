@@ -33,12 +33,12 @@ class Contacts extends Migration
             $table->string('Budget:');
             $table->string('Payment method:');
             $table->string('Case description made by the client:');
-            $table->string('Info for the manager:');
-            $table->string('Info for the commercial:');
-            $table->string('first contact done');
-            $table->string('tracking done');
-            $table->string('budget done');
-            $table->string('documentation sended');
+            $table->string('Info for the Manager:');
+            $table->string('Info for the Commercial:');
+            $table->string('First contact done');
+            $table->string('Tracking done');
+            $table->string('Budget done');
+            $table->string('Documentation sended');
             $table->string('signed');
             $table->string('airline');
             $table->string('airline');
@@ -49,7 +49,7 @@ class Contacts extends Migration
             $table->string('airline');
             $table->string('airline');
             $table->string('airline');
-            $table->string('airline');
+            $table->string('airline')->
             $table->string('airline');
             $table->timestamps();
         });

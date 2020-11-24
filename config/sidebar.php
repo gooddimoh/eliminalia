@@ -77,12 +77,12 @@ return [
                 [
                     'url' => '/dashboard/contacts/list',
                     'title' => 'Contact List',
-                    'route-name' => 'ContactList'
+                    'route-name' => 'Contac tList'
                 ],
                 [
                     'url' => '/dashboard/contacts/registration',
                     'title' => 'Contact Registration',
-                    'route-name' => 'ContactRegistration'
+                    'route-name' => 'Contact Registration'
                 ],
                 [
                     'url' => '/dashboard/contacts/inquiries',

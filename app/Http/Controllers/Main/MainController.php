@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\API\AuthController;
@@ -31,6 +32,11 @@ class MainController extends Controller
     {
     }
 
+    public function UserManagement()
+    {
+        return view();
+    }
+
     public function Contact(Request $request)
     {
         return view('dashboard.admin.dashboard');
@@ -38,17 +44,17 @@ class MainController extends Controller
 
     public function Inquiries(Request $request)
     {
-        Inquiries::class;
+        return view();
     }
 
     public function ContactRegistration(Request $request)
     {
-        ContactRegistration::class;
+        return view();
     }
 
     public function ContactList(Request $request)
     {
-        ContactList::class;
+        return view();
     }
 
     public function SelectSearch(Request $request)
@@ -73,7 +79,7 @@ class MainController extends Controller
 
     public function FileManager(Request $request)
     {
-        FileManager::Index();
+        return view();
     }
 
     public function Auth()

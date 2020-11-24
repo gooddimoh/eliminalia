@@ -7,15 +7,13 @@
 // $user->role == 'PARTNER';
 // $user->role == 'MANAGER';
 
-Route::get('/dashboard1234', function () {
-    return redirect('dashboard');
+Route::get('/dashboard', function () { return redirect(' '); });
+Route::get('/', function () {  return redirect('dashboard'); });
+
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () {
+
 });
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth'], ['auth', 'role:superadmin', 'auth', 'role:manager']], function () {});
-
-Route::get('/', function () {
-    return redirect('dashboard');
-});
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
@@ -31,22 +29,21 @@ Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout
 Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 'register']);
 
 Route::get('dashboard/', 'MainController@dashboard')->name('dashboard');
-Route::get('dashboard/usermanagement', 'UserManagement@show')->name('usermanagement');
+Route::get('dashboard/usermanagement', 'MainController@usermanagement')->name('usermanagement');
 
 Route::post('dashboard/user/create', 'UsersController@Create')->name('UserCreate');
 Route::get('dashboard/user/edit', 'UsersController@Edit')->name('UserEdit');
 Route::get('dashboard/user/store', 'UsersController@Store')->name('UserStore');
 
 Route::get('dashboard/Map', 'MainController@Map')->name('Map');
-Route::get('dashboard/File Manager', 'MainController@File Manager')->name('File Manager');
-Route::get('dashboard/Timeline', 'MainController@Timeline')->name('Timeline');
+Route::get('dashboard/Timeline', 'TimelineController@Timeline')->name('Timeline');
 Route::get('dashboard/Calendar', 'MainController@Calendar')->name('calendar');
-Route::get('dashboard/contacts/list', 'MainController@ContactList')->name('ContactList');
-Route::get('dashboard/contacts/Inquiries', 'MainController@Inquiries')->name('Inquiries');
-Route::get('dashboard/partners/Partners list', 'MainController@partners list')->name('Partners List');
-Route::get('dashboard/partners/Registration', 'MainController@registration')->name('ContactRegistration');
-
-Route::get('dashboard/timeline/MakePost', 'TimeLineController@MakePostToTimeline')->name('MakePostToTimeline');
+Route::get('dashboard/Contacts/list', 'MainController@ContactList')->name('ContactList');
+Route::get('dashboard/Contacts/Inquiries', 'MainController@Inquiries')->name('Inquiries');
+Route::get('dashboard/Partners/Partners list', 'MainController@partners list')->name('Partners List');
+Route::get('dashboard/Partners/Registration', 'MainController@registration')->name('ContactRegistration');
+Route::get('dashboard/File Manager', 'FileManager@filemanager')->name('File Manager');
+Route::get('dashboard/Timeline/MakePost', 'TimeLineController@MakePostToTimeline')->name('MakePostToTimeline');
 
 Route::get('dashboard/email/inbox', 'EmailController@emailinbox')->name('emailinbox');
 Route::get('dashboard/email/compose', 'EmailController@emailcompose')->name('emailcompose');
@@ -89,9 +86,6 @@ Route::get('edititem1', 'TestController@edititem')->name('edititem');
 
 Route::post('usermanagement/usernew', 'MainController@usermanagement.new.user')->name('usermanagement_new_user');
 Route::post('usermanagement/useredit', 'MainController@usermanagement.new.edit')->name('usermanagement_new_edit');
-
-
-
 
 // $query = Job::where('status', '=', Job::APPROVED);
 

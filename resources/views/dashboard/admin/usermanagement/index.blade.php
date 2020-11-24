@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', 'USER MANAGEMENT')
+@section('title', 'USER MANAGEMENT LIST')
 @push('css')
     <link href="{{asset('assets/plugins/summernote/dist/summernote.css')}}" rel="stylesheet"/>
 @endpush
@@ -115,7 +115,8 @@
                                     <td>{{$user->id}}</td>
                                     <td>{{1}}</td>
                                     <td>{{2}}</td>
-                                </tr><tr class="gradeA even" role="row">
+                                </tr>
+                                <tr class="gradeA even" role="row">
                                     <td class="f-w-600 text-inverse dtr-control sorting_1"
                                         tabindex="0">{{$user->id}}</td>
                                     <td class="with-img">
@@ -126,7 +127,8 @@
                                     <td>{{$user->id}}</td>
                                     <td>{{1}}</td>
                                     <td>{{2}}</td>
-                                </tr><tr class="gradeA even" role="row">
+                                </tr>
+                                <tr class="gradeA even" role="row">
                                     <td class="f-w-600 text-inverse dtr-control sorting_1"
                                         tabindex="0">{{$user->id}}</td>
                                     <td class="with-img">
@@ -137,7 +139,8 @@
                                     <td>{{$user->id}}</td>
                                     <td>{{1}}</td>
                                     <td>{{2}}</td>
-                                </tr><tr class="gradeA even" role="row">
+                                </tr>
+                                <tr class="gradeA even" role="row">
                                     <td class="f-w-600 text-inverse dtr-control sorting_1"
                                         tabindex="0">{{$user->id}}</td>
                                     <td class="with-img">
@@ -148,7 +151,8 @@
                                     <td>{{$user->id}}</td>
                                     <td>{{1}}</td>
                                     <td>{{2}}</td>
-                                </tr><tr class="gradeA even" role="row">
+                                </tr>
+                                <tr class="gradeA even" role="row">
                                     <td class="f-w-600 text-inverse dtr-control sorting_1"
                                         tabindex="0">{{$user->id}}</td>
                                     <td class="with-img">
@@ -255,22 +259,17 @@
 @endsection
 @section('scripts')
     <script type="text/javascript">
-        $("search").change(function () {
-            let data = "data";
-            var request = $.ajax({
-                url: "{{route("usermanagementnew")}}",
-                method: "post",
-                data: {view: 'view'},
-                dataType: "html"
-            });
-            request.done(function (view) {
-                $("#html").html(view);
-            });
-            request.fail(function (jqXHR, textStatus) {
-                alert("Request failed: " + textStatus);
-            });
+        $.ajax({
+            url: "{{route("usermanagementlist")}}",
+            method: "post",
+            dataType: "html"
         });
-        // ajax return view //
+        request.done(function (view) {
+            $("#table").html(view);
+        });
+        request.fail(function (jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
     </script>
 @stop
 @push('scripts')
