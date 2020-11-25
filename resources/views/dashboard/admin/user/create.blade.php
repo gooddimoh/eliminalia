@@ -8,7 +8,7 @@
                     {{ trans('global.create') }} {{ trans('cruds.user.title_singular') }}
                 </div>
                 <div class="panel-body">
-                    <form action="{{ route("admin.users.store") }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route("users.store") }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group has-error">
                             <label for="name">{{ trans('email.failed') }}*</label>
@@ -36,7 +36,6 @@
                             <label for="approved">{{ trans('cruds.user.fields.approved') }}</label>
                             <input name="approved" type="hidden" value="0">
                             <input value="1" type="checkbox" id="approved" name="approved" {{ old('approved', 0) == 1 ? 'checked' : '' }}>
-                            {{ }}
                         </div>
                         <div class="form-group ">
                             <label for="email">{{ trans('cruds.user.fields.email') }}*</label>

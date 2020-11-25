@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -36,15 +35,14 @@ class AuthController extends Controller
 
     public function GetLogout(Request $request)
     {
-        echo 'getLogout';
-        var_dump($request->validate());
-        echo "getLogout";
+        var_dump($request->all());
         die();
     }
 
     public function GetRegister(Request $request)
     {
         $request->session(['key' => 'value']);
+        echo "1234 GetRegister 1234";
         var_dump($request->all());
     }
 

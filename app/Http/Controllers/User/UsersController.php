@@ -28,7 +28,7 @@ class UsersController extends Controller
 
         $roles = Role::all()->pluck('title', 'id');
 
-        return view('admin.dashboard.create', compact('roles'));
+        return view('dashboard.admin.user.create', compact('roles'));
     }
 
     public function store(StoreUserRequest $request, Response $response)
@@ -39,9 +39,8 @@ class UsersController extends Controller
             'password' => 'required',
             'email' => 'required'
         ]);
+
         $request->ajax();
-
-
         $response->isOk();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));

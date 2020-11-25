@@ -6,8 +6,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class NotificationOne extends Notification
-{
+class NotificationOne extends Notification {
     use Notifiable;
 
 }

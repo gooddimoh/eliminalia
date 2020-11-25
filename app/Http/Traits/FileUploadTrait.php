@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Traits;
 
 use Illuminate\Http\Request;
@@ -30,7 +31,7 @@ trait FileUploadTrait {
         if (!file_exists(config('filesystems.disks.public.root') . '/' . $this->uploadPath . '/' . $this->folderName)) {
             $attachmentPath = config('filesystems.disks.public.root') . '/' . $this->uploadPath . '/' . $this->folderName;
             mkdir($attachmentPath, 0777);
-            Storage::put('public/' . $this->uploadPath . '/' . $this->folderName . '/index.html', 'Silent Is Golden');
+            Storage::put('public/' . $this->uploadPath . '/' . $this->folderName . '/index.html', 'Silent Is Golden')
             return true;
         }
         return false;
