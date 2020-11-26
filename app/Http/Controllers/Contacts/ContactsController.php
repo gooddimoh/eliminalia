@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -14,29 +15,25 @@ use Illuminate\Auth\Access\Gate;
 
 class ContactsController extends Controller
 {
-    public function index()
+    public function Index()
     {
 //        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 //        if (Auth::check()) {
 //            // The user is logged in...
 //        }
         $users = User::all();
-
         return view('admin.users.index', compact('users'));
     }
 
-    public function create()
+    public function Create()
     {
-        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+//        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         $roles = Role::all()->pluck('title', 'id');
-
         return view('admin.users.create', compact('roles'));
     }
 
-    public function store(StoreUserRequest $request)
+    public function Store(StoreUserRequest $request)
     {
-
         die();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
@@ -44,18 +41,49 @@ class ContactsController extends Controller
         return redirect()->route('admin.users.index');
     }
 
-    public function edit(User $user)
+    public function List()
     {
-        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
-        $roles = Role::all()->pluck('title', 'id');
-
-        $user->load('roles');
-
-        return view('admin.users.edit', compact('roles', 'user'));
+        $data1 = '';
+        $data2 = '';
+        $data3 = '';
+        $data4 = '';
+        $roles = $data1 . $data2 . $data3 . $data4;
+        return view('dashboard.admin.contacts.contact list', compact('roles'));
     }
 
-    public function update(UpdateUserRequest $request, User $user)
+    public function Registration()
+    {
+        $data1 = '';
+        $data2 = '';
+        $data3 = '';
+        $data4 = '';
+        $roles = $data1 . $data2 . $data3 . $data4;
+        return view('dashboard.admin.contacts.contact registration', compact('roles'));
+    }
+
+    public function Inquiries()
+    {
+        // abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden'); //
+        $users = User::all();
+
+        return view('dashboard.admin.contacts.inquiries', compact('users'));
+    }
+
+    public function Edit(User $user)
+    {
+        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        $roles = Role::all()->pluck('title', 'id');
+        $roles->load('roles');
+        $data1 = '';
+        $data2 = '';
+        $data3 = '';
+        $data4 = '';
+        $user = $data1 . $data2 . $data3 . $data4;
+        $roles = $data1 . $data2 . $data3 . $data4;
+        return view('admin . users . edit', compact('roles', 'user'));
+    }
+
+    public function Update(UpdateUserRequest $request, User $user)
     {
         $approved = $user->approved;
 
@@ -66,19 +94,19 @@ class ContactsController extends Controller
             $user->notify(new UserApprovedNotification());
         }
 
-        return redirect()->route('admin.users.index');
+        return redirect()->route('admin . users . index');
     }
 
-    public function show(User $user)
+    public function Show(User $user)
     {
         abort_if(Gate::denies('user_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $user->load('roles');
 
-        return view('admin.users.show', compact('user'));
+        return view('admin . users . show', compact('user'));
     }
 
-    public function destroy(User $user)
+    public function Destroy(User $user)
     {
         abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
@@ -87,7 +115,7 @@ class ContactsController extends Controller
         return back();
     }
 
-    public function massDestroy(MassDestroyUserRequest $request)
+    public function MassDestroy(MassDestroyUserRequest $request)
     {
         User::whereIn('id', request('ids'))->delete();
 

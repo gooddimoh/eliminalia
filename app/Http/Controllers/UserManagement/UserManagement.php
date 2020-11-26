@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -33,27 +34,23 @@ class UserManagement extends Controller
     {
         // abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         // $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
-
-        $value = session('key', 'default');
-//        $roles = Role::all()->pluck('title', 'id');
+        //        $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
-
-        var_dump($value);
-
         // var_dump($validatedData);
-
+        $request->session()->flush();
+        $request->flush();
+        $request->all();
         return view('dashboard.Admin.UserManagement.create')->with('users', $users);
     }
 
     public function store(StoreUserRequest $request)
     {
-
         $request->session()->flush();
         $request->flush();
-        $user = User::create($request->all());
-        $user->roles()->sync($request->input('roles', []));
+        var_dump($request->all());
         die();
-        return redirect()->route('admin.users.index')->with('users', $user);
+        $user = User::create($request->all());
+        return view('admin.users.index')->with('users', $user);
     }
 
     public function edit(Request $request, User $user)
@@ -61,10 +58,8 @@ class UserManagement extends Controller
 //        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $roles = Role::all()->pluck('title', 'id');
-
         $user->load('roles');
-
-        return view('admin.users.edit', compact('roles', 'user'));
+        return view('dashboard.manager.usermanagement.edit', compact('users'));
     }
 
     public function update(UpdateUserRequest $request, User $user)

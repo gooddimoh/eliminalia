@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use App\Models\Role;
@@ -40,6 +39,7 @@ class Search extends Model
 
     protected function create(Request $request, array $data)
     {
+        $request->validate();
         $request->validate();
 
         $user = User::create([

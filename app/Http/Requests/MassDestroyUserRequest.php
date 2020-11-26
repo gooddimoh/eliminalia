@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Requests;
 
 use App\User;
@@ -10,7 +11,7 @@ class MassDestroyUserRequest extends FormRequest
 {
     public function authorize()
     {
-        abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+//        abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return true;
     }
@@ -18,7 +19,7 @@ class MassDestroyUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'ids'   => 'required|array',
+            'ids' => 'required|array',
             'ids.*' => 'exists:users,id',
         ];
     }

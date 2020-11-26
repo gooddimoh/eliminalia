@@ -1,12 +1,12 @@
 <?php
-
 namespace App\Http\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
-trait FileUploadTrait {
+trait FileUploadTrait
+{
     /**
      * @var string
      **/
@@ -30,8 +30,8 @@ trait FileUploadTrait {
     {
         if (!file_exists(config('filesystems.disks.public.root') . '/' . $this->uploadPath . '/' . $this->folderName)) {
             $attachmentPath = config('filesystems.disks.public.root') . '/' . $this->uploadPath . '/' . $this->folderName;
+            Storage::put('public/' . $this->uploadPath . '/' . $this->folderName . '/index.html', 'Silent Is Golden');
             mkdir($attachmentPath, 0777);
-            Storage::put('public/' . $this->uploadPath . '/' . $this->folderName . '/index.html', 'Silent Is Golden')
             return true;
         }
         return false;
@@ -48,11 +48,9 @@ trait FileUploadTrait {
         $rules = array('fileupload' => $this->rule);
         $file = array('fileupload' => $file);
         $fileValidator = Validator::make($file, $rules);
-
         if ($fileValidator->fails()) {
             $messages = $fileValidator->messages();
-            return redirect()->back()->withInput(request()->all())
-                ->withErrors($messages);
+            return redirect()->back()->withInput(request()->all())->withErrors($messages);
         }
     }
 

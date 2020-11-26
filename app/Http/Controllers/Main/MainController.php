@@ -10,17 +10,12 @@ use phpDocumentor\Reflection\DocBlock\TagFactory;
 class MainController extends Controller
 {
 
-//    public function __construct()
-//    {
-//        $this->middleware('auth', 'role', 'permissions');
-//    }
+    public function __construct()
+    {
+    }
 
     public function index()
     {
-        if (auth()->check()) {
-            $user = auth()->user();
-            $role = auth()->role();
-        }
     }
 
     public function Dashboard(Request $request)
@@ -34,7 +29,7 @@ class MainController extends Controller
 
     public function UserManagement()
     {
-        return view();
+        return view('dashboard.admin.dashboard');
     }
 
     public function Contact(Request $request)
@@ -69,12 +64,12 @@ class MainController extends Controller
 
     public function Calendar(Request $request)
     {
-        return view('dashboard/calendar');
+        return view('dashboard.admin.calendar');
     }
 
     public function Map(Request $request)
     {
-        return view('dashboard/map');
+        return view('dashboard.admin.map');
     }
 
     public function FileManager(Request $request)
@@ -84,8 +79,7 @@ class MainController extends Controller
 
     public function Auth()
     {
-        AuthController::login();
-        AuthController::register();
+        return view();
     }
 
 }

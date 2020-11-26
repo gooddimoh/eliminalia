@@ -7,63 +7,76 @@
 @section('content')
     <form method="post" action="{{route('contactsupdate')}}" class="col-xl-12">
         @csrf
-        <h4>New user data</h4>
         <div class="row">
-            <div class="col-md-3">
-                <div class="form-group row">
-                    <label class="col-form-label">Username:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Username:" value="">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Name:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Password:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Phone:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Email (main)*:" value="">
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-form-label">DNI:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Surname:" value="">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Address:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Address:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">City:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="City:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Permission Level:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Country*:">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="form-group row">
-                    <label class="col-form-label ">Password:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Surname:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label ">Surname:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Phone number 2:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Email:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Email (secondary):">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label ">ID:</label>
-                    <input class="form-control form-control-sm" type="text" value="" placeholder="Company ID:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Postal code:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Postal code:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label ">State:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="State:">
+            <div class="col-md-6">
+                <h4>New user data</h4>
+                <div class="panel" data-sortable-id="table-basic-7" data-init="true" style="">
+                    <div class="col-md-3">
+                        <div class="form-group row">
+                            <label class="col-form-label">Username:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name="" placeholder="Username:">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label">Name:</label>
+                            <input class="form-control form-control-sm" type="text" name="" placeholder="Password:">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label">Phone:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""  placeholder="Email (main)*:" value="">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label">DNI:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="Surname:">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label">Address:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="Address:">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label">City:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="City:">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label">Permission Level:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="Country*:">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group row">
+                            <label class="col-form-label ">Password:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="Surname:">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label ">Surname:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="Phone number 2:">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label">Email:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="Email (secondary):">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label ">ID:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="Company ID:">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label">Postal code:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="Postal code:">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label ">State:</label>
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="State:">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
@@ -144,7 +157,6 @@
         </p>
     </div>
 @endsection
-
 <script type="">
     $("search").change(function () {
         let data = "data";

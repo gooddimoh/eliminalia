@@ -22,13 +22,16 @@ class UsersController extends Controller
         return $users = User::all()->jsonSerialize();
     }
 
-    public function create()
+    public function create(Request $request)
     {
 //        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        $user = User::create($request->all());
+        var_dump($user);
+        die();
         $roles = Role::all()->pluck('title', 'id');
-
-        return view('dashboard.admin.user.create', compact('roles'));
+        $users = new User();
+        return view('dashboard.admin.user.create', compact('roles', 'users'));
     }
 
     public function store(StoreUserRequest $request, Response $response)
@@ -40,7 +43,7 @@ class UsersController extends Controller
             'email' => 'required'
         ]);
 
-        $request->ajax();
+        $request->pjax();
         $response->isOk();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));

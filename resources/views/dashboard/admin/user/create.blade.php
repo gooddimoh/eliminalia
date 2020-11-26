@@ -20,7 +20,8 @@
                         </div>
                         <div class="form-group ">
                             <label for="email">{{ trans('cruds.user.fields.email') }}*</label>
-                            <input type="email" id="email" name="email" class="form-control" value="{{ old('email', isset($user) ? $user->email : '') }}" required>
+                            <input type="email" id="email" name="email" class="form-control"
+                                   value="{{ old('email', isset($user) ? $user->email : '') }}" required>
                             <p class="helper-block">
                                 {{ trans('cruds.user.fields.email_helper') }}
                             </p>
@@ -35,7 +36,8 @@
                         <div class="form-group ">
                             <label for="approved">{{ trans('cruds.user.fields.approved') }}</label>
                             <input name="approved" type="hidden" value="0">
-                            <input value="1" type="checkbox" id="approved" name="approved" {{ old('approved', 0) == 1 ? 'checked' : '' }}>
+                            <input value="1" type="checkbox" id="approved"
+                                   name="approved" {{ old('approved', 0) == 1 ? 'checked' : '' }}>
                         </div>
                         <div class="form-group ">
                             <label for="email">{{ trans('cruds.user.fields.email') }}*</label>
@@ -68,7 +70,9 @@
                             <label for="roles">{{ trans('cruds.user.fields.roles') }}*
                                 <span class="btn btn-info btn-xs select-all">{{ trans('global.select_all') }}</span>
                                 <span class="btn btn-info btn-xs deselect-all">{{ trans('global.deselect_all') }}</span></label>
-                            <select name="roles[]" id="roles" class="form-control form-control-sm select2"
+                            {{-- User --}}
+                            {{var_dump($users)}}
+                            <select name="" id="roles" class="form-control form-control-sm select2"
                                     multiple="multiple" required>
                                 @foreach($roles as $id => $roles)
                                     <option value="{{ $id }}" {{ (in_array($id, old('roles', [])) || isset($user) && $user->roles->contains($id)) ? 'selected' : '' }}>{{ $roles }}</option>

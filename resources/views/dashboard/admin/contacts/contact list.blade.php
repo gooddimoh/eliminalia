@@ -1,5 +1,4 @@
 @extends('layouts.default')
-
 @section('title', 'Basic Tables')
 
 @push('css')
@@ -13,24 +12,27 @@
     <link href="{{'assets/plugins/tag-it/css/jquery.tagit.css'}}" rel="stylesheet"/>
     <link href="{{'assets/plugins/bootstrap-daterangepicker/daterangepicker.css'}}" rel="stylesheet"/>
     <link href="{{'assets/plugins/select2/dist/css/select2.min.css'}}" rel="stylesheet"/>
-    <link href="{{'assets/plugins/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'}}" rel="stylesheet"/>
+    <link href="{{'assets/plugins/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'}}"
+          rel="stylesheet"/>
     <link href="{{'assets/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css'}}" rel="stylesheet"/>
     <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.css'}}" rel="stylesheet"/>
-    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-fontawesome.css'}}" rel="stylesheet"/>
-    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-glyphicons.css'}}"  rel="stylesheet"/>
+    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-fontawesome.css'}}"
+          rel="stylesheet"/>
+    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-glyphicons.css'}}"
+          rel="stylesheet"/>
 @endpush
 
 @section('content')
     <div class="panel-body">
-        <h4 class="panel-title">Data Table - Default</h4>
+        <h4 class="panel-title">CONTACT REGISTRATION</h4>
         <div class="pagination">
             <div class="panel panel-inverse">
                 <div class="panel-body">
                     <div id="data-table-default_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                <div class="dataTables_length" id="data-table-default_length"><label>Show <select
-                                                name="data-table-default_length" aria-controls="data-table-default"
+                                <div class="dataTables_length" id="data-table-default_length"><label>Show
+                                        <select name="data-table-default_length" aria-controls="data-table-default"
                                                 class="custom-select custom-select-sm form-control form-control-sm">
                                             <option value="10">10</option>
                                             <option value="25">25</option>
@@ -40,10 +42,9 @@
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div id="data-table-default_filter" class="dataTables_filter">
-                                    <label>
-                                        Search:
-                                        <input type="search" class="form-control form-control-sm" placeholder="Search:"
-                                               aria-controls="data-table-default"></label></div>
+                                    <label> Search: <input type="search" class="form-control form-control-sm"
+                                                           placeholder="Search:"
+                                                           aria-controls="data-table-default"></label></div>
                             </div>
                         </div>
                         <div class="row">
@@ -149,7 +150,7 @@
                                                                                   class="page-link">6</a></li>
                                         <li class="paginate_button page-item next" id="data-table-default_next">
                                             <a href="#" aria-controls="data-table-default" data-dt-idx="7"
-                                                    tabindex="0" class="page-link">Next</a></li>
+                                               tabindex="0" class="page-link">Next</a></li>
                                     </ul>
                                 </div>
                             </div>

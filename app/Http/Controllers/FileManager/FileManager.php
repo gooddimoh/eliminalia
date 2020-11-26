@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 class FileManager extends Controller
 {
-    public function index()
+    public function Index()
     {
         echo "filemanager";
     }

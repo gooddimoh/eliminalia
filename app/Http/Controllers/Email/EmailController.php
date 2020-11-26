@@ -1,21 +1,22 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 class EmailController extends Controller
 {
-    public static function inbox(Request $request)
+    public function Inbox(Request $request)
     {
         $request->all()->Inbox() ? view('email.email-Inbox') : '';
     }
 
-    public static function compose(Request $request)
+    public function Compose(Request $request)
     {
         $request->all()->Compose() ? view('email.email-Compose') : '';
     }
 
-    public static function Detail(Request $request)
+    public function Detail(Request $request)
     {
         $request->all()->Detail() ? view('email.email-Detail') : '';
     }

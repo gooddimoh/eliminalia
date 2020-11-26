@@ -1,5 +1,4 @@
 @extends('layouts.default')
-
 @section('title', 'Basic Tables')
 
 @push('css')
@@ -13,11 +12,14 @@
     <link href="{{'assets/plugins/tag-it/css/jquery.tagit.css'}}" rel="stylesheet"/>
     <link href="{{'assets/plugins/bootstrap-daterangepicker/daterangepicker.css'}}" rel="stylesheet"/>
     <link href="{{'assets/plugins/select2/dist/css/select2.min.css'}}" rel="stylesheet"/>
-    <link href="{{'assets/plugins/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'}}" rel="stylesheet"/>
+    <link href="{{'assets/plugins/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'}}"
+          rel="stylesheet"/>
     <link href="{{'assets/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css'}}" rel="stylesheet"/>
     <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.css'}}" rel="stylesheet"/>
-    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-fontawesome.css'}}" rel="stylesheet"/>
-    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-glyphicons.css'}}" rel="stylesheet"/>
+    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-fontawesome.css'}}"
+          rel="stylesheet"/>
+    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-glyphicons.css'}}"
+          rel="stylesheet"/>
 @endpush
 
 @section('content')
@@ -69,7 +71,7 @@
                                             aria-controls="data-table-default" rowspan="1" colspan="1"
                                             style="width: 0px;" aria-sort="ascending"
                                             aria-label=": activate to sort column descending">
-                                            1
+                                            Contact ID
                                         </th>
                                         <th width="1%" data-orderable="false" class="sorting_disabled" rowspan="1"
                                             colspan="1" style="width: 30px;" aria-label="">2
@@ -77,53 +79,42 @@
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 272px;"
                                             aria-label="Rendering engine: activate to sort column ascending">
-                                            name
+                                            Date
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 339px;"
                                             aria-label="Browser: activate to sort column ascending">
-                                            Email
+                                            Name and surname
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 306px;"
                                             aria-label="Platform(s): activate to sort column ascending">
-                                            Email
+                                            Company
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 235px;"
                                             aria-label="Engine version: activate to sort column ascending">
-                                            Email
+                                            Commercial
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 176px;"
                                             aria-label="CSS grade: activate to sort column ascending">
-                                            Email
+                                            Status
                                         </th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr class="gradeX odd" role="row">
-                                        <td width="1%" class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">
-                                            1
-                                        </td>
-                                        <td width="1%" class="with-img"><img src="../assets/img/user/user-1.jpg"
-                                                                             class="img-rounded height-30"></td>
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 4.0</td>
-                                        <td>Win 95+</td>
-                                        <td>4</td>
-                                        <td>X</td>
-                                    </tr>
-                                    <tr class="gradeA even" role="row">
-                                        <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">10</td>
-                                        <td class="with-img"><img src="../assets/img/user/user-10.jpg"
-                                                                  class="img-rounded height-30"></td>
-                                        <td>Gecko</td>
-                                        <td>Firefox 3.0</td>
-                                        <td>Win 2k+ / OSX.3+</td>
-                                        <td>1.9</td>
-                                        <td>A</td>
-                                    </tr>
+                                    @foreach($users as $user)
+                                        <tr>
+                                            <td>{{$user->id}}</td>
+                                            <td class="with-img">
+                                                <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                            </td>
+                                            <td>{{$user->email}}</td>
+                                            <td>{{$user->name}}</td>
+                                            <td>{{$user->role}}</td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>

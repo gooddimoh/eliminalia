@@ -47,7 +47,6 @@ class UserManagement extends Controller
 
     public function store(StoreUserRequest $request)
     {
-
         $request->session()->flush();
         $request->flush();
         $user = User::create($request->all());

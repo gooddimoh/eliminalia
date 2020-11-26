@@ -205,10 +205,5 @@ return [
             'url' => '/dashboard/Map',
             'route-name' => 'Map'
         ],
-        ['icon' => 'fa fa-map',
-            'title' => 'Permissions',
-            'url' => '/dashboard/Permissions',
-            'route-name' => 'Permissions'
-        ],
     ]
 ];

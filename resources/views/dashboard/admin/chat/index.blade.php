@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="chatbox">
+<div id="wassenger" class="chatbox wassenger">
 
 </div>
 </body>

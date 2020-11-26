@@ -162,20 +162,17 @@
     </div>
 @endsection
 <script>
-    $("search").change(function () {
-        let data = "data";
-        var request = $.ajax({
-            url: "{{route("usermanagementnew")}}",
-            method: "post",
-            data: {view: 'view'},
-            dataType: "html"
-        });
-        request.done(function (view) {
-            $("#html").html(view);
-        });
-        request.fail(function (jqXHR, textStatus) {
-            alert("Request failed: " + textStatus);
-        });
+    var request = $.ajax({
+        url: "{{route("usermanagementnew")}}",
+        method: "post",
+        data: {view: 'view'},
+        dataType: "html"
+    });
+    request.done(function (view) {
+        $("#html").html(view);
+    });
+    request.fail(function (jqXHR, textStatus) {
+        alert("Request failed: " + textStatus);
     });
 </script>
 @push('scripts')
