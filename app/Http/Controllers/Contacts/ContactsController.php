@@ -15,19 +15,24 @@ use Illuminate\Auth\Access\Gate;
 
 class ContactsController extends Controller
 {
+
     public function Index()
     {
-//        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-//        if (Auth::check()) {
-//            // The user is logged in...
-//        }
+    // maby use Gate
+
+        $users = User::all()->role;
         $users = User::all();
-        return view('admin.users.index', compact('users'));
+        $users = User::all();
+        $users = User::all();
+        $users = User::all();
+        $users = User::all();
+        $users = User::all();
+        return view('admin.users.index', compact('users', 'model2'));
     }
 
     public function Create()
     {
-//        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         $roles = Role::all()->pluck('title', 'id');
         return view('admin.users.create', compact('roles'));
     }
@@ -43,12 +48,9 @@ class ContactsController extends Controller
 
     public function List()
     {
-        $data1 = '';
-        $data2 = '';
-        $data3 = '';
-        $data4 = '';
-        $roles = $data1 . $data2 . $data3 . $data4;
-        return view('dashboard.admin.contacts.contact list', compact('roles'));
+        $Role = Role::all();
+        $User = User::all();
+        return view('welcome')->with('Role', $Role)->with('User', $User);
     }
 
     public function Registration()
@@ -57,7 +59,8 @@ class ContactsController extends Controller
         $data2 = '';
         $data3 = '';
         $data4 = '';
-        $roles = $data1 . $data2 . $data3 . $data4;
+        $data5 = $data1 . $data2 . $data3 . $data4;
+        $roles = '';
         return view('dashboard.admin.contacts.contact registration', compact('roles'));
     }
 

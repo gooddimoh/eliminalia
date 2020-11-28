@@ -23,13 +23,11 @@ class HomeController extends Controller
 
     public function index()
     {
-//        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         return $users = User::all();
     }
 
     public function create()
     {
-//        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $roles = Role::all()->pluck('title', 'id');
 

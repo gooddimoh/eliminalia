@@ -39679,7 +39679,7 @@ hr {
     background: #FFFFFF;
     border: none;
     box-shadow: none;
-    border-radius: 0px!important;
+    border-radius: 0px !important;
 }
 
 .panel > .table-bordered,
@@ -41413,21 +41413,22 @@ hr {
 }
 
 .timeline {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
+    /*list-style-type: none;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*position: relative;*/
 }
 
 .timeline:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    bottom: 5px;
-    width: 5px;
-    background: #2d353c;
-    left: 10%;
-    margin-left: -2.5px;
+    /*content: "";*/
+    /*position: absolute;*/
+    /*top: 5px;*/
+    /*bottom: 5px;*/
+    /*width: 5px;*/
+    /*background: #2d353c;*/
+    /*left: 10%;*/
+    /*margin-left: -2.5px;*/
+    /*display:none;*/
 }
 
 @media (max-width: 991.98px) {

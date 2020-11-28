@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,15 +12,21 @@ class Links extends Migration
      */
     public function up()
     {
-        Schema::create('role_user', function (Blueprint $table) {
-            $table->id();
-            $table->string('Name*:');
-            $table->string('Name*:');
-            $table->string('Name*:');
-            $table->string('Name*:');
-            $table->string('Name*:');
-            $table->string('Name*:');
-            $table->json('Name*:');
+        Schema::create('links', function (Blueprint $table) {
+            $table->integer('id');
+            $table->date('fecha');
+            $table->time('hora');
+            $table->date('fecha_modificacion');
+            $table->time('hora_modificacion');
+            $table->integer('id_gestor');
+            $table->integer('id_cliente');
+            $table->string('enlace');
+            $table->enum('estado');
+            $table->enum('estado_seo');
+            $table->date('fecha_modificacion_seo');
+            $table->timestamp('hora_modificacion_seo');
+            $table->enum('tipo_enlace');
+            $table->integer('id_categoria');
         });
     }
 
@@ -32,6 +37,6 @@ class Links extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('links');
     }
 }

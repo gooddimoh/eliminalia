@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,13 +13,29 @@ class ContactBook extends Migration
     public function up()
     {
         Schema::create('contact_book', function (Blueprint $table) {
-            $table->string('user_id');
-            $table->string('user_id');
-            $table->string('user_id');
-            $table->string('user_id');
-            $table->string('user_id');
-            $table->string('user_id');
-            $table->string('user_id');
+            $table->id('id');
+            $table->timestamp('fecha');
+            $table->enum('tipo_contacto');
+            $table->integer('id_medio_comunicacion');
+            $table->string('nombre_empresa');
+            $table->string('cif');
+            $table->string('cargo');
+            $table->string('nombre');
+            $table->string('apellidos');
+            $table->string('dni');
+            $table->string('pais');
+            $table->string('ciudad');
+            $table->string('provincia');
+            $table->string('direccion');
+            $table->string('codigo_postal');
+            $table->string('telefono');
+            $table->string('telefono2');
+            $table->string('email');
+            $table->string('email2');
+            $table->string('web');
+            $table->string('observaciones');
+            $table->enum('idioma');
+            $table->tinyInteger('activo');
         });
     }
 
@@ -31,6 +46,6 @@ class ContactBook extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('contact_book');
     }
 }

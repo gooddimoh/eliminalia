@@ -3,7 +3,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Access_History extends Migration
+class LinksSearch extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,13 @@ class Access_History extends Migration
      */
     public function up()
     {
-        Schema::create('access_history', function (Blueprint $table) {
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id', 'user_id_fk_466020')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedInteger('role_id');
-            $table->foreign('role_id', 'role_id_fk_466020')->references('id')->on('roles')->onDelete('cascade');
-            $table->foreign('role_id', 'users_id_fk_466020')->references('id')->on('roles')->onDelete('cascade');
+        Schema::create('links_search', function (Blueprint $table) {
+            $table->integer('id');
+            $table->text('enlace');
+            $table->text('texto_a_buscar');
+            $table->tinyInteger('estado');
+            $table->integer('id_usuario');
+            $table->timestamp('fecha_actualizado');
         });
     }
 
@@ -28,6 +29,6 @@ class Access_History extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('access_history');
     }
 }

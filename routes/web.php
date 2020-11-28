@@ -15,8 +15,7 @@ Route::get('/dashboard', function () {
     return redirect(' ');
 });
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () {
-});
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () { });
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
@@ -38,17 +37,18 @@ Route::post('user/create', 'UsersController@create')->name('user.create');
 Route::post('user/edit', 'UsersController@edit')->name('user.edit');
 Route::post('user/store', 'UsersController@edit')->name('users.store');
 
-Route::get('dashboard/user/edit', 'UsersController@Edit')->name('UserEdit');
-Route::get('dashboard/user/store', 'UsersController@Store')->name('UserStore');
+Route::get('dashboard/user/edit', 'UsersController@Edit')->name('user.edit');
+Route::get('dashboard/user/store', 'UsersController@Store')->name('user.store');
 
 Route::get('dashboard/Map', 'MainController@Map')->name('Map');
-Route::get('dashboard/Timeline', 'TimelineController@Timeline')->name('Timeline');
+Route::get('dashboard/Timeline', 'TimelineController@Timeline')->name('timeline');
 Route::get('dashboard/calendar', 'MainController@Calendar')->name('calendar');
 
-Route::get('dashboard/Partners/Partners list', 'MainController@partners list')->name('Partners List');
-Route::get('dashboard/Partners/Registration', 'MainController@registration')->name('ContactRegistration');
-Route::get('dashboard/File Manager', 'FileManager@filemanager')->name('File Manager');
-Route::get('dashboard/Timeline/MakePost', 'TimeLineController@MakePostToTimeline')->name('MakePostToTimeline');
+Route::get('dashboard/partners/list', 'PartnersController@list')->name('partners.list');
+Route::get('dashboard/partners/registration', 'PartnersController@registration')->name('partners.registration');
+
+Route::get('dashboard/filemanager', 'FileManager@filemanager')->name('File Manager');
+Route::get('dashboard/timeline/makepost', 'TimeLineController@timelinepost')->name('timeline.post');
 
 Route::get('dashboard/email/inbox', 'EmailController@emailinbox')->name('emailinbox');
 Route::get('dashboard/email/compose', 'EmailController@emailcompose')->name('emailcompose');
@@ -65,14 +65,17 @@ Route::get('dashboard/usermanagement/new', 'UserManagement@create')->name('userm
 Route::get('dashboard/usermanagement/edit', 'UserManagement@edit')->name('usermanagementedit');
 Route::get('ActionHistory', 'UserManagement@show')->name('ActionHistory');
 
-Route::get('contact', 'MainController@contact')->name('contact');
-Route::get('contacts', 'MainController@index')->name('contacts');
+Route::get('contact', 'ContactsController@contact')->name('contact');
+Route::get('contacts', 'ContactsController@index')->name('contacts');
 
-Route::get('dashboard/contacts/registration', 'ContactsController@Registration')->name('ContactRegistration');
-Route::get('dashboard/contacts/inquiries', 'ContactsController@Inquiries')->name('Inquiries');
-Route::get('dashboard/contacts/list', 'ContactsController@List')->name('ContactList');
+Route::get('dashboard/contacts/registration', 'ContactsController@registration')->name('contactregistration');
+Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('inquiries');
+Route::get('dashboard/contacts/list', 'ContactsController@list')->name('contactList');
 
 Route::post('contacts', 'ContactsController@store')->name('contacts');
+
+Route::post('contacts/create', 'ContactsController@Create')->name('contacts.create');
+
 Route::post('register', ['uses' => 'Auth\AuthController@postRegister', 'as' => 'login']);
 
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin', 'as' => 'login']);
@@ -102,3 +105,6 @@ Route::post('usermanagement/useredit', 'MainController@usermanagement.new.edit')
 
 // $query = Job::where('status', '=', Job::APPROVED);
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

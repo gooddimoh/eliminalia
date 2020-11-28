@@ -14,10 +14,10 @@ class UserContactsBook extends Migration
     public function up()
     {
         Schema::create('user_contacts_book', function (Blueprint $table) {
-            $table->string('role_id');
-            $table->string('role_id');
-            $table->string('role_id');
-            $table->string('role_id');
+            $table->integer('id');
+            $table->timestamp('fecha');
+            $table->integer('id_contacto');
+            $table->integer('id_usuario');
         });
     }
 
@@ -28,6 +28,6 @@ class UserContactsBook extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('user_contacts_book');
     }
 }

@@ -1,23 +1,22 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ContactBookLink extends Migration
-{
+class ContactBookLink extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('contact_book_link', function (Blueprint $table) {
-            $table->string('role_id');
-            $table->string('role_id');
-            $table->string('role_id');
-            $table->string('role_id');
+            $table->id('id')->autoIncrement();
+            $table->timestamp('fecha')->comment('date');
+            $table->integer('id_contacto');
+            $table->integer('id_enlace');
         });
     }
 
@@ -28,6 +27,6 @@ class ContactBookLink extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('contact_book_link');
     }
 }

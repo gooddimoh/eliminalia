@@ -3,11 +3,11 @@
 @section('title', 'Basic Tables')
 {{--There output Contacts data --}}
 @section('content')
-    <form method="post" action="{{route('contacts')}}" class="col-xl-12">
+    <form method="post" action="{{route('contacts.create')}}" class="col-xl-12">
         @csrf
         <h1>CONTACT REGISTRATION</h1>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="form-group row">
                     <label class="col-form-label">Name*:</label>
                     <input class="form-control form-control-sm" type="text" name="name" value="" placeholder="Name*:">
@@ -35,6 +35,10 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Country*:</label>
+                    <select name="cars" id="cars">
+                        <option value="Aruba">Britain</option>
+                        <option value="Bahrain">Australia</option>
+                    </select>
                     <input class="form-control form-control-sm" type="text" name="country" placeholder="Country*:">
                 </div>
                 <div class="form-group row">
@@ -43,7 +47,7 @@
                            placeholder="Commercial*:">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="form-group row">
                     <label class="col-form-label">Surname:</label>
                     <input class="form-control form-control-sm" type="text" name="surname" placeholder="Surname:">
@@ -93,6 +97,13 @@
                 </div>
                 <label class="col-form-label form-control-sm"></label>
             </div>
+            <div class="col-md-6">
+                <div class="timeline">
+                    <p>Time Line</p>
+                    <input type="checkbox" name="name1" placeholder="name1" checked>
+                    <input type="checkbox" name="name1" placeholder="name1" checked>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -113,13 +124,16 @@
                 <div class="form-group row">
                     <br>
                     <label class="col-form-label col-md-2">Case description made by the client:</label>
-                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:" name="textbox_type_1">
+                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
+                              name="textbox_type_1">
                         Case description made by the client:
                     </textarea>
                     <label class="col-form-label col-md-2">Info for the manager:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the manager:" name="textbox_type_2"></textarea>
+                    <textarea class="form-control" rows="6" placeholder="Info for the manager:"
+                              name="textbox_type_2"></textarea>
                     <label class="col-form-label col-md-2">Info for the commercial:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:" name="textbox_type_3"></textarea>
+                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:"
+                              name="textbox_type_3"></textarea>
                 </div>
                 <br>
                 <div class="inputs" style="">
@@ -167,8 +181,8 @@
                 </div>
             </div>
         </div>
-        <div class="row -align-right">
-            <button type="submit" class="form-control btn btn-green">CONTACT REGISTER</button>
+        <div class="row align-right">
+            <button type="submit" class="form-control btn btn-green width-150">CONTACT REGISTER</button>
         </div>
     </form>
 @endsection

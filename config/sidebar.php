@@ -134,11 +134,11 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => 'dashboard/Partners/Registration',
+                'url' => 'dashboard/partners/registration',
                 'title' => 'Partner Registration',
                 'route-name' => 'Partner Registration'
             ], [
-                'url' => 'dashboard/Partners/List',
+                'url' => 'dashboard/partners/list',
                 'title' => 'Partners List',
                 'route-name' => 'Partners List'
             ]]
@@ -185,11 +185,11 @@ return [
             'url' => '/dashboard/Timeline',
             'route-name' => 'Timeline'
         ],
-//        ['icon' => 'fa fa-edit',
-//            'title' => 'MakePostToTimeline',
-//            'url' => '/dashboard/MakePostToTimeline',
-//            'route-name' => 'MakePostToTimeline'
-//        ],
+        ['icon' => 'fa fa-edit',
+            'title' => 'PostToTimeline',
+            'url' => '/dashboard/PostToTimeline',
+            'route-name' => 'PostToTimeline'
+        ],
         ['icon' => 'fa fa-hdd',
             'title' => 'File Manager',
             'url' => '/dashboard/File Manager',

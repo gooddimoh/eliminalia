@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-    <form method="post" action="{{route('user.create')}}" class="col-xl-12">
+    <form method="post" action="{{route('contacts.registration')}}" class="col-xl-12">
         @csrf
         {{ csrf_field() }}
         <div class="row">

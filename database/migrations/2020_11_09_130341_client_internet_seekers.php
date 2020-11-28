@@ -14,11 +14,12 @@ class ClientInternetSeekers extends Migration
     public function up()
     {
         Schema::create('client_internet_seekers', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->string('user_id');
-            $table->string('user_id');
-            $table->string('user_id');
-            $table->string('user_id');
+            $table->integer('id')->primary();
+            $table->date('fecha');
+            $table->time('hora');
+            $table->integer('id_usuario');
+            $table->integer('id_cliente');
+            $table->integer('id_buscador_internet');
         });
     }
 
@@ -29,6 +30,6 @@ class ClientInternetSeekers extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('client_internet_seekers');
     }
 }

@@ -13,10 +13,12 @@ class Tickets extends Migration
     public function up()
     {
         Schema::create('tickets', function (Blueprint $table) {
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id', 'user_id_fk_466020')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedInteger('role_id');
-            $table->foreign('role_id', 'role_id_fk_466020')->references('id')->on('roles')->onDelete('cascade');
+            $table->integer('id');
+            $table->date('fecha');
+            $table->time('hora');
+            $table->integer('id_usuario');
+            $table->integer('id_asunto');
+            $table->string('contenido');
         });
     }
 
@@ -27,6 +29,6 @@ class Tickets extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('tickets');
     }
 }

@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,18 +13,20 @@ class Partners extends Migration
     public function up()
     {
         Schema::create('partners', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->string('Nombre');
-            $table->string('Phone number 1:');
-            $table->string('Phone number 2:');
-            $table->string('Email (main):');
-            $table->string('Email (secondary):');
-            $table->string('Address:');
-            $table->string('Postal code:');
-            $table->string('City:');
-            $table->string('State:');
-            $table->string('Country*:');
-            $table->string('Observations:');
+            $table->id('id')->primary();
+            $table->timestamp('fecha');
+            $table->string('nombre');
+            $table->string('pais');
+            $table->string('ciudad');
+            $table->string('provincia');
+            $table->string('direccion');
+            $table->string('codigo_postal');
+            $table->string('telefono');
+            $table->string('telefono2');
+            $table->string('email');
+            $table->string('email2');
+            $table->string('observaciones');
+            $table->tinyInteger('activo');
         });
     }
 
@@ -36,6 +37,6 @@ class Partners extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('partners');
     }
 }
