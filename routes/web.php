@@ -49,9 +49,9 @@ Route::get('dashboard/partners/registration', 'PartnersController@registration')
 Route::get('dashboard/filemanager', 'FileManager@filemanager')->name('File Manager');
 Route::get('dashboard/timeline/makepost', 'TimeLineController@timelinepost')->name('timeline.post');
 
-Route::get('dashboard/email/inbox', 'EmailController@emailinbox')->name('emailinbox');
-Route::get('dashboard/email/compose', 'EmailController@emailcompose')->name('emailcompose');
-Route::get('dashboard/email/detail', 'EmailController@emaildetail')->name('emaildetail');
+Route::get('dashboard/email/inbox', 'EmailController@inbox')->name('inbox');
+Route::get('dashboard/email/compose', 'EmailController@compose')->name('compose');
+Route::get('dashboard/email/detail', 'EmailController@detail')->name('detail');
 
 Route::get('dashboard/tracker/index', 'EmailController@emaildetail')->name('emaildetail');
 

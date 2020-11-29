@@ -16,6 +16,7 @@ class TimelineController extends Controller
 
     public function timeline()
     {
-        return view("dashboard.admin.timeline.timeline");
+        $role = '';
+        return view("dashboard.$role.timeline.timeline");
     }
 }
