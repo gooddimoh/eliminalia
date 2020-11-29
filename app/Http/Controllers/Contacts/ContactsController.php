@@ -18,15 +18,14 @@ class ContactsController extends Controller
 
     public function Index()
     {
-    // maby use Gate
+        $users = User::all()->role();
+        $roleя = Role::all();
+        $users = User::all();
+        $users = User::all();
+        $users = User::all();
+        $users = User::all();
+        $users = User::all();
 
-        $users = User::all()->role;
-        $users = User::all();
-        $users = User::all();
-        $users = User::all();
-        $users = User::all();
-        $users = User::all();
-        $users = User::all();
         return view('admin.users.index', compact('users', 'model2'));
     }
 
@@ -41,6 +40,7 @@ class ContactsController extends Controller
     {
         die();
         $user = User::create($request->all());
+        $request->validation();
         $user->roles()->sync($request->input('roles', []));
 
         return redirect()->route('admin.users.index');

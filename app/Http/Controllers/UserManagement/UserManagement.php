@@ -19,7 +19,8 @@ class UserManagement extends Controller
     public function index(Request $request)
     {
         $users = User::all();
-        return view('admin.users.index', compact('users'));
+        $roles = Role::all();
+        return view('admin.users.index', compact('users', 'roles'));
     }
 
     public function list(Request $request)
@@ -32,22 +33,20 @@ class UserManagement extends Controller
 
     public function create(Request $request)
     {
-        // abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        // $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
-        //        $roles = Role::all()->pluck('title', 'id');
+        $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
+        $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
-        // var_dump($validatedData);
+        var_dump($validatedData);
         $request->session()->flush();
         $request->flush();
         $request->all();
-        return view('dashboard.Admin.UserManagement.create')->with('users', $users);
+        redirect(route(''));
     }
 
     public function store(StoreUserRequest $request)
     {
         $request->session()->flush();
-        $request->flush();
-        var_dump($request->all());
+        $request->validate($request->all());
         die();
         $user = User::create($request->all());
         return view('admin.users.index')->with('users', $user);
@@ -55,8 +54,6 @@ class UserManagement extends Controller
 
     public function edit(Request $request, User $user)
     {
-//        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $roles = Role::all()->pluck('title', 'id');
         $user->load('roles');
         return view('dashboard.manager.usermanagement.edit', compact('users'));

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -34,7 +35,7 @@ class AuthentifcateController extends Controller
         if ($validator->fails()) {
             return response()->json(['status_code' => 400, 'message' => 'Bad Request']);
         }
-//        return view('admin.users.index', compact('users'));
+        return view('admin.users.index', compact('users'));
     }
 
 

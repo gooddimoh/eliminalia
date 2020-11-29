@@ -15,7 +15,8 @@ Route::get('/dashboard', function () {
     return redirect(' ');
 });
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () { });
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () {
+});
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
@@ -42,7 +43,7 @@ Route::get('dashboard/user/store', 'UsersController@Store')->name('user.store');
 
 Route::get('dashboard/Map', 'MainController@Map')->name('Map');
 Route::get('dashboard/Timeline', 'TimelineController@Timeline')->name('timeline');
-Route::get('dashboard/calendar', 'MainController@Calendar')->name('calendar');
+Route::get('dashboard/Calendar', 'MainController@Calendar')->name('calendar');
 
 Route::get('dashboard/partners/list', 'PartnersController@list')->name('partners.list');
 Route::get('dashboard/partners/registration', 'PartnersController@registration')->name('partners.registration');
@@ -54,6 +55,8 @@ Route::get('dashboard/email/inbox', 'EmailController@emailinbox')->name('emailin
 Route::get('dashboard/email/compose', 'EmailController@emailcompose')->name('emailcompose');
 Route::get('dashboard/email/detail', 'EmailController@emaildetail')->name('emaildetail');
 
+Route::get('dashboard/tracker/index', 'EmailController@emaildetail')->name('emaildetail');
+
 Route::get('dashboard/chart/flot', 'ChartController@chartFlot')->name('chart-flot');
 Route::get('dashboard/chart/js', 'ChartController@chartJs')->name('chart-js');
 Route::get('dashboard/chart/d3', 'ChartController@chartD3')->name('chart-d3');
@@ -63,7 +66,7 @@ Route::get('dashboard/map/vector', 'ChartController@mapVector')->name('map-vecto
 Route::get('dashboard/usermanagement/list', 'UserManagement@list')->name('usermanagementlist');
 Route::get('dashboard/usermanagement/new', 'UserManagement@create')->name('usermanagementnew');
 Route::get('dashboard/usermanagement/edit', 'UserManagement@edit')->name('usermanagementedit');
-Route::get('ActionHistory', 'UserManagement@show')->name('ActionHistory');
+Route::get('actionhistory', 'UserManagement@show')->name('ActionHistory');
 
 Route::get('contact', 'ContactsController@contact')->name('contact');
 Route::get('contacts', 'ContactsController@index')->name('contacts');
@@ -75,6 +78,7 @@ Route::get('dashboard/contacts/list', 'ContactsController@list')->name('contactL
 Route::post('contacts', 'ContactsController@store')->name('contacts');
 
 Route::post('contacts/create', 'ContactsController@Create')->name('contacts.create');
+Route::post('contacts/edit', 'ContactsController@Create')->name('contacts.create');
 
 Route::post('register', ['uses' => 'Auth\AuthController@postRegister', 'as' => 'login']);
 
@@ -103,7 +107,7 @@ Route::get('/forgot-password', function () {
 Route::post('usermanagement/usernew', 'MainController@usermanagement.new.user')->name('usermanagement_new_user');
 Route::post('usermanagement/useredit', 'MainController@usermanagement.new.edit')->name('usermanagement_new_edit');
 
-// $query = Job::where('status', '=', Job::APPROVED);
+//$query = Job::where('status', '=', Job::APPROVED);
 
 Auth::routes();
 
