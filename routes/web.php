@@ -60,10 +60,12 @@ Route::get('dashboard/chart/js', 'ChartController@chartJs')->name('chart-js');
 Route::get('dashboard/chart/d3', 'ChartController@chartD3')->name('chart-d3');
 Route::get('dashboard/chart/apex', 'ChartController@chartApex')->name('chart-apex');
 
-Route::get('dashboard/map/vector', 'ChartController@mapVector')->name('map-vector');
 Route::get('dashboard/usermanagement/list', 'UserManagement@list')->name('usermanagementlist');
 Route::get('dashboard/usermanagement/new', 'UserManagement@create')->name('usermanagementnew');
 Route::get('dashboard/usermanagement/edit', 'UserManagement@edit')->name('usermanagementedit');
+
+Route::get('dashboard/map/vector', 'ChartController@mapVector')->name('map-vector');
+
 Route::get('actionhistory', 'UserManagement@show')->name('ActionHistory');
 
 Route::get('contact', 'ContactsController@contact')->name('contact');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\API\AuthController;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use phpDocumentor\Reflection\DocBlock\TagFactory;
 
 class MainController extends Controller
@@ -20,6 +21,13 @@ class MainController extends Controller
 
     public function Dashboard(Request $request)
     {
+
+        $session = Session::all();
+        var_dump($session);
+
+        die('');
+//        $user->isAdmin;
+
         return view('dashboard.admin.dashboard');
     }
 

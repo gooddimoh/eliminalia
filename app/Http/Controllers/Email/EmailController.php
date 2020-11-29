@@ -8,16 +8,16 @@ class EmailController extends Controller
 {
     public function Inbox(Request $request)
     {
-        view('email.email-Inbox');
+        view('email.email-inbox');
     }
 
     public function Compose(Request $request)
     {
-        view('email.email-Compose');
+        view('email.email-compose');
     }
 
     public function Detail(Request $request)
     {
-        view('email.email-Detail');
+        view('email.email-detail');
     }
 }
