@@ -19,14 +19,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 });
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
-Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
 Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 'register']);
-
+Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
 Route::post('register', ['uses' => 'Auth\AuthController@postRegister', 'as' => 'login']);
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin', 'as' => 'login']);
 
 Route::get('index', 'MainController@index')->name('index');
-
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
 Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 'register']);

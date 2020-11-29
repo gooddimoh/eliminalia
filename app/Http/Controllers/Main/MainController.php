@@ -80,6 +80,7 @@ class MainController extends Controller
     public function Auth()
     {
         return view();
+        redirect()->route('')
     }
 
 }

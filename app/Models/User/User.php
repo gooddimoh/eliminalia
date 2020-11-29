@@ -92,7 +92,7 @@ class User extends Model
         });
     }
 
-    public function Roles()
+    public function Role()
     {
         return $this->belongsToMany(Role::class);
     }
