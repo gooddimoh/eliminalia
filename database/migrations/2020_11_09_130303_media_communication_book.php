@@ -10,6 +10,7 @@ class MediaCommunicationBook extends Migration
      *
      * @return void
      */
+//    2
     public function up()
     {
         Schema::create('media_communication_book', function (Blueprint $table) {
