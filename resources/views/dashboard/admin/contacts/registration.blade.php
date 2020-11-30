@@ -82,9 +82,10 @@
                     <label class="col-form-label">Native language*:</label>
                     <select class="form-control form-control-sm" name="nativelanguage">
                         <option value="0">Native languge*:</option>
+                        <option value="1" selected>selected lang</option>
                         <option value="1">SPANISH</option>
                         <option value="2">ENGLISH</option>
-                        <option value="3" selected>selected lang</option>
+                        <option value="3">ENGLISH</option>
                         <option value="4">FRENCH</option>
                         <option value="5">DEUTSCH</option>
                         <option value="6">ITALIAN</option>
@@ -101,9 +102,14 @@
             </div>
             <div class="col-md-6">
                 <div class="timeline">
-                    <p>Time Line</p>
-                    <input type="checkbox" name="name1" placeholder="name1" checked>
-                    <input type="checkbox" name="name1" placeholder="name1" checked>
+                    <div class="form-group">
+                        <input type="checkbox" name="name1" placeholder="name1" checked>
+                        <p>physical person</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="name1" placeholder="name1" checked>
+                        <p>legal person</p>
+                    </div>
                 </div>
             </div>
         </div>

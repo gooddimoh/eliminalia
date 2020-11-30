@@ -77,7 +77,10 @@
                         <i class="fa fa-bug media-object bg-silver-darker"></i>
                     </div>
                     <div class="media-body">
-                        <h6 class="media-heading">Server Error Reports
+                        <h6 class="media-heading">
+                            {{--                            {{$notification}}--}}
+                            Notification in Blade
+                            Server Error Reports
                             <i class="fa fa-exclamation-circle text-danger"></i>
                         </h6>
                         <div class="text-muted f-s-10">3 minutes ago</div>

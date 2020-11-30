@@ -19,13 +19,13 @@ class UserManagement extends Controller
     public function index(Request $request)
     {
         $users = User::all();
-        return view('admin.users.index', compact('users'));
+        $role = Role::all();
+//      $data = Data::all();
+        return view('admin.users.index', compact('users', 'role'));
     }
 
     public function list(Request $request)
     {
-        //  Gate::after(function ($user, $ability, $result, $arguments) { });
-
         $users = User::all();
         var_dump($users);
         echo "data1";
@@ -39,7 +39,7 @@ class UserManagement extends Controller
     {
         $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
         $roles = Role::all()->pluck('title', 'id');
-        $users = User::all()->find();
+        $users = User::all();
         $request->session()->flush();
         $request->flush();
         $request->all();
@@ -51,6 +51,13 @@ class UserManagement extends Controller
     {
         $request->session()->flush();
         $request->flush();
+        User::create();
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+        $input = $request->all();
+        User::create($input);
         var_dump($request->all());
         die();
         $user = User::create($request->all());
@@ -59,8 +66,6 @@ class UserManagement extends Controller
 
     public function edit(Request $request, User $user)
     {
-//        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $roles = Role::all()->pluck('title', 'id');
         $user->load('roles');
         return view('dashboard.manager.usermanagement.edit', compact('users'));
@@ -80,8 +85,6 @@ class UserManagement extends Controller
 
     public function destroy(User $user)
     {
-//        abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $user->delete();
 
         return back();

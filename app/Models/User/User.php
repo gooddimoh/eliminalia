@@ -40,41 +40,6 @@ class User extends Model
         'deleted_at',
     ];
 
-//    protected function Create(array $data, Request $request)
-//    {
-//        $request->validate($request->all());
-//        $messages = [
-//            'required' => 'The :attribute is mandatory',
-//            'phone_number.regex' => 'The phone number must be in E.164 format'
-//        ];
-//        $this->validate(
-//            $request, [
-//            'name' => 'required',
-//            'phone_number' => 'required|regex:/^\+[1-9]\d{1,14}$/',
-//            'description' => 'required'
-//        ], $messages
-//        );
-//        $user = new User;
-//        $user->save();
-//        $newTicket = new Ticket($request->all());
-//        $newTicket->save();
-//
-//        $request->session()->flash(
-//            'status',
-//            "We've received your support ticket. We'll be in touch soon!"
-//        );
-//
-//        return redirect()->route('home');
-//
-//        Storage::makeDirectory(__DIR__ . '/Client_ID_/' . $user->id);
-//        Storage::makeDirectory(__DIR__ . '/Client_ID_/' . $user->id . "/Internal/Client_Private_Documents/");
-//        Storage::makeDirectory(__DIR__ . '/Client_ID_/' . $user->id . "/Links/Internal/Private_Documents/");
-//        Storage::makeDirectory(__DIR__ . '/Client_ID_/' . $user->id . "/Links/Public_Documents/");
-//        Storage::makeDirectory(__DIR__ . '/Client_ID_/' . $user->id . "/Public/Client_Documents/");
-//
-//        return view('list');
-//    }
-
     public function Save(array $options = array())
     {
         return parent::save($options);
@@ -90,6 +55,8 @@ class User extends Model
         return $this->belongsTo('App\Models\User')->withDefault(function ($user, $post) {
             $user->name = 'Guest Author';
         });
+
+        $this->morphedByMany();
     }
 
     public function Roles()

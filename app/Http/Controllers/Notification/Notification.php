@@ -37,7 +37,6 @@ class UserManagement extends Controller
         $value = session('key', 'default');
 //        $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
-
         var_dump($value);
 
         // var_dump($validatedData);
@@ -89,8 +88,7 @@ class UserManagement extends Controller
         return back();
     }
 
-    public function massDestroy(MassDestroyUserRequest $request)
-    {
+    public function massDestroy(MassDestroyUserRequest $request){
         User::whereIn('id', request('ids'))->delete();
         return response(null, Response::HTTP_NO_CONTENT);
     }

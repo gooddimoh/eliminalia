@@ -14,15 +14,18 @@
                     <div class="col-md-3">
                         <div class="form-group row">
                             <label class="col-form-label">Username:</label>
-                            <input class="form-control form-control-sm" type="text" value="" name="" placeholder="Username:">
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="Username:">
                         </div>
                         <div class="form-group row">
                             <label class="col-form-label">Name:</label>
-                            <input class="form-control form-control-sm" type="text" name="" placeholder="Password:">
+                            <input class="form-control form-control-sm" type="text" name="" value=""
+                                   placeholder="Password:">
                         </div>
                         <div class="form-group row">
                             <label class="col-form-label">Phone:</label>
-                            <input class="form-control form-control-sm" type="text" value="" name=""  placeholder="Email (main)*:" value="">
+                            <input class="form-control form-control-sm" type="text" value="" name=""
+                                   placeholder="Email (main)*:">
                         </div>
                         <div class="form-group row">
                             <label class="col-form-label">DNI:</label>
@@ -84,15 +87,14 @@
                 <div class="panel" data-sortable-id="table-basic-7" data-init="true" style="">
                     <!-- begin panel-heading -->
                     <div class="panel-heading ui-sortable-handle">
-                        <h4 class="panel-title">List of all Users <span
-                                    class="label label-success m-l-5 t-minus-1">NEW</span>
+                        <h4 class="panel-title">List of all Users <span class="label label-success m-l-5 t-minus-1">NEW</span>
                         </h4>
                         <div class="panel-heading-btn">
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
                                data-click="panel-expand"><i class="fa fa-expand"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
-                            <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle circle btn-warning"
                                data-click="panel-collapse"><i class="fa fa-minus"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
                                data-click="panel-remove"><i class="fa fa-times"></i></a>

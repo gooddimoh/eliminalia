@@ -190,6 +190,11 @@ return [
             'url' => '/dashboard/PostToTimeline',
             'route-name' => 'PostToTimeline'
         ],
+        ['icon' => 'fa fa-edit',
+            'title' => 'PostWithFiles',
+            'url' => '/dashboard/postwithfiles',
+            'route-name' => 'postwithfiles'
+        ],
         ['icon' => 'fa fa-hdd',
             'title' => 'File Manager',
             'url' => '/dashboard/File Manager',

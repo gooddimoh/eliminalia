@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -17,7 +18,7 @@ class ContactsController extends Controller
 
     public function Index()
     {
-        // maby use Gate
+        // maby use Gate //
 
         $users = User::all()->role;
         $users = User::all();
@@ -32,9 +33,9 @@ class ContactsController extends Controller
 
     public function Create()
     {
-
         $roles = Role::all()->pluck('title', 'id');
-        return view('admin.users.create', compact('roles'));
+        $user = 'user';
+        return view('admin.users.create', compact('roles', 'user'));
     }
 
     public function Store(StoreUserRequest $request)
@@ -48,12 +49,11 @@ class ContactsController extends Controller
 
     public function List()
     {
-//        $Role = Role::all();
-//        $User = User::all();
-
-        $Role = '';
-        $User = '';
-        return view('dashboard.admin.contacts.list')->with('Role', $Role)->with('User', $User);
+        //    $role = Role::all();
+        //    $user = User::all();
+        //    $role = '';
+        //    $user = '';
+        return view('dashboard.admin.contacts.list');
     }
 
     public function Registration()
@@ -69,62 +69,59 @@ class ContactsController extends Controller
 
     public function Inquiries()
     {
-        // abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden'); //
         $users = User::all();
-
         return view('dashboard.admin.contacts.inquiries', compact('users'));
     }
 
-    public function Edit(User $user)
+    public function Edit(Reques $request, User $user, Response $response)
     {
-        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         $roles = Role::all()->pluck('title', 'id');
         $roles->load('roles');
+        $request->session();
         $data1 = '';
         $data2 = '';
         $data3 = '';
         $data4 = '';
         $user = $data1 . $data2 . $data3 . $data4;
         $roles = $data1 . $data2 . $data3 . $data4;
-        return view('admin . users . edit', compact('roles', 'user'));
+        return view('admin.users.edit', compact('roles', 'user'));
     }
 
-    public function Update(UpdateUserRequest $request, User $user)
+    public function Update(UserRequest $request, User $user)
     {
-        $approved = $user->approved;
 
+        $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required|max:255',
+            'price' => 'required|max:255'
+        ]);
+
+        $approved = $user->approved;
         $user->update($request->all());
         $user->roles()->sync($request->input('roles', []));
-
         if ($approved == 0 && $user->approved == 1) {
             $user->notify(new UserApprovedNotification());
         }
-
-        return redirect()->route('admin . users . index');
+        return redirect()->route('admin.users.index');
     }
 
     public function Show(User $user)
     {
-        abort_if(Gate::denies('user_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $user->load('roles');
-
-        return view('admin . users . show', compact('user'));
+        return view('admin.users.show', compact('user'));
     }
 
     public function Destroy(User $user)
     {
         abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $user->delete();
-
         return back();
     }
 
     public function MassDestroy(MassDestroyUserRequest $request)
     {
         User::whereIn('id', request('ids'))->delete();
-
         return response(null, Response::HTTP_NO_CONTENT);
     }
 }

@@ -79,12 +79,12 @@ class MainController extends Controller
 
     public function FileManager(Request $request)
     {
-        return view();
+        return view('');
     }
 
     public function Auth()
     {
-        return view();
+        return view('');
     }
 
 }

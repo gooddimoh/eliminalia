@@ -26,7 +26,7 @@
                                 {{ trans('cruds.user.fields.email_helper') }}
                             </p>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group ">
                             <label for="password">{{ trans('cruds.user.fields.password') }}</label>
                             <input type="password" id="password" name="password" class="form-control" required>
                             <p class="helper-block">

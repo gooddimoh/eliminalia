@@ -40,17 +40,16 @@ Route::get('dashboard/contacts/registration', 'ContactsController@registration')
 Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('inquiries');
 Route::get('dashboard/contacts/list', 'ContactsController@list')->name('contact list');
 
-Route::get('dashboard/customer/CUSTOMER REGISTRATION', 'ContactsController@list')->name('customer.list(SADMIN)');
-Route::get('dashboard/customer/CUSTOMERS LIST (SADMIN)', 'ContactsController@list')->name('customer.list(SADMIN)');
-Route::get('dashboard/customer/CUSTOMERS LIST (ADMIN)', 'ContactsController@list')->name('customer.list(SADMIN)');
-Route::get('dashboard/customer/CUSTOMERS LIST (MANAGER)', 'ContactsController@list')->name('customer.list(MANAGER)');
-Route::get('dashboard/customer/CUSTOMERS LIST (PARTNER)', 'ContactsController@list')->name('customer.list(PARTNER)');
-Route::get('dashboard/customer/CUSTOMERS LIST (REGISTRATOR)', 'ContactsController@list')->name('customer.list(REGISTRATOR)');
-Route::get('dashboard/customer/FINALIZATE FILES (PENDING BILLING) ', 'ContactsController@list')->name('customer.list(PENDING BILLING)');
+Route::get('dashboard/customer/customerregistration', 'ContactsController@list')->name('customer.list(SADMIN)');
+Route::get('dashboard/customer/customers list (SADMIN)', 'ContactsController@list')->name('customer.list(SADMIN)');
+Route::get('dashboard/customer/customers list (ADMIN)', 'ContactsController@list')->name('customer.list(SADMIN)');
+Route::get('dashboard/customer/customers list (MANAGER)', 'ContactsController@list')->name('customer.list(MANAGER)');
+Route::get('dashboard/customer/customers list (PARTNER)', 'ContactsController@list')->name('customer.list(PARTNER)');
+Route::get('dashboard/customer/customers list (REGISTRATOR)', 'ContactsController@list')->name('customer.list(REGISTRATOR)');
+Route::get('dashboard/customer/finalizte files (PENDING BILLING) ', 'ContactsController@list')->name('customer.list(PENDING BILLING)');
 
 Route::get('dashboard/partners/list', 'PartnersController@list')->name('partners.list');
 Route::get('dashboard/partners/registration', 'PartnersController@registration')->name('partners.registration');
-Route::get('dashboard/partners/list', 'PartnersController@list')->name('partners.list');
 
 Route::get('requests', 'ContactsController@list')->name('finalizate files');
 Route::get('requests', 'ContactsController@withdraw.contracts')->name('withdraw.contracts');
@@ -87,10 +86,7 @@ Route::get('dashboard/contacts/registration', 'ContactsController@registration')
 Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('contact.inquiries');
 Route::get('dashboard/contacts/list', 'ContactsController@list')->name('contact.list');
 
-Route::get('actionhistory', 'UserManagement@show')->name('actionhistory');
-
 Route::post('contacts', 'ContactsController@store')->name('contacts');
-
 Route::post('contacts/create', 'ContactsController@create')->name('contacts.create');
 Route::post('contacts/registration', 'ContactsController@registration')->name('contacts.registration');
 
@@ -98,6 +94,8 @@ Route::post('register', ['uses' => 'Auth\AuthController@postRegister', 'as' => '
 
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin', 'as' => 'login']);
 Route::post('postlogin', ['uses' => 'Auth\AuthController@postlogin', 'as' => 'postlogin']);
+
+Route::get('actionhistory', 'UserManagement@show')->name('actionhistory');
 
 Route::resource('UserResource', 'UsersController');
 Route::resource('Roles', 'RolesController');
@@ -113,12 +111,9 @@ Route::get('additem4', 'TestController@additem')->name('additem4');
 
 Route::get('edititem1', 'TestController@edititem')->name('edititem');
 
-Route::get('/forgot-password', function () {
-    return view('auth.forgot-password');
-})->middleware(['guest'])->name('password.request');
+Route::get('/forgot-password', function () { return view('auth.forgot-password'); })->middleware(['guest'])->name('password.request');
 
 Route::post('usermanagement/user/new', 'MainController@usermanagementnew')->name('usermanagementnew');
 Route::post('usermanagement/user/list', 'MainController@usermanagementedit')->name('usermanagementlist');
 
 // $query = Job::where('status', '=', Job::APPROVED);
-
