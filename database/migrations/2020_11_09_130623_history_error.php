@@ -28,6 +28,6 @@ class HistoryError extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('history_error');
     }
 }

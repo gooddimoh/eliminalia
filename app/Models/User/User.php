@@ -59,7 +59,7 @@ class User extends Model
         $this->morphedByMany();
     }
 
-    public function Roles()
+    public function Role()
     {
         return $this->belongsToMany(Role::class);
     }

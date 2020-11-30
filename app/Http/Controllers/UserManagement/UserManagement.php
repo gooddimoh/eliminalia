@@ -19,9 +19,14 @@ class UserManagement extends Controller
     public function index(Request $request)
     {
         $users = User::all();
+<<<<<<< HEAD
         $role = Role::all();
 //      $data = Data::all();
         return view('admin.users.index', compact('users', 'role'));
+=======
+        $roles = Role::all();
+        return view('admin.users.index', compact('users', 'roles'));
+>>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
     }
 
     public function list(Request $request)
@@ -40,16 +45,25 @@ class UserManagement extends Controller
         $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
         $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
+<<<<<<< HEAD
         $request->session()->flush();
         $request->flush();
         $request->all();
         var_dump($validatedData);
         return view('dashboard.Admin.UserManagement.create')->with('users', $users);
+=======
+        var_dump($validatedData);
+        $request->session()->flush();
+        $request->flush();
+        $request->all();
+        redirect(route(''));
+>>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
     }
 
     public function store(StoreUserRequest $request)
     {
         $request->session()->flush();
+<<<<<<< HEAD
         $request->flush();
         User::create();
         $this->validate($request, [
@@ -59,6 +73,9 @@ class UserManagement extends Controller
         $input = $request->all();
         User::create($input);
         var_dump($request->all());
+=======
+        $request->validate($request->all());
+>>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
         die();
         $user = User::create($request->all());
         return view('admin.users.index')->with('users', $user);

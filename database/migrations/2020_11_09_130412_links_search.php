@@ -29,6 +29,6 @@ class LinksSearch extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('access_history');
+        Schema::dropIfExists('links_search');
     }
 }

@@ -15,7 +15,7 @@ class ContactBook extends Migration
         Schema::create('contact_book', function (Blueprint $table) {
             $table->id('id');
             $table->timestamp('fecha');
-            $table->enum('tipo_contacto');
+            $table->string('tipo_contacto');
             $table->integer('id_medio_comunicacion');
             $table->string('nombre_empresa');
             $table->string('cif');
@@ -34,7 +34,7 @@ class ContactBook extends Migration
             $table->string('email2');
             $table->string('web');
             $table->string('observaciones');
-            $table->enum('idioma');
+            $table->string('idioma',1);
             $table->tinyInteger('activo');
         });
     }

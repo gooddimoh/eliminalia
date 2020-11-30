@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\API\AuthController;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use phpDocumentor\Reflection\DocBlock\TagFactory;
 use App\Models\Comment;
 
@@ -22,9 +23,23 @@ class MainController extends Controller
 
     public function Dashboard(Request $request)
     {
+<<<<<<< HEAD
         $data = '';
         $articles = '';
         $popular = '';
+=======
+
+        $session = Session::all();
+        var_dump($session);
+
+//        die('');
+
+        $data = 'data';
+        data_fill($data);
+
+//        $user->isAdmin;
+
+>>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
         return view('dashboard.admin.dashboard');
     }
 
@@ -84,7 +99,12 @@ class MainController extends Controller
 
     public function Auth()
     {
+<<<<<<< HEAD
         return view('');
+=======
+        return view();
+        redirect()->route('')
+>>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
     }
 
 }
