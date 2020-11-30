@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email (main)*:</label>
-                    <input class="form-control form-control-sm" type="text" name="email" placeholder="">
+                    <input class="form-control form-control-sm" type="text" name="email" placeholder="Email (main)*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">ID:</label>
