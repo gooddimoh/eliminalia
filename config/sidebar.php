@@ -98,31 +98,31 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => 'dashboard/Customers/Registration',
+                'url' => '/dashboard/Customers/Registration',
                 'title' => 'Customer Registration',
                 'route-name' => 'Customer Registration'
             ], [
-                'url' => 'dashboard/Customer/list (ADMIN)',
+                'url' => '/dashboard/Customer/list (ADMIN)',
                 'title' => 'Customerlist (ADMIN)',
                 'route-name' => 'Customerlist (ADMIN)'
             ], [
-                'url' => 'dashboard/Customer/List (MANAGER)',
+                'url' => '/dashboard/Customer/List (MANAGER)',
                 'title' => 'Customer List (MANAGER)',
                 'route-name' => 'Customer List (MANAGER)'
             ], [
-                'url' => 'dashboard/Customer/List (PARTNER)',
+                'url' => '/dashboard/Customer/List (PARTNER)',
                 'title' => 'Customer List (PARTNER)',
                 'route-name' => 'Customer List (PARTNER)'
             ], [
-                'url' => 'dashboard/Customer/List (REGISTRATOR)',
+                'url' => '/dashboard/Customer/List (REGISTRATOR)',
                 'title' => 'Customer List (REGISTRATOR)',
                 'route-name' => 'Customer List (REGISTRATOR)'
             ], [
-                'url' => 'dashboard/Customer/List (SADMIN',
+                'url' => '/dashboard/Customer/List (SADMIN',
                 'title' => 'Customer List (SADMIN)',
                 'route-name' => 'Customer List'
             ], [
-                'url' => 'dashboard/Pending Billing',
+                'url' => '/dashboard/Pending Billing',
                 'title' => 'Pending Billing',
                 'route-name' => 'Pending Billing'
             ]
@@ -134,11 +134,11 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => 'dashboard/partners/registration',
+                'url' => '/dashboard/partners/registration',
                 'title' => 'Partner Registration',
                 'route-name' => 'Partner Registration'
             ], [
-                'url' => 'dashboard/partners/list',
+                'url' => '/dashboard/partners/list',
                 'title' => 'Partners List',
                 'route-name' => 'Partners List'
             ]]
@@ -148,11 +148,11 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => 'dashboard/Finalizate/Files',
+                'url' => '/dashboard/Finalizate/Files',
                 'title' => 'Finalizate Files',
                 'route-name' => 'Finalizate Files'
             ], [
-                'url' => 'dashboard/Withdraw/Contracts',
+                'url' => '/dashboard/Withdraw/Contracts',
                 'title' => 'Withdraw/Contracts',
                 'route-name' => 'Withdraw Contracts'
             ]]
@@ -162,15 +162,15 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => 'dashboard/General/Statistics',
+                'url' => '/dashboard/statistics/general',
                 'title' => 'General Statistics',
                 'route-name' => 'General Statistics'
             ], [
-                'url' => 'dashboard/Facturation/Statistics',
+                'url' => '/dashboard/statistics/facturation',
                 'title' => 'Facturation Contracts',
                 'route-name' => 'Withdraw Contracts'
             ], [
-                'url' => 'dashboard/Contact/Statistics',
+                'url' => '/dashboard/statistics/contact',
                 'title' => 'Contact Contracts',
                 'route-name' => 'Contact Statistics'
             ]]

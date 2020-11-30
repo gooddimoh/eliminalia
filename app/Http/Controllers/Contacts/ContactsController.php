@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -18,7 +17,7 @@ class ContactsController extends Controller
 
     public function Index()
     {
-    // maby use Gate
+        // maby use Gate
 
         $users = User::all()->role;
         $users = User::all();
@@ -27,6 +26,7 @@ class ContactsController extends Controller
         $users = User::all();
         $users = User::all();
         $users = User::all();
+        var_dump($users);
         return view('admin.users.index', compact('users', 'model2'));
     }
 
@@ -48,9 +48,12 @@ class ContactsController extends Controller
 
     public function List()
     {
-        $Role = Role::all();
-        $User = User::all();
-        return view('welcome')->with('Role', $Role)->with('User', $User);
+//        $Role = Role::all();
+//        $User = User::all();
+
+        $Role = '';
+        $User = '';
+        return view('dashboard.admin.contacts.list')->with('Role', $Role)->with('User', $User);
     }
 
     public function Registration()
@@ -61,7 +64,7 @@ class ContactsController extends Controller
         $data4 = '';
         $data5 = $data1 . $data2 . $data3 . $data4;
         $roles = '';
-        return view('dashboard.admin.contacts.contact registration', compact('roles'));
+        return view('dashboard.admin.contacts.registration', compact('roles'));
     }
 
     public function Inquiries()

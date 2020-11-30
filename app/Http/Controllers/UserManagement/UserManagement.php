@@ -27,19 +27,24 @@ class UserManagement extends Controller
         //  Gate::after(function ($user, $ability, $result, $arguments) { });
 
         $users = User::all();
+        var_dump($users);
+        echo "data1";
+        echo "data2";
+        echo "data3";
+        echo "data4";
+        die();
         return view('dashboard.admin.usermanagement.index')->with('users', $users);
     }
 
     public function create(Request $request)
     {
-        // abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        // $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
-        //        $roles = Role::all()->pluck('title', 'id');
-        $users = User::all();
-        // var_dump($validatedData);
+        $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
+        $roles = Role::all()->pluck('title', 'id');
+        $users = User::all()->find();
         $request->session()->flush();
         $request->flush();
         $request->all();
+        var_dump($validatedData);
         return view('dashboard.Admin.UserManagement.create')->with('users', $users);
     }
 
@@ -65,14 +70,12 @@ class UserManagement extends Controller
     public function update(UpdateUserRequest $request, User $user)
     {
         $approved = $user->approved;
-
+        $request->all();
         $user->update($request->all());
         $user->roles()->sync($request->input('roles', []));
-
         if ($approved == 0 && $user->approved == 1) {
             $user->notify(new UserApprovedNotification());
         }
-
         return redirect()->route('admin.users.index');
     }
 

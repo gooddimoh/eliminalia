@@ -1,5 +1,4 @@
 <?php
-
 // $user->role == 'SUPERADMIN';
 // $user->role == 'ADMIN SUCURSAL';
 // $user->role == 'ALTA CONTRATOS';
@@ -8,14 +7,15 @@
 // $user->role == 'PARTNER';
 // $user->role == 'MANAGER';
 
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'MainController@dashboard')->name('dashboard');
 Route::get('/', function () {
     return redirect('dashboard');
 });
-Route::get('/dashboard', function () {
-    return redirect(' ');
-});
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () { });
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () {
+});
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
@@ -30,8 +30,30 @@ Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login'])
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
 Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 'register']);
 
-Route::get('dashboard/', 'MainController@dashboard')->name('dashboard');
-Route::get('dashboard/usermanagement', 'MainController@usermanagement')->name('usermanagement');
+// USER MANAGEMENT //
+Route::get('dashboard/usermanagement', 'UserManagement@usermanagement')->name('user.management');
+Route::get('dashboard/usermanagement/list', 'UserManagement@list')->name('usermanagement.list');
+Route::get('dashboard/usermanagement/new', 'UserManagement@create')->name('usermanagement.new');
+Route::get('dashboard/usermanagement/edit', 'UserManagement@edit')->name('usermanagement.edit');
+
+Route::get('dashboard/contacts/registration', 'ContactsController@registration')->name('contact registration');
+Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('inquiries');
+Route::get('dashboard/contacts/list', 'ContactsController@list')->name('contact list');
+
+Route::get('dashboard/customer/CUSTOMER REGISTRATION', 'ContactsController@list')->name('customer.list(SADMIN)');
+Route::get('dashboard/customer/CUSTOMERS LIST (SADMIN)', 'ContactsController@list')->name('customer.list(SADMIN)');
+Route::get('dashboard/customer/CUSTOMERS LIST (ADMIN)', 'ContactsController@list')->name('customer.list(SADMIN)');
+Route::get('dashboard/customer/CUSTOMERS LIST (MANAGER)', 'ContactsController@list')->name('customer.list(MANAGER)');
+Route::get('dashboard/customer/CUSTOMERS LIST (PARTNER)', 'ContactsController@list')->name('customer.list(PARTNER)');
+Route::get('dashboard/customer/CUSTOMERS LIST (REGISTRATOR)', 'ContactsController@list')->name('customer.list(REGISTRATOR)');
+Route::get('dashboard/customer/FINALIZATE FILES (PENDING BILLING) ', 'ContactsController@list')->name('customer.list(PENDING BILLING)');
+
+Route::get('dashboard/partners/list', 'PartnersController@list')->name('partners.list');
+Route::get('dashboard/partners/registration', 'PartnersController@registration')->name('partners.registration');
+Route::get('dashboard/partners/list', 'PartnersController@list')->name('partners.list');
+
+Route::get('requests', 'ContactsController@list')->name('finalizate files');
+Route::get('requests', 'ContactsController@withdraw.contracts')->name('withdraw.contracts');
 
 Route::post('user/create', 'UsersController@create')->name('user.create');
 Route::post('user/edit', 'UsersController@edit')->name('user.edit');
@@ -44,15 +66,15 @@ Route::get('dashboard/Map', 'MainController@Map')->name('Map');
 Route::get('dashboard/Timeline', 'TimelineController@Timeline')->name('timeline');
 Route::get('dashboard/calendar', 'MainController@Calendar')->name('calendar');
 
-Route::get('dashboard/partners/list', 'PartnersController@list')->name('partners.list');
-Route::get('dashboard/partners/registration', 'PartnersController@registration')->name('partners.registration');
-
 Route::get('dashboard/filemanager', 'FileManager@filemanager')->name('File Manager');
 Route::get('dashboard/timeline/makepost', 'TimeLineController@timelinepost')->name('timeline.post');
 
-Route::get('dashboard/email/inbox', 'EmailController@emailinbox')->name('emailinbox');
-Route::get('dashboard/email/compose', 'EmailController@emailcompose')->name('emailcompose');
-Route::get('dashboard/email/detail', 'EmailController@emaildetail')->name('emaildetail');
+Route::get('dashboard/email/inbox', 'EmailController@inbox')->name('emailinbox');
+Route::get('dashboard/email/compose', 'EmailController@compose')->name('emailcompose');
+Route::get('dashboard/email/detail', 'EmailController@detail')->name('emaildetail');
+
+Route::get('dashboard/statistics/general', 'EmailController@general')->name('emailgeneral');
+Route::get('dashboard/statistics/general', 'EmailController@detail')->name('emaildetail');
 
 Route::get('dashboard/chart/flot', 'ChartController@chartFlot')->name('chart-flot');
 Route::get('dashboard/chart/js', 'ChartController@chartJs')->name('chart-js');
@@ -60,21 +82,17 @@ Route::get('dashboard/chart/d3', 'ChartController@chartD3')->name('chart-d3');
 Route::get('dashboard/chart/apex', 'ChartController@chartApex')->name('chart-apex');
 
 Route::get('dashboard/map/vector', 'ChartController@mapVector')->name('map-vector');
-Route::get('dashboard/usermanagement/list', 'UserManagement@list')->name('usermanagementlist');
-Route::get('dashboard/usermanagement/new', 'UserManagement@create')->name('usermanagementnew');
-Route::get('dashboard/usermanagement/edit', 'UserManagement@edit')->name('usermanagementedit');
-Route::get('ActionHistory', 'UserManagement@show')->name('ActionHistory');
 
-Route::get('contact', 'ContactsController@contact')->name('contact');
-Route::get('contacts', 'ContactsController@index')->name('contacts');
+Route::get('dashboard/contacts/registration', 'ContactsController@registration')->name('contact.registration');
+Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('contact.inquiries');
+Route::get('dashboard/contacts/list', 'ContactsController@list')->name('contact.list');
 
-Route::get('dashboard/contacts/registration', 'ContactsController@registration')->name('contactregistration');
-Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('inquiries');
-Route::get('dashboard/contacts/list', 'ContactsController@list')->name('contactList');
+Route::get('actionhistory', 'UserManagement@show')->name('actionhistory');
 
 Route::post('contacts', 'ContactsController@store')->name('contacts');
 
-Route::post('contacts/create', 'ContactsController@Create')->name('contacts.create');
+Route::post('contacts/create', 'ContactsController@create')->name('contacts.create');
+Route::post('contacts/registration', 'ContactsController@registration')->name('contacts.registration');
 
 Route::post('register', ['uses' => 'Auth\AuthController@postRegister', 'as' => 'login']);
 
@@ -99,12 +117,8 @@ Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->middleware(['guest'])->name('password.request');
 
-
-Route::post('usermanagement/usernew', 'MainController@usermanagement.new.user')->name('usermanagement_new_user');
-Route::post('usermanagement/useredit', 'MainController@usermanagement.new.edit')->name('usermanagement_new_edit');
+Route::post('usermanagement/user/new', 'MainController@usermanagementnew')->name('usermanagementnew');
+Route::post('usermanagement/user/list', 'MainController@usermanagementedit')->name('usermanagementlist');
 
 // $query = Job::where('status', '=', Job::APPROVED);
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

@@ -92,11 +92,10 @@
                 <div class="panel" data-sortable-id="table-basic-7" data-init="true" style="">
                     <!-- begin panel-heading -->
                     <div class="panel-heading ui-sortable-handle">
-                        <h4 class="panel-title">List of all Users <span
-                                    class="label label-success m-l-5 t-minus-1">NEW</span></h4>
+                        <h4 class="panel-title">List of all Users <span class="label label-success m-l-5 t-minus-1"> NEW </span></h4>
                         <div class="panel-heading-btn">
-                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default data-click="
-                               panel-expand"><i class="fa fa-expand"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default
+                             data-click="panel-expand"><i class="fa fa-expand"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
@@ -165,7 +164,7 @@
     $("search").change(function () {
         let data = "data";
         var request = $.ajax({
-            url: "{{route("usermanagementnew")}}",
+            url: "{{route("usermanagement.new")}}",
             method: "post",
             data: {view: 'view'},
             dataType: "html"

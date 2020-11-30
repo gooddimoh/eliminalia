@@ -63,8 +63,8 @@
                             <!-- begin percentage -->
                             <div class="mb-3 text-grey">
                                 <i class="fa fa-caret-up"></i> <span data-animation="number"
-                                                                     data-value="33.21">0.00</span>% compare to last
-                                week
+                                                                     data-value="33.21">0.00</span>
+                                % compare to last week
                             </div>
                             <!-- end percentage -->
                             <hr class="bg-white-transparent-2"/>

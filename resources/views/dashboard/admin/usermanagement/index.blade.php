@@ -8,14 +8,13 @@
         <div class="panel-heading">
             <h4 class="panel-title">UserManagement List</h4>
             <div class="panel-heading-btn">
-                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i
-                            class="fa fa-expand"></i></a>
+                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i
                             class="fa fa-redo"></i></a>
                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i
                             class="fa fa-minus"></i></a>
-                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i
-                            class="fa fa-times"></i></a>
+                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove">
+                    <i class="fa fa-times"></i></a>
             </div>
         </div>
         <div class="panel-body">
@@ -68,18 +67,6 @@
                                     <td>{{1}}</td>
                                     <td>{{2}}</td>
                                 </tr>
-                                <tr class="gradeA even" role="row">
-                                    <td class="f-w-600 text-inverse dtr-control sorting_1"
-                                        tabindex="0">{{$user->id}}</td>
-                                    <td class="with-img">
-                                        <img src="{{$user->id}}" class="img-rounded height-100">
-                                    </td>
-                                    <td>{{$user->name}}</td>
-                                    <td>{{$user->password}}</td>
-                                    <td>{{$user->id}}</td>
-                                    <td>{{1}}</td>
-                                    <td>{{2}}</td>
-                                </tr>
                             @endforeach
                             </tbody>
                         </table>
@@ -92,7 +79,7 @@
 @section('scripts')
     <script type="text/javascript">
         $.ajax({
-            url: "{{route("usermanagementlist")}}",
+            url: "{{route("usermanagement.list")}}",
             method: "post",
             dataType: "html"
         });

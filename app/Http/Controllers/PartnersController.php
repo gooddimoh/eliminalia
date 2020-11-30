@@ -16,8 +16,8 @@ class PartnersController extends Controller
 
     public function List()
     {
-//        $users = User::all();
-        $users = DB::select("select * from Users");
+        $users = User::all();
+//        $users
         return view("dashboard.admin.partners.list")->with('users', $users);
     }
 
