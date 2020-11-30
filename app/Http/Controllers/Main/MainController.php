@@ -25,7 +25,11 @@ class MainController extends Controller
         $session = Session::all();
         var_dump($session);
 
-        die('');
+//        die('');
+
+        $data = 'data';
+        data_fill($data);
+
 //        $user->isAdmin;
 
         return view('dashboard.admin.dashboard');

@@ -36,12 +36,6 @@ class HomeController extends Controller
 
     public function store(StoreUserRequest $request)
     {
-        $request->validate([
-            'firstname' => 'required',
-            'lastname' => 'required',
-            'password' => 'required',
-            'email' => 'required'
-        ]);
 
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));

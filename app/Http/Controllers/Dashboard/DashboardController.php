@@ -10,7 +10,7 @@ class DashboardController extends Controller
     public function Index()
     {
         $user = new User();
-        $user = $user->role();
-        view('{role}admin.dashboard');
+        $user_role = $user->role();
+        view("{$user_role}.admin.dashboard");
     }
 }
