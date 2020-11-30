@@ -111,6 +111,6 @@
     <script src="{{asset('/assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
     <script src="{{asset('/assets/js/demo/table-manage-default.demo.js')}}"></script>
-    <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
-    <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
+    <script src="{{asset('/assets/plugins/summernote/dist/summernote.min.js')}}"></script>
+    <script src="{{asset('/assets/js/demo/form-summernote.demo.js')}}"></script>
 @endpush

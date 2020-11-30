@@ -4,11 +4,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Chores extends Model
+class Calls extends Model
 {
     use HasFactory;
 
-    protected $table = 'Chores';
+    protected $table = 'calls_contacts';
 
     protected $dates = [
         'updated_at',
@@ -18,19 +18,15 @@ class Chores extends Model
     ];
 
     protected $fillable = [
-        'id',
-        'name',
-        'description',
-        'created by',
-        'for',
-        'importance',
-        'start_date',
-        'final_date',
-        'finished_mark_date',
-        'log',
-        'state',
-        'group',
-        'order'
+        'id ',
+        'date',
+        'time',
+        'commercial_id',
+        'contact_id',
+        'observations',
+        'done',
+        'call_made',
+        'management_date'
     ];
 
     /**

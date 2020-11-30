@@ -14,7 +14,7 @@ class Asuntos extends Migration
     public function up()
     {
         Schema::create('Asuntos', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
             $table->string('id');
             $table->string('ultima_fecha');
             $table->string('ultima_hora');

@@ -6,6 +6,7 @@ use App\Http\Controllers\API\AuthController;
 use App\Models\User;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\DocBlock\TagFactory;
+use App\Models\Comment;
 
 class MainController extends Controller
 {
@@ -16,10 +17,14 @@ class MainController extends Controller
 
     public function index()
     {
+
     }
 
     public function Dashboard(Request $request)
     {
+        $data = '';
+        $articles = '';
+        $popular = '';
         return view('dashboard.admin.dashboard');
     }
 

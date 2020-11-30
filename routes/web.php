@@ -62,11 +62,11 @@ Route::post('user/store', 'UsersController@edit')->name('users.store');
 Route::get('dashboard/user/edit', 'UsersController@Edit')->name('user.edit');
 Route::get('dashboard/user/store', 'UsersController@Store')->name('user.store');
 
-Route::get('dashboard/Map', 'MainController@Map')->name('Map');
+Route::get('dashboard/map', 'MainController@Map')->name('Map');
 Route::get('dashboard/Timeline', 'TimelineController@Timeline')->name('timeline');
 Route::get('dashboard/calendar', 'MainController@Calendar')->name('calendar');
 
-Route::get('dashboard/filemanager', 'FileManager@filemanager')->name('File Manager');
+Route::get('dashboard/filemanager', 'FileManager@filemanager')->name('file.manager');
 Route::get('dashboard/timeline/makepost', 'TimeLineController@timelinepost')->name('timeline.post');
 
 Route::get('dashboard/email/inbox', 'EmailController@inbox')->name('emailinbox');

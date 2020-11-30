@@ -34,11 +34,13 @@
                     <input class="form-control form-control-sm" type="text" name="city" placeholder="City:">
                 </div>
                 <div class="form-group row">
-                    <label class="col-form-label">Country*:</label>
-                    <select name="cars" id="cars">
-                        <option value="Aruba">Britain</option>
-                        <option value="Bahrain">Australia</option>
-                    </select>
+                    <div class="form-group row width-150">
+                        <label class="col-form-label float-left">Country*:</label>
+                        <select class="form-control form-control-sm float-right" name="paymentmethod">
+                            <option value="Aruba">Britain</option>
+                            <option value="Bahrain">Australia</option>
+                        </select>
+                    </div>
                     <input class="form-control form-control-sm" type="text" name="country" placeholder="Country*:">
                 </div>
                 <div class="form-group row">

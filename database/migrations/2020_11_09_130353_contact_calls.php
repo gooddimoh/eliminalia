@@ -14,7 +14,7 @@ class ContactCall extends Migration
     public function up()
     {
         Schema::create('contact_calls', function (Blueprint $table) {
-            $table->id('id');
+            $table->id('id')->autoIncrement();
             $table->date('fecha');
             $table->time('hora');
             $table->integer('id_comercial');

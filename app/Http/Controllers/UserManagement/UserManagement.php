@@ -32,7 +32,6 @@ class UserManagement extends Controller
         echo "data2";
         echo "data3";
         echo "data4";
-        die();
         return view('dashboard.admin.usermanagement.index')->with('users', $users);
     }
 
