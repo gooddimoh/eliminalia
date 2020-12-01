@@ -19,8 +19,7 @@ class UserManagement extends Controller
     public function index(Request $request)
     {
         $users = User::all();
-        $role = Role::all();
-//      $data = Data::all();
+        $roles = Role::all();
         return view('admin.users.index', compact('users', 'role'));
     }
 

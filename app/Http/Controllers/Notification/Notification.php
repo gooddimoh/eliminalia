@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -31,11 +32,8 @@ class UserManagement extends Controller
 
     public function create(Request $request)
     {
-        // abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        // $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
-
         $value = session('key', 'default');
-//        $roles = Role::all()->pluck('title', 'id');
+        $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
         var_dump($value);
 
@@ -44,7 +42,7 @@ class UserManagement extends Controller
         return view('dashboard.Admin.UserManagement.create')->with('users', $users);
     }
 
-    public function store(StoreUserRequest $request)
+    public function store(Request $request)
     {
         $request->session()->flush();
         $request->flush();
@@ -56,22 +54,17 @@ class UserManagement extends Controller
 
     public function edit(Request $request, User $user)
     {
-//        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $roles = Role::all()->pluck('title', 'id');
-
         $user->load('roles');
-
         return view('admin.users.edit', compact('roles', 'user'));
     }
 
-    public function update(UpdateUserRequest $request, User $user)
+    public function update(Request $request, User $user)
     {
         $approved = $user->approved;
-
         $user->update($request->all());
         $user->roles()->sync($request->input('roles', []));
-
         if ($approved == 0 && $user->approved == 1) {
             $user->notify(new UserApprovedNotification());
         }
@@ -81,10 +74,7 @@ class UserManagement extends Controller
 
     public function destroy(User $user)
     {
-//        abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $user->delete();
-
         return back();
     }
 

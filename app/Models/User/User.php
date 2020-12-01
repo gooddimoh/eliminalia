@@ -45,6 +45,11 @@ class User extends Model
         return parent::save($options);
     }
 
+    public function Create()
+    {
+//        $this->sa
+    }
+
     public function Data()
     {
         return $this->morphedByMany('App\Models\Role', '');

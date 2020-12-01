@@ -18,13 +18,12 @@ class UsersController extends Controller
 {
     public function index()
     {
-//        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         return $users = User::all()->jsonSerialize();
     }
 
     public function create(Request $request)
     {
-//        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $user = User::create($request->all());
         var_dump($user);
