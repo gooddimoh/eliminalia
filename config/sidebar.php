@@ -200,11 +200,6 @@ return [
             'url' => '/dashboard/File Manager',
             'route-name' => 'File Manager'
         ],
-        ['icon' => 'fa fa-hdd',
-            'title' => 'Tracker',
-            'url' => '/dashboard/Tracker',
-            'route-name' => 'Tracker'
-        ],
         ['icon' => 'fa fa-calendar',
             'title' => 'Calendar',
             'url' => '/dashboard/calendar',

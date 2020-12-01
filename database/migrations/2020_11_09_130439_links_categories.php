@@ -22,7 +22,7 @@ class LinksCategories extends Migration
             $table->double('importe');
             $table->integer('porcentaje_realizacion');
             $table->tinyInteger('realizado');
-            $table->string('forma_pago');
+            $table->enum('forma_pago');
             $table->string('observaciones', 5000);
             $table->date('pay_day');
         });

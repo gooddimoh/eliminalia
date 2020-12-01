@@ -28,6 +28,6 @@ class ManagementSeo extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('management_seo');
+        Schema::dropIfExists('acl_rules');
     }
 }

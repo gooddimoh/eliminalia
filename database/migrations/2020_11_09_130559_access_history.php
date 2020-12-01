@@ -17,7 +17,7 @@ class AccessHistory extends Migration
             $table->date('fecha');
             $table->time('hora');
             $table->integer('id_usuario');
-            $table->string('dispositivo');
+            $table->enum('dispositivo');
             $table->string('dispositivo_modelo');
             $table->string('dispositivo_os');
             $table->string('dispositivo_navegador');

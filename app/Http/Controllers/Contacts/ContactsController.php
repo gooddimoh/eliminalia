@@ -18,25 +18,16 @@ class ContactsController extends Controller
 
     public function Index()
     {
-<<<<<<< HEAD
         // maby use Gate //
 
         $users = User::all()->role;
         $users = User::all();
-=======
-        $users = User::all()->role();
-        $roleя = Role::all();
->>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
         $users = User::all();
         $users = User::all();
         $users = User::all();
         $users = User::all();
         $users = User::all();
-<<<<<<< HEAD
         var_dump($users);
-=======
-
->>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
         return view('admin.users.index', compact('users', 'model2'));
     }
 
@@ -51,7 +42,6 @@ class ContactsController extends Controller
     {
         die();
         $user = User::create($request->all());
-        $request->validation();
         $user->roles()->sync($request->input('roles', []));
 
         return redirect()->route('admin.users.index');

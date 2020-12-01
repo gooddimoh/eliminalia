@@ -18,7 +18,7 @@ class HistoryActions extends Migration
             $table->time('hora');
             $table->integer('id_usuario')->index();
             $table->integer('id_referencia');
-            $table->string('tipo');
+            $table->enum('tipo');
             $table->string('observaciones');
         });
     }
@@ -30,6 +30,6 @@ class HistoryActions extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('history_actions');
+        Schema::dropIfExists('acl_rules');
     }
 }

@@ -16,7 +16,7 @@ class Contacts extends Migration
         Schema::create('Contacts', function (Blueprint $table) {
             $table->id('id');
             $table->timestamp('fecha');
-            $table->string('nivel_permiso');
+            $table->enum('nivel_permiso');
             $table->integer('id_comercial');
             $table->string('nombre');
             $table->string('apellidos');
@@ -36,7 +36,7 @@ class Contacts extends Migration
             $table->string('observaciones_cliente');
             $table->string('observaciones_gestor');
             $table->string('observaciones_comercial');
-            $table->string('idioma');
+            $table->enum('idioma');
             $table->double('presupuesto');
             $table->enum('forma_pagos');
             $table->tinyInteger('rastreo_hecho');

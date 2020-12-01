@@ -9,24 +9,19 @@ use Illuminate\Http\Request;
 
 class PartnersController extends Controller
 {
-    public function index()
+    public function Index()
     {
         return view("");
     }
 
-    public function store()
-    {
-
-    }
-
-    public function list()
+    public function List()
     {
         $users = User::all();
 //        $users
         return view("dashboard.admin.partners.list")->with('users', $users);
     }
 
-    public function registration()
+    public function Registration()
     {
         return view("dashboard.admin.partners.registration");
     }

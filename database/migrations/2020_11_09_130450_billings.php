@@ -27,6 +27,6 @@ class Billings extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('billings');
+        Schema::dropIfExists('acl_rules');
     }
 }

@@ -18,12 +18,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 });
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
-Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 'register']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
+Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 'register']);
+
 Route::post('register', ['uses' => 'Auth\AuthController@postRegister', 'as' => 'login']);
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin', 'as' => 'login']);
 
 Route::get('index', 'MainController@index')->name('index');
+
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
 Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 'register']);
@@ -61,56 +63,32 @@ Route::get('dashboard/user/store', 'UsersController@Store')->name('user.store');
 
 Route::get('dashboard/map', 'MainController@Map')->name('Map');
 Route::get('dashboard/Timeline', 'TimelineController@Timeline')->name('timeline');
-Route::get('dashboard/Calendar', 'MainController@Calendar')->name('calendar');
+Route::get('dashboard/calendar', 'MainController@Calendar')->name('calendar');
 
 Route::get('dashboard/filemanager', 'FileManager@filemanager')->name('file.manager');
 Route::get('dashboard/timeline/makepost', 'TimeLineController@timelinepost')->name('timeline.post');
 
-<<<<<<< HEAD
 Route::get('dashboard/email/inbox', 'EmailController@inbox')->name('emailinbox');
 Route::get('dashboard/email/compose', 'EmailController@compose')->name('emailcompose');
 Route::get('dashboard/email/detail', 'EmailController@detail')->name('emaildetail');
 
 Route::get('dashboard/statistics/general', 'EmailController@general')->name('emailgeneral');
 Route::get('dashboard/statistics/general', 'EmailController@detail')->name('emaildetail');
-=======
-Route::get('dashboard/email/inbox', 'EmailController@inbox')->name('inbox');
-Route::get('dashboard/email/compose', 'EmailController@compose')->name('compose');
-Route::get('dashboard/email/detail', 'EmailController@detail')->name('detail');
-
-Route::get('dashboard/tracker/index', 'EmailController@emaildetail')->name('emaildetail');
->>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
 
 Route::get('dashboard/chart/flot', 'ChartController@chartFlot')->name('chart-flot');
 Route::get('dashboard/chart/js', 'ChartController@chartJs')->name('chart-js');
 Route::get('dashboard/chart/d3', 'ChartController@chartD3')->name('chart-d3');
 Route::get('dashboard/chart/apex', 'ChartController@chartApex')->name('chart-apex');
 
-<<<<<<< HEAD
 Route::get('dashboard/map/vector', 'ChartController@mapVector')->name('map-vector');
-=======
-Route::get('dashboard/usermanagement/list', 'UserManagement@list')->name('usermanagementlist');
-Route::get('dashboard/usermanagement/new', 'UserManagement@create')->name('usermanagementnew');
-Route::get('dashboard/usermanagement/edit', 'UserManagement@edit')->name('usermanagementedit');
-
-Route::get('dashboard/map/vector', 'ChartController@mapVector')->name('map-vector');
-
-Route::get('actionhistory', 'UserManagement@show')->name('ActionHistory');
->>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
 
 Route::get('dashboard/contacts/registration', 'ContactsController@registration')->name('contact.registration');
 Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('contact.inquiries');
 Route::get('dashboard/contacts/list', 'ContactsController@list')->name('contact.list');
 
 Route::post('contacts', 'ContactsController@store')->name('contacts');
-<<<<<<< HEAD
 Route::post('contacts/create', 'ContactsController@create')->name('contacts.create');
 Route::post('contacts/registration', 'ContactsController@registration')->name('contacts.registration');
-=======
-
-Route::post('contacts/create', 'ContactsController@Create')->name('contacts.create');
-Route::post('contacts/edit', 'ContactsController@Create')->name('contacts.create');
->>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
 
 Route::post('register', ['uses' => 'Auth\AuthController@postRegister', 'as' => 'login']);
 
@@ -138,12 +116,4 @@ Route::get('/forgot-password', function () { return view('auth.forgot-password')
 Route::post('usermanagement/user/new', 'MainController@usermanagementnew')->name('usermanagementnew');
 Route::post('usermanagement/user/list', 'MainController@usermanagementedit')->name('usermanagementlist');
 
-<<<<<<< HEAD
 // $query = Job::where('status', '=', Job::APPROVED);
-=======
-//$query = Job::where('status', '=', Job::APPROVED);
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> 38c2063668dc7e52a4f3b55945a6158003a3c013
