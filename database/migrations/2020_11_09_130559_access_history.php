@@ -22,6 +22,8 @@ class AccessHistory extends Migration
             $table->string('dispositivo_os');
             $table->string('dispositivo_navegador');
             $table->string('ip');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

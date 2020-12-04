@@ -10,8 +10,6 @@ class UpdateUserRequest extends FormRequest
 {
     public function authorize()
     {
-        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         return true;
     }
 

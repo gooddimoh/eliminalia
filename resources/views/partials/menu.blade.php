@@ -12,9 +12,7 @@
             @can('user_management_access')
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa-fw fas fa-users">
-
-                        </i>
+                        <i class="fa-fw fas fa-users"></i>
                         <span>{{ trans('cruds.userManagement.title') }}</span>
                         <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
                     </a>
@@ -54,9 +52,7 @@
             @endcan
             <li>
                 <a href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
-                    <i class="fas fa-fw fa-sign-out-alt">
-
-                    </i>
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
                     {{ trans('global.logout') }}
                 </a>
             </li>

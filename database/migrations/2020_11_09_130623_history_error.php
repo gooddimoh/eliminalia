@@ -18,6 +18,8 @@ class HistoryError extends Migration
             $table->integer('id_error');
             $table->date('fecha');
             $table->time('time');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
@@ -28,6 +30,6 @@ class HistoryError extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('history_error');
     }
 }

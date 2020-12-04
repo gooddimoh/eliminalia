@@ -13,10 +13,10 @@ class ContactBook extends Migration
     public function up()
     {
         Schema::create('contact_book', function (Blueprint $table) {
-            $table->id('id');
+            $table->id('id ');
             $table->timestamp('fecha');
             $table->enum('tipo_contacto');
-            $table->integer('id_medio_comunicacion');
+            $table->integer('id_medio_comunicacion ');
             $table->string('nombre_empresa');
             $table->string('cif');
             $table->string('cargo');
@@ -36,6 +36,8 @@ class ContactBook extends Migration
             $table->string('observaciones');
             $table->enum('idioma');
             $table->tinyInteger('activo');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

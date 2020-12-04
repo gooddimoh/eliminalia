@@ -13,43 +13,43 @@ class Contacts extends Migration
      */
     public function up()
     {
-        Schema::create('Contacts', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id('id');
             $table->timestamp('fecha');
-            $table->enum('nivel_permiso');
+            $table->enum('permission_level');
             $table->integer('id_comercial');
-            $table->string('nombre');
-            $table->string('apellidos');
-            $table->string('nombre_empresa');
-            $table->string('dni');
+            $table->string('name');
+            $table->string('surnames');
+            $table->string('company_name');
+            $table->string('days');
             $table->string('cif');
-            $table->string('pais');
-            $table->string('ciudad');
-            $table->string('provincia');
-            $table->string('direccion');
-            $table->string('codigo_postal');
-            $table->string('telefono');
+            $table->string('country');
+            $table->string('city');
+            $table->string('province');
+            $table->string('address');
+            $table->string('postal_code');
+            $table->string('phone');
             $table->string('commercial*');
-            $table->string('telefono2');
+            $table->string('phone2');
             $table->string('email');
             $table->string('email2');
-            $table->string('observaciones_cliente');
-            $table->string('observaciones_gestor');
-            $table->string('observaciones_comercial');
-            $table->enum('idioma');
-            $table->double('presupuesto');
-            $table->enum('forma_pagos');
-            $table->tinyInteger('rastreo_hecho');
-            $table->tinyInteger('presupuesto_hecho');
-            $table->tinyInteger('cliente_firmado');
-            $table->tinyInteger('desechado');
-            $table->tinyInteger('toma_de_contacto');
-            $table->tinyInteger('documentacion_enviada');
-            $table->string('motivo_desechado');
-            $table->date('fecha_firmado');
-            $table->date('fecha_desechado');
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
+            $table->string('customer_remarks');
+            $table->string('remarks_manager');
+            $table->string('commercial_remarks');
+            $table->enum('language');
+            $table->double('budget');
+            $table->enum('form_payments');
+            $table->tinyInteger('trace_done');
+            $table->tinyInteger('budget_done');
+            $table->tinyInteger('customer_signed');
+            $table->tinyInteger('scrapped');
+            $table->tinyInteger('contact_making');
+            $table->tinyInteger('documentation_submitted');
+            $table->string('discarded_reason');
+            $table->date('date_signed');
+            $table->date('discarded_date');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
@@ -60,6 +60,6 @@ class Contacts extends Migration
      */
     public function down()
     {
-        Schema::drop('Contacts');
+        Schema::drop('contacts');
     }
 }

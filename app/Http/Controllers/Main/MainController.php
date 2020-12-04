@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\API\AuthController;
@@ -11,13 +10,11 @@ use App\Models\Comment;
 class MainController extends Controller
 {
 
-    public function __construct()
-    {
+    public function __construct(){
     }
 
-    public function index()
-    {
-
+    public function index(){
+        $post = 'post';
     }
 
     public function Dashboard(Request $request)

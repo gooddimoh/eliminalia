@@ -92,7 +92,7 @@
                                     class="label label-success m-l-5 t-minus-1"> NEW </span></h4>
                         <div class="panel-heading-btn">
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default
-                             data-click=" panel-expand"><i class="fa fa-expand"></i></a>
+                             data-click="panel-expand"><i class="fa fa-expand"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
@@ -105,23 +105,6 @@
                     <!-- begin panel-body -->
                     <div class="panel-body">
                         <!-- begin table-responsive -->
-                        <div class="table-responsive  height-600">
-                            <table class="table table-striped m-b-0 overflow-hidden">
-                                <tbody>
-                                @foreach($users as $user)
-                                    <tr>
-                                        <td>{{$user->id}}</td>
-                                        <td class="with-img">
-                                            <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
-                                        </td>
-                                        <td>{{$user->email}}</td>
-                                        <td>{{$user->name}}</td>
-                                        <td>{{$user->role}}</td>
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
                 </div>
                 <div class="panel">

@@ -15,24 +15,26 @@ class MediaCommunicationBook extends Migration
     {
         Schema::create('media_communication_book', function (Blueprint $table) {
             $table->id('id');
-            $table->string('fecha');
-            $table->string('tipo_medio_comunicacion');
-            $table->string('nombre');
-            $table->string('nombre_empresa');
+            $table->string('date');
+            $table->string('media_type');
+            $table->string('name');
+            $table->string('company_name');
             $table->string('cif');
-            $table->string('pais');
-            $table->string('ciudad');
-            $table->string('provincia');
-            $table->string('direccion');
-            $table->string('codigo_postal');
-            $table->string('telefono');
-            $table->string('telefono2');
+            $table->string('parents');
+            $table->string('city');
+            $table->string('province');
+            $table->string('address');
+            $table->string('postal_code');
+            $table->string('phone');
+            $table->string('phone2');
             $table->string('email');
             $table->string('email2');
             $table->string('web');
-            $table->string('observaciones');
-            $table->enum('idioma');
-            $table->tinyInteger('activo');
+            $table->string('observations');
+            $table->enum('language');
+            $table->tinyInteger('active');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

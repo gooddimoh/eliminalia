@@ -27,6 +27,8 @@ class Partners extends Migration
             $table->string('email2');
             $table->string('observaciones');
             $table->tinyInteger('activo');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

@@ -15,21 +15,21 @@ class AttachedFiles extends Migration
     {
         Schema::create('attached_files', function (Blueprint $table) {
             $table->id('id')->primary();
-            $table->id('id')->primary();
-            $table->uuid('id')->primary();
             $table->date('upload_date');
             $table->time('upload_time');
-            $table->id('id_manager');
-            $table->id('id_client');
+            $table->id('id_gestor');
+            $table->id('customer_id');
             $table->string('id_global');
             $table->string('filename');
             $table->string('file_extension');
             $table->string('file_path');
             $table->string('kind');
-            $table->timestamp('read_at')->nullable();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
@@ -38,6 +38,6 @@ class AttachedFiles extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('attached_files');
     }
 }

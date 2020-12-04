@@ -18,6 +18,8 @@ class CreateNotificationsTable extends Migration {
             $table->text('data');
             $table->timestamp('read_at')->nullable();
             $table->timestamps();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
@@ -28,6 +30,6 @@ class CreateNotificationsTable extends Migration {
      */
     public function down()
     {
-        Schema::drop('flights');
+        Schema::drop('notifications');
     }
 }

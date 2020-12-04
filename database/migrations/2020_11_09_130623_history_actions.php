@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,6 +21,8 @@ class HistoryActions extends Migration
             $table->integer('id_referencia');
             $table->enum('tipo');
             $table->string('observaciones');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
@@ -30,6 +33,6 @@ class HistoryActions extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acl_rules');
+        Schema::dropIfExists('history_actions');
     }
 }

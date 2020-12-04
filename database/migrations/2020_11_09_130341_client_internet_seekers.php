@@ -15,11 +15,13 @@ class ClientInternetSeekers extends Migration
     {
         Schema::create('client_internet_seekers', function (Blueprint $table) {
             $table->integer('id')->primary();
-            $table->date('fecha');
-            $table->time('hora');
-            $table->integer('id_usuario');
-            $table->integer('id_cliente');
-            $table->integer('id_buscador_internet');
+            $table->date('date');
+            $table->time('time');
+            $table->integer('user_id');
+            $table->integer('customer_id');
+            $table->integer('internet_search_id');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

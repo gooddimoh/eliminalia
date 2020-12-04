@@ -13,7 +13,19 @@ class Events extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('events', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable()->unique();
+            $table->datetime('email_verified_at')->nullable();
+            $table->string('password')->nullable();
+            $table->string('remember_token')->nullable();
+            $table->boolean('approved')->default(0)->nullable();
+            $table->timestamps();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->softDeletes();
+        });
     }
 
     /**
@@ -23,6 +35,6 @@ class Events extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('sessions');
     }
 }

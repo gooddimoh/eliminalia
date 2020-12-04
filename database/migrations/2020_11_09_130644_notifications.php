@@ -20,6 +20,8 @@ class Notifications extends Migration
             $table->string('tipo');
             $table->tinyInteger('leida');
             $table->timestamp('fecha');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

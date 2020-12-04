@@ -16,6 +16,8 @@ class CreateUsersTable extends Migration
             $table->string('remember_token')->nullable();
             $table->boolean('approved')->default(0)->nullable();
             $table->timestamps();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
             $table->softDeletes();
         });
     }

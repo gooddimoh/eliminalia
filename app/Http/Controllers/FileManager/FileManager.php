@@ -16,6 +16,16 @@ class FileManager extends Controller
         return view("list");
     }
 
+    public function create()
+    {
+        return view("index");
+    }
+
+    public function store()
+    {
+        return view("index");
+    }
+
     public function registration()
     {
         return view("create");

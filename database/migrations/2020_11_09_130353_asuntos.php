@@ -13,16 +13,18 @@ class Asuntos extends Migration
      */
     public function up()
     {
-        Schema::create('Asuntos', function (Blueprint $table) {
+        Schema::create('asuntos', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('id');
-            $table->string('ultima_fecha');
-            $table->string('ultima_hora');
-            $table->string('id_ultimo_usuario');
-            $table->string('id_cliente');
+            $table->string('last_date');
+            $table->string('last_minute');
+            $table->string('id_last_user');
+            $table->string('customer_id');
             $table->string('id_enlace');
-            $table->string('asunto');
-            $table->string('finalizado');
+            $table->string('affair');
+            $table->string('finalized');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +36,6 @@ class Asuntos extends Migration
      */
     public function down()
     {
-        Schema::drop('Contacts');
+        Schema::drop('asuntos');
     }
 }

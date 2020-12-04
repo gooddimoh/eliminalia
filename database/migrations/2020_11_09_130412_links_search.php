@@ -19,6 +19,8 @@ class LinksSearch extends Migration
             $table->tinyInteger('estado');
             $table->integer('id_usuario');
             $table->timestamp('fecha_actualizado');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
@@ -29,6 +31,6 @@ class LinksSearch extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('access_history');
+        Schema::dropIfExists('links_search');
     }
 }

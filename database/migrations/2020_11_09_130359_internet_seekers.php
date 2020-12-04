@@ -15,8 +15,10 @@ class Internet_seekers extends Migration
         Schema::create('internet_seekers', function (Blueprint $table) {
             $table->id();
             $table->integer('id');
-            $table->string('plataforma');
-            $table->string('pais ');
+            $table->string('platform');
+            $table->string('parents ');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

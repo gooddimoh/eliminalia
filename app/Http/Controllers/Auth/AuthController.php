@@ -17,7 +17,6 @@ class AuthController extends Controller
         print_r($request->get(["name"]));
 
         $validate = $request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']);
-        var_dump($validate);
         echo "postLogin";
         die();
 

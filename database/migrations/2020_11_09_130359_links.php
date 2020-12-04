@@ -27,6 +27,8 @@ class Links extends Migration
             $table->timestamp('hora_modificacion_seo');
             $table->enum('tipo_enlace');
             $table->integer('id_categoria');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

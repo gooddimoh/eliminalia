@@ -14,9 +14,11 @@ class ContactBookLink extends Migration {
     {
         Schema::create('contact_book_link', function (Blueprint $table) {
             $table->id('id')->autoIncrement();
-            $table->timestamp('fecha')->comment('date');
-            $table->integer('id_contacto');
-            $table->integer('id_enlace');
+            $table->timestamp('date')->comment('date');
+            $table->integer('contact_id');
+            $table->integer('id_enlace ');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

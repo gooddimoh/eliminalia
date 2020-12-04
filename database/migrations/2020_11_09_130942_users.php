@@ -11,9 +11,10 @@ class Users extends Migration
      *
      * @return void
      */
+
     public function up()
     {
-        Schema::create('Users', function (Blueprint $table) {
+        Schema::create('user', function (Blueprint $table) {
             $table->id('id')->primary();
             $table->string('name');
             $table->string('email');
@@ -21,10 +22,6 @@ class Users extends Migration
             $table->string('phone');
             $table->string('remember_token');
             $table->string('approved');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
-            $table->timestamp('deleted_at');
-            $table->timestamp('email_verified_at');
             $table->foreign('dni');
             $table->string('name');
             $table->string('surnames');
@@ -74,7 +71,11 @@ class Users extends Migration
             $table->morphs('notifiable');
             $table->timestamp('file_created');
             $table->timestamp('file_updated');
+            $table->timestamp('email_verified_at');
             $table->timestamp('read_at')->nullable();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('deleted_at');
             $table->timestamps();
         });
     }
@@ -84,8 +85,9 @@ class Users extends Migration
      *
      * @return void
      */
+
     public function down()
     {
-        Schema::drop('Users');
+        Schema::drop('user');
     }
 }

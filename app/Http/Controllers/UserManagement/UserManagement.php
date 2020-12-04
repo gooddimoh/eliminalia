@@ -20,6 +20,12 @@ class UserManagement extends Controller
     {
         $users = User::all();
         $roles = Role::all();
+        if ($request->all()) {
+            $view = view('data', compact('post'))->render();
+
+            response()->stream('');
+            return response()->json(['html' => $view]);
+        }
         return view('admin.users.index', compact('users', 'role'));
     }
 
@@ -36,20 +42,24 @@ class UserManagement extends Controller
 
     public function create(Request $request)
     {
-        $validatedData = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
+        $datavalidated = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
         $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
-        $request->session()->flush();
+
+//        $request->session()->flush();
+//        $request->session();
+
         $request->flush();
         $request->all();
-        var_dump($validatedData);
+        var_dump($datavalidated);
         return view('dashboard.Admin.UserManagement.create')->with('users', $users);
     }
 
     public function store(StoreUserRequest $request)
     {
-        $request->pjax();
-        User::create($request->all());
+        $request->ajax();
+        $user = User::create($request->all());
+        var_dump($user);
         return view('admin.users.index')->with('users', $user);
     }
 
@@ -66,6 +76,7 @@ class UserManagement extends Controller
         $request->all();
         $user->update($request->all());
         $user->roles()->sync($request->input('roles', []));
+
         if ($approved == 0 && $user->approved == 1) {
             $user->notify(new UserApprovedNotification());
         }

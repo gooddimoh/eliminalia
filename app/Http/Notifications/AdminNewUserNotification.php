@@ -8,8 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class AdminNewUserNotification extends Notification
-{
+class AdminNewUserNotification extends Notification {
     use Queueable;
 
     private $user;

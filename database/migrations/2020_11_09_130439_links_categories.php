@@ -25,6 +25,8 @@ class LinksCategories extends Migration
             $table->enum('forma_pago');
             $table->string('observaciones', 5000);
             $table->date('pay_day');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
