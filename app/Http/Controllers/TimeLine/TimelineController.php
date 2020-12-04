@@ -9,12 +9,12 @@ class TimelineController extends Controller
 {
     public function index()
     {
-        
+
     }
 
     public function create()
     {
-        
+
     }
 
     public function store(Request $request)
@@ -24,8 +24,9 @@ class TimelineController extends Controller
 
     public function timeline()
     {
-        $timeline = Timeline::all();
-        return view("dashboard.admin.timeline.timeline")->with('timeline', $timeline);
+//        $timeline = Timeline::all();
+//        return view("dashboard.admin.timeline.timeline")->with('timeline', $timeline);
+        return view("dashboard.admin.timeline.index");
     }
 
 }

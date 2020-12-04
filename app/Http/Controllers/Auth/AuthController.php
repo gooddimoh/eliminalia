@@ -36,12 +36,12 @@ class AuthController extends Controller
     public function GetLogout(Request $request)
     {
         var_dump($request->all());
-        die();
     }
 
     public function GetRegister(Request $request)
     {
         $request->session(['key' => 'value']);
+        $user = User::create($request->all());
         echo "1234 GetRegister 1234";
         var_dump($request->all());
     }

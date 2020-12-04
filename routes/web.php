@@ -15,8 +15,7 @@ Route::get('/', function () {
     return redirect('dashboard');
 });
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () {
-});
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () { });
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
@@ -57,8 +56,8 @@ Route::post('user/store', 'UsersController@edit')->name('users.store');
 Route::get('dashboard/user/edit', 'UsersController@Edit')->name('user.edit');
 Route::get('dashboard/user/store', 'UsersController@Store')->name('user.store');
 
-Route::get('dashboard/Timeline', 'TimelineController@Timeline')->name('timeline');
-Route::get('dashboard/Timeline/MakePost', 'TimeLineController@timelinepost')->name('timeline.post');
+Route::get('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
+Route::get('dashboard/timeline/makepost', 'TimeLineController@timelinepost')->name('timeline.post');
 
 Route::get('dashboard/map', 'MainController@Map')->name('Map');
 Route::get('dashboard/map/vector', 'ChartController@mapVector')->name('map-vector');

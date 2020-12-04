@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use App\Models\Role;
@@ -39,7 +40,7 @@ class User extends Model
         return parent::save($options);
     }
 
-    public function Create()
+    public static function Create()
     {
 
     }

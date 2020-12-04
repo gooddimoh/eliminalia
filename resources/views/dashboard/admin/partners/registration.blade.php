@@ -81,22 +81,28 @@
             <div class="col-md-12">
                 <div class="form-group row">
                     <br>
-                    <label class="col-form-label col-md-2">Case description made by the client:</label>
-                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
-                              name="textbox_type_1">
+                    <div class="col-md-3">
+                        <label class="col-form-label col-md-2">Case description made by the client:</label>
+                        <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
+                                  name="textbox_type_1">
                     </textarea>
-                    <label class="col-form-label col-md-2">Info for the manager:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the manager:"
-                              name="textbox_type_2"></textarea>
-                    <label class="col-form-label col-md-2">Info for the commercial:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:"
-                              name="textbox_type_3"></textarea>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-form-label col-md-2">Info for the manager:</label>
+                        <textarea class="form-control" rows="6" placeholder="Info for the manager:"
+                                  name="textbox_type_2"></textarea>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-form-label col-md-2">Info for the commercial:</label>
+                        <textarea class="form-control" rows="6" placeholder="Info for the commercial:"
+                                  name="textbox_type_3"></textarea>
+                    </div>
                 </div>
                 <br>
             </div>
         </div>
         <div class="row -align-right">
-            <button type="submit" class="form-control btn btn-green">PARTNER REGISTRATION</button>
+            <button type="submit" class="form-control btn btn-green width-250">PARTNER REGISTRATION</button>
         </div>
     </form>
 @endsection
