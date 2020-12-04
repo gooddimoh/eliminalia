@@ -1,11 +1,4 @@
 <?php
-/* $user->role == 'SUPERADMIN';
- $user->role == 'ADMIN SUCURSAL';
- $user->role == 'ALTA CONTRATOS';
- $user->role == 'RASTREADOR';
- $user->role == 'COMERCIAL';
- $user->role == 'PARTNER';
- $user->role == 'MANAGER';*/
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -22,7 +15,8 @@ Route::get('/', function () {
     return redirect('dashboard');
 });
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () { });
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () {
+});
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
