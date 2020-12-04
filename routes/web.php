@@ -15,7 +15,8 @@ Route::get('/', function () {
     return redirect('dashboard');
 });
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () { });
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () {
+});
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
@@ -109,7 +110,7 @@ Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->middleware(['guest'])->name('password.request');
 
-Route::post('usermanagement/user/new', 'MainController@usermanagementnew')->name('usermanagementnew');
+Route::post('usermanagement/create', 'MainController@usermanagementnew')->name('usermanagementnew');
 Route::post('usermanagement/component/tbody', 'MainController@usermanagementedit')->name('usermanagementlist');
 Route::post('usermanagement/user/list', 'MainController@usermanagementedit')->name('usermanagementlist');
 

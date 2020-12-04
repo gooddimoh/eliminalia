@@ -182,8 +182,8 @@ return [
         ],
         ['icon' => 'fa fa-clock',
             'title' => 'Timeline',
-            'url' => '/dashboard/Timeline',
-            'route-name' => 'Timeline'
+            'url' => '/dashboard/timeline',
+            'route-name' => 'timeline'
         ],
         ['icon' => 'fa fa-edit',
             'title' => 'PostToTimeline',
@@ -204,6 +204,11 @@ return [
             'title' => 'Map',
             'url' => '/dashboard/Map',
             'route-name' => 'Map'
+        ],
+        ['icon' => 'fa fa-sign-out-alt',
+            'title' => 'Logout',
+            'url' => '/dashboard/Logout',
+            'route-name' => 'Logout'
         ],
     ]
 ];

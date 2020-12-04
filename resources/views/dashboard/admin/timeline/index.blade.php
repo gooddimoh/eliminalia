@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Color Admin | Timeline</title>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-    <meta content="" name="description" />
-    <meta content="" name="author" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
 
     <!-- ================== BEGIN BASE CSS STYLE ================== -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-    <link href="../assets/css/default/app.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
+    <link href="../assets/css/default/app.min.css" rel="stylesheet"/>
     <!-- ================== END BASE CSS STYLE ================== -->
 </head>
 <body>
@@ -37,7 +37,7 @@
             <li class="navbar-form">
                 <form action="" method="POST" name="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter keyword" />
+                        <input type="text" class="form-control" placeholder="Enter keyword"/>
                         <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
                     </div>
                 </form>
@@ -54,13 +54,14 @@
                             <i class="fa fa-bug media-object bg-silver-darker"></i>
                         </div>
                         <div class="media-body">
-                            <h6 class="media-heading">Server Error Reports <i class="fa fa-exclamation-circle text-danger"></i></h6>
+                            <h6 class="media-heading">Server Error Reports <i
+                                        class="fa fa-exclamation-circle text-danger"></i></h6>
                             <div class="text-muted f-s-10">3 minutes ago</div>
                         </div>
                     </a>
                     <a href="javascript:;" class="dropdown-item media">
                         <div class="media-left">
-                            <img src="../assets/img/user/user-1.jpg" class="media-object" alt="" />
+                            <img src="../assets/img/user/user-1.jpg" class="media-object" alt=""/>
                             <i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
                         </div>
                         <div class="media-body">
@@ -71,7 +72,7 @@
                     </a>
                     <a href="javascript:;" class="dropdown-item media">
                         <div class="media-left">
-                            <img src="../assets/img/user/user-2.jpg" class="media-object" alt="" />
+                            <img src="../assets/img/user/user-2.jpg" class="media-object" alt=""/>
                             <i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
                         </div>
                         <div class="media-body">
@@ -106,12 +107,13 @@
             </li>
             <li class="dropdown navbar-user">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="../assets/img/user/user-13.jpg" alt="" />
+                    <img src="../assets/img/user/user-13.jpg" alt=""/>
                     <span class="d-none d-md-inline">Adam Schwartz</span> <b class="caret"></b>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <a href="javascript:;" class="dropdown-item">Edit Profile</a>
-                    <a href="javascript:;" class="dropdown-item"><span class="badge badge-danger pull-right">2</span> Inbox</a>
+                    <a href="javascript:;" class="dropdown-item"><span class="badge badge-danger pull-right">2</span>
+                        Inbox</a>
                     <a href="javascript:;" class="dropdown-item">Calendar</a>
                     <a href="javascript:;" class="dropdown-item">Setting</a>
                     <div class="dropdown-divider"></div>
@@ -133,7 +135,7 @@
                     <a href="javascript:;" data-toggle="nav-profile">
                         <div class="cover with-shadow"></div>
                         <div class="image">
-                            <img src="../assets/img/user/user-13.jpg" alt="" />
+                            <img src="../assets/img/user/user-13.jpg" alt=""/>
                         </div>
                         <div class="info">
                             <b class="caret pull-right"></b>Sean Ngu
@@ -151,7 +153,8 @@
             </ul>
             <!-- end sidebar user -->
             <!-- begin sidebar nav -->
-            <ul class="nav"><li class="nav-header">Navigation</li>
+            <ul class="nav">
+                <li class="nav-header">Navigation</li>
                 <li class="has-sub">
                     <a href="javascript:;">
                         <b class="caret"></b>
@@ -193,7 +196,8 @@
                         <li><a href="ui_typography.html">Typography</a></li>
                         <li><a href="ui_tabs_accordions.html">Tabs & Accordions</a></li>
                         <li><a href="ui_unlimited_tabs.html">Unlimited Nav Tabs</a></li>
-                        <li><a href="ui_modal_notification.html">Modal & Notification <i class="fa fa-paper-plane text-theme"></i></a></li>
+                        <li><a href="ui_modal_notification.html">Modal & Notification <i
+                                        class="fa fa-paper-plane text-theme"></i></a></li>
                         <li><a href="ui_widget_boxes.html">Widget Boxes</a></li>
                         <li><a href="ui_media_object.html">Media Object</a></li>
                         <li><a href="ui_buttons.html">Buttons <i class="fa fa-paper-plane text-theme"></i></a></li>
@@ -209,7 +213,7 @@
                 <li>
                     <a href="bootstrap_4.html">
                         <div class="icon-img">
-                            <img src="../assets/img/logo/logo-bs4.png" alt="" />
+                            <img src="../assets/img/logo/logo-bs4.png" alt=""/>
                         </div>
                         <span>Bootstrap 4 <span class="label label-theme">NEW</span></span>
                     </a>
@@ -221,8 +225,10 @@
                         <span>Form Stuff <span class="label label-theme">NEW</span></span>
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="form_elements.html">Form Elements <i class="fa fa-paper-plane text-theme"></i></a></li>
-                        <li><a href="form_plugins.html">Form Plugins <i class="fa fa-paper-plane text-theme"></i></a></li>
+                        <li><a href="form_elements.html">Form Elements <i class="fa fa-paper-plane text-theme"></i></a>
+                        </li>
+                        <li><a href="form_plugins.html">Form Plugins <i class="fa fa-paper-plane text-theme"></i></a>
+                        </li>
                         <li><a href="form_slider_switcher.html">Form Slider + Switcher</a></li>
                         <li><a href="form_validation.html">Form Validation</a></li>
                         <li><a href="form_wizards.html">Wizards <i class="fa fa-paper-plane text-theme"></i></a></li>
@@ -281,10 +287,13 @@
                         <span>Front End</span>
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="../../../frontend/template/template_one_page_parallax/index.html" target="_blank">One Page Parallax</a></li>
+                        <li><a href="../../../frontend/template/template_one_page_parallax/index.html" target="_blank">One
+                                Page Parallax</a></li>
                         <li><a href="../../../frontend/template/template_blog/index.html" target="_blank">Blog</a></li>
-                        <li><a href="../../../frontend/template/template_forum/index.html" target="_blank">Forum</a></li>
-                        <li><a href="../../../frontend/template/template_e_commerce/index.html" target="_blank">E-Commerce</a></li>
+                        <li><a href="../../../frontend/template/template_forum/index.html" target="_blank">Forum</a>
+                        </li>
+                        <li><a href="../../../frontend/template/template_e_commerce/index.html" target="_blank">E-Commerce</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="has-sub">
@@ -363,7 +372,8 @@
                         <li><a href="page_with_mixed_menu.html">Page with Mixed Menu</a></li>
                         <li><a href="page_boxed_layout_with_mixed_menu.html">Boxed Layout with Mixed Menu</a></li>
                         <li><a href="page_with_transparent_sidebar.html">Page with Transparent Sidebar</a></li>
-                        <li><a href="page_with_search_sidebar.html">Page with Search Sidebar <i class="fa fa-paper-plane text-theme"></i></a></li>
+                        <li><a href="page_with_search_sidebar.html">Page with Search Sidebar <i
+                                        class="fa fa-paper-plane text-theme"></i></a></li>
                     </ul>
                 </li>
                 <li class="has-sub active">
@@ -379,8 +389,10 @@
                         <li><a href="extra_invoice.html">Invoice</a></li>
                         <li><a href="extra_404_error.html">404 Error Page</a></li>
                         <li><a href="extra_profile.html">Profile Page</a></li>
-                        <li><a href="extra_scrum_board.html">Scrum Board <i class="fa fa-paper-plane text-theme"></i></a></li>
-                        <li><a href="extra_cookie_acceptance_banner.html">Cookie Acceptance Banner <i class="fa fa-paper-plane text-theme"></i></a></li>
+                        <li><a href="extra_scrum_board.html">Scrum Board <i
+                                        class="fa fa-paper-plane text-theme"></i></a></li>
+                        <li><a href="extra_cookie_acceptance_banner.html">Cookie Acceptance Banner <i
+                                        class="fa fa-paper-plane text-theme"></i></a></li>
                     </ul>
                 </li>
                 <li class="has-sub">
@@ -407,15 +419,22 @@
                         <li><a href="../template_ajax/">AJAX</a></li>
                         <li><a href="../template_angularjs/">ANGULAR JS</a></li>
                         <li><a href="../template_angularjs10/">ANGULAR JS 10</a></li>
-                        <li><a href="javascript:alert('Laravel Version only available in downloaded version.');">LARAVEL</a></li>
+                        <li>
+                            <a href="javascript:alert('Laravel Version only available in downloaded version.');">LARAVEL</a>
+                        </li>
                         <li><a href="../template_vuejs/">VUE JS</a></li>
                         <li><a href="../template_reactjs/">REACT JS</a></li>
-                        <li><a href="javascript:alert('.NET Core 3.1 MVC Version only available in downloaded version.');">ASP.NET <i class="fa fa-paper-plane text-theme"></i></a></li>
+                        <li>
+                            <a href="javascript:alert('.NET Core 3.1 MVC Version only available in downloaded version.');">ASP.NET
+                                <i class="fa fa-paper-plane text-theme"></i></a></li>
                         <li><a href="../template_material/index_v3.html">MATERIAL DESIGN</a></li>
                         <li><a href="../template_apple/index_v3.html">APPLE DESIGN</a></li>
-                        <li><a href="../template_transparent/index_v3.html">TRANSPARENT DESIGN <i class="fa fa-paper-plane text-theme"></i></a></li>
-                        <li><a href="../template_facebook/index_v3.html">FACEBOOK DESIGN <i class="fa fa-paper-plane text-theme"></i></a></li>
-                        <li><a href="../template_google/index_v3.html">GOOGLE DESIGN <i class="fa fa-paper-plane text-theme"></i></a></li>
+                        <li><a href="../template_transparent/index_v3.html">TRANSPARENT DESIGN <i
+                                        class="fa fa-paper-plane text-theme"></i></a></li>
+                        <li><a href="../template_facebook/index_v3.html">FACEBOOK DESIGN <i
+                                        class="fa fa-paper-plane text-theme"></i></a></li>
+                        <li><a href="../template_google/index_v3.html">GOOGLE DESIGN <i
+                                        class="fa fa-paper-plane text-theme"></i></a></li>
                     </ul>
                 </li>
                 <li class="has-sub">
@@ -460,7 +479,8 @@
                     </ul>
                 </li>
                 <!-- begin sidebar minify button -->
-                <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+                <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i
+                                class="fa fa-angle-double-left"></i></a></li>
                 <!-- end sidebar minify button -->
             </ul>
             <!-- end sidebar nav -->
@@ -499,13 +519,14 @@
                 <!-- begin timeline-body -->
                 <div class="timeline-body">
                     <div class="timeline-header">
-                        <span class="userimage"><img src="../assets/img/user/user-1.jpg" alt="" /></span>
+                        <span class="userimage"><img src="../assets/img/user/user-1.jpg" alt=""/></span>
                         <span class="username"><a href="javascript:;">John Smith</a> <small></small></span>
                         <span class="views">18 Views</span>
                     </div>
                     <div class="timeline-content">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis tincidunt luctus.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis tincidunt
+                            luctus.
                             Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
                         </p>
                     </div>
@@ -527,18 +548,23 @@
                         </div>
                     </div>
                     <div class="timeline-footer">
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                                    class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                                    class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                                    class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
                     </div>
                     <div class="timeline-comment-box">
-                        <div class="user"><img src="../assets/img/user/user-13.jpg" /></div>
+                        <div class="user"><img src="../assets/img/user/user-13.jpg"/></div>
                         <div class="input">
                             <form action="">
                                 <div class="input-group">
-                                    <input type="text" class="form-control rounded-corner" placeholder="Write a comment..." />
+                                    <input type="text" class="form-control rounded-corner"
+                                           placeholder="Write a comment..."/>
                                     <span class="input-group-btn p-l-10">
-										<button class="btn btn-primary f-s-12 rounded-corner" type="button">Comment</button>
+										<button class="btn btn-primary f-s-12 rounded-corner"
+                                                type="button">Comment</button>
 										</span>
                                 </div>
                             </form>
@@ -562,21 +588,26 @@
                 <!-- begin timeline-body -->
                 <div class="timeline-body">
                     <div class="timeline-header">
-                        <span class="userimage"><img src="../assets/img/user/user-6.jpg" alt="" /></span>
+                        <span class="userimage"><img src="../assets/img/user/user-6.jpg" alt=""/></span>
                         <span class="username">Richard Leong</span>
                         <span class="views">1,282 Views</span>
                     </div>
                     <div class="timeline-content">
                         <p class="lead">
                             <i class="fa fa-quote-left fa-fw pull-left"></i>
-                            Quisque sed varius nisl. Nulla facilisi. Phasellus consequat sapien sit amet nibh molestie placerat. Donec nulla quam, ullamcorper ut velit vitae, lobortis condimentum magna. Suspendisse mollis in sem vel mollis.
+                            Quisque sed varius nisl. Nulla facilisi. Phasellus consequat sapien sit amet nibh molestie
+                            placerat. Donec nulla quam, ullamcorper ut velit vitae, lobortis condimentum magna.
+                            Suspendisse mollis in sem vel mollis.
                             <i class="fa fa-quote-right fa-fw pull-right"></i>
                         </p>
                     </div>
                     <div class="timeline-footer">
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                                    class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                                    class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                                    class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
                     </div>
                 </div>
                 <!-- end timeline-body -->
@@ -592,25 +623,60 @@
         <div class="theme-panel-content">
             <h5>App Settings</h5>
             <ul class="theme-list clearfix">
-                <li><a href="javascript:;" class="bg-red" data-theme="red" data-theme-file="../assets/css/default/theme/red.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Red">&nbsp;</a></li>
-                <li><a href="javascript:;" class="bg-pink" data-theme="pink" data-theme-file="../assets/css/default/theme/pink.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Pink">&nbsp;</a></li>
-                <li><a href="javascript:;" class="bg-orange" data-theme="orange" data-theme-file="../assets/css/default/theme/orange.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Orange">&nbsp;</a></li>
-                <li><a href="javascript:;" class="bg-yellow" data-theme="yellow" data-theme-file="../assets/css/default/theme/yellow.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Yellow">&nbsp;</a></li>
-                <li><a href="javascript:;" class="bg-lime" data-theme="lime" data-theme-file="../assets/css/default/theme/lime.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Lime">&nbsp;</a></li>
-                <li><a href="javascript:;" class="bg-green" data-theme="green" data-theme-file="../assets/css/default/theme/green.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Green">&nbsp;</a></li>
-                <li class="active"><a href="javascript:;" class="bg-teal" data-theme="default" data-theme-file="" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Default">&nbsp;</a></li>
-                <li><a href="javascript:;" class="bg-aqua" data-theme="aqua" data-theme-file="../assets/css/default/theme/aqua.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Aqua">&nbsp;</a></li>
-                <li><a href="javascript:;" class="bg-blue" data-theme="blue" data-theme-file="../assets/css/default/theme/blue.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Blue">&nbsp;</a></li>
-                <li><a href="javascript:;" class="bg-purple" data-theme="purple" data-theme-file="../assets/css/default/theme/purple.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Purple">&nbsp;</a></li>
-                <li><a href="javascript:;" class="bg-indigo" data-theme="indigo" data-theme-file="../assets/css/default/theme/indigo.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Indigo">&nbsp;</a></li>
-                <li><a href="javascript:;" class="bg-black" data-theme="black" data-theme-file="../assets/css/default/theme/black.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Black">&nbsp;</a></li>
+                <li><a href="javascript:;" class="bg-red" data-theme="red"
+                       data-theme-file="../assets/css/default/theme/red.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Red">&nbsp;</a></li>
+                <li><a href="javascript:;" class="bg-pink" data-theme="pink"
+                       data-theme-file="../assets/css/default/theme/pink.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Pink">&nbsp;</a>
+                </li>
+                <li><a href="javascript:;" class="bg-orange" data-theme="orange"
+                       data-theme-file="../assets/css/default/theme/orange.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Orange">&nbsp;</a>
+                </li>
+                <li><a href="javascript:;" class="bg-yellow" data-theme="yellow"
+                       data-theme-file="../assets/css/default/theme/yellow.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Yellow">&nbsp;</a>
+                </li>
+                <li><a href="javascript:;" class="bg-lime" data-theme="lime"
+                       data-theme-file="../assets/css/default/theme/lime.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Lime">&nbsp;</a>
+                </li>
+                <li><a href="javascript:;" class="bg-green" data-theme="green"
+                       data-theme-file="../assets/css/default/theme/green.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Green">&nbsp;</a>
+                </li>
+                <li class="active"><a href="javascript:;" class="bg-teal" data-theme="default" data-theme-file=""
+                                      data-click="theme-selector" data-toggle="tooltip" data-trigger="hover"
+                                      data-container="body" data-title="Default">&nbsp;</a></li>
+                <li><a href="javascript:;" class="bg-aqua" data-theme="aqua"
+                       data-theme-file="../assets/css/default/theme/aqua.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Aqua">&nbsp;</a>
+                </li>
+                <li><a href="javascript:;" class="bg-blue" data-theme="blue"
+                       data-theme-file="../assets/css/default/theme/blue.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Blue">&nbsp;</a>
+                </li>
+                <li><a href="javascript:;" class="bg-purple" data-theme="purple"
+                       data-theme-file="../assets/css/default/theme/purple.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Purple">&nbsp;</a>
+                </li>
+                <li><a href="javascript:;" class="bg-indigo" data-theme="indigo"
+                       data-theme-file="../assets/css/default/theme/indigo.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Indigo">&nbsp;</a>
+                </li>
+                <li><a href="javascript:;" class="bg-black" data-theme="black"
+                       data-theme-file="../assets/css/default/theme/black.min.css" data-click="theme-selector"
+                       data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Black">&nbsp;</a>
+                </li>
             </ul>
             <div class="divider"></div>
             <div class="row m-t-10">
                 <div class="col-6 control-label text-inverse f-w-600">Header Fixed</div>
                 <div class="col-6 d-flex">
                     <div class="custom-control custom-switch ml-auto">
-                        <input type="checkbox" class="custom-control-input" name="header-fixed" id="headerFixed" value="1" checked />
+                        <input type="checkbox" class="custom-control-input" name="header-fixed" id="headerFixed"
+                               value="1" checked/>
                         <label class="custom-control-label" for="headerFixed">&nbsp;</label>
                     </div>
                 </div>
@@ -619,7 +685,8 @@
                 <div class="col-6 control-label text-inverse f-w-600">Header Inverse</div>
                 <div class="col-6 d-flex">
                     <div class="custom-control custom-switch ml-auto">
-                        <input type="checkbox" class="custom-control-input" name="header-inverse" id="headerInverse" value="1" />
+                        <input type="checkbox" class="custom-control-input" name="header-inverse" id="headerInverse"
+                               value="1"/>
                         <label class="custom-control-label" for="headerInverse">&nbsp;</label>
                     </div>
                 </div>
@@ -628,7 +695,8 @@
                 <div class="col-6 control-label text-inverse f-w-600">Sidebar Fixed</div>
                 <div class="col-6 d-flex">
                     <div class="custom-control custom-switch ml-auto">
-                        <input type="checkbox" class="custom-control-input" name="sidebar-fixed" id="sidebarFixed" value="1" checked />
+                        <input type="checkbox" class="custom-control-input" name="sidebar-fixed" id="sidebarFixed"
+                               value="1" checked/>
                         <label class="custom-control-label" for="sidebarFixed">&nbsp;</label>
                     </div>
                 </div>
@@ -637,7 +705,8 @@
                 <div class="col-6 control-label text-inverse f-w-600">Sidebar Grid</div>
                 <div class="col-6 d-flex">
                     <div class="custom-control custom-switch ml-auto">
-                        <input type="checkbox" class="custom-control-input" name="sidebar-grid" id="sidebarGrid" value="1" />
+                        <input type="checkbox" class="custom-control-input" name="sidebar-grid" id="sidebarGrid"
+                               value="1"/>
                         <label class="custom-control-label" for="sidebarGrid">&nbsp;</label>
                     </div>
                 </div>
@@ -646,7 +715,8 @@
                 <div class="col-md-6 control-label text-inverse f-w-600">Sidebar Gradient</div>
                 <div class="col-md-6 d-flex">
                     <div class="custom-control custom-switch ml-auto">
-                        <input type="checkbox" class="custom-control-input" name="sidebar-gradient" id="sidebarGradient" value="1" />
+                        <input type="checkbox" class="custom-control-input" name="sidebar-gradient" id="sidebarGradient"
+                               value="1"/>
                         <label class="custom-control-label" for="sidebarGradient">&nbsp;</label>
                     </div>
                 </div>
@@ -732,8 +802,10 @@
             <div class="divider"></div>
             <div class="row m-t-10">
                 <div class="col-md-12">
-                    <a href="https://seantheme.com/color-admin/documentation/" class="btn btn-inverse btn-block btn-rounded" target="_blank"><b>Documentation</b></a>
-                    <a href="javascript:;" class="btn btn-default btn-block btn-rounded" data-click="reset-local-storage"><b>Reset Local Storage</b></a>
+                    <a href="https://seantheme.com/color-admin/documentation/"
+                       class="btn btn-inverse btn-block btn-rounded" target="_blank"><b>Documentation</b></a>
+                    <a href="javascript:;" class="btn btn-default btn-block btn-rounded"
+                       data-click="reset-local-storage"><b>Reset Local Storage</b></a>
                 </div>
             </div>
         </div>
@@ -741,7 +813,8 @@
     <!-- end theme-panel -->
 
     <!-- begin scroll to top btn -->
-    <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+    <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i
+                class="fa fa-angle-up"></i></a>
     <!-- end scroll to top btn -->
 </div>
 <!-- end page container -->

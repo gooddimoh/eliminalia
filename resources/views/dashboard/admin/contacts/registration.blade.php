@@ -103,12 +103,15 @@
             <div class="col-md-6">
                 <div class="timeline">
                     <div class="form-group">
-                        <input type="checkbox" name="name1" placeholder="name1" checked>
-                        <p>physical person</p>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="name1" placeholder="name1" checked>
-                        <p>legal person</p>
+                        <div class="custom-control custom-switch mb-1">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1" name="name1"
+                                   placeholder="name1" checked>
+                            <label class="custom-control-label" for="customSwitch1">Physical Person</label>
+                        </div>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" disabled="" id="customSwitch2">
+                            <label class="custom-control-label" for="customSwitch2">Legal Person</label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -117,8 +120,7 @@
             <div class="col-md-12">
                 <div class="form-group row width-150">
                     <label class="col-form-label">BUDGET:</label>
-                    <input class="form-control form-control-sm width-80" type="number" name="budget"
-                           placeholder="CURRENCY" value="2">
+                    <input class="form-control form-control-sm width-80" type="number" name="budget" placeholder="CURRENCY" value="2">
                 </div>
                 <div class="form-group row width-150">
                     <label class="col-form-label">Payment method:</label>
@@ -129,12 +131,11 @@
                         <option value="3">Other</option>
                     </select>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row col-md-12">
                     <br>
                     <label class="col-form-label col-md-2">Case description made by the client:</label>
                     <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
                               name="textbox_type_1">
-                        Case description made by the client:
                     </textarea>
                     <label class="col-form-label col-md-2">Info for the manager:</label>
                     <textarea class="form-control" rows="6" placeholder="Info for the manager:"
