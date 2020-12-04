@@ -54,7 +54,6 @@
                                 </th>
                             </tr>
                             </thead>
-                            {{}}
                         </table>
                     </div>
                 </div>
@@ -65,7 +64,7 @@
 @section('scripts')
     <script type="text/javascript">
         $.ajax({
-            url: "{{route("usermanagement.ajax.tbody")}}",
+            {{--url: "{{route("usermanagement.ajax.tbody")}}",--}}
             method: "post",
             dataType: "html"
         });

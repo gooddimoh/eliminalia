@@ -13,31 +13,33 @@
                 <h4>New User Data</h4>
                 <div class="form-group row">
                     <label class="col-form-label">Username:</label>
-                    <input class="form-control form-control-sm" type="text" name="username" placeholder="Username:" value="">
+                    <input class="form-control form-control-sm height-40" type="text" name="username" placeholder="Username:"
+                           value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Name:</label>
-                    <input class="form-control form-control-sm" type="text" name="name" placeholder="Name:" value="">
+                    <input class="form-control form-control-sm height-40" type="text" name="name" placeholder="Name:" value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Phone:</label>
-                    <input class="form-control form-control-sm" type="text" name="phone" placeholder="Phone:" value="">
+                    <input class="form-control form-control-sm height-40" type="text" name="phone" placeholder="Phone:" value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">DNI:</label>
-                    <input class="form-control form-control-sm" type="text" name="dni" placeholder="DNI:" value="">
+                    <input class="form-control form-control-sm height-40" type="text" name="dni" placeholder="DNI:" value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Address:</label>
-                    <input class="form-control form-control-sm" type="text" name="address" placeholder="Address:" value="">
+                    <input class="form-control form-control-sm height-40" type="text" name="address" placeholder="Address:"
+                           value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">City:</label>
-                    <input class="form-control form-control-sm" type="text" name="city" placeholder="City:" value="">
+                    <input class="form-control form-control-sm height-40" type="text" name="city" placeholder="City:" value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
-                    <select class="form-control form-control-sm" name="name" value="">
+                    <select class="form-control form-control-sm height-40" name="name" value="">
                         <option value="0">SUPERADMIN:</option>
                         <option value="1">ADMIN SUCURSAL:</option>
                         <option value="1">ALTA CONTRATOS</option>
@@ -52,27 +54,31 @@
                 <h4>&nbsp;</h4>
                 <div class="form-group row">
                     <label class="col-form-label ">Password:</label>
-                    <input class="form-control form-control-sm" type="text" value="" name="password"  placeholder="Password:">
+                    <input class="form-control form-control-sm height-40" type="text" value="" name="password"
+                           placeholder="Password:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label ">Surname:</label>
-                    <input class="form-control form-control-sm" type="text" value="" name="surname" placeholder="Surname:">
+                    <input class="form-control form-control-sm height-40" type="text" value="" name="surname"
+                           placeholder="Surname:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email:</label>
-                    <input class="form-control form-control-sm" type="text" value="" name="email" placeholder="Email (main)*:">
+                    <input class="form-control form-control-sm height-40" type="text" value="" name="email"
+                           placeholder="Email (main)*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">ID:</label>
-                    <input class="form-control form-control-sm" type="text" value="" name="id" placeholder="ID:">
+                    <input class="form-control form-control-sm height-40" type="text" value="" name="id" placeholder="ID:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Postal code:</label>
-                    <input class="form-control form-control-sm" type="text" value="" name="postalcode" placeholder="Postal code:">
+                    <input class="form-control form-control-sm height-40" type="text" value="" name="postalcode"
+                           placeholder="Postal code:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
-                    <input class="form-control form-control-sm" type="text" value="" name="state" placeholder="State:">
+                    <input class="form-control form-control-sm height-40" type="text" value="" name="state" placeholder="State:">
                 </div>
                 <div class="form-group row ">
                     <div class="row-align-right">
@@ -84,6 +90,7 @@
                 </div>
             </div>
             <div class="col-md-6 ui-sortable">
+                <input type="text" name="search" placeholder="Search">
                 <h1>Search existent user</h1>
                 <div class="panel" data-sortable-id="table-basic-7" data-init="true" style="">
                     <!-- begin panel-heading -->
@@ -92,7 +99,7 @@
                                     class="label label-success m-l-5 t-minus-1"> NEW </span></h4>
                         <div class="panel-heading-btn">
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default
-                             data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                             data-click=" panel-expand"><i class="fa fa-expand"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
@@ -101,15 +108,27 @@
                                data-click="panel-remove"><i class="fa fa-times"></i></a>
                         </div>
                     </div>
-                    <!-- end panel-heading -->
-                    <!-- begin panel-body -->
+                    <table class="table">
+                        <tbody>
+                        @foreach($users as $user)
+                            <tr>
+                                <th>#</th>
+                                <th>{{$user->name}}</th>
+                                <th>{{$user->email}}</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                     <div class="panel-body">
                         <!-- begin table-responsive -->
                     </div>
                 </div>
                 <div class="panel">
                     <div class="panel-body">
-                        <p>Time Line</p>
+                        <div id="timeline">
+                            <p>Time Line</p>
+                        </div>
                     </div>
                 </div>
             </div>

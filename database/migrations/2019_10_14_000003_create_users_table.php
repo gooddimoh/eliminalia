@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,9 +19,20 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
+            $table->rememberToken();
+            $table->timestamps();
             $table->softDeletes();
         });
     }
+
+    // Example //
+
+    //$table->increments('id');
+    //$table->string('name');
+    //$table->string('email')->unique();
+    //$table->string('password');
+    //$table->rememberToken();
+    //$table->timestamps();
 
     public function down()
     {

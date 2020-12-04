@@ -43,7 +43,7 @@ class UserManagement extends Controller
     public function create(Request $request)
     {
         $datavalidated = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
-        $roles = Role::all()->pluck('title', 'id');
+        $role = Role::all()->pluck('title', 'id');
         $users = User::all();
 
 //        $request->session()->flush();

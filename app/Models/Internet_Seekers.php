@@ -4,8 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Internet_Seekers extends Model
-{
+class Internet_Seekers extends Model {
     use HasFactory;
 
     /**

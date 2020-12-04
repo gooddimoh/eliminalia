@@ -84,22 +84,21 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    $role role roel
-                                    @foreach($users as $user)
-                                        <tr class="gradeX odd" role="row">
-                                            <td width="1%" class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">
-                                                1
-                                            </td>
-                                            <td width="1%" class="with-img">
-                                                <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
-                                            </td>
-                                            <td>{{$user->id}}</td>
-                                            <td>{{$user->id}}</td>
-                                            <td>{{$user->id}}</td>
-                                            <td>{{$user->count}}</td>
-                                            <td>{{$user->id}}</td>
-                                        </tr>
-                                    @endforeach
+                                    {{--                                    @foreach($users as $user)--}}
+                                    {{--                                        <tr class="gradeX odd" role="row">--}}
+                                    {{--                                            <td width="1%" class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">--}}
+                                    {{--                                                1--}}
+                                    {{--                                            </td>--}}
+                                    {{--                                            <td width="1%" class="with-img">--}}
+                                    {{--                                                <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">--}}
+                                    {{--                                            </td>--}}
+                                    {{--                                            <td>{{$user->id}}</td>--}}
+                                    {{--                                            <td>{{$user->id}}</td>--}}
+                                    {{--                                            <td>{{$user->id}}</td>--}}
+                                    {{--                                            <td>{{$user->count}}</td>--}}
+                                    {{--                                            <td>{{$user->id}}</td>--}}
+                                    {{--                                        </tr>--}}
+                                    {{--                                    @endforeach--}}
                                     </tbody>
                                 </table>
                             </div>

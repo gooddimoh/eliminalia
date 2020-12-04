@@ -22,14 +22,9 @@ Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login'])
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
 Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 'register']);
 
-Route::post('register', ['uses' => 'Auth\AuthController@postRegister', 'as' => 'login']);
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin', 'as' => 'login']);
 
 Route::get('index', 'MainController@index')->name('index');
-
-Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
-Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
-Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 'register']);
 
 // USER MANAGEMENT //
 Route::get('dashboard/usermanagement', 'UserManagement@usermanagement')->name('user.management');
@@ -116,6 +111,9 @@ Route::get('/forgot-password', function () {
 })->middleware(['guest'])->name('password.request');
 
 Route::post('usermanagement/user/new', 'MainController@usermanagementnew')->name('usermanagementnew');
+Route::post('usermanagement/component/tbody', 'MainController@usermanagementedit')->name('usermanagementlist');
+Route::post('usermanagement/user/list', 'MainController@usermanagementedit')->name('usermanagementlist');
+
 Route::post('usermanagement/user/list', 'MainController@usermanagementedit')->name('usermanagementlist');
 
 // $query = Job::where('status', '=', Job::APPROVED);

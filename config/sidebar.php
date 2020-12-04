@@ -195,11 +195,6 @@ return [
             'url' => '/dashboard/postwithfiles',
             'route-name' => 'postwithfiles'
         ],
-        ['icon' => 'fa fa-hdd',
-            'title' => 'File Manager',
-            'url' => '/dashboard/File Manager',
-            'route-name' => 'File Manager'
-        ],
         ['icon' => 'fa fa-calendar',
             'title' => 'Calendar',
             'url' => '/dashboard/calendar',

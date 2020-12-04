@@ -11,26 +11,28 @@
             <div class="col-md-12">
                 <div class="form-group row">
                     <label class="col-form-label">Name*:</label>
-                    <input class="form-control form-control-sm" type="text" name="name" value="" placeholder="Name*:">
+                    <input class="form-control form-control-sm height-40 width-600" type="text" name="name" value=""
+                           placeholder="Name*:">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="form-group row">
                     <label class="col-form-label">Phone number 1*:</label>
-                    <input class="form-control form-control-sm" type="text" name="phonenumber1" value=""
+                    <input class="form-control form-control-sm height-40" type="text" name="phonenumber1" value=""
                            placeholder="Phone number 1*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email (main)*:</label>
-                    <input class="form-control form-control-sm" type="text" name="email" placeholder="">
+                    <input class="form-control form-control-sm height-40" type="text" name="email" placeholder="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Address:</label>
-                    <input class="form-control form-control-sm" type="text" name="id" placeholder="ID:">
+                    <input class="form-control form-control-sm height-40" type="text" name="id" placeholder="ID:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">City:</label>
-                    <input class="form-control form-control-sm" type="text" name="country" placeholder="Country*:">
+                    <input class="form-control form-control-sm height-40" type="text" name="country"
+                           placeholder="Country*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Country*:</label>
@@ -43,29 +45,35 @@
                     <input type="submit" value="Submit">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="form-group row">
                     <label class="col-form-label">Phone number 2:</label>
-                    <input class="form-control form-control-sm" type="text" name="surname" placeholder="Surname:">
+                    <input class="form-control form-control-sm height-40" type="text" name="surname"
+                           placeholder="Surname:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email (secondary):</label>
-                    <input class="form-control form-control-sm" type="text" name="phonenumber2"
+                    <input class="form-control form-control-sm height-40" type="text" name="phonenumber2"
                            placeholder="Phone number 2:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Postal code:</label>
-                    <input class="form-control form-control-sm" type="text" name="email"
+                    <input class="form-control form-control-sm height-40" type="text" name="email"
                            placeholder="Email (secondary):">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
-                    <input class="form-control form-control-sm" type="text" name="companyid" value=""
+                    <input class="form-control form-control-sm height-40" type="text" name="companyid" value=""
                            placeholder="Company ID:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
-                    <input class="form-control form-control-sm" type="text" name="state" placeholder="State:">
+                    <input class="form-control form-control-sm height-40" type="text" name="state" placeholder="State:">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="content" class="content">
+                    <h1>Time Line</h1>
                 </div>
             </div>
         </div>
@@ -76,7 +84,6 @@
                     <label class="col-form-label col-md-2">Case description made by the client:</label>
                     <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
                               name="textbox_type_1">
-                        Case description made by the client:
                     </textarea>
                     <label class="col-form-label col-md-2">Info for the manager:</label>
                     <textarea class="form-control" rows="6" placeholder="Info for the manager:"

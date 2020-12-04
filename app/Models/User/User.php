@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use App\Models\Role;
@@ -15,7 +14,7 @@ class User extends Model
 {
     use SoftDeletes, Notifiable, HasFactory;
 
-    protected $table = 'Users';
+    protected $table = 'USERS';
 
     protected $dates = [
         'updated_at',
@@ -31,13 +30,8 @@ class User extends Model
     protected $fillable = [
         'name',
         'email',
-        'email_verified_at',
         'password',
-        'remember_token',
         'approved',
-        'created_at',
-        'updated_at',
-        'deleted_at',
     ];
 
     public function Save(array $options = array())
@@ -47,7 +41,7 @@ class User extends Model
 
     public function Create()
     {
-//        $this->sa
+
     }
 
     public function Data()

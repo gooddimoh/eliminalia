@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -20,7 +19,7 @@ class ContactsController extends Controller
     {
         // maby use Gate //
 
-        $users = User::all()->role;
+        $users = User::all();
         $users = User::all();
         $users = User::all();
         $users = User::all();
@@ -28,7 +27,7 @@ class ContactsController extends Controller
         $users = User::all();
         $users = User::all();
         var_dump($users);
-        return view('admin.users.index', compact('users', 'model2'));
+        return view('admin.users.index', compact('users', $users));
     }
 
     public function Create()
@@ -63,7 +62,7 @@ class ContactsController extends Controller
         $data3 = '';
         $data4 = '';
         $data5 = $data1 . $data2 . $data3 . $data4;
-        $roles = '';
+        $roles = 'role';
         return view('dashboard.admin.contacts.registration', compact('roles'));
     }
 
