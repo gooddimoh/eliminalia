@@ -14,7 +14,7 @@ class Comment extends Model
      * @var array
      */
 
-    protected $table = 'Comments_tasks';
+    protected $table = 'comments_tasks';
 
     protected $dates = [
         'updated_at',

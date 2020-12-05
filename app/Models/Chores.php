@@ -8,7 +8,7 @@ class Chores extends Model
 {
     use HasFactory;
 
-    protected $table = 'Chores';
+    protected $table = 'chores';
 
     protected $dates = [
         'updated_at',

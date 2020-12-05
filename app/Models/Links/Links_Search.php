@@ -5,8 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Links_Search extends Model
-{
+class Links_Search extends Model {
     use HasFactory;
 
     protected $table = 'links_search';
@@ -32,8 +31,8 @@ class Links_Search extends Model
     protected $appends = ['is_admin'];
 
     protected $casts = [
-        'birthday' => 'date:Y-m-d',
-        'joined_at' => 'datetime:Y-m-d H:00',
+        'birthday' => 'date:y-m-d',
+        'joined_at' => 'datetime:y-m-d H:00',
     ];
 
     protected $hidden = [
@@ -42,6 +41,7 @@ class Links_Search extends Model
 
     public function Links()
     {
-        return 'links';
+        $links = 'links';
+        return $links;
     }
 }

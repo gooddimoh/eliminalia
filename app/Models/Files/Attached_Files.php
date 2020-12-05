@@ -12,7 +12,7 @@ class Attached_Files extends Model
      *
      * @var array
      */
-    protected $table = 'Attached_Files';
+    protected $table = 'attached_files';
 
     protected $dates = [
         'updated_at',

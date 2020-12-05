@@ -10,7 +10,7 @@ class Timeline extends Model
 {
     use HasFactory;
 
-    protected $table = 'calls_contacts';
+    protected $table = 'timeline';
 
     protected $dates = [
         'updated_at',

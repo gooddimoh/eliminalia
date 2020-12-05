@@ -14,7 +14,7 @@ class Links extends Model
      * @var array
      */
 
-    protected $table = 'Links';
+    protected $table = 'links';
 
     protected $dates = [
         'updated_at',

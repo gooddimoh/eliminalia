@@ -14,7 +14,7 @@ class Costumers extends Model
      * @var array
      */
 
-    protected $table = 'Costumers';
+    protected $table = 'costumers';
 
     protected $dates = [
         'updated_at',

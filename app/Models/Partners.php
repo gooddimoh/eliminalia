@@ -8,7 +8,7 @@ class Partners extends Model
 {
     use HasFactory;
 
-    protected $table = 'Partners';
+    protected $table = 'partners';
 
     protected $dates = [
         'updated_at',

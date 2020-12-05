@@ -14,7 +14,7 @@ class Contacts extends Model
      * @var array
      */
 
-    protected $table = 'Contacts';
+    protected $table = 'contacts';
 
     protected $dates = [
         'updated_at',

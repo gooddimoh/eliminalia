@@ -13,7 +13,7 @@ class Client_Internet_Seekers extends Model {
      * @var array
      */
 
-    protected $table = 'Client_internet_seekers';
+    protected $table = 'client_internet_seekers';
 
     protected $dates = [
         'updated_at',

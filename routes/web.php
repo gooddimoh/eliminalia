@@ -15,7 +15,8 @@ Route::get('/', function () {
     return redirect('dashboard');
 });
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () { });
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () {
+});
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
 Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout']);
@@ -112,7 +113,26 @@ Route::get('/forgot-password', function () {
 Route::post('usermanagement/create', 'MainController@usermanagementnew')->name('usermanagementnew');
 Route::post('usermanagement/component/tbody', 'MainController@usermanagementedit')->name('usermanagementlist');
 Route::post('usermanagement/user/list', 'MainController@usermanagementedit')->name('usermanagementlist');
-
 Route::post('usermanagement/user/list', 'MainController@usermanagementedit')->name('usermanagementlist');
 
 // $query = Job::where('status', '=', Job::APPROVED);
+// Front-End Controllers
+
+Route::get('/home-page', 'FrontEndController@home_page')->name('user.management');
+Route::get('/who-we-are', 'FrontEndController@who_we_are')->name('user.management');
+Route::get('/how-do-we-do-it', 'FrontEndController@how_do_we_do_it')->name('user.management');
+
+Route::get('/particular', 'FrontEndController@particular')->name('user.management');
+Route::get('/we_delete_your_name', 'FrontEndController@we_delete_your_name')->name('user.management');
+
+Route::get('/mass_media', 'FrontEndController@massmedia')->name('massmedia');
+Route::get('/state_gazzettes', 'FrontEndController@stategazzettes')->name('stategazzettes');
+Route::get('/we_delete_your_media', 'FrontEndController@wedeleteyourmedia')->name('wedeleteyourmedia');
+Route::get('/social_network_and_forums', 'FrontEndController@socialnetworkandforums')->name('socialnetworkandforums');
+
+Route::get('/im_a_public_figure', 'FrontEndController@mapublicfigure')->name('mapublicfigure');
+Route::get('/how_can_we_help_you', 'FrontEndController@howcanwehelpyou')->name('howcanwehelpyou');
+Route::get('/confidentialy_and_guarantees', 'FrontEndController@confidentialyandguarantees')->name('confidentialyandguarantees');
+Route::get('/crisis_cabinet', 'FrontEndController@crisiscabinet')->name('crisiscabinet');
+Route::get('/contact_us', 'FrontEndController@contactus')->name('contactus');
+

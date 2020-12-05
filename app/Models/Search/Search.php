@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Storage;
 class Search extends Model {
     use SoftDeletes, Notifiable, HasFactory;
 
-    protected $table = 'Users';
+    protected $table = 'users';
 
     protected $dates = [
         'updated_at',
@@ -39,13 +39,30 @@ class Search extends Model {
 
     protected function create(Request $request, array $data)
     {
-        $request->validate();
 
-        $user = User::create([
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+
+        $request->validate();
+        $data = [
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password'])
-        ]);
+        ];
+        $user = User::create($data);
 
         Storage::makeDirectory('/userassets/' . $user->id);
         Storage::makeDirectory('/userassets/' . $user->id . "/img");
@@ -64,9 +81,7 @@ class Search extends Model {
         ]);
 
         if ($validator->fails()) {
-            return redirect('post/create')
-                ->withErrors($validator)
-                ->withInput();
+            return redirect('post/create')->withErrors($validator)->withInput();
         }
     }
 
