@@ -5,8 +5,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
-class Calls extends Model
-{
+class Calls extends Model {
     use HasFactory;
 
     protected $table = 'calls_contacts';

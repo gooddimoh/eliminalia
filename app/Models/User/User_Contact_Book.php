@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User_Contacts_Book extends Model
+class UsersContact_Book extends Model
 {
     use HasFactory;
 
@@ -26,11 +26,6 @@ class User_Contacts_Book extends Model
         'id', 'fecha', 'id_contacto', 'id_usuario'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'password', 'remember_token',
     ];

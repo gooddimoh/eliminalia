@@ -15,7 +15,7 @@ class User extends Model
 {
     use SoftDeletes, Notifiable, HasFactory;
 
-    protected $table = 'USERS';
+    protected $table = 'users';
 
     protected $dates = [
         'updated_at',
@@ -40,7 +40,7 @@ class User extends Model
         return parent::save($options);
     }
 
-    public static function Create()
+    public function Create()
     {
 
     }

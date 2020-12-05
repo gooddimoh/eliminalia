@@ -1,9 +1,11 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Users extends Migration {
+class Users extends Migration
+{
 
     /**
      * Run the migrations.
@@ -13,7 +15,7 @@ class Users extends Migration {
 
     public function up()
     {
-        Schema::create('USERS', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id('id')->primary();
             $table->string('name');
             $table->string('email');
@@ -87,6 +89,6 @@ class Users extends Migration {
 
     public function down()
     {
-        Schema::drop('USERS');
+        Schema::drop('users');
     }
 }

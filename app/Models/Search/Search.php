@@ -11,8 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
 
-class Search extends Model
-{
+class Search extends Model {
     use SoftDeletes, Notifiable, HasFactory;
 
     protected $table = 'Users';

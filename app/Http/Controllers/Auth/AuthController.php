@@ -16,16 +16,10 @@ class AuthController extends Controller
     public function PostLogin(Request $request)
     {
         print_r($request->get(["name"]));
-
-        $validate = $request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']);
-        echo "postLogin";
-        die();
-
         $validate['password'] = bcrypt($request->password);
-        $user = User::created($validatedData);
+        $user = User::created($request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']));
         $accessToken = $user->createToken('authToken')->accessToken;
-
-        return response(['user' => $user, 'access_token' => $accessToken]);
+        return view('auth.login');
     }
 
     public function Store()

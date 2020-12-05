@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -8,13 +9,7 @@ class Links_Search extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-
-    protected $table = 'Links_search';
+    protected $table = 'links_search';
 
     protected $dates = [
         'updated_at',
@@ -32,13 +27,21 @@ class Links_Search extends Model
         'fecha_actualizado'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+    protected $visible = ['first_name', 'last_name'];
+
+    protected $appends = ['is_admin'];
+
+    protected $casts = [
+        'birthday' => 'date:Y-m-d',
+        'joined_at' => 'datetime:Y-m-d H:00',
+    ];
 
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function Links()
+    {
+        return 'links';
+    }
 }

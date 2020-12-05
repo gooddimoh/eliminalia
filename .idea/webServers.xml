@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="edc590fa-2cd0-4856-91af-81e7e699f8ed" name="104.131.109.152" url="http://104.131.109.152">
+        <fileTransfer rootFolder="/var/www/html/eliminalia" host="104.131.109.152" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
