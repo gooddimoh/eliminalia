@@ -2,6 +2,7 @@
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
 //Route::get('/home/{locale}', function ($locale) {
 //    if (!in_array($locale, ['en', 'es', 'fr'])) {
 //        abort(400);

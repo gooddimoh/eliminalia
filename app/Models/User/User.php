@@ -11,8 +11,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Client\Request;
 
 
-class User extends Model
-{
+class User extends Model {
     use SoftDeletes, Notifiable, HasFactory;
 
     protected $table = 'users';
