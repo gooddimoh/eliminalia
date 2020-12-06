@@ -47,10 +47,7 @@ class UsersController extends Controller
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
 
-        redirect()->route('admin.users.index');
-
-        return view();
-        return response()->json("StatusCode", 200);
+        redirect()->back();
     }
 
 //    public function input(){

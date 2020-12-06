@@ -23,7 +23,7 @@ class FileManager extends Controller
 
     public function store()
     {
-        return view("index");
+        return redirect()->back();
     }
 
     public function registration()

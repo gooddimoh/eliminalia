@@ -17,6 +17,7 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () {
+
 });
 
 Route::get('login', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
@@ -24,7 +25,6 @@ Route::get('logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'logout
 Route::get('register', ['uses' => 'Auth\AuthController@getRegister', 'as' => 'register']);
 
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin', 'as' => 'login']);
-
 Route::get('index', 'MainController@index')->name('index');
 
 // USER MANAGEMENT //
@@ -32,6 +32,8 @@ Route::get('dashboard/usermanagement', 'UserManagement@usermanagement')->name('u
 Route::get('dashboard/usermanagement/list', 'UserManagement@list')->name('usermanagement.list');
 Route::get('dashboard/usermanagement/new', 'UserManagement@create')->name('usermanagement.new');
 Route::get('dashboard/usermanagement/edit', 'UserManagement@edit')->name('usermanagement.edit');
+
+Route::post('usermanagement/user/create', 'UserManagement@store')->name('usermanagement.create');
 
 Route::get('dashboard/contacts/registration', 'ContactsController@registration')->name('contact registration');
 Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('inquiries');
@@ -110,11 +112,6 @@ Route::get('edititem1', 'TestController@edititem')->name('edititem');
 Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->middleware(['guest'])->name('password.request');
-
-Route::post('usermanagement/create', 'MainController@usermanagementnew')->name('usermanagementnew');
-Route::post('usermanagement/component/tbody', 'MainController@usermanagementedit')->name('usermanagementlist');
-Route::post('usermanagement/user/list', 'MainController@usermanagementedit')->name('usermanagementlist');
-Route::post('usermanagement/user/list', 'MainController@usermanagementedit')->name('usermanagementlist');
 
 // $query = Job::where('status', '=', Job::APPROVED);
 // Front-End Controllers

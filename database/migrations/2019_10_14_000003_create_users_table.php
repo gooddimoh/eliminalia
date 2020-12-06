@@ -16,23 +16,11 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->string('remember_token')->nullable();
             $table->boolean('approved')->default(0)->nullable();
-            $table->timestamps();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
-            $table->rememberToken();
-            $table->timestamps();
             $table->softDeletes();
         });
     }
-
-    // Example //
-
-    //$table->increments('id');
-    //$table->string('name');
-    //$table->string('email')->unique();
-    //$table->string('password');
-    //$table->rememberToken();
-    //$table->timestamps();
 
     public function down()
     {

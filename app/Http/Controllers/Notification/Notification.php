@@ -27,7 +27,7 @@ class UserManagement extends Controller
         //  Gate::after(function ($user, $ability, $result, $arguments) { });
 
         $users = User::all();
-        return view('dashboard.admin.usermanagement.index')->with('users', $users);
+        return view('dashboard.superadmin.usermanagement.index')->with('users', $users);
     }
 
     public function create(Request $request)
@@ -39,7 +39,7 @@ class UserManagement extends Controller
 
         // var_dump($validatedData);
 
-        return view('dashboard.Admin.UserManagement.create')->with('users', $users);
+        return view('dashboard.superadmin.UserManagement.create')->with('users', $users);
     }
 
     public function store(Request $request)
@@ -49,7 +49,7 @@ class UserManagement extends Controller
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
         die();
-        return redirect()->route('admin.users.index')->with('users', $user);
+        return redirect()->back();
     }
 
     public function edit(Request $request, User $user)

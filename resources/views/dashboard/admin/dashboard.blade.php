@@ -2530,77 +2530,73 @@
             <!-- end card -->
         </div>
         <!-- end col-4 -->
-    </div>
-    <!-- end col-8 -->
-    <!-- begin col-4 -->
-    <div class="col-xl-4 col-lg-6">
-        <!-- begin card -->
-        <div class="card bg-dark border-0 text-white mb-3">
-            <div class="card-body">
-                <div class="mb-2 text-grey">
-                    <b>SESSION BY LOCATION</b>
-                    <span class="ml-2"><i class="fa fa-info-circle" data-toggle="popover" data-trigger="hover"
-                                          data-title="Total sales" data-placement="top"
-                                          data-content="Net sales (gross sales minus discounts and returns) plus taxes and shipping. Includes orders from all sales channels."></i></span>
-                </div>
-                <div id="visitors-map" class="mb-2" style="height: 200px"></div>
-                <div>
-                    <div class="d-flex align-items-center text-white mb-2">
-                        <div class="widget-img widget-img-xs rounded bg-inverse mr-2 width-40"
-                             style="background-image: url(/assets/img/flag/us.jpg)"></div>
-                        <div class="d-flex w-100">
-                            <div>United States</div>
-                            <div class="ml-auto text-grey"><span data-animation="number"
-                                                                 data-value="39.85">0.00</span>%
+        <div class="col-xl-4 col-lg-6">
+            <!-- begin card -->
+            <div class="card bg-dark border-0 text-white mb-3">
+                <div class="card-body">
+                    <div class="mb-2 text-grey">
+                        <b>SESSION BY LOCATION</b>
+                        <span class="ml-2"><i class="fa fa-info-circle" data-toggle="popover" data-trigger="hover"
+                                              data-title="Total sales" data-placement="top"
+                                              data-content="Net sales (gross sales minus discounts and returns) plus taxes and shipping. Includes orders from all sales channels."></i></span>
+                    </div>
+                    <div id="visitors-map" class="mb-2" style="height: 200px"></div>
+                    <div>
+                        <div class="d-flex align-items-center text-white mb-2">
+                            <div class="widget-img widget-img-xs rounded bg-inverse mr-2 width-40"
+                                 style="background-image: url(/assets/img/flag/us.jpg)"></div>
+                            <div class="d-flex w-100">
+                                <div>United States</div>
+                                <div class="ml-auto text-grey"><span data-animation="number"
+                                                                     data-value="39.85">0.00</span>%
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center text-white mb-2">
-                        <div class="widget-img widget-img-xs rounded bg-inverse mr-2 width-40"
-                             style="background-image: url(/assets/img/flag/cn.jpg)"></div>
-                        <div class="d-flex w-100">
-                            <div>China</div>
-                            <div class="ml-auto text-grey"><span data-animation="number"
-                                                                 data-value="14.23">0.00</span>%
+                        <div class="d-flex align-items-center text-white mb-2">
+                            <div class="widget-img widget-img-xs rounded bg-inverse mr-2 width-40"
+                                 style="background-image: url(/assets/img/flag/cn.jpg)"></div>
+                            <div class="d-flex w-100">
+                                <div>China</div>
+                                <div class="ml-auto text-grey"><span data-animation="number"
+                                                                     data-value="14.23">0.00</span>%
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center text-white mb-2">
-                        <div class="widget-img widget-img-xs rounded bg-inverse mr-2 width-40"
-                             style="background-image: url(/assets/img/flag/de.jpg)"></div>
-                        <div class="d-flex w-100">
-                            <div>Germany</div>
-                            <div class="ml-auto text-grey"><span data-animation="number"
-                                                                 data-value="12.83">0.00</span>%
+                        <div class="d-flex align-items-center text-white mb-2">
+                            <div class="widget-img widget-img-xs rounded bg-inverse mr-2 width-40"
+                                 style="background-image: url(/assets/img/flag/de.jpg)"></div>
+                            <div class="d-flex w-100">
+                                <div>Germany</div>
+                                <div class="ml-auto text-grey"><span data-animation="number"
+                                                                     data-value="12.83">0.00</span>%
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center text-white mb-2">
-                        <div class="widget-img widget-img-xs rounded bg-inverse mr-2 width-40"
-                             style="background-image: url(/assets/img/flag/fr.jpg)"></div>
-                        <div class="d-flex w-100">
-                            <div>France</div>
-                            <div class="ml-auto text-grey"><span data-animation="number"
-                                                                 data-value="11.14">0.00</span>%
+                        <div class="d-flex align-items-center text-white mb-2">
+                            <div class="widget-img widget-img-xs rounded bg-inverse mr-2 width-40"
+                                 style="background-image: url(/assets/img/flag/fr.jpg)"></div>
+                            <div class="d-flex w-100">
+                                <div>France</div>
+                                <div class="ml-auto text-grey"><span data-animation="number"
+                                                                     data-value="11.14">0.00</span>%
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center text-white mb-0">
-                        <div class="widget-img widget-img-xs rounded bg-inverse mr-2 width-40"
-                             style="background-image: url(/assets/img/flag/jp.jpg)"></div>
-                        <div class="d-flex w-100">
-                            <div>Japan</div>
-                            <div class="ml-auto text-grey"><span data-animation="number"
-                                                                 data-value="10.75">0.00</span>%
+                        <div class="d-flex align-items-center text-white mb-0">
+                            <div class="widget-img widget-img-xs rounded bg-inverse mr-2 width-40"
+                                 style="background-image: url(/assets/img/flag/jp.jpg)"></div>
+                            <div class="d-flex w-100">
+                                <div>Japan</div>
+                                <div class="ml-auto text-grey"><span data-animation="number"
+                                                                     data-value="10.75">0.00</span>%
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- end card -->
         </div>
-        <!-- end card -->
-    </div>
-    <!-- end col-4 -->
     </div>
     <!-- end row -->
     <!-- begin row -->

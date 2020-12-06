@@ -1,9 +1,11 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ContactBookLink extends Migration {
+class ContactBookLink extends Migration
+{
     /**
      * Run the migrations.
      *
@@ -16,7 +18,7 @@ class ContactBookLink extends Migration {
             $table->id('id')->autoIncrement();
             $table->timestamp('date')->comment('date');
             $table->integer('contact_id');
-            $table->integer('id_enlace ');
+            $table->integer('id_enlace');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

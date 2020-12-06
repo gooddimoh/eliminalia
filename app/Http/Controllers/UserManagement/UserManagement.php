@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -19,13 +20,15 @@ class UserManagement extends Controller
     {
         $users = User::all();
         $roles = Role::all();
+        var_dump($users);
+        die("");
         if ($request->all()) {
             $view = view('data', compact('post'))->render();
 
             response()->stream('');
             return response()->json(['html' => $view]);
         }
-        return view('admin.users.index', compact('users', 'role'));
+        return view('dashboard.admin.usermanagement.index', compact('users', 'role'));
     }
 
     public function list(Request $request)
@@ -36,7 +39,9 @@ class UserManagement extends Controller
         echo "data2";
         echo "data3";
         echo "data4";
-        return view('dashboard.admin.usermanagement.index')->with('users', $users);
+        var_dump($users);
+        die("");
+        return view('dashboard.admin.usermanagement.index', compact('users', $users));
     }
 
     public function create(Request $request)
@@ -50,6 +55,7 @@ class UserManagement extends Controller
 
         $request->flush();
         $request->all();
+        die();
         var_dump($datavalidated);
         return view('dashboard.Admin.UserManagement.create')->with('users', $users);
     }
@@ -57,9 +63,10 @@ class UserManagement extends Controller
     public function store(StoreUserRequest $request)
     {
         $request->ajax();
-        $user = User::create($request->all());
+        $user = $this->create($request->all());
         var_dump($user);
-        return view('admin.users.index')->with('users', $user);
+        die();
+        redirect('usermanagement.list');
     }
 
     public function edit(Request $request, User $user)

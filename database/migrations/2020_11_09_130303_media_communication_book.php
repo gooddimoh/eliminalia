@@ -31,7 +31,7 @@ class MediaCommunicationBook extends Migration
             $table->string('email2');
             $table->string('web');
             $table->string('observations');
-            $table->enum('language');
+            $table->string('language');
             $table->tinyInteger('active');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

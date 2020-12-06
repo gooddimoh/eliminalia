@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Client\Request;
 
 
-class User extends Model {
+class User extends Model
+{
     use SoftDeletes, Notifiable, HasFactory;
 
     protected $table = 'users';
@@ -19,7 +20,6 @@ class User extends Model {
     protected $dates = [
         'updated_at',
         'created_at',
-        'deleted_at',
         'email_verified_at',
     ];
 
@@ -40,9 +40,9 @@ class User extends Model {
         return parent::save($options);
     }
 
-    public function Create()
+    public static function Create()
     {
-
+       
     }
 
     public function Data()
@@ -55,8 +55,6 @@ class User extends Model {
         return $this->belongsTo('App\Models\User')->withDefault(function ($user, $post) {
             $user->name = 'Guest Author';
         });
-
-        $this->morphedByMany();
     }
 
     public function Roles()

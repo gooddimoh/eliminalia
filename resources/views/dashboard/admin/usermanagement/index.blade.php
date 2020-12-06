@@ -22,9 +22,7 @@
             <div id="data-table-default_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                 <div class="row">
                     <div class="col-sm-12">
-                        <table id="data-table-default"
-                               class="table table-striped table-bordered table-td-valign-middle dataTable no-footer dtr-inline"
-                               role="grid" aria-describedby="data-table-default_info" style="width: 1609px;">
+                        <table id="data-table-default" class="table table-striped table-bordered table-td-valign-middle dataTable no-footer dtr-inline" role="grid" aria-describedby="data-table-default_info" style="width: 1609px;">
                             <thead>
                             <tr role="row">
                                 <th width="1%" class="sorting_asc" tabindex="0" aria-controls="data-table-default"
@@ -54,6 +52,21 @@
                                 </th>
                             </tr>
                             </thead>
+                            <tbody>
+                            @foreach($users as $user)
+                                <tr>
+                                    <td>{{$user->id}}</td>
+                                    <td class="with-img">
+                                        <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                    </td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->role}}</td>
+                                    <td>{{$user->role}}</td>
+                                    <td>{{$user->role}}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -83,6 +96,6 @@
     <script src="{{asset('/assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
     <script src="{{asset('/assets/js/demo/table-manage-default.demo.js')}}"></script>
-    <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
-    <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
+    <script src="{{asset('/assets/plugins/summernote/dist/summernote.min.js')}}"></script>
+    <script src="{{asset('/assets/js/demo/form-summernote.demo.js')}}"></script>
 @endpush

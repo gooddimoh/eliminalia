@@ -15,16 +15,20 @@ class Users extends Migration
 
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id('id')->primary();
+        Schema::create('users2', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('email')->nullable()->unique();
+            $table->datetime('email_verified_at')->nullable();
+            $table->string('password')->nullable();
+            $table->string('remember_token')->nullable();
+            $table->boolean('approved')->default(0)->nullable();
+            $table->foreign('dni');
             $table->string('name');
             $table->string('email');
             $table->string('password');
             $table->string('phone');
             $table->string('remember_token');
             $table->string('approved');
-            $table->foreign('dni');
-            $table->string('name');
             $table->string('surnames');
             $table->string('company_name');
             $table->string('dni');
@@ -69,15 +73,11 @@ class Users extends Migration
             $table->string('id_partner ');
             $table->integer('Permission Level:');
             $table->integer('payment')->comment("banned");
-            $table->morphs('notifiable');
-            $table->timestamp('file_created');
-            $table->timestamp('file_updated');
-            $table->timestamp('email_verified_at');
-            $table->timestamp('read_at')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
-            $table->timestamp('deleted_at');
             $table->timestamps();
+            $table->rememberToken();
+            $table->morphs('notifiable');
         });
     }
 
@@ -89,6 +89,6 @@ class Users extends Migration
 
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('users2');
     }
 }

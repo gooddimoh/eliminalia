@@ -173,6 +173,7 @@
     </div>
 @endsection
 <script>
+    {{-- Some Data Return Via Ajax --}}
     $("search").change(function () {
         let data = "data";
         var request = $.ajax({

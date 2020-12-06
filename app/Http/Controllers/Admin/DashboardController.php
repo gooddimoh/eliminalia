@@ -12,7 +12,6 @@ class DashboardController extends Controller
     {
         if ($request->ajax()) {
             $data = Search::search($request->get('full_text_search_query'))->get();
-
             return response()->json($data);
         }
     }

@@ -30,32 +30,31 @@ class ContactsController extends Controller
         return view('admin.users.index', compact('users', $users));
     }
 
-    public function Create()
+    public function create()
     {
         $roles = Role::all()->pluck('title', 'id');
         $user = 'user';
         return view('admin.users.create', compact('roles', 'user'));
     }
 
-    public function Store(StoreUserRequest $request)
+    public function store(StoreUserRequest $request)
     {
         die();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
-
-        return redirect()->route('admin.users.index');
+        return redirect()->back();
     }
 
-    public function List()
+    public function list()
     {
         //    $role = Role::all();
         //    $user = User::all();
         //    $role = '';
         //    $user = '';
-        return view('dashboard.admin.contacts.list');
+        return view('dashboard.superadmin.contacts.list');
     }
 
-    public function Registration()
+    public function registration()
     {
         $data1 = '';
         $data2 = '';
@@ -63,16 +62,16 @@ class ContactsController extends Controller
         $data4 = '';
         $data5 = $data1 . $data2 . $data3 . $data4;
         $roles = 'role';
-        return view('dashboard.admin.contacts.registration', compact('roles'));
+        return view('dashboard.superadmin.contacts.registration', compact('roles'));
     }
 
-    public function Inquiries()
+    public function inquiries()
     {
         $users = User::all();
-        return view('dashboard.admin.contacts.inquiries', compact('users'));
+        return view('dashboard.superadmin.contacts.inquiries', compact('users'));
     }
 
-    public function Edit(Reques $request, User $user, Response $response)
+    public function edit(Reques $request, User $user, Response $response)
     {
         $roles = Role::all()->pluck('title', 'id');
         $roles->load('roles');
@@ -86,7 +85,7 @@ class ContactsController extends Controller
         return view('admin.users.edit', compact('roles', 'user'));
     }
 
-    public function Update(UserRequest $request, User $user)
+    public function update(UserRequest $request, User $user)
     {
 
         $request->validate([
@@ -104,14 +103,14 @@ class ContactsController extends Controller
         return redirect()->route('admin.users.index');
     }
 
-    public function Show(User $user)
+    public function show(User $user)
     {
 
         $user->load('roles');
         return view('admin.users.show', compact('user'));
     }
 
-    public function Destroy(User $user)
+    public function destroy(User $user)
     {
         abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         $user->delete();

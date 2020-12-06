@@ -10,4 +10,9 @@ class CustomersController extends Controller
     {
         return view("index");
     }
+
+    public function store()
+    {
+        return redirect()->back();
+    }
 }

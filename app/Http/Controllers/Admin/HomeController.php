@@ -28,9 +28,7 @@ class HomeController extends Controller
 
     public function create()
     {
-
         $roles = Role::all()->pluck('title', 'id');
-
         return view('admin.users.create', compact('roles'));
     }
 
@@ -58,7 +56,6 @@ class HomeController extends Controller
 //
 //        return view();
 //    });
-
 
     public function edit(User $user)
     {
@@ -91,7 +88,6 @@ class HomeController extends Controller
 
         return redirect()->route('admin.users.index');
     }
-
 
     public function show(User $user)
     {

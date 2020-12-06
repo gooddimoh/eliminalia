@@ -22,9 +22,7 @@
             <div id="data-table-default_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                 <div class="row">
                     <div class="col-sm-12">
-                        <table id="data-table-default"
-                               class="table table-striped table-bordered table-td-valign-middle dataTable no-footer dtr-inline"
-                               role="grid" aria-describedby="data-table-default_info" style="width: 1609px;">
+                        <table id="data-table-default" class="table table-striped table-bordered table-td-valign-middle dataTable no-footer dtr-inline" role="grid" aria-describedby="data-table-default_info" style="width: 1609px;">
                             <thead>
                             <tr role="row">
                                 <th width="1%" class="sorting_asc" tabindex="0" aria-controls="data-table-default"
