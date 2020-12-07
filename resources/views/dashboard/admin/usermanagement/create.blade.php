@@ -139,7 +139,9 @@
                                 <th>Email Address</th>
                                 <th width="1%"></th>
                             </tr>
+
                             </thead>
+
                             <tbody>
                             @foreach($users as $user)
                                 <tr>
@@ -150,6 +152,7 @@
                             @endforeach
                             </tbody>
                         </table>
+                        update
                     </table>
                     <div class="panel-body">
                         <!-- begin table-responsive -->
