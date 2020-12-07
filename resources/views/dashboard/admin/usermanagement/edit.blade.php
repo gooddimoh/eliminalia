@@ -5,7 +5,8 @@
 @endpush
 
 @section('content')
-    <form method="post" action="{{route('usermanagement.update')}}" class="col-xl-12">
+    <form method="post" action="#" class="col-xl-12">
+        {{--    <form method="post" action="{{route('usermanagement.update')}}" class="col-xl-12">--}}
         @csrf
         {{ csrf_field() }}
         <div class="row">
