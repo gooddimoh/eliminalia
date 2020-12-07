@@ -57,7 +57,7 @@ class UserManagement extends Controller
         $request->all();
         die();
         var_dump($datavalidated);
-        return view('dashboard.Admin.UserManagement.create')->with('users', $users);
+        return view('dashboard.admin.UserManagement.create')->with('users', $users);
     }
 
     public function store(StoreUserRequest $request)
