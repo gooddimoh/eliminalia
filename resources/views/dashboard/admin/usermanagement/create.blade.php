@@ -24,6 +24,11 @@
                            value="">
                 </div>
                 <div class="form-group row">
+                    <label class="col-form-label ">Password Confirm:</label>
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value=""
+                           placeholder="Password:">
+                </div>
+                <div class="form-group row">
                     <label class="col-form-label">DNI:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" name="dni"
                            placeholder="DNI:"
@@ -57,16 +62,15 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <h4>&nbsp;</h4>
-                <div class="form-group row">
-                    <label class="col-form-label ">Password:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="password"
-                           placeholder="Password:">
-                </div>
                 <div class="form-group row">
                     <label class="col-form-label ">Surname:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="surname"
                            placeholder="Surname:">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label ">Password:</label>
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="password"
+                           placeholder="Password:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email:</label>
@@ -112,8 +116,8 @@
                         <h4 class="panel-title">List of all Users<span
                                     class="label label-success m-l-5 t-minus-1"> NEW </span></h4>
                         <div class="panel-heading-btn">
-                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default
-                             data-click=" panel-expand"><i class="fa fa-expand"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
+                             data-click="panel-expand"><i class="fa fa-expand"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
