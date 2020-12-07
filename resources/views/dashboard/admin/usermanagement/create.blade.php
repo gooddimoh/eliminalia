@@ -96,7 +96,7 @@
                     <div class="row-align-right">
                         <button type="submit" class="form-control btn btn-green m-t-40 m-l-40"
                                 style="margin-left:130px!important; margin-top:34px!important; border-radius:0px!important; padding-top:8px">
-                            CONTACT REGISTER
+                            NEW USER
                         </button>
                     </div>
                 </div>
