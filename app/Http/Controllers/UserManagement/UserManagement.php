@@ -13,6 +13,7 @@ use App\Notifications\UserApprovedNotification;
 use App\Models\Role;
 use App\Models\User;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\DB;
 
 class UserManagement extends Controller
 {
@@ -33,6 +34,7 @@ class UserManagement extends Controller
 
     public function list(Request $request)
     {
+
         $users = User::all();
         return view('dashboard.admin.usermanagement.index', compact('users', $users));
     }
@@ -42,7 +44,8 @@ class UserManagement extends Controller
         //        $datavalidated = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
         //        $role = Role::all()->pluck('title', 'id');
         //        $request->all();
-
+        $deleteid = $request->get("delete");
+        User::destroy($deleteid);
         $users = User::all();
         return view('dashboard.admin.usermanagement.create')->with('users', $users);
     }
@@ -57,9 +60,11 @@ class UserManagement extends Controller
 
     public function edit(Request $request, User $user)
     {
+        $id = $request->get("edit");
+
         $roles = Role::all()->pluck('title', 'id');
-        $user->load('roles');
-        return view('dashboard.manager.usermanagement.edit', compact('users'));
+        $user = DB::table('users')->where('id', $id)->first();
+        return view('dashboard.manager.usermanagement.edit', compact('user', $user));
     }
 
     public function update(UpdateUserRequest $request, User $user)

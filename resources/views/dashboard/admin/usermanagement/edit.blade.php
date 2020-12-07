@@ -176,24 +176,6 @@
             está recibido o no? Solo el SUPER ADMIN.</p>
     </div>
 @endsection
-<script>
-    {{-- Some Data Return Via Ajax --}}
-    $("search").change(function () {
-        let data = "data";
-        var request = $.ajax({
-            url: "{{route("usermanagement.new")}}",
-            method: "post",
-            data: {view: 'view'},
-            dataType: "html"
-        });
-        request.done(function (view) {
-            $("#html").html(view);
-        });
-        request.fail(function (jqXHR, textStatus) {
-            alert("Request failed: " + textStatus);
-        });
-    });
-</script>
 @push('scripts')
     <script src="{{asset('/assets/plugins/jquery-migrate/dist/jquery-migrate.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>

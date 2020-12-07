@@ -117,7 +117,7 @@
                                     class="label label-success m-l-5 t-minus-1"> NEW </span></h4>
                         <div class="panel-heading-btn">
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
-                             data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                               data-click="panel-expand"><i class="fa fa-expand"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
@@ -144,9 +144,22 @@ danger"
                             <tbody>
                             @foreach($users as $user)
                                 <tr>
+                                    <th class="width-60">{{$user->id}}</th>
                                     <th class="width-60">{{$user->name}}</th>
                                     <th class="width-60">{{$user->email}}</th>
                                     <th class="width-60">&nbsp;</th>
+                                    <th class="width-60">
+                                        <a class="red"
+                                           href="http://loc.eliminalia.com/dashboard/usermanagement/new?delete={{$user->id}}">
+                                            Delete
+                                        </a>
+                                    </th>
+                                    <th class="width-60">
+                                        <a class="red"
+                                           href="http://loc.eliminalia.com/dashboard/usermanagement/edit?edit={{$user->id}}">
+                                            Edit
+                                        </a>
+                                    </th>
                                 </tr>
                             @endforeach
                             </tbody>
