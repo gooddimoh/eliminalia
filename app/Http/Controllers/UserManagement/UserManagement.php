@@ -73,14 +73,14 @@ class UserManagement extends Controller
     {
 
         $request->all();
-        $user = User::UPDAT
-        $user->update();$request->all()
+//        $user = User::UPDAT
+//        $user->update();$request->all()
         $user->roles()->sync($request->input('roles', []));
 
-        if ($approved == 0 && $user->approved == 1) {
-            $user->notify(new UserApprovedNotification());
-        }
-        return redirect()->route('admin.users.index');
+//        if ($approved == 0 && $user->approved == 1) {
+//            $user->notify(new UserApprovedNotification());
+//        }
+//        return redirect()->route('admin.users.index');
     }
 
     public function destroy(User $user)
