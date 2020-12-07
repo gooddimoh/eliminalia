@@ -8,8 +8,8 @@
     <form id="form" method="post" action="{{route('usermanagement.create')}}" class="col-xl-12">
         @csrf
         {{ csrf_field() }}
+        <h4>New User Data</h4>
         <div class="row">
-            <h4>New User Data</h4>
             <div class="col-md-3">
                 <div class="form-group row">
                     <label class="col-form-label">Name:</label>
