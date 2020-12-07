@@ -64,7 +64,7 @@ class UserManagement extends Controller
 
         $roles = Role::all()->pluck('title', 'id');
         $user = DB::table('users')->where('id', $id)->first();
-        return view('dashboard.manager.usermanagement.edit', compact('user', $user));
+        return view('dashboard.damin.usermanagement.edit', compact('user', $user));
     }
 
     public function update(UpdateUserRequest $request, User $user)
