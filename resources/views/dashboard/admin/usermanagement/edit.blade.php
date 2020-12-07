@@ -125,10 +125,22 @@
                         <tbody>
                         @foreach($users as $user)
                             <tr>
-                                <th>#</th>
-                                <th>{{$user->id}}</th>
-                                <th>{{$user->name}}</th>
-                                <th>{{$user->email}}</th>
+                                <th class="width-60">{{$user->id}}</th>
+                                <th class="width-60">{{$user->name}}</th>
+                                <th class="width-60">{{$user->email}}</th>
+                                <th class="width-60">&nbsp;</th>
+                                <th class="width-60">
+                                    <a class="red"
+                                       href="http://loc.eliminalia.com/dashboard/usermanagement/new?delete={{$user->id}}">
+                                        Delete
+                                    </a>
+                                </th>
+                                <th class="width-60">
+                                    <a class="red"
+                                       href="http://loc.eliminalia.com/dashboard/usermanagement/edit?edit={{$user->id}}">
+                                        Edit
+                                    </a>
+                                </th>
                             </tr>
                         @endforeach
                         </tbody>
