@@ -65,17 +65,16 @@ class UserManagement extends Controller
         $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
         $user = User::query()->find($id);
-        var_dump($user);
-        die("|");
         $user = DB::table('users')->where('id', $id)->first();
-        return view('dashboard.admin.usermanagement.edit', compact('', $user));
+        return view('dashboard.admin.usermanagement.edit', compact('user', $user, "users", $users));
     }
 
     public function update(UpdateUserRequest $request, User $user)
     {
-        $approved = $user->approved;
+
         $request->all();
-        $user->update($request->all());
+        $user = User::UPDAT
+        $user->update();$request->all()
         $user->roles()->sync($request->input('roles', []));
 
         if ($approved == 0 && $user->approved == 1) {

@@ -5,43 +5,37 @@
 @endpush
 
 @section('content')
-    <form method="post" action="" class="col-xl-12">
+    <form method="post" action="{{route('usermanagement.update')}}" class="col-xl-12">
         @csrf
         {{ csrf_field() }}
         <div class="row">
             <div class="col-md-3">
                 <h4>New User Data</h4>
                 <div class="form-group row">
-                    <label class="col-form-label">Username:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="username"
-                           placeholder="Username:"
-                           value="">
-                </div>
-                <div class="form-group row">
                     <label class="col-form-label">Name:</label>
                     <input class="form-control form-control-sm height-40" type="text" name="name" placeholder="Name:"
-                           value="">
+                           value="{{$user->name}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Phone:</label>
                     <input class="form-control form-control-sm height-40" type="text" name="phone" placeholder="Phone:"
-                           value="">
+                           value="{{$user->phone}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">DNI:</label>
                     <input class="form-control form-control-sm height-40" type="text" name="dni" placeholder="DNI:"
-                           value="">
+                           value="{{$user->dni}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Address:</label>
                     <input class="form-control form-control-sm height-40" type="text" name="address"
                            placeholder="Address:"
-                           value="">
+                           value="{{$user->address}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">City:</label>
                     <input class="form-control form-control-sm height-40" type="text" name="city" placeholder="City:"
-                           value="">
+                           value="{{$user->city}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
@@ -60,33 +54,38 @@
                 <h4>&nbsp;</h4>
                 <div class="form-group row">
                     <label class="col-form-label ">Password:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="password"
-                           placeholder="Password:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label ">Surname:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="surname"
-                           placeholder="Surname:">
+                    <input class="form-control form-control-sm height-40" type="text" name="password"
+                           placeholder="Password:" value="{{$user->password}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email:</label>
                     <input class="form-control form-control-sm height-40" type="text" value="" name="email"
-                           placeholder="Email (main)*:">
+                           placeholder="Email (main)*:" value="{{$user->email}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">ID:</label>
                     <input class="form-control form-control-sm height-40" type="text" value="" name="id"
-                           placeholder="ID:">
+                           placeholder="ID:" value="{{$user->id}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Postal code:</label>
                     <input class="form-control form-control-sm height-40" type="text" value="" name="postalcode"
-                           placeholder="Postal code:">
+                           placeholder="Postal code:" value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
                     <input class="form-control form-control-sm height-40" type="text" value="" name="state"
-                           placeholder="State:">
+                           placeholder="State:" value="{{$user->state}}">
+                </div>
+                <div class="form-group form-control-sm  height-40 flex-column align-items-end bottom justify-content-end"
+                     style="position: relative">
+                    <div class="banned" style="position:absolute; top:40px; right:0px;">
+                        <span class="text">&nbsp;BANNED&nbsp;</span>
+                        <input class="ui-checkboxradio-checked" style="cursor:pointer;" type="checkbox" value="1"
+                               checked
+                               name="banned">
+
+                    </div>
                 </div>
                 <div class="form-group row ">
                     <div class="row-align-right">
@@ -100,7 +99,8 @@
             <div class="col-md-6 ui-sortable">
                 <div id="data-table-default_filter" class="dataTables_filter">
                     <label>Search:
-                        <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="data-table-default">
+                        <input type="search" class="form-control form-control-sm" placeholder=""
+                               aria-controls="data-table-default">
                     </label>
                 </div>
                 <h1>Search existent user</h1>
@@ -111,7 +111,7 @@
                                     class="label label-success m-l-5 t-minus-1"> NEW </span></h4>
                         <div class="panel-heading-btn">
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
-                             data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                               data-click="panel-expand"><i class="fa fa-expand"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
@@ -125,9 +125,9 @@
                         @foreach($users as $user)
                             <tr>
                                 <th>#</th>
+                                <th>{{$user->id}}</th>
                                 <th>{{$user->name}}</th>
                                 <th>{{$user->email}}</th>
-                                <th>&nbsp;</th>
                             </tr>
                         @endforeach
                         </tbody>
@@ -147,33 +147,7 @@
         </div>
     </form>
     <div class="legend">
-        <h1>Legend</h1>
-        <p>
-        <p>SUPERADMIN; Acceso total a la app</p>
-        <p>ADMIN SUCURSAL: Puede ver clientes de esa sucursal, comerciales de esa sucursal, partners de esa sucursal y
-            facturación de de los clientes de esa sucursal. (Ver me refiero a ver y modificar) cualquier Eliminación que
-            quiera hacer llega siempre a SUPER ADMIN. El admin de sucursal puede ver toda la cola de rastreos que están
-            pedidas al rastreador.</p>
-        <p>ALTA CONTRATOS: Solo puede dar de clientes y generar contratos en .pdf, modificar clientes, pero
-            evidentemente solamente de la sucursal a a que está asignado.</p>
-        <p>
-            RASTREADOR: Solo hacer rastreos y añadir rastreos al sistema. Es como una cola de pedidos, los comerciales
-            asignados a este rastreador, le piden rastros y el responde con los links. Esto tiene que funcionar como una
-            cola de pedidos; el comercial o rastreador piden un rastreo y llega el aviso al rastreador, cuando el
-            rastreador completa el rastreo le llega una viso a la persona que le había pedido el rastreo. Cuando doy de
-            alta un rastreador tengo que decir a que persona asigno ese rastreador. (A que comercial y parteras)
-        </p>
-        <p>COMERCIAL: Puede añadir contactos y estos convertirlos a clientes, ver facturación de sus clientes, ver
-            estado de clientes como si fuera un manager, pero no puede ver las gestiones internas. Tiene que poder hacer
-            contactos y contratos y poner más de un contrato a un cliente. Tiene que poder hacer seguimiento a todos los
-            rastreos que el comercia envíe a usuario RASTREADOR.</p>
-        <p>PARTNER; Puede ver los clientes de sus comerciales, su facturación y cómo avanza el expediente como si fuera
-            manager pero sin ver gestiones internas.</p>
-        <p>MANAGER: Puede ver todos sus clientes, hacer gestiones internas, publicas, subir documentos. Finalizar un
-            cliente, Rescindir un cliente. No puede ver facturación, tampoco puede modificar los datos de un cliente, ni
-            eliminar un cliente. Cuando un cliente se pone pendiente de pago, tiene que llegar una aviso al "comercial
-            de ese cliente e Partner si lo tuviera" también al admin de la sucursal. ¿Quién puede decir si el pago ya
-            está recibido o no? Solo el SUPER ADMIN.</p>
+        Legend
     </div>
 @endsection
 @push('scripts')
