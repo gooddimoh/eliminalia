@@ -12,12 +12,6 @@
             <div class="col-md-3">
                 <h4>New User Data</h4>
                 <div class="form-group row">
-                    <label class="col-form-label">Username:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="username"
-                           placeholder="Username:"
-                           value="">
-                </div>
-                <div class="form-group row">
                     <label class="col-form-label">Name:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" name="name"
                            placeholder="Name:"
@@ -124,7 +118,8 @@
                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
                                data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-Username:
+danger"
                                data-click="panel-remove"><i class="fa fa-times"></i></a>
                         </div>
                     </div>
@@ -152,7 +147,6 @@
                             @endforeach
                             </tbody>
                         </table>
-                        update
                     </table>
                     <div class="panel-body">
                         <!-- begin table-responsive -->
