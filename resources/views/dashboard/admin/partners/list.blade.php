@@ -86,21 +86,6 @@
         </div>
     </div>
 @endsection
-@section('scripts')
-    <script type="text/javascript">
-        $.ajax({
-            url: "{{route("usermanagementlist")}}",
-            method: "post",
-            dataType: "html"
-        });
-        request.done(function (view) {
-            $("#table").html(view);
-        });
-        request.fail(function (jqXHR, textStatus) {
-            alert("Request failed: " + textStatus);
-        });
-    </script>
-@stop
 @push('scripts')
     <script src="{{asset('/assets/plugins/jquery-migrate/dist/jquery-migrate.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>

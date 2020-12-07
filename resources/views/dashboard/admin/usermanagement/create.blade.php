@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-    <form method="post" action="{{route('usermanagement.create')}}" class="col-xl-12">
+    <form id="form" method="post" action="{{route('usermanagement.create')}}" class="col-xl-12">
         @csrf
         {{ csrf_field() }}
         <div class="row">
@@ -13,39 +13,43 @@
                 <h4>New User Data</h4>
                 <div class="form-group row">
                     <label class="col-form-label">Username:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="username"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="username"
                            placeholder="Username:"
                            value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Name:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="name" placeholder="Name:"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="name"
+                           placeholder="Name:"
                            value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Phone:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="phone" placeholder="Phone:"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="phone"
+                           placeholder="Phone:"
                            value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">DNI:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="dni" placeholder="DNI:"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="dni"
+                           placeholder="DNI:"
                            value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Address:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="address"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="address"
                            placeholder="Address:"
                            value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">City:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="city" placeholder="City:"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="city"
+                           placeholder="City:"
                            value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
-                    <select class="form-control form-control-sm height-40" name="name" value="">
+                    <select class="form-control form-control-sm height-40 m-r-10" name="name" value="">
                         <option value="0">Permission Level</option>
                         <option value="1">-----</option>
                         <option value="2">SUPERADMIN:</option>
@@ -62,32 +66,32 @@
                 <h4>&nbsp;</h4>
                 <div class="form-group row">
                     <label class="col-form-label ">Password:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="password"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="password"
                            placeholder="Password:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label ">Surname:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="surname"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="surname"
                            placeholder="Surname:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="email"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="email"
                            placeholder="Email (main)*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">ID:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="id"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="id"
                            placeholder="ID:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Postal code:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="postalcode"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="postalcode"
                            placeholder="Postal code:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="state"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="state"
                            placeholder="State:">
                 </div>
                 <div class="form-group row ">
@@ -100,7 +104,13 @@
                 </div>
             </div>
             <div class="col-md-6 ui-sortable">
-                <input type="text" name="search" placeholder="Search">
+                <div id="data-table-default_filter" class="dataTables_filter">
+                    <label class="flex-row">
+                        <h4 class="float-left">Search existent user</h4>
+                        <input type="search" class="form-control form-control-sm" placeholder=""
+                               aria-controls="data-table-default">
+                    </label>
+                </div>
                 <h1>Search existent user</h1>
                 <div class="panel" data-sortable-id="table-basic-7" data-init="true" style="">
                     <!-- begin panel-heading -->
@@ -118,17 +128,28 @@
                                data-click="panel-remove"><i class="fa fa-times"></i></a>
                         </div>
                     </div>
-                    <table class="table">
-                        <tbody>
-                        @foreach($users as $user)
+                    <table id="data-table-default"
+                           class="table table-striped table-bordered table-td-valign-middle dataTable no-footer dtr-inline"
+                           role="grid" aria-describedby="data-table-default_info" style="width: 1609px;">
+                        <table class="table table-striped m-b-0">
+                            <thead>
                             <tr>
                                 <th>#</th>
-                                <th>{{$user->name}}</th>
-                                <th>{{$user->email}}</th>
-                                <th>&nbsp;</th>
+                                <th>Username</th>
+                                <th>Email Address</th>
+                                <th width="1%"></th>
                             </tr>
-                        @endforeach
-                        </tbody>
+                            </thead>
+                            <tbody>
+                            @foreach($users as $user)
+                                <tr>
+                                    <th class="width-60">{{$user->name}}</th>
+                                    <th class="width-60">{{$user->email}}</th>
+                                    <th class="width-60">&nbsp;</th>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </table>
                     <div class="panel-body">
                         <!-- begin table-responsive -->
@@ -144,25 +165,33 @@
             </div>
         </div>
     </form>
-    @extends('dashboard.superadmin.usermanagement.component.legend')
+    <div class="panel-body">
+        legend
+    </div>
 @endsection
-<script>
-    $("search").change(function () {
-        let data = "data";
-        var request = $.ajax({
-            url: "{{route("usermanagement.new")}}",
-            method: "post",
-            data: {view: 'view'},
-            dataType: "html"
-        });
-        request.done(function (view) {
-            $("#html").html(view);
-        });
-        request.fail(function (jqXHR, textStatus) {
-            alert("Request failed: " + textStatus);
-        });
-    });
-</script>
+{{--<script>--}}
+{{--    $("#form").submit(function (e) {--}}
+{{--        e.preventDefault(); // avoid to execute the actual submit of the form.--}}
+{{--        var form = $(this).serialize();--}}
+{{--        console.log(form);--}}
+{{--        var request = $.ajax({--}}
+{{--            url: "http://loc.eliminalia.com/usermanagement/create",--}}
+{{--            method: "post",--}}
+{{--            data: form,--}}
+{{--            dataType: "html"--}}
+{{--        });--}}
+{{--        request.done(function (view) {--}}
+
+{{--            console.log('success');--}}
+{{--            console.log('tbody');--}}
+
+{{--            $("#tbody").html(view);--}}
+{{--        });--}}
+{{--        request.fail(function (jqXHR, textStatus) {--}}
+{{--            alert("Request failed: " + textStatus);--}}
+{{--        });--}}
+{{--    });--}}
+{{--</script>--}}
 @push('scripts')
     <script src="{{asset('/assets/plugins/jquery-migrate/dist/jquery-migrate.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>

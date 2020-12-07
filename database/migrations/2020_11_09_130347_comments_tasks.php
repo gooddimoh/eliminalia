@@ -14,7 +14,6 @@ class CommentsTasks extends Migration
     public function up()
     {
         Schema::create('comments_tasks', function (Blueprint $table) {
-            $table->integer('id ');
             $table->integer('task_id');
             $table->integer('user_id');
             $table->string('commentary');

@@ -98,7 +98,11 @@
                 </div>
             </div>
             <div class="col-md-6 ui-sortable">
-                <input type="text" name="search" placeholder="Search">
+                <div id="data-table-default_filter" class="dataTables_filter">
+                    <label>Search:
+                        <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="data-table-default">
+                    </label>
+                </div>
                 <h1>Search existent user</h1>
                 <div class="panel" data-sortable-id="table-basic-7" data-init="true" style="">
                     <!-- begin panel-heading -->

@@ -34,10 +34,12 @@ class AuthController extends Controller
 
     public function GetRegister(Request $request)
     {
-        $request->session(['key' => 'value']);
+//        $request->session(['key' => 'value']);
         $user = User::create($request->all());
-        echo "1234 GetRegister 1234";
-        var_dump($request->all());
+//        echo "1234 GetRegister 1234";
+//        var_dump($request->all());
+//        if success
+        return view('auth.register');
     }
 
     public function PostRegister()

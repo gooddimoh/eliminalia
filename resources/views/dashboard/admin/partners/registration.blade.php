@@ -11,11 +11,11 @@
             <div class="col-md-12">
                 <div class="form-group row">
                     <label class="col-form-label">Name*:</label>
-                    <input class="form-control form-control-sm height-40 width-600" type="text" name="name" value=""
-                           placeholder="Name*:">
+                    <input class="form-control form-control-sm height-40" type="text" name="name" value="" placeholder="Name*:">
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6">
+            <div class="col-md-6">
                 <div class="form-group row">
                     <label class="col-form-label">Phone number 1*:</label>
                     <input class="form-control form-control-sm height-40" type="text" name="phonenumber1" value=""
@@ -45,7 +45,7 @@
                     <input type="submit" value="Submit">
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <div class="form-group row">
                     <label class="col-form-label">Phone number 2:</label>
                     <input class="form-control form-control-sm height-40" type="text" name="surname"
@@ -71,6 +71,7 @@
                     <input class="form-control form-control-sm height-40" type="text" name="state" placeholder="State:">
                 </div>
             </div>
+            </div>
             <div class="col-md-6">
                 <div id="content" class="content">
                     <h1>Time Line</h1>
@@ -81,18 +82,18 @@
             <div class="col-md-12">
                 <div class="form-group row">
                     <br>
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                         <label class="col-form-label col-md-2">Case description made by the client:</label>
                         <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
                                   name="textbox_type_1">
                     </textarea>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                         <label class="col-form-label col-md-2">Info for the manager:</label>
                         <textarea class="form-control" rows="6" placeholder="Info for the manager:"
                                   name="textbox_type_2"></textarea>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                         <label class="col-form-label col-md-2">Info for the commercial:</label>
                         <textarea class="form-control" rows="6" placeholder="Info for the commercial:"
                                   name="textbox_type_3"></textarea>
@@ -106,23 +107,6 @@
         </div>
     </form>
 @endsection
-<script>
-    $("search").change(function () {
-        let data = "data";
-        var request = $.ajax({
-            url: "{{route("usermanagementnew")}}",
-            method: "post",
-            data: {view: 'view'},
-            dataType: "html"
-        });
-        request.done(function (view) {
-            $("#html").html(view);
-        });
-        request.fail(function (jqXHR, textStatus) {
-            alert("Request failed: " + textStatus);
-        });
-    });
-</script>
 
 @push('scripts')
     <script src="{{asset('/assets/plugins/jquery-migrate/dist/jquery-migrate.js')}}"></script>

@@ -15,7 +15,6 @@ class Asuntos extends Migration
     {
         Schema::create('asuntos', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('id');
             $table->string('last_date');
             $table->string('last_minute');
             $table->string('id_last_user');
@@ -23,8 +22,6 @@ class Asuntos extends Migration
             $table->string('id_enlace');
             $table->string('affair');
             $table->string('finalized');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
             $table->timestamps();
         });
     }

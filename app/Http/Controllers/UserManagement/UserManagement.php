@@ -34,39 +34,25 @@ class UserManagement extends Controller
     public function list(Request $request)
     {
         $users = User::all();
-        var_dump($users);
-        echo "data1";
-        echo "data2";
-        echo "data3";
-        echo "data4";
-        var_dump($users);
-        die("");
         return view('dashboard.admin.usermanagement.index', compact('users', $users));
     }
 
     public function create(Request $request)
     {
-        $datavalidated = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
-        $role = Role::all()->pluck('title', 'id');
+        //        $datavalidated = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
+        //        $role = Role::all()->pluck('title', 'id');
+        //        $request->all();
+
         $users = User::all();
-
-//        $request->session()->flush();
-//        $request->session();
-
-        $request->flush();
-        $request->all();
-        die();
-        var_dump($datavalidated);
-        return view('dashboard.admin.UserManagement.create')->with('users', $users);
+        return view('dashboard.admin.usermanagement.create')->with('users', $users);
     }
 
-    public function store(StoreUserRequest $request)
+
+    public function store(Request $request)
     {
-        $request->ajax();
-        $user = $this->create($request->all());
-        var_dump($user);
-        die();
-        redirect('usermanagement.list');
+        User::create($request->all());
+        $user = User::all();
+        return view('dashboard.admin.usermanagement.parts.tbody', compact('user', $user));
     }
 
     public function edit(Request $request, User $user)

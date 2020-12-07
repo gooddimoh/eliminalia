@@ -20,29 +20,29 @@ class User extends Model
     protected $dates = [
         'updated_at',
         'created_at',
-        'email_verified_at',
     ];
 
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
     ];
 
     protected $fillable = [
         'name',
-        'email',
+        'surname',
         'password',
-        'banned',
-        'approved',
+        'phone',
+        'email',
+        'dni',
+        'address',
+        'postal_code',
+        'city',
+        'state',
+        'permission_level',
     ];
 
     public function Save(array $options = array())
     {
         return parent::save($options);
-    }
-
-    public static function Create()
-    {
-       
     }
 
     public function Data()

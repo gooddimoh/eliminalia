@@ -11,11 +11,18 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->nullable();
+            $table->string('surname')->nullable();
+            $table->string('password')->nullable()->unique();
+            $table->string('phone')->nullable()->unique();
             $table->string('email')->nullable()->unique();
-            $table->datetime('email_verified_at')->nullable();
-            $table->string('password')->nullable();
+            $table->string('dni')->nullable()->unique();
+            $table->string('address')->nullable()->unique();
+            $table->string('postal_code')->nullable()->unique();
+            $table->string('city')->nullable()->unique();
+            $table->string('state')->nullable()->unique();
+            $table->string('permission_level')->nullable();
+            $table->boolean('banned')->default(0)->nullable();
             $table->string('remember_token')->nullable();
-            $table->boolean('approved')->default(0)->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->softDeletes();

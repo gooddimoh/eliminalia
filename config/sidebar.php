@@ -18,21 +18,7 @@ return [
             'url' => '/dashboard',
             'route-name' => 'dashboard'
         ],
-        ['icon' => 'fa fa-key',
-            'title' => 'Login & Register',
-            'url' => 'javascript:;',
-            'caret' => true,
-            'sub_menu' => [[
-                'url' => '/login',
-                'title' => 'Login',
-                'route-name' => 'login'
-            ], [
-                'url' => '/register',
-                'title' => 'Register',
-                'route-name' => 'register'
-            ]]
-        ],
-        ['icon' => 'fa fa-hdd',
+        ['icon' => 'fa fa-envelope',
             'title' => 'Email',
             'url' => 'javascript:;',
             'caret' => true,
@@ -48,6 +34,20 @@ return [
                 'url' => '/dashboard/email/detail',
                 'title' => 'Email Detail',
                 'route-name' => 'withdraw detail'
+            ]]
+        ],
+        ['icon' => 'fa fa-key',
+            'title' => 'Login & Register',
+            'url' => 'javascript:;',
+            'caret' => true,
+            'sub_menu' => [[
+                'url' => '/login',
+                'title' => 'Login',
+                'route-name' => 'login'
+            ], [
+                'url' => '/register',
+                'title' => 'Register',
+                'route-name' => 'register'
             ]]
         ],
         [
@@ -98,33 +98,33 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => '/dashboard/Customers/Registration',
+                'url' => '/dashboard/customer/Registration',
                 'title' => 'Customer Registration',
                 'route-name' => 'Customer Registration'
             ], [
-                'url' => '/dashboard/Customer/list (ADMIN)',
+                'url' => '/dashboard/customer/list (ADMIN)',
                 'title' => 'Customerlist (ADMIN)',
-                'route-name' => 'Customerlist (ADMIN)'
+                'route-name' => 'customerlist(ADMIN)'
             ], [
-                'url' => '/dashboard/Customer/List (MANAGER)',
+                'url' => '/dashboard/customer/List (MANAGER)',
                 'title' => 'Customer List (MANAGER)',
-                'route-name' => 'Customer List (MANAGER)'
+                'route-name' => 'customerlist(MANAGER)'
             ], [
-                'url' => '/dashboard/Customer/List (PARTNER)',
+                'url' => '/dashboard/customer/List (PARTNER)',
                 'title' => 'Customer List (PARTNER)',
-                'route-name' => 'Customer List (PARTNER)'
+                'route-name' => 'customerlist(PARTNER)'
             ], [
-                'url' => '/dashboard/Customer/List (REGISTRATOR)',
+                'url' => '/dashboard/customer/List (REGISTRATOR)',
                 'title' => 'Customer List (REGISTRATOR)',
-                'route-name' => 'Customer List (REGISTRATOR)'
+                'route-name' => 'customerlist(REGISTRATOR)'
             ], [
-                'url' => '/dashboard/Customer/List (SADMIN',
+                'url' => '/dashboard/customer/List (SADMIN)',
                 'title' => 'Customer List (SADMIN)',
-                'route-name' => 'Customer List'
+                'route-name' => 'customerlist(SADMIN)'
             ], [
                 'url' => '/dashboard/Pending Billing',
                 'title' => 'Pending Billing',
-                'route-name' => 'Pending Billing'
+                'route-name' => 'pendingbilling'
             ]
             ]
         ],
@@ -148,13 +148,13 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => '/dashboard/Finalizate/Files',
+                'url' => '/dashboard/requests/finalizate_files',
                 'title' => 'Finalizate Files',
-                'route-name' => 'Finalizate Files'
+                'route-name' => 'finalizate_files'
             ], [
-                'url' => '/dashboard/Withdraw/Contracts',
-                'title' => 'Withdraw/Contracts',
-                'route-name' => 'Withdraw Contracts'
+                'url' => '/dashboard/requests/withdraw_contracts',
+                'title' => 'Withdraw Contracts',
+                'route-name' => 'withdraw_contracts'
             ]]
         ],
         ['icon' => 'fa fa-key',
