@@ -40,14 +40,14 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
-                    <select class="form-control form-control-sm height-40" name="name" value="">
-                        <option value="0">SUPERADMIN:</option>
-                        <option value="1">ADMIN SUCURSAL:</option>
-                        <option value="1">ALTA CONTRATOS</option>
-                        <option value="1">RASTREADOR</option>
-                        <option value="1">COMERCIAL</option>
-                        <option value="1">PARTNER</option>
-                        <option value="1">MANAGER</option>
+                    <select class="form-control form-control-sm height-40" name="permission_Level">
+                        <option value="SUPERADMIN">SUPERADMIN:</option>
+                        <option value="ADMIN SUCURSAL">ADMIN SUCURSAL:</option>
+                        <option value="ALTA CONTRATOS">ALTA CONTRATOS:</option>
+                        <option value="RASTREADOR">RASTREADOR</option>
+                        <option value="COMERCIAL">COMERCIAL</option>
+                        <option value="PARTNER">PARTNER</option>
+                        <option value="MANAGER">MANAGER</option>
                     </select>
                 </div>
             </div>
@@ -127,6 +127,7 @@
                             <tr>
                                 <th class="width-60">{{$user->id}}</th>
                                 <th class="width-60">{{$user->name}}</th>
+                                <th class="width-60">{{$user->permission_level}}</th>
                                 <th class="width-60">{{$user->email}}</th>
                                 <th class="width-60">&nbsp;</th>
                                 <th class="width-60">
