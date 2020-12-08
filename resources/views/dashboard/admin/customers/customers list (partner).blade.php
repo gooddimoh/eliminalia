@@ -11,10 +11,10 @@
                     </select> entries</label></div>
         </div>
         <div class="col-sm-12 col-md-6">
-            <div id="data-table-default_filter" class="dataTables_filter"><label>Search:<input type="search"
-                                                                                               class="form-control form-control-sm"
-                                                                                               placeholder=""
-                                                                                               aria-controls="data-table-default"></label>
+            <div id="data-table-default_filter" class="dataTables_filter">
+                <label>
+                    Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="data-table-default">
+                </label>
             </div>
         </div>
     </div>

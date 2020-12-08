@@ -15,7 +15,7 @@
                            placeholder="Name*:">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="col-md-6">
                     <div class="form-group row">
                         <label class="col-form-label">Phone number 1*:</label>
@@ -27,13 +27,23 @@
                         <input class="form-control form-control-sm height-40" type="text" name="email" placeholder="">
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label">Address:</label>
+                        <label class="col-form-label">ID:</label>
                         <input class="form-control form-control-sm height-40" type="text" name="id" placeholder="ID:">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Address:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="country"
+                               placeholder="Address*:">
                     </div>
                     <div class="form-group row">
                         <label class="col-form-label">City:</label>
                         <input class="form-control form-control-sm height-40" type="text" name="country"
-                               placeholder="Country*:">
+                               placeholder="City*:">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Commercial *:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="country"
+                               placeholder="City*:">
                     </div>
                     <div class="form-group row">
                         <label class="col-form-label">Country*:</label>
@@ -45,17 +55,33 @@
                         </select>
                         <input type="submit" value="Submit">
                     </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Commercial *:</label>
+                        <label for="country">Choose a country:</label>
+                        <select id="country" name="country">
+                            <option value="david_castella">Maria Gracia</option>
+                            <option value="david_castella">----</option>
+                            <option value="maria_gracia">Rikcy Boards</option>
+                            <option value="mercedes">Carlo Del Bo</option>
+                        </select>
+                        <input type="submit" value="Submit">
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group row">
                         <label class="col-form-label">Phone number 2:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="surname"
+                        <input class="form-control form-control-sm height-40" type="text" name="phone2"
                                placeholder="Surname:">
                     </div>
                     <div class="form-group row">
                         <label class="col-form-label">Email (secondary):</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="phonenumber2"
-                               placeholder="Phone number 2:">
+                        <input class="form-control form-control-sm height-40" type="text" name="Email(secondary)"
+                               placeholder="Email(secondary)">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Company ID:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="Email(secondary)"
+                               placeholder="Email(secondary)">
                     </div>
                     <div class="form-group row">
                         <label class="col-form-label">Postal code:</label>
@@ -68,9 +94,37 @@
                                placeholder="Company ID:">
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label">State:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="state"
-                               placeholder="State:">
+                        <label class="col-form-label">Native language *:</label>
+                        <label for="country">Choose a country:</label>
+                        <select id="country" name="country">
+                            <option value="david_castella">Maria Gracia</option>
+                            <option value="david_castella">----</option>
+                            <option value="maria_gracia">Rikcy Boards</option>
+                            <option value="mercedes">Carlo Del Bo</option>
+                        </select>
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Native language *:</label>
+                        <label for="country">Choose a country:</label>
+                        <select id="country" name="country">
+                            <option value="david_castella">Maria Gracia</option>
+                            <option value="david_castella">----</option>
+                            <option value="maria_gracia">Rikcy Boards</option>
+                            <option value="mercedes">Carlo Del Bo</option>
+                        </select>
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Native language *:</label>
+                        <label for="country">Choose a country:</label>
+                        <select id="country" name="country">
+                            <option value="david_castella">Maria Gracia</option>
+                            <option value="david_castella">----</option>
+                            <option value="maria_gracia">Rikcy Boards</option>
+                            <option value="mercedes">Carlo Del Bo</option>
+                        </select>
+                        <input type="submit" value="Submit">
                     </div>
                 </div>
             </div>

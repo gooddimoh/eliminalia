@@ -14,33 +14,37 @@
                 <h4>New User Data</h4>
                 <div class="form-group row">
                     <label class="col-form-label">Name:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="name" placeholder="Name:"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="name"
+                           placeholder="Name:"
                            value="{{$user->name}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Phone:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="phone" placeholder="Phone:"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="phone"
+                           placeholder="Phone:"
                            value="{{$user->phone}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">DNI:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="dni" placeholder="DNI:"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="dni"
+                           placeholder="DNI:"
                            value="{{$user->dni}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Address:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="address"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="address"
                            placeholder="Address:"
                            value="{{$user->address}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">City:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="city" placeholder="City:"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="city"
+                           placeholder="City:"
                            value="{{$user->city}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
-                    <select class="form-control form-control-sm height-40" name="permission_Level">
+                    <select class="form-control form-control-sm height-40 m-r-10" name="permission_Level">
                         <option value="SUPERADMIN">SUPERADMIN:</option>
                         <option value="ADMIN SUCURSAL">ADMIN SUCURSAL:</option>
                         <option value="ALTA CONTRATOS">ALTA CONTRATOS:</option>
@@ -55,31 +59,30 @@
                 <h4>&nbsp;</h4>
                 <div class="form-group row">
                     <label class="col-form-label ">Password:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="password"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="password"
                            placeholder="Password:" value="{{$user->password}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="email"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="email"
                            placeholder="Email (main)*:" value="{{$user->email}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">ID:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="id"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="id"
                            placeholder="ID:" value="{{$user->id}}">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Postal code:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="postalcode"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="postalcode"
                            placeholder="Postal code:" value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
-                    <input class="form-control form-control-sm height-40" type="text" value="" name="state"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="state"
                            placeholder="State:" value="{{$user->state}}">
                 </div>
-                <div class="form-group form-control-sm  height-40 flex-column align-items-end bottom justify-content-end"
-                     style="position: relative">
+                <div class="form-group form-control-sm flex-column align-items-end bottom justify-content-end height-40 m-r-10" style="position: relative">
                     <div class="banned" style="position:absolute; top:40px; right:0px;">
                         <span class="text">&nbsp;BANNED&nbsp;</span>
                         <input class="ui-checkboxradio-checked" style="cursor:pointer;" type="checkbox" value="1"
@@ -124,7 +127,7 @@
                     <table class="table">
                         <tbody>
                         @foreach($users as $user)
-                            <tr>
+                            <tr href="http://loc.eliminalia.com/dashboard/usermanagement/new?delete={{$user->id}}">
                                 <th class="width-60">{{$user->id}}</th>
                                 <th class="width-60">{{$user->name}}</th>
                                 <th class="width-60">{{$user->permission_level}}</th>

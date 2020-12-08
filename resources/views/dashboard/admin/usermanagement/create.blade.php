@@ -105,7 +105,9 @@
                 <div id="data-table-default_filter" class="dataTables_filter">
                     <label class="flex-row">
                         <h4 class="float-left">Search existent user</h4>
-                        <h1>Filter</h1>
+                        <div class="panel">
+                            <h1>Filter</h1>
+                        </div>
                         <input type="search" class="form-control form-control-sm" placeholder=""
                                aria-controls="data-table-default">
                     </label>
@@ -138,30 +140,32 @@ danger"
                                 <th>Username</th>
                                 <th>Email Address</th>
                                 <th width="1%"></th>
+                                <th width="1%"></th>
+                                <th width="1%"></th>
                             </tr>
-
                             </thead>
-
                             <tbody>
                             @foreach($users as $user)
-                                <tr>
-                                    <th class="width-60">{{$user->id}}</th>
-                                    <th class="width-60">{{$user->name}}</th>
-                                    <th class="width-60">{{$user->email}}</th>
-                                    <th class="width-60">&nbsp;</th>
-                                    <th class="width-60">
-                                        <a class="red"
-                                           href="http://loc.eliminalia.com/dashboard/usermanagement/new?delete={{$user->id}}">
-                                            Delete
-                                        </a>
-                                    </th>
-                                    <th class="width-60">
-                                        <a class="red"
-                                           href="http://loc.eliminalia.com/dashboard/usermanagement/edit?edit={{$user->id}}">
-                                            Edit
-                                        </a>
-                                    </th>
-                                </tr>
+                                <a href="http://loc.eliminalia.com/dashboard/usermanagement/edit?edit=2">
+                                    <tr>
+                                        <th class="width-60">{{$user->id}}</th>
+                                        <th class="width-60">{{$user->name}}</th>
+                                        <th class="width-60">{{$user->email}}</th>
+                                        <th class="width-60">&nbsp;</th>
+                                        <th class="width-60">
+                                            <a class="red"
+                                               href="http://loc.eliminalia.com/dashboard/usermanagement/new?delete={{$user->id}}">
+                                                Delete
+                                            </a>
+                                        </th>
+                                        <th class="width-60">
+                                            <a class="red"
+                                               href="http://loc.eliminalia.com/dashboard/usermanagement/edit?edit={{$user->id}}">
+                                                Edit
+                                            </a>
+                                        </th>
+                                    </tr>
+                                </a>
                             @endforeach
                             </tbody>
                         </table>

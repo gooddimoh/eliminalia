@@ -5,7 +5,7 @@
 @section('content')
     <form method="post" action="{{route('contacts.create')}}" class="col-xl-12">
         @csrf
-        <h1>CONTACT REGISTRATION</h1>
+        <h1>Contact Data</h1>
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group row">
@@ -13,17 +13,17 @@
                     <input class="form-control form-control-sm" type="text" name="name" value="" placeholder="Name*:">
                 </div>
                 <div class="form-group row">
-                    <label class="col-form-label">Phone number 1*:</label>
+                    <label class="col-form-label">Phone number 1 *:</label>
                     <input class="form-control form-control-sm" type="text" name="phonenumber1" value=""
                            placeholder="Phone number 1*:">
                 </div>
                 <div class="form-group row">
-                    <label class="col-form-label">Email (main)*:</label>
+                    <label class="col-form-label">Email (main) *:</label>
                     <input class="form-control form-control-sm" type="text" name="email" placeholder="Email (main)*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">ID:</label>
-                    <input class="form-control form-control-sm" type="text" name="id" placeholder="ID:">
+                    <input class="form-control form-control-sm" type="text" name="ID" placeholder="ID:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Address:</label>
@@ -37,8 +37,20 @@
                     <div class="form-group row width-150">
                         <label class="col-form-label float-left">Country*:</label>
                         <select class="form-control form-control-sm float-right" name="paymentmethod">
-                            <option value="Aruba">Britain</option>
-                            <option value="Bahrain">Australia</option>
+                            @foreach($countryies as $country):
+                            <option value="{{$country->id}}">{{$country->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group row width-150">
+                        <label class="col-form-label float-left">Commercial *:</label>
+                        <select class="form-control form-control-sm float-right" name="paymentmethod">
+                            <option value="Aruba">David Castella</option>
+                            <option value="Bahrain">Maria Gracia</option>
+                            <option value="Bahrain">Ricky Bordas</option>
+                            <option value="Bahrain">Antonio Paladino</option>
                         </select>
                     </div>
                     <input class="form-control form-control-sm" type="text" name="country" placeholder="Country*:">
@@ -119,7 +131,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group row width-150">
-                    <label class="col-form-label">BUDGET:</label>
+                    <label class="col-form-label">Budget:</label>
                     <input class="form-control form-control-sm width-80" type="number" name="budget"
                            placeholder="CURRENCY" value="2">
                 </div>
@@ -136,32 +148,32 @@
                     <br>
                     <label class="col-form-label col-md-2">Case description made by the client:</label>
                     <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
-                              name="textbox_type_1">
+                              name="textarea1">
                     </textarea>
                     <label class="col-form-label col-md-2">Info for the manager:</label>
                     <textarea class="form-control" rows="6" placeholder="Info for the manager:"
-                              name="textbox_type_2"></textarea>
+                              name="textarea2"></textarea>
                     <label class="col-form-label col-md-2">Info for the commercial:</label>
                     <textarea class="form-control" rows="6" placeholder="Info for the commercial:"
-                              name="textbox_type_3"></textarea>
+                              name="textarea3"></textarea>
                 </div>
                 <br>
                 <div class="inputs" style="">
                     <div class="form-group row">
                         <input type="checkbox" name="input_type_0" value="0">
-                        <label>&nbsp;&nbsp; FIRST CONTACT DONE</label>
+                        <label>FIRST CONTACT DONE</label>
                     </div>
                     <div class="form-group row">
                         <input type="checkbox" name="input_type_1" value="1">
-                        <label>&nbsp;&nbsp;TRACKING DONE</label>
+                        <label>TRACKING DONE</label>
                     </div>
                     <div class="form-group row">
                         <input type="checkbox" name="input_type_2" value="2">
-                        <label>&nbsp;&nbsp;BUDGET DONE</label>
+                        <label>BUDGET DONE</label>
                     </div>
                     <div class="form-group row">
                         <input type="checkbox" name="input_type_3" value="3">
-                        <label>&nbsp;&nbsp;DOCUMENTATION SENDED</label>
+                        <label>DOCUMENTATION SENDED</label>
                     </div>
                     <div class="form-group row">
                         <input type="checkbox" name="input_type_4" value="4">
@@ -171,23 +183,31 @@
                 <br>
                 <div class="form-group row">
                     <input type="checkbox" value="0" name="input_type_0">
-                    <label>&nbsp;&nbsp; FIRST CONTACT DONE </label>
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;FIRST CONTACT DONE</label>
                 </div>
                 <div class="form-group row">
                     <input type="checkbox" value="1" name="input_type_1">
-                    <label>&nbsp;&nbsp; TRACKING DONE </label>
+                    <label>&nbsp;&nbsp;TRACKING DONE</label>
+                </div>
+                <div class="form-group row">
+                    <input type="checkbox" value="1" name="input_type_1">
+                    <label>&nbsp;&nbsp;TRACKING DONE</label>
+                </div>
+                <div class="form-group row">
+                    <input type="checkbox" value="1" name="input_type_1">
+                    <label>&nbsp;&nbsp;TRACKING DONE</label>
                 </div>
                 <div class="form-group row">
                     <input type="checkbox" value="2" name="input_type_2">
-                    <label>&nbsp;&nbsp; BUDGET DONE </label>
+                    <label>&nbsp;&nbsp;BUDGET DONE</label>
                 </div>
                 <div class="form-group row">
                     <input type="checkbox" value="3" name="input_type_3">
-                    <label>&nbsp;&nbsp; DOCUMENTATION SENDED </label>
+                    <label>&nbsp;&nbsp;DOCUMENTATION SENDED</label>
                 </div>
                 <div class="form-group row">
                     <input type="checkbox" value="4" name="input_type_4">
-                    <label>&nbsp;&nbsp; SIGNED </label>
+                    <label>&nbsp;&nbsp;SIGNED</label>
                 </div>
             </div>
         </div>

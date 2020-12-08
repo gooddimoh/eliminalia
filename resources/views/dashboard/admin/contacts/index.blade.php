@@ -39,7 +39,8 @@
                                             <option value="25">25</option>
                                             <option value="50">50</option>
                                             <option value="100">100</option>
-                                        </select> entries</label></div>
+                                        </select> entries</label>
+                                </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div id="data-table-default_filter" class="dataTables_filter">
@@ -82,24 +83,29 @@
                                             rowspan="1" colspan="1" style="width: 176px;"
                                             aria-label="CSS grade: activate to sort column ascending">Email
                                         </th>
+                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
+                                            rowspan="1" colspan="1" style="width: 176px;"
+                                            aria-label="CSS grade: activate to sort column ascending">Email
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {{--                                    @foreach($users as $user)--}}
-                                    {{--                                        <tr class="gradeX odd" role="row">--}}
-                                    {{--                                            <td width="1%" class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">--}}
-                                    {{--                                                1--}}
-                                    {{--                                            </td>--}}
-                                    {{--                                            <td width="1%" class="with-img">--}}
-                                    {{--                                                <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">--}}
-                                    {{--                                            </td>--}}
-                                    {{--                                            <td>{{$user->id}}</td>--}}
-                                    {{--                                            <td>{{$user->id}}</td>--}}
-                                    {{--                                            <td>{{$user->id}}</td>--}}
-                                    {{--                                            <td>{{$user->count}}</td>--}}
-                                    {{--                                            <td>{{$user->id}}</td>--}}
-                                    {{--                                        </tr>--}}
-                                    {{--                                    @endforeach--}}
+                                    @foreach($users as $user)
+                                        <tr class="gradeX odd" role="row">
+                                            <td width="1%" class="f-w-600 text-inverse dtr-control sorting_1"
+                                                tabindex="0">
+                                                1
+                                            </td>
+                                            <td width="1%" class="with-img">
+                                                <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                            </td>
+                                            <td>{{$user->id}}</td>
+                                            <td>{{$user->id}}</td>
+                                            <td>{{$user->id}}</td>
+                                            <td>{{$user->count}}</td>
+                                            <td>{{$user->id}}</td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
