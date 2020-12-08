@@ -8,7 +8,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class AdminNewUserNotification extends Notification {
+class AdminNewUserNotification extends Notification
+{
     use Queueable;
 
     private $user;
@@ -43,9 +44,7 @@ class AdminNewUserNotification extends Notification {
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
-            ->line('New user has registered: ' . $this->user->name . ' (' . $this->user->email . ')')
-            ->action('Login to adminpanel to approve', route('admin.users.edit', $this->user->id));
+        return (new MailMessage)->line('New user has registered: ' . $this->user->name . ' (' . $this->user->email . ')')->action('Login to adminpanel to approve', route('admin.users.edit', $this->user->id));
     }
 
     /**
@@ -54,6 +53,21 @@ class AdminNewUserNotification extends Notification {
      * @param mixed $notifiable
      * @return array
      */
+
+    public function Create()
+    {
+        // New Client
+        // Create id Client
+
+        // Create automatic folders
+        // Links
+        // Public Documents
+        // Private Documents (Internal)
+
+        // Client Documents Public
+        // Private Documents (Internal)
+    }
+
     public function toArray($notifiable)
     {
         return [

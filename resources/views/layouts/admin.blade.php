@@ -28,12 +28,10 @@
             <span class="logo-mini"><b>{{ trans('panel.site_title') }}</b></span>
             <span class="logo-lg">{{ trans('panel.site_title') }}</span>
         </a>
-
         <nav class="navbar navbar-static-top">
             <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                 <span class="sr-only">{{ trans('global.toggleNavigation') }}</span>
             </a>
-
             @if(count(config('panel.available_languages', [])) > 1)
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
@@ -57,13 +55,9 @@
                     </ul>
                 </div>
             @endif
-
-
         </nav>
     </header>
-
     @include('partials.menu')
-
     <div class="content-wrapper" style="min-height: 960px;">
         @if(session('message'))
             <div class="row" style='padding:20px 20px 0 20px;'>
@@ -90,7 +84,6 @@
     <footer class="main-footer text-center">
         <strong>{{ trans('panel.site_title') }} &copy;</strong> {{ trans('global.allRightsReserved') }}
     </footer>
-
     <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
         {{ csrf_field() }}
     </form>

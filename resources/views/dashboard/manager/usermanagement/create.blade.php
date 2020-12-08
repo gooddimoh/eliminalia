@@ -95,8 +95,8 @@
                         <h4 class="panel-title">List of all Users <span
                                     class="label label-success m-l-5 t-minus-1">NEW</span></h4>
                         <div class="panel-heading-btn">
-                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default data-click="
-                               panel-expand"><i class="fa fa-expand"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
+                               data-click="panel-expand"><i class="fa fa-expand"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
@@ -131,6 +131,7 @@
             </div>
         </div>
     </form>
+@section('legend')
     <div class="legend">
         <h1>Legend</h1>
         <p>
@@ -160,6 +161,7 @@
             de ese cliente e Partner si lo tuviera" también al admin de la sucursal. ¿Quién puede decir si el pago ya
             está recibido o no? Solo el SUPER ADMIN.</p>
     </div>
+@endsection
 @endsection
 <script>
     var request = $.ajax({

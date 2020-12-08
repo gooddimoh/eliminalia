@@ -105,6 +105,7 @@
                 <div id="data-table-default_filter" class="dataTables_filter">
                     <label class="flex-row">
                         <h4 class="float-left">Search existent user</h4>
+                        <h1>Filter</h1>
                         <input type="search" class="form-control form-control-sm" placeholder=""
                                aria-controls="data-table-default">
                     </label>

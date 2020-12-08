@@ -1,4 +1,4 @@
-@section()
+@section('tbody')
     <div class="table-responsive height-600">
         <table class="table table-striped m-b-0 overflow-hidden">
             <tbody>

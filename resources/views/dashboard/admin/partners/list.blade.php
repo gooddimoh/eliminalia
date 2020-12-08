@@ -64,16 +64,6 @@
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->password}}</td>
                                     <td>{{$user->id}}</td>
-                                </tr>
-                                <tr class="gradeA even" role="row">
-                                    <td class="f-w-600 text-inverse dtr-control sorting_1"
-                                        tabindex="0">{{$user->id}}</td>
-                                    <td class="with-img">
-                                        <img src="{{$user->id}}" class="img-rounded height-100">
-                                    </td>
-                                    <td>{{$user->name}}</td>
-                                    <td>{{$user->password}}</td>
-                                    <td>{{$user->id}}</td>
                                     <td>{{1}}</td>
                                     <td>{{2}}</td>
                                 </tr>

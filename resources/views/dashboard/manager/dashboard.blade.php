@@ -15,9 +15,6 @@
         <li class="breadcrumb-item"><a href="javascript:;">Dashboard</a></li>
         <li class="breadcrumb-item active">Dashboard</li>
     </ol>
-    <!-- end breadcrumb -->
-    <!-- end breadcrumb1 -->
-
     <!-- begin page-header -->
     <h1 class="page-header mb-3">Dashboard</h1>
     <!-- end page-header -->

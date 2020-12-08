@@ -31,7 +31,6 @@
         <input type="checkbox" placeholder="Subscribed to notifications">
     </div>
 </div>
-
 <div class="textboxes">
     <div class="one">
         <h1>Info for the manager:</h1>

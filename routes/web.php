@@ -115,7 +115,8 @@ Route::get('additem4', 'TestController@additem')->name('additem4');
 Route::get('edititem1', 'TestController@edititem')->name('edititem');
 
 // $query = Job::where('status', '=', Job::APPROVED);
-// Front-End Controllers
+
+// Front-End Controllers //
 
 Route::get('/home-page', 'FrontEndController@home_page')->name('user.management');
 Route::get('/who-we-are', 'FrontEndController@who_we_are')->name('user.management');

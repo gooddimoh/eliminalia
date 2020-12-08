@@ -183,7 +183,7 @@
     </ul>
 @endsection
 
-@section('content2')
+@section('accordion')
     <div id="accordion" class="accordion"index.blade.php>
         <!-- begin card -->
         <div class="card bg-dark text-white">

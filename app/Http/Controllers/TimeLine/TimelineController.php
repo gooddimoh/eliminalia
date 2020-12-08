@@ -27,7 +27,7 @@ class TimelineController extends Controller
     {
 //        $timeline = Timeline::all();
 //        return view("dashboard.superadmin.timeline.timeline")->with('timeline', $timeline);
-        return view("dashboard.superadmin.timeline.index");
+        return view("dashboard.admin.timeline.index");
     }
 
 }

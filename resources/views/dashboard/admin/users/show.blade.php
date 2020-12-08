@@ -5,6 +5,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
+                    {{-- trans some item in trans --}}
                     {{ trans('global.create') }} {{ trans('cruds.user.title_singular') }}
                 </div>
                 <div class="panel-body">
