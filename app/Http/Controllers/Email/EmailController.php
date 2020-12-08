@@ -6,17 +6,17 @@ use Illuminate\Http\Request;
 
 class EmailController extends Controller
 {
-    public function Inbox(Request $request)
+    public function inbox(Request $request)
     {
         return view('email.email-inbox');
     }
 
-    public function Compose(Request $request)
+    public function compose(Request $request)
     {
         return view('email.email-compose');
     }
 
-    public function Detail(Request $request)
+    public function detail(Request $request)
     {
         return view('email.email-detail');
     }
