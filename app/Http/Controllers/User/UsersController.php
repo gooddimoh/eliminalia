@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -14,8 +13,7 @@ use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
-class UsersController extends Controller
-{
+class UsersController extends Controller {
     public function index()
     {
 
@@ -58,7 +56,6 @@ class UsersController extends Controller
 //        return view();
 //    });
 
-
     public function edit(User $user)
     {
 //        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -90,7 +87,6 @@ class UsersController extends Controller
 
         return redirect()->route('admin.users.index');
     }
-
 
     public function show(User $user)
     {

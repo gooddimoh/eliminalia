@@ -11,66 +11,68 @@
             <div class="col-md-12">
                 <div class="form-group row">
                     <label class="col-form-label">Name*:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="name" value="" placeholder="Name*:">
+                    <input class="form-control form-control-sm height-40" type="text" name="name" value=""
+                           placeholder="Name*:">
                 </div>
             </div>
             <div class="col-md-6">
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-form-label">Phone number 1*:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="phonenumber1" value=""
-                           placeholder="Phone number 1*:">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-form-label">Phone number 1*:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="phonenumber1" value=""
+                               placeholder="Phone number 1*:">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Email (main)*:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="email" placeholder="">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Address:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="id" placeholder="ID:">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">City:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="country"
+                               placeholder="Country*:">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Country*:</label>
+                        <label for="country">Choose a country:</label>
+                        <select id="country" name="country">
+                            <option value="volvo">England</option>
+                            <option value="saab">Armenia</option>
+                            <option value="mercedes">Algeria</option>
+                        </select>
+                        <input type="submit" value="Submit">
+                    </div>
                 </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Email (main)*:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="email" placeholder="">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-form-label">Phone number 2:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="surname"
+                               placeholder="Surname:">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Email (secondary):</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="phonenumber2"
+                               placeholder="Phone number 2:">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">Postal code:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="email"
+                               placeholder="Email (secondary):">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">State:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="companyid" value=""
+                               placeholder="Company ID:">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label">State:</label>
+                        <input class="form-control form-control-sm height-40" type="text" name="state"
+                               placeholder="State:">
+                    </div>
                 </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Address:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="id" placeholder="ID:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">City:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="country"
-                           placeholder="Country*:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Country*:</label>
-                    <label for="country">Choose a country:</label>
-                    <select id="country" name="country">
-                        <option value="volvo">England</option>
-                        <option value="saab">Armenia</option>
-                        <option value="mercedes">Algeria</option>
-                    </select>
-                    <input type="submit" value="Submit">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-form-label">Phone number 2:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="surname"
-                           placeholder="Surname:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Email (secondary):</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="phonenumber2"
-                           placeholder="Phone number 2:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Postal code:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="email"
-                           placeholder="Email (secondary):">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">State:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="companyid" value=""
-                           placeholder="Company ID:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">State:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="state" placeholder="State:">
-                </div>
-            </div>
             </div>
             <div class="col-md-6">
                 <div id="content" class="content">

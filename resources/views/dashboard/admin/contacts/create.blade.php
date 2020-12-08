@@ -120,7 +120,8 @@
             <div class="col-md-12">
                 <div class="form-group row width-150">
                     <label class="col-form-label">BUDGET:</label>
-                    <input class="form-control form-control-sm width-80" type="number" name="budget" placeholder="CURRENCY" value="2">
+                    <input class="form-control form-control-sm width-80" type="number" name="budget"
+                           placeholder="CURRENCY" value="2">
                 </div>
                 <div class="form-group row width-150">
                     <label class="col-form-label">Payment method:</label>

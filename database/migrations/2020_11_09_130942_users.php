@@ -71,6 +71,7 @@ class Users extends Migration
             $table->string('search_parameters');
             $table->string('subscribed_notifications');
             $table->string('id_partner ');
+            $table->string('id_partner ');
             $table->integer('Permission Level:');
             $table->integer('payment')->comment("banned");
             $table->timestamp('created_at')->nullable();

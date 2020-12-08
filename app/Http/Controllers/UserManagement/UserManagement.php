@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -49,7 +48,6 @@ class UserManagement extends Controller
         $users = User::all();
         return view('dashboard.admin.usermanagement.create')->with('users', $users);
     }
-
 
     public function store(Request $request)
     {
