@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -51,7 +52,7 @@ class ContactsController extends Controller
         //    $user = User::all();
         //    $role = '';
         //    $user = '';
-        return view('dashboard.superadmin.contacts.list');
+        return view('dashboard.admin.contacts.list');
     }
 
     public function registration()
@@ -62,13 +63,13 @@ class ContactsController extends Controller
         $data4 = '';
         $data5 = $data1 . $data2 . $data3 . $data4;
         $roles = 'role';
-        return view('dashboard.superadmin.contacts.registration', compact('roles'));
+        return view('dashboard.admin.contacts.registration', compact('roles'));
     }
 
     public function inquiries()
     {
         $users = User::all();
-        return view('dashboard.superadmin.contacts.inquiries', compact('users'));
+        return view('dashboard.admin.contacts.inquiries', compact('users'));
     }
 
     public function edit(Reques $request, User $user, Response $response)
