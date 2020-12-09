@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -13,7 +14,8 @@ use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
-class UsersController extends Controller {
+class UsersController extends Controller
+{
     public function index()
     {
 
@@ -25,7 +27,6 @@ class UsersController extends Controller {
 
         $user = User::create($request->all());
         var_dump($user);
-        die();
         $roles = Role::all()->pluck('title', 'id');
         $users = new User();
         return view('dashboard.admin.user.create', compact('roles', 'users'));
@@ -81,9 +82,10 @@ class UsersController extends Controller {
 
     public function register($request)
     {
-        var_dump($request);
-        die("");
-        $approved = $user->approved;
+        $user = User::all();
+//        $approved = $user->banned; ?
+//        $approved = $user->approved;
+//        $user = '';
 
         return redirect()->route('admin.users.index');
     }
@@ -100,16 +102,13 @@ class UsersController extends Controller {
     public function destroy(User $user)
     {
         abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $user->delete();
-
         return back();
     }
 
     public function massDestroy(MassDestroyUserRequest $request)
     {
         User::whereIn('id', request('ids'))->delete();
-
         return response(null, Response::HTTP_NO_CONTENT);
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -21,7 +22,6 @@ class UserManagement extends Controller
         $users = User::all();
         $roles = Role::all();
         var_dump($users);
-        die("");
         if ($request->all()) {
             $view = view('data', compact('post'))->render();
 
@@ -40,9 +40,10 @@ class UserManagement extends Controller
 
     public function create(Request $request)
     {
-        //        $datavalidated = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
-        //        $role = Role::all()->pluck('title', 'id');
-        //        $request->all();
+        $datavalidated = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
+        $role = Role::all()->pluck('title', 'id');
+        $request->all();
+
         $deleteid = $request->get("delete");
         User::destroy($deleteid);
         $users = User::all();

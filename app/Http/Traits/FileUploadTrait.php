@@ -5,8 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
-trait FileUploadTrait
-{
+trait FileUploadTrait {
     /**
      * @var string
      **/

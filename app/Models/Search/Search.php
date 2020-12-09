@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use App\Models\Role;
@@ -39,21 +38,6 @@ class Search extends Model {
 
     protected function create(Request $request, array $data)
     {
-
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
         //
 
         $request->validate();
@@ -63,7 +47,6 @@ class Search extends Model {
             'password' => bcrypt($data['password'])
         ];
         $user = User::create($data);
-
         Storage::makeDirectory('/userassets/' . $user->id);
         Storage::makeDirectory('/userassets/' . $user->id . "/img");
         Storage::makeDirectory('/userassets/' . $user->id . "/intro");

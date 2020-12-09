@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -40,12 +41,9 @@ class HomeController extends Controller
             'password' => 'required',
             'email' => 'required'
         ]);
-
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
-
         redirect()->route('admin.users.index');
-
         return response()->json("StatusCode", 200);
     }
 
@@ -62,17 +60,14 @@ class HomeController extends Controller
 //        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         $roles = Role::all()->pluck('title', 'id');
         $user->load('roles');
-
         return view('admin.users.edit', compact('roles', 'user'));
     }
 
     public function update(UpdateUserRequest $request, User $user)
     {
         $approved = $user->approved;
-
         $user->update($request->all());
         $user->roles()->sync($request->input('roles', []));
-
         if ($approved == 0 && $user->approved == 1) {
             $user->notify(new UserApprovedNotification());
         }
@@ -82,35 +77,27 @@ class HomeController extends Controller
 
     public function register($request)
     {
-        var_dump($request);
-        die("");
-        $approved = $user->approved;
-
+//        $approved = $user->approved;
         return redirect()->route('admin.users.index');
     }
 
     public function show(User $user)
     {
         abort_if(Gate::denies('user_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $user->load('roles');
-
         return view('admin.users.show', compact('user'));
     }
 
     public function destroy(User $user)
     {
         abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $user->delete();
-
         return back();
     }
 
     public function massDestroy(MassDestroyUserRequest $request)
     {
         User::whereIn('id', request('ids'))->delete();
-
         return response(null, Response::HTTP_NO_CONTENT);
     }
 }

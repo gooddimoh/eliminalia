@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 use phpDocumentor\Reflection\DocBlock\TagFactory;
 use App\Models\Comment;
 
-class MainController extends Controller
-{
+class MainController extends Controller {
 
     public function __construct(){
     }
@@ -83,5 +82,4 @@ class MainController extends Controller
     {
         return view('');
     }
-
 }
