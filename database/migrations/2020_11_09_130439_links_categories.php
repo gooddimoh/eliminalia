@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,15 +16,15 @@ class LinksCategories extends Migration
         Schema::create('links_categories', function (Blueprint $table) {
             $table->integer('id');
             $table->timestamp('fecha')->comment('CURRENT_TIMESTAMP');
-            $table->time('hora', 300);
+            $table->time('hora');
             $table->integer('id_gestor');
             $table->integer('id_cliente');
             $table->integer('pago');
             $table->double('importe');
             $table->integer('porcentaje_realizacion');
             $table->tinyInteger('realizado');
-            $table->enum('forma_pago');
-            $table->string('observaciones', 5000);
+            $table->string('forma_pago');
+            $table->string('observaciones');
             $table->date('pay_day');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

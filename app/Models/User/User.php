@@ -73,13 +73,13 @@ class User extends Model
         $fileName = 'profile-' . time() . '.' . $file->getClientOriginalExtension();
 
         // New Client
-            // Create ID Client
-            // Links Public Documents
+        // Create ID Client
+        // Links Public Documents
 
         // Create Automatic Folders
-            // Links
-                // Public Documents
-                // Private Documents (Internal)
+        // Links
+        // Public Documents
+        // Private Documents (Internal)
 
         // Client Documents (public)
         // Private Documents (internal)
@@ -87,6 +87,28 @@ class User extends Model
         $s3 = Storage::disk('s3');
         $filePath = '/uploads/media/' . $fileName;
         $s3->put($filePath, file_get_contents($file), 'public');
+
+    }
+
+    public function Create($data)
+    {
+
+        $user = new User;
+        $user->name = $data->name;
+        $user->surname = $data->surname;
+        $user->password = $data->password;
+
+        Storage::putFileAs();
+
+        $user->phone = $data->phone;
+        $user->email = $data->email;
+        $user->dni = $data->dni;
+        $user->address = $data->address;
+        $user->postal_code = $data->postal_code;
+        $user->city = $data->city;
+        $user->state = $data->state;
+        $user->permission_level = $data->permission_level;
+        $user->save();
 
     }
 }

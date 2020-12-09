@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,7 +14,7 @@ class Partners extends Migration
     public function up()
     {
         Schema::create('partners', function (Blueprint $table) {
-            $table->id('id')->primary();
+            $table->integer('id')->primary();
             $table->timestamp('fecha');
             $table->string('nombre');
             $table->string('pais');
@@ -27,8 +28,7 @@ class Partners extends Migration
             $table->string('email2');
             $table->string('observaciones');
             $table->tinyInteger('activo');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -19,7 +19,7 @@ class HistoryActions extends Migration
             $table->time('hora');
             $table->integer('id_usuario')->index();
             $table->integer('id_referencia');
-            $table->enum('tipo');
+            $table->string('tipo');
             $table->string('observaciones');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

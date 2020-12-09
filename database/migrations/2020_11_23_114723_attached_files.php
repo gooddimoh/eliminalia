@@ -24,8 +24,6 @@ class AttachedFiles extends Migration
             $table->string('file_extension');
             $table->string('file_path');
             $table->string('kind');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
             $table->timestamps();
         });
     }

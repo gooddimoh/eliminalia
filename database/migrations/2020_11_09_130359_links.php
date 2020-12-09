@@ -21,11 +21,11 @@ class Links extends Migration
             $table->integer('id_gestor');
             $table->integer('id_cliente');
             $table->string('enlace');
-            $table->enum('estado');
-            $table->enum('estado_seo');
+            $table->string('estado');
+            $table->string('estado_seo');
             $table->date('fecha_modificacion_seo');
             $table->timestamp('hora_modificacion_seo');
-            $table->enum('tipo_enlace');
+            $table->string('tipo_enlace');
             $table->integer('id_categoria');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

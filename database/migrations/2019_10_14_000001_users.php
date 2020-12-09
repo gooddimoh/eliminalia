@@ -15,19 +15,11 @@ class Users extends Migration
 
     public function up()
     {
-        Schema::create('users2', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('email')->nullable()->unique();
-            $table->datetime('email_verified_at')->nullable();
+        Schema::create('users', function (Blueprint $table) {
+            $table->integer('id')->autoIncrement();
             $table->string('password')->nullable();
-            $table->string('remember_token')->nullable();
-            $table->boolean('approved')->default(0)->nullable();
-            $table->foreign('dni');
             $table->string('name');
             $table->string('email');
-            $table->string('password');
-            $table->string('phone');
-            $table->string('remember_token');
             $table->string('approved');
             $table->string('surnames');
             $table->string('company_name');
@@ -64,21 +56,17 @@ class Users extends Migration
             $table->string('seg_payment_date');
             $table->string('payment_form_sec');
             $table->string('date_rescision');
-            $table->string('commercial_id ');
             $table->string('completion_folder');
             $table->string('state_seo');
-            $table->string('seg_monthly_import');
             $table->string('search_parameters');
             $table->string('subscribed_notifications');
-            $table->string('id_partner ');
-            $table->string('id_partner ');
+            $table->string('id_partner');
             $table->integer('Permission Level:');
             $table->integer('payment')->comment("banned");
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
-            $table->timestamps();
-            $table->rememberToken();
             $table->morphs('notifiable');
+            $table->timestamp('created_at');
+            $table->timestamp('deleted_at');
+            $table->rememberToken();
         });
     }
 

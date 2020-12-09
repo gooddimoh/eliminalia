@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Billings extends Migration
+class Countries extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class Billings extends Migration
      */
     public function up()
     {
-        Schema::create('billings', function (Blueprint $table) {
-            $table->integer('id')->primary();
-//            $table->unsignedInteger('user_id');
-//            $table->foreign('user_id', 'user_id_fk_466020')->references('id')->on('users')->onDelete('cascade');
+        Schema::create('countries', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -27,6 +28,6 @@ class Billings extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('billings');
+        Schema::dropIfExists('countries');
     }
 }

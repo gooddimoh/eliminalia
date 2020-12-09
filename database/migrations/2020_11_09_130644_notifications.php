@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,7 +13,7 @@ class Notifications extends Migration
      */
     public function up()
     {
-        Schema::create('notificaciones', function (Blueprint $table) {
+        Schema::create('notifications', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
             $table->integer('id_usuario');
             $table->text('name');

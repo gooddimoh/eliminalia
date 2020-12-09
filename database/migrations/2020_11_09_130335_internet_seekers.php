@@ -27,6 +27,6 @@ class InternetSeekers extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('InternetSeekers');
+        Schema::dropIfExists('internet_seekers');
     }
 }

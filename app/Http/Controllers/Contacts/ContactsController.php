@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -8,9 +9,10 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Notifications\UserApprovedNotification;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Auth\Access\Gate;
 use App\Models\Role;
 use App\Models\User;
-use Illuminate\Auth\Access\Gate;
+use App\Models\Countries;
 
 class ContactsController extends Controller
 {
@@ -39,7 +41,6 @@ class ContactsController extends Controller
 
     public function store(StoreUserRequest $request)
     {
-        die();
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
         return redirect()->back();
@@ -56,13 +57,14 @@ class ContactsController extends Controller
 
     public function registration()
     {
+        $countries = Countries::all();
         $data1 = '';
         $data2 = '';
         $data3 = '';
         $data4 = '';
         $data5 = $data1 . $data2 . $data3 . $data4;
         $roles = 'role';
-        return view('dashboard.admin.contacts.registration', compact('roles'));
+        return view('dashboard.admin.contacts.create', compact('countries', $countries));
     }
 
     public function inquiries()

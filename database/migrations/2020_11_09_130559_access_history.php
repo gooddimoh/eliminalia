@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,9 +16,9 @@ class AccessHistory extends Migration
         Schema::create('access_history', function (Blueprint $table) {
             $table->integer('id');
             $table->date('fecha');
-            $table->time('hora');
+            $table->time('hora'); /*time*/
             $table->integer('id_usuario');
-            $table->enum('dispositivo');
+            $table->string('dispositivo');
             $table->string('dispositivo_modelo');
             $table->string('dispositivo_os');
             $table->string('dispositivo_navegador');

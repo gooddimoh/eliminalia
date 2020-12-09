@@ -1,13 +1,13 @@
 @extends('layouts.default')
 
-@section('title', 'Basic Tables')
+@section('title', 'CONTACT REGISTRATION')
 {{--There output Contacts data --}}
 @section('content')
     <form method="post" action="{{route('contacts.create')}}" class="col-xl-12">
         @csrf
         <h1>Contact Data</h1>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <div class="form-group row">
                     <label class="col-form-label">Name*:</label>
                     <input class="form-control form-control-sm" type="text" name="name" value="" placeholder="Name*:">
@@ -37,9 +37,11 @@
                     <div class="form-group row width-150">
                         <label class="col-form-label float-left">Country*:</label>
                         <select class="form-control form-control-sm float-right" name="paymentmethod">
-                            @foreach($countryies as $country):
-                            <option value="{{$country->id}}">{{$country->name}}</option>
-                            @endforeach
+                            {{--                            @foreach($countryies as $country):--}}
+                            {{--                            <option value="{{$country->id}}">{{$country->name}}</option>--}}
+                            {{--                            @endforeach--}}
+                            <option value="0">Spain</option>
+                            <option value="1">UK</option>
                         </select>
                     </div>
                 </div>
@@ -61,7 +63,7 @@
                            placeholder="Commercial*:">
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <div class="form-group row">
                     <label class="col-form-label">Surname:</label>
                     <input class="form-control form-control-sm" type="text" name="surname" placeholder="Surname:">
@@ -113,16 +115,47 @@
                 <label class="col-form-label form-control-sm"></label>
             </div>
             <div class="col-md-6">
-                <div class="timeline">
-                    <div class="form-group">
-                        <div class="custom-control custom-switch mb-1">
-                            <input type="checkbox" class="custom-control-input" id="customSwitch1" name="name1"
-                                   placeholder="name1" checked>
-                            <label class="custom-control-label" for="customSwitch1">Physical Person</label>
-                        </div>
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" disabled="" id="customSwitch2">
-                            <label class="custom-control-label" for="customSwitch2">Legal Person</label>
+                <div class="form-group">
+                    <div class="custom-control custom-switch mb-1">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1" name="name1"
+                               placeholder="name1" checked>
+                        <label class="custom-control-label" for="customSwitch1">Physical Person</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" disabled="" id="customSwitch2">
+                        <label class="custom-control-label" for="customSwitch2">Legal Person</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="row form-group">
+                    <label class="col-form-label">Budget:</label>
+                    <input class="form-control form-control-sm" type="text" name="budget" value="" placeholder="Name*:">
+                    <select class="default-select2 form-control select2-hidden-accessible" data-select2-id="1"
+                            tabindex="-1" aria-hidden="true">
+                        <optgroup label="Mountain Time Zone" data-select2-id="21">
+                            <option value="usd" data-select2-id="23">$</option>
+                            <option value="euro" data-select2-id="22">€</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="row form-group">
+                    <label class="col-form-label">Payment method:</label>
+                    <div class="form-group row" data-select2-id="7">
+                        <label class="col-lg-4 col-form-label">Basic Select2</label>
+                        <div class="col-lg-8">
+                            <select class="default-select2 form-control select2-hidden-accessible" data-select2-id="1"
+                                    tabindex="-1" aria-hidden="true">
+                                <optgroup label="Mountain Time Zone" data-select2-id="21">
+                                    <option value="AZ" data-select2-id="0">----</option>
+                                    <option value="AZ" data-select2-id="1">Wire Transfer</option>
+                                    <option value="CO" data-select2-id="2">Check</option>
+                                    <option value="NE" data-select2-id="3">Specie</option>
+                                    <option value="NE" data-select2-id="4">Other</option>
+                                </optgroup>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -147,15 +180,11 @@
                 <div class="form-group row col-md-12">
                     <br>
                     <label class="col-form-label col-md-2">Case description made by the client:</label>
-                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
-                              name="textarea1">
-                    </textarea>
+                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:" name="textarea1"></textarea>
                     <label class="col-form-label col-md-2">Info for the manager:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the manager:"
-                              name="textarea2"></textarea>
+                    <textarea class="form-control" rows="6" placeholder="Info for the manager:" name="textarea2"></textarea>
                     <label class="col-form-label col-md-2">Info for the commercial:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:"
-                              name="textarea3"></textarea>
+                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:" name="textarea3"></textarea>
                 </div>
                 <br>
                 <div class="inputs" style="">
@@ -177,7 +206,7 @@
                     </div>
                     <div class="form-group row">
                         <input type="checkbox" name="input_type_4" value="4">
-                        <label>&nbsp;&nbsp;SIGNED</label>
+                        <label>SIGNED</label>
                     </div>
                 </div>
                 <br>
