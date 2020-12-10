@@ -42,6 +42,7 @@ class UserManagement extends Controller
     {
         $datavalidated = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
         $role = Role::all()->pluck('title', 'id');
+//        $users = User::all()->pluck('title', 'id');
         $request->all();
 
         $deleteid = $request->get("delete");

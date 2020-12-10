@@ -58,13 +58,13 @@ return [
             'sub_menu' => [
                 [
                     'url' => '/dashboard/usermanagement/new',
-                    'title' => 'Contact New',
-                    'route-name' => 'Contact New'
+                    'title' => 'Usermanagement New',
+                    'route-name' => 'Usermanagement New'
                 ],
                 [
                     'url' => '/dashboard/usermanagement/list',
-                    'title' => 'Contact List',
-                    'route-name' => 'Contact List'
+                    'title' => 'Usermanagement List',
+                    'route-name' => 'Usermanagement List'
                 ],
             ]
         ],
@@ -75,14 +75,14 @@ return [
             'caret' => true,
             'sub_menu' => [
                 [
-                    'url' => '/dashboard/contacts/list',
-                    'title' => 'Contact List',
-                    'route-name' => 'Contac tList'
-                ],
-                [
                     'url' => '/dashboard/contacts/registration',
                     'title' => 'Contact Registration',
                     'route-name' => 'Contact Registration'
+                ],
+                [
+                    'url' => '/dashboard/contacts/list',
+                    'title' => 'Contact List',
+                    'route-name' => 'Contac tList'
                 ],
                 [
                     'url' => '/dashboard/contacts/inquiries',

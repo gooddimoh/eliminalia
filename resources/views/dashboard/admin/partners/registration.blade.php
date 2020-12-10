@@ -8,130 +8,169 @@
         @csrf
         <h1>PARTNERS REGISTRATION</h1>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="form-group row">
                     <label class="col-form-label">Name*:</label>
                     <input class="form-control form-control-sm height-40" type="text" name="name" value=""
                            placeholder="Name*:">
                 </div>
-            </div>
-            <div class="col-md-12">
-                <div class="col-md-6">
-                    <div class="form-group row">
-                        <label class="col-form-label">Phone number 1*:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="phonenumber1" value=""
-                               placeholder="Phone number 1*:">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Email (main)*:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="email" placeholder="">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">ID:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="id" placeholder="ID:">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Address:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="country"
-                               placeholder="Address*:">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">City:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="country"
-                               placeholder="City*:">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Commercial *:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="country"
-                               placeholder="City*:">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Country*:</label>
-                        <label for="country">Choose a country:</label>
-                        <select id="country" name="country">
-                            <option value="volvo">England</option>
-                            <option value="saab">Armenia</option>
-                            <option value="mercedes">Algeria</option>
-                        </select>
-                        <input type="submit" value="Submit">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Commercial *:</label>
-                        <label for="country">Choose a country:</label>
-                        <select id="country" name="country">
-                            <option value="david_castella">Maria Gracia</option>
-                            <option value="david_castella">----</option>
-                            <option value="maria_gracia">Rikcy Boards</option>
-                            <option value="mercedes">Carlo Del Bo</option>
-                        </select>
-                        <input type="submit" value="Submit">
-                    </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Phone number 1*:</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="phonenumber1" value=""
+                           placeholder="Phone number 1*:">
                 </div>
-                <div class="col-md-6">
-                    <div class="form-group row">
-                        <label class="col-form-label">Phone number 2:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="phone2"
-                               placeholder="Surname:">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Email (secondary):</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="Email(secondary)"
-                               placeholder="Email(secondary)">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Company ID:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="Email(secondary)"
-                               placeholder="Email(secondary)">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Postal code:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="email"
-                               placeholder="Email (secondary):">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">State:</label>
-                        <input class="form-control form-control-sm height-40" type="text" name="companyid" value=""
-                               placeholder="Company ID:">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Native language *:</label>
-                        <label for="country">Choose a country:</label>
-                        <select id="country" name="country">
-                            <option value="david_castella">Maria Gracia</option>
-                            <option value="david_castella">----</option>
-                            <option value="maria_gracia">Rikcy Boards</option>
-                            <option value="mercedes">Carlo Del Bo</option>
-                        </select>
-                        <input type="submit" value="Submit">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Native language *:</label>
-                        <label for="country">Choose a country:</label>
-                        <select id="country" name="country">
-                            <option value="david_castella">Maria Gracia</option>
-                            <option value="david_castella">----</option>
-                            <option value="maria_gracia">Rikcy Boards</option>
-                            <option value="mercedes">Carlo Del Bo</option>
-                        </select>
-                        <input type="submit" value="Submit">
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Native language *:</label>
-                        <label for="country">Choose a country:</label>
-                        <select id="country" name="country">
-                            <option value="david_castella">Maria Gracia</option>
-                            <option value="david_castella">----</option>
-                            <option value="maria_gracia">Rikcy Boards</option>
-                            <option value="mercedes">Carlo Del Bo</option>
-                        </select>
-                        <input type="submit" value="Submit">
-                    </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Email (main)*:</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="email" placeholder="">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">ID:</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="id" placeholder="ID:">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Address:</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="country"
+                           placeholder="Address*:">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">City:</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="country"
+                           placeholder="City*:">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Commercial *:</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="country"
+                           placeholder="City*:">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Phone number 2:</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="phone2"
+                           placeholder="Surname:">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Email (secondary):</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="Email(secondary)"
+                           placeholder="Email(secondary)">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Company ID:</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="Email(secondary)"
+                           placeholder="Email(secondary)">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Postal code:</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="email"
+                           placeholder="Email (secondary):">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">State:</label>
+                    <input class="form-control form-control-sm height-40" type="text" name="companyid" value=""
+                           placeholder="Company ID:">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Country*:</label>
+                    <select id="country" name="country">
+                        <option value="volvo">England</option>
+                        <option value="saab">Armenia</option>
+                        <option value="mercedes">Algeria</option>
+                    </select>
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Commercial *:</label>
+                    <select id="country" name="country">
+                        <option value="david_castella">Maria Gracia</option>
+                        <option value="david_castella">----</option>
+                        <option value="maria_gracia">Rikcy Boards</option>
+                        <option value="mercedes">Carlo Del Bo</option>
+                    </select>
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Native language *:</label>
+                    <select id="country" name="country">
+                        <option value="david_castella">Maria Gracia</option>
+                        <option value="david_castella">----</option>
+                        <option value="maria_gracia">Rikcy Boards</option>
+                        <option value="mercedes">Carlo Del Bo</option>
+                    </select>
+                    <input type="submit" value="Submit">
                 </div>
             </div>
             <div class="col-md-6">
-                <div id="content" class="content">
-                    <h1>Time Line</h1>
-                </div>
+                <ul class="timeline">
+                    <li>
+                        <h1 style="margin-left:64%">Call Time Line</h1>
+                        <div class="timeline-time">
+                            <span class="date">today</span>
+                            <span class="time">04:20</span>
+                        </div>
+                        <div class="timeline-icon">
+                            <a href="javascript:;">&nbsp;</a>
+                        </div>
+                        <div class="timeline-body">
+                            <div class="timeline-header">
+                                <span class="userimage"><img src="../assets/img/user/user-1.jpg" alt=""></span>
+                                <span class="username"><a href="javascript:;">John Smith</a> <small></small></span>
+                                <span class="views">18 Views</span>
+                            </div>
+                            <div class="timeline-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis
+                                    quis tincidunt luctus.
+                                    Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
+                                </p>
+                            </div>
+                            <div class="timeline-likes">
+                                <div class="stats">
+<span class="fa-stack fa-fw stats-icon">
+<i class="fa fa-circle fa-stack-2x text-danger"></i>
+<i class="fa fa-heart fa-stack-1x fa-inverse t-plus-1"></i>
+</span>
+                                    <span class="fa-stack fa-fw stats-icon">
+<i class="fa fa-circle fa-stack-2x text-primary"></i>
+<i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
+</span>
+                                    <span class="stats-total">4.3k</span>
+                                </div>
+                                <div class="stats-right">
+                                    <span class="stats-text">259 Shares</span>
+                                    <span class="stats-text">21 Comments</span>
+                                </div>
+                            </div>
+                            <div class="timeline-footer">
+                                <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                                            class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                                <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                                            class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                                <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                                            class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                            </div>
+                            <div class="timeline-comment-box">
+                                <div class="user"><img src="../assets/img/user/user-13.jpg"></div>
+                                <div class="input">
+                                    <form action="">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control rounded-corner"
+                                                   placeholder="Write a comment...">
+                                            <span class="input-group-btn p-l-10">
+<button class="btn btn-primary f-s-12 rounded-corner" type="button">Comment</button>
+</span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-icon">
+                            <a href="javascript:;">&nbsp;</a>
+                        </div>
+                        <div class="timeline-body">
+                            Loading...
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="row">

@@ -34,26 +34,34 @@
                     <input class="form-control form-control-sm" type="text" name="city" placeholder="City:">
                 </div>
                 <div class="form-group row">
-                    <div class="form-group row width-150">
-                        <label class="col-form-label float-left">Country*:</label>
-                        <select class="form-control form-control-sm float-right" name="paymentmethod">
-                            {{--                            @foreach($countryies as $country):--}}
-                            {{--                            <option value="{{$country->id}}">{{$country->name}}</option>--}}
-                            {{--                            @endforeach--}}
-                            <option value="0">Spain</option>
-                            <option value="1">UK</option>
-                        </select>
+                    <div class="form-group row width-300">
+                        <div class="col-md-4">
+                            <label class="col-form-label float-left">Country*:&nbsp;&nbsp;</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control form-control-sm float-right" name="paymentmethod">
+                                {{--                            @foreach($countryies as $country):--}}
+                                {{--                            <option value="{{$country->id}}">{{$country->name}}</option>--}}
+                                {{--                            @endforeach--}}
+                                <option value="0">Spain</option>
+                                <option value="1">UK</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <div class="form-group row width-150">
-                        <label class="col-form-label float-left">Commercial *:</label>
-                        <select class="form-control form-control-sm float-right" name="paymentmethod">
-                            <option value="Aruba">David Castella</option>
-                            <option value="Bahrain">Maria Gracia</option>
-                            <option value="Bahrain">Ricky Bordas</option>
-                            <option value="Bahrain">Antonio Paladino</option>
-                        </select>
+                    <div class="form-group row width-300">
+                        <div class="col-md-4">
+                            <label class="col-form-label float-left">Commercial*:&nbsp;&nbsp;</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control form-control-sm float-right" name="paymentmethod">
+                                <option value="Aruba">David Castella</option>
+                                <option value="Bahrain">Maria Gracia</option>
+                                <option value="Bahrain">Ricky Bordas</option>
+                                <option value="Bahrain">Antonio Paladino</option>
+                            </select>
+                        </div>
                     </div>
                     <input class="form-control form-control-sm" type="text" name="country" placeholder="Country*:">
                 </div>
@@ -129,46 +137,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2">
-                <div class="row form-group">
-                    <label class="col-form-label">Budget:</label>
-                    <input class="form-control form-control-sm" type="text" name="budget" value="" placeholder="Name*:">
-                    <select class="default-select2 form-control select2-hidden-accessible" data-select2-id="1"
-                            tabindex="-1" aria-hidden="true">
-                        <optgroup label="Mountain Time Zone" data-select2-id="21">
-                            <option value="usd" data-select2-id="23">$</option>
-                            <option value="euro" data-select2-id="22">€</option>
-                        </optgroup>
-                    </select>
-                </div>
-                <div class="row form-group">
-                    <label class="col-form-label">Payment method:</label>
-                    <div class="form-group row" data-select2-id="7">
-                        <label class="col-lg-4 col-form-label">Basic Select2</label>
-                        <div class="col-lg-8">
-                            <select class="default-select2 form-control select2-hidden-accessible" data-select2-id="1"
-                                    tabindex="-1" aria-hidden="true">
-                                <optgroup label="Mountain Time Zone" data-select2-id="21">
-                                    <option value="AZ" data-select2-id="0">----</option>
-                                    <option value="AZ" data-select2-id="1">Wire Transfer</option>
-                                    <option value="CO" data-select2-id="2">Check</option>
-                                    <option value="NE" data-select2-id="3">Specie</option>
-                                    <option value="NE" data-select2-id="4">Other</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md-12">
-                <div class="form-group row width-150">
+                <div class="width-150">
                     <label class="col-form-label">Budget:</label>
                     <input class="form-control form-control-sm width-80" type="number" name="budget"
                            placeholder="CURRENCY" value="2">
                 </div>
-                <div class="form-group row width-150">
+                <div class="width-150">
                     <label class="col-form-label">Payment method:</label>
                     <select class="form-control form-control-sm" name="paymentmethod">
                         <option value="0">Wire transfer</option>
@@ -177,64 +152,32 @@
                         <option value="3">Other</option>
                     </select>
                 </div>
-                <div class="form-group row col-md-12">
+                <div class="col-md-12">
                     <br>
                     <label class="col-form-label col-md-2">Case description made by the client:</label>
-                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:" name="textarea1"></textarea>
+                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
+                              name="textarea1"></textarea>
                     <label class="col-form-label col-md-2">Info for the manager:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the manager:" name="textarea2"></textarea>
+                    <textarea class="form-control" rows="6" placeholder="Info for the manager:"
+                              name="textarea2"></textarea>
                     <label class="col-form-label col-md-2">Info for the commercial:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:" name="textarea3"></textarea>
+                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:"
+                              name="textarea3"></textarea>
                 </div>
                 <br>
-                <div class="inputs" style="">
-                    <div class="form-group row">
-                        <input type="checkbox" name="input_type_0" value="0">
-                        <label>FIRST CONTACT DONE</label>
-                    </div>
-                    <div class="form-group row">
-                        <input type="checkbox" name="input_type_1" value="1">
-                        <label>TRACKING DONE</label>
-                    </div>
-                    <div class="form-group row">
-                        <input type="checkbox" name="input_type_2" value="2">
-                        <label>BUDGET DONE</label>
-                    </div>
-                    <div class="form-group row">
-                        <input type="checkbox" name="input_type_3" value="3">
-                        <label>DOCUMENTATION SENDED</label>
-                    </div>
-                    <div class="form-group row">
-                        <input type="checkbox" name="input_type_4" value="4">
-                        <label>SIGNED</label>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group row">
+                <div class="form-group">
                     <input type="checkbox" value="0" name="input_type_0">
-                    <label>&nbsp;&nbsp;&nbsp;&nbsp;FIRST CONTACT DONE</label>
+                    <label>FIRST CONTACT DONE</label>
                 </div>
-                <div class="form-group row">
+                <div class="form-group">
                     <input type="checkbox" value="1" name="input_type_1">
-                    <label>&nbsp;&nbsp;TRACKING DONE</label>
+                    <label>TRACKING DONE</label>
                 </div>
-                <div class="form-group row">
-                    <input type="checkbox" value="1" name="input_type_1">
-                    <label>&nbsp;&nbsp;TRACKING DONE</label>
-                </div>
-                <div class="form-group row">
-                    <input type="checkbox" value="1" name="input_type_1">
-                    <label>&nbsp;&nbsp;TRACKING DONE</label>
-                </div>
-                <div class="form-group row">
-                    <input type="checkbox" value="2" name="input_type_2">
-                    <label>&nbsp;&nbsp;BUDGET DONE</label>
-                </div>
-                <div class="form-group row">
+                <div class="form-group">
                     <input type="checkbox" value="3" name="input_type_3">
                     <label>&nbsp;&nbsp;DOCUMENTATION SENDED</label>
                 </div>
-                <div class="form-group row">
+                <div class="form-group">
                     <input type="checkbox" value="4" name="input_type_4">
                     <label>&nbsp;&nbsp;SIGNED</label>
                 </div>

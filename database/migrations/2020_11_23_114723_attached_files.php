@@ -14,11 +14,11 @@ class AttachedFiles extends Migration
     public function up()
     {
         Schema::create('attached_files', function (Blueprint $table) {
-            $table->id('id')->primary();
+            $table->integer('id')->primary();
             $table->date('upload_date');
             $table->time('upload_time');
-            $table->id('id_gestor');
-            $table->id('customer_id');
+            $table->integer('id_gestor');
+            $table->integer('customer_id');
             $table->string('id_global');
             $table->string('filename');
             $table->string('file_extension');

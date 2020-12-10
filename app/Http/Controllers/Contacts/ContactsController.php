@@ -51,8 +51,8 @@ class ContactsController extends Controller
         //    $role = Role::all();
         //    $user = User::all();
         //    $role = '';
-        //    $user = '';
-        return view('dashboard.admin.contacts.list');
+        $users = User::all();
+        return view('dashboard.admin.contacts.index', compact('users'));
     }
 
     public function registration()
