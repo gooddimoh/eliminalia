@@ -27,10 +27,12 @@ class Timeline extends Model
         'contact_id',
         'observations',
         'done',
-        'TimeLine',
+        'timeline',
         'management_date'
-        // Some Data //
     ];
+
+//    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'very_strong_password';
+//    GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root1234';
 
     /**
      * The attributes that should be hidden for arrays.

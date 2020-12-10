@@ -40,7 +40,6 @@ class UserManagement extends Controller
 
     public function create(Request $request)
     {
-        $datavalidated = $request->validate(['title' => 'required|unique:posts|max:255', 'body' => 'required']);
         $role = Role::all()->pluck('title', 'id');
 //        $users = User::all()->pluck('title', 'id');
         $request->all();
@@ -53,9 +52,23 @@ class UserManagement extends Controller
 
     public function store(Request $request)
     {
-        User::create($request->all());
-        $user = User::all();
-        return view('dashboard.admin.usermanagement.parts.tbody', compact('user', $user));
+        $request->validate(['name' => 'required', 'password' => 'required', 'email' => 'required', 'permission_level' => 'required']);
+        $data = (object)$request->all();
+        $user = new User;
+        $user->name = $data->name;
+        $user->password = $data->password;
+//        Storage::putFileAs();
+        $user->phone = $data->phone;
+        $user->email = $data->email;
+        $user->dni = $data->dni;
+        $user->address = $data->address;
+        $user->postal_code = $data->postalcode;
+        $user->city = $data->city;
+        $user->state = $data->state;
+        $user->permission_level = $data->permission_level;
+        $user->save();
+
+        return redirect(route('usermanagement.new'));
     }
 
     public function edit(Request $request, User $user)
@@ -69,24 +82,32 @@ class UserManagement extends Controller
         return view('dashboard.admin.usermanagement.edit', compact('user', $user, "users", $users));
     }
 
-    public function update(UpdateUserRequest $request, User $user)
+    public function update(Request $request, User $user)
     {
-
-        $request->all();
-//        $user = User::UPDAT
-//        $user->update();$request->all()
-        $user->roles()->sync($request->input('roles', []));
-
-//        if ($approved == 0 && $user->approved == 1) {
-//            $user->notify(new UserApprovedNotification());
-//        }
-//        return redirect()->route('admin.users.index');
+        $request->validate(['name' => 'required', 'password' => 'required', 'email' => 'required']);
+        $data = (object)$request->all();
+        echo "die";
+        die();
+        $user = User::where('id', $request->get('id'))->firstOrFail();
+        $user->name = $data->name;
+        $user->password = $data->password;
+//        Storage::putFileAs();
+        $user->phone = $data->phone;
+        $user->email = $data->email;
+        $user->dni = $data->dni;
+        $user->address = $data->address;
+        $user->postal_code = $data->postalcode;
+        $user->city = $data->city;
+        $user->state = $data->state;
+        $user->permission_level = $data->permission_level;
+        $user->update();
+        $user->notify(new AdminPageNotification());
+        return redirect()->route('usermanagement.edit');
     }
 
     public function destroy(User $user)
     {
         $user->delete();
-
         return back();
     }
 

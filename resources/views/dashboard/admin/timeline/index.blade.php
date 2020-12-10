@@ -13,7 +13,7 @@
     <!-- begin page-header -->
     <h1 class="page-header">Timeline <small>header small text goes here...</small></h1>
     <!-- end page-header -->
-    <!-- begin timeline -->
+
     <ul class="timeline">
         <li>
             <!-- begin timeline-time -->
@@ -105,32 +105,25 @@
             <!-- begin timeline-body -->
             <div class="timeline-body">
                 Loading...
+                <div id="accordion" class="accordion">
+                    <div class="card bg-light">
+                        <div class="card-header bg-light-lighter pointer-cursor d-flex align-items-center"
+                             data-toggle="collapse"
+                             data-target="#collapseOne" aria-expanded="false">
+                            <i class="fa fa-circle fa-fw text-blue mr-2 f-s-8"></i> Timeline item
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion" style="">
+                            <div class="card-body">
+                                It's about request...
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- begin timeline-body -->
         </li>
     </ul>
 
-    <div class="timeline-body">
-        <div id="accordion" class="accordion">
-            <div class="card bg-dark text-white">
-                <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center" data-toggle="collapse"
-                     data-target="#collapseOne" aria-expanded="true">
-                    <i class="fa fa-circle fa-fw text-blue mr-2 f-s-8"></i> Collapsible Group Item #1
-                </div>
-                <div id="collapseOne" class="collapse show" data-parent="#accordion" style="">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
-                        of them accusamus labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- end timeline -->
 @endsection
 

@@ -25,15 +25,15 @@ return [
             'sub_menu' => [[
                 'url' => '/dashboard/email/inbox',
                 'title' => 'Email Inbox',
-                'route-name' => 'general inbox'
+                'route-name' => 'general_inbox'
             ], [
                 'url' => '/dashboard/email/compose',
                 'title' => 'Email Compose',
-                'route-name' => 'withdraw compose'
+                'route-name' => 'withdraw_compose'
             ], [
                 'url' => '/dashboard/email/detail',
                 'title' => 'Email Detail',
-                'route-name' => 'withdraw detail'
+                'route-name' => 'withdraw_detail'
             ]]
         ],
         ['icon' => 'fa fa-key',
@@ -59,12 +59,12 @@ return [
                 [
                     'url' => '/dashboard/usermanagement/new',
                     'title' => 'Usermanagement New',
-                    'route-name' => 'Usermanagement New'
+                    'route-name' => 'usermanagement_new'
                 ],
                 [
                     'url' => '/dashboard/usermanagement/list',
                     'title' => 'Usermanagement List',
-                    'route-name' => 'Usermanagement List'
+                    'route-name' => 'usermanagement_list'
                 ],
             ]
         ],
@@ -76,18 +76,18 @@ return [
             'sub_menu' => [
                 [
                     'url' => '/dashboard/contacts/registration',
-                    'title' => 'Contact Registration',
-                    'route-name' => 'Contact Registration'
+                    'title' => 'contact registration',
+                    'route-name' => 'contact_registration'
                 ],
                 [
                     'url' => '/dashboard/contacts/list',
                     'title' => 'Contact List',
-                    'route-name' => 'Contac tList'
+                    'route-name' => 'contact list'
                 ],
                 [
                     'url' => '/dashboard/contacts/inquiries',
                     'title' => 'Inquiries',
-                    'route-name' => 'Inquiries'
+                    'route-name' => 'inquiries'
                 ],
 
             ]
@@ -98,33 +98,33 @@ return [
             'url' => 'javascript:;',
             'caret' => true,
             'sub_menu' => [[
-                'url' => '/dashboard/customer/Registration',
+                'url' => '/dashboard/customer/registration',
                 'title' => 'Customer Registration',
-                'route-name' => 'Customer Registration'
+                'route-name' => 'customer_registration'
             ], [
                 'url' => '/dashboard/customer/list (ADMIN)',
                 'title' => 'Customerlist (ADMIN)',
                 'route-name' => 'customerlist(ADMIN)'
             ], [
-                'url' => '/dashboard/customer/List (MANAGER)',
+                'url' => '/dashboard/customer/list (MANAGER)',
                 'title' => 'Customer List (MANAGER)',
                 'route-name' => 'customerlist(MANAGER)'
             ], [
-                'url' => '/dashboard/customer/List (PARTNER)',
+                'url' => '/dashboard/customer/list (PARTNER)',
                 'title' => 'Customer List (PARTNER)',
                 'route-name' => 'customerlist(PARTNER)'
             ], [
-                'url' => '/dashboard/customer/List (REGISTRATOR)',
+                'url' => '/dashboard/customer/list (REGISTRATOR)',
                 'title' => 'Customer List (REGISTRATOR)',
                 'route-name' => 'customerlist(REGISTRATOR)'
             ], [
-                'url' => '/dashboard/customer/List (SADMIN)',
+                'url' => '/dashboard/customer/list (SADMIN)',
                 'title' => 'Customer List (SADMIN)',
                 'route-name' => 'customerlist(SADMIN)'
             ], [
-                'url' => '/dashboard/Pending Billing',
+                'url' => '/dashboard/pending_billing',
                 'title' => 'Pending Billing',
-                'route-name' => 'pendingbilling'
+                'route-name' => 'pending_billing'
             ]
             ]
         ],
@@ -136,11 +136,11 @@ return [
             'sub_menu' => [[
                 'url' => '/dashboard/partners/registration',
                 'title' => 'Partner Registration',
-                'route-name' => 'Partner Registration'
+                'route-name' => 'partner_registration'
             ], [
                 'url' => '/dashboard/partners/list',
                 'title' => 'Partners List',
-                'route-name' => 'Partners List'
+                'route-name' => 'partners_list'
             ]]
         ],
         ['icon' => 'fa fa-key',
@@ -164,21 +164,21 @@ return [
             'sub_menu' => [[
                 'url' => '/dashboard/statistics/general',
                 'title' => 'General Statistics',
-                'route-name' => 'General Statistics'
+                'route-name' => 'general_statistics'
             ], [
                 'url' => '/dashboard/statistics/facturation',
                 'title' => 'Facturation Contracts',
-                'route-name' => 'Withdraw Contracts'
+                'route-name' => 'withdraw_contracts'
             ], [
                 'url' => '/dashboard/statistics/contact',
                 'title' => 'Contact Contracts',
-                'route-name' => 'Contact Statistics'
+                'route-name' => 'contact_statistics'
             ]]
         ],
         ['icon' => 'fa fa-hdd',
             'title' => 'Action History',
-            'url' => '/dashboard/Action History',
-            'route-name' => 'Action History'
+            'url' => '/dashboard/action_history',
+            'route-name' => 'actionhistory'
         ],
         ['icon' => 'fa fa-clock',
             'title' => 'Timeline',
@@ -187,8 +187,8 @@ return [
         ],
         ['icon' => 'fa fa-edit',
             'title' => 'PostToTimeline',
-            'url' => '/dashboard/PostToTimeline',
-            'route-name' => 'PostToTimeline'
+            'url' => '/dashboard/posttotimeline',
+            'route-name' => 'posttotimeline'
         ],
         ['icon' => 'fa fa-edit',
             'title' => 'PostWithFiles',
@@ -198,17 +198,17 @@ return [
         ['icon' => 'fa fa-calendar',
             'title' => 'Calendar',
             'url' => '/dashboard/calendar',
-            'route-name' => 'Calendar'
+            'route-name' => 'calendar'
         ],
         ['icon' => 'fa fa-map',
             'title' => 'Map',
-            'url' => '/dashboard/Map',
-            'route-name' => 'Map'
+            'url' => '/dashboard/map',
+            'route-name' => 'map'
         ],
         ['icon' => 'fa fa-sign-out-alt',
             'title' => 'Logout',
-            'url' => '/dashboard/Logout',
-            'route-name' => 'Logout'
+            'url' => '/dashboard/logout',
+            'route-name' => 'logout'
         ],
     ]
 ];

@@ -5,10 +5,9 @@
 @endpush
 
 @section('content')
-    <form method="post" action="#" class="col-xl-12">
+    <form method="post" action="{{route('usermanagement.update')}}" class="col-xl-12">
         {{--    <form method="post" action="{{route('usermanagement.update')}}" class="col-xl-12">--}}
         @csrf
-        {{ csrf_field() }}
         <div class="row">
             <div class="col-md-3">
                 <h4>New User Data</h4>
@@ -44,14 +43,14 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
-                    <select class="form-control form-control-sm height-40 m-r-10" name="permission_Level">
-                        <option value="SUPERADMIN">SUPERADMIN:</option>
-                        <option value="ADMIN SUCURSAL">ADMIN SUCURSAL:</option>
-                        <option value="ALTA CONTRATOS">ALTA CONTRATOS:</option>
-                        <option value="RASTREADOR">RASTREADOR</option>
-                        <option value="COMERCIAL">COMERCIAL</option>
-                        <option value="PARTNER">PARTNER</option>
-                        <option value="MANAGER">MANAGER</option>
+                    <select class="form-control form-control-sm height-40 m-r-10" name="permission_level">
+                        <option value="0">SUPERADMIN:</option>
+                        <option value="1">ADMIN SUCURSAL:</option>
+                        <option value="3">ALTA CONTRATOS:</option>
+                        <option value="4">RASTREADOR</option>
+                        <option value="5">COMERCIAL</option>
+                        <option value="6">PARTNER</option>
+                        <option value="7">MANAGER</option>
                     </select>
                 </div>
             </div>
@@ -82,12 +81,13 @@
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="state"
                            placeholder="State:" value="{{$user->state}}">
                 </div>
-                <div class="form-group form-control-sm flex-column align-items-end bottom justify-content-end height-40 m-r-10" style="position: relative">
+                <div class="form-group form-control-sm flex-column align-items-end bottom justify-content-end height-40 m-r-10"
+                     style="position: relative">
                     <div class="banned" style="position:absolute; top:40px; right:0px;">
-                        <span class="text">&nbsp;BANNED&nbsp;</span>
-                        <input class="ui-checkboxradio-checked" style="cursor:pointer;" type="checkbox" value="1"
-                               checked
-                               name="banned">
+                        <span class="text">BANNED</span>
+                        <input class="ui-checkboxradio-checked" style="cursor:pointer;" type="checkbox"
+                               {{--                               value="{{$user->banned}}"--}}
+                               checked name="banned">
 
                     </div>
                 </div>

@@ -48,7 +48,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
-                    <select class="form-control form-control-sm height-40 m-r-10" name="name" value="">
+                    <select class="form-control form-control-sm height-40 m-r-10" name="permission_level" value="">
                         <option value="0">Permission Level</option>
                         <option value="1">-----</option>
                         <option value="2">SUPERADMIN:</option>

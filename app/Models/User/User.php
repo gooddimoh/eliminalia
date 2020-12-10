@@ -12,22 +12,17 @@ use Illuminate\Http\Client\Request;
 
 class User extends Model
 {
-    use SoftDeletes, Notifiable, HasFactory;
+    use HasFactory;
 
     protected $table = 'users';
-
-    protected $dates = [
-        'updated_at',
-        'created_at',
-    ];
 
     protected $hidden = [
         'password',
     ];
+    protected $guarded = [];
 
     protected $fillable = [
         'name',
-        'surname',
         'password',
         'phone',
         'email',
@@ -36,8 +31,10 @@ class User extends Model
         'postal_code',
         'city',
         'state',
-        'permission_level',
+        'permission_level'
     ];
+
+    public $timestamps = false;
 
     public function Save(array $options = array())
     {
@@ -90,27 +87,6 @@ class User extends Model
 
     }
 
-    public function Create($data)
-    {
-
-        $user = new User;
-        $user->name = $data->name;
-        $user->surname = $data->surname;
-        $user->password = $data->password;
-
-        Storage::putFileAs();
-
-        $user->phone = $data->phone;
-        $user->email = $data->email;
-        $user->dni = $data->dni;
-        $user->address = $data->address;
-        $user->postal_code = $data->postal_code;
-        $user->city = $data->city;
-        $user->state = $data->state;
-        $user->permission_level = $data->permission_level;
-        $user->save();
-
-    }
 }
 
 
