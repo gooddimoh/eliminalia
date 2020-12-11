@@ -18,7 +18,7 @@ class ContactBookLink extends Migration
             $table->id('id')->autoIncrement();
             $table->timestamp('date')->comment('date');
             $table->integer('contact_id');
-            $table->integer('id_enlace');
+            $table->integer('link_id');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

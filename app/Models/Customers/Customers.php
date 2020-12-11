@@ -4,7 +4,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Client_Internet_Seekers extends Model {
+class Customers extends Model
+{
     use HasFactory;
 
     /**
@@ -13,7 +14,7 @@ class Client_Internet_Seekers extends Model {
      * @var array
      */
 
-    protected $table = 'client_internet_seekers';
+    protected $table = 'customers';
 
     protected $dates = [
         'updated_at',
@@ -22,7 +23,9 @@ class Client_Internet_Seekers extends Model {
         'email_verified_at',
     ];
 
-    protected $fillable = ['id', 'date', 'time', 'user_id', 'client_id', 'internet_search_id'];
+    protected $fillable = [
+        'id',
+    ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -34,3 +37,4 @@ class Client_Internet_Seekers extends Model {
         'password', 'remember_token',
     ];
 }
+

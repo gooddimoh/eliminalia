@@ -19,7 +19,7 @@ class Asuntos extends Migration
             $table->string('last_minute');
             $table->string('id_last_user');
             $table->string('customer_id');
-            $table->string('id_enlace');
+            $table->string('link_id');
             $table->string('affair');
             $table->string('finalized');
             $table->timestamps();

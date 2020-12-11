@@ -24,11 +24,70 @@
 
 @section('content')
     <div class="panel-body">
-        <h4 class="panel-title">CONTACT LIST</h4>
+        <div class="row">
+            <div class="row">
+                <h4 class="panel-title">Search Contact</h4>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-10"></div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group" style="display: flex;">
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark">Not Signed</label>
+                                <input type="checkbox" id="cssCheckbox3" value="" checked>
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark">Signed</label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark">Discarded</label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark">All</label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group" style="display: flex;">
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> No tracking (T) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> No budget (B) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> Doc. not sended (D) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> Doc. sended (D) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> With tracking (T) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> With budget (B) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="pagination">
             <div class="panel panel-inverse">
                 <div class="panel-body">
-                    {{--  Contact ID	Date	Name and surname	Company	Commercial	Status	T	B	D --}}
                     <div id="data-table-default_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
@@ -59,33 +118,39 @@
                                         <th width="1%" class="sorting_asc" tabindex="0"
                                             aria-controls="data-table-default" rowspan="1" colspan="1"
                                             style="width: 0px;" aria-sort="ascending"
-                                            aria-label=": activate to sort column descending">Avatar
+                                            aria-label=": activate to sort column descending">Contact ID
                                         </th>
                                         <th width="1%" data-orderable="false" class="sorting_disabled" rowspan="1"
-                                            colspan="1" style="width: 30px;" aria-label=""></th>
+                                            colspan="1" style="width: 30px;" aria-label="">Date
+                                        </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 272px;"
-                                            aria-label="Rendering engine: activate to sort column ascending">id
+                                            aria-label="Rendering engine: activate to sort column ascending">Name and
+                                            surname
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 339px;"
-                                            aria-label="Browser: activate to sort column ascending">Name
+                                            aria-label="Browser: activate to sort column ascending">Company
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 306px;"
-                                            aria-label="Platform(s): activate to sort column ascending">Email
+                                            aria-label="Platform(s): activate to sort column ascending">Commercial
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 235px;"
-                                            aria-label="Engine version: activate to sort column ascending"> Email
+                                            aria-label="Engine version: activate to sort column ascending"> Status
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 176px;"
-                                            aria-label="CSS grade: activate to sort column ascending">Email
+                                            aria-label="CSS grade: activate to sort column ascending">T
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 176px;"
-                                            aria-label="CSS grade: activate to sort column ascending">Email
+                                            aria-label="CSS grade: activate to sort column ascending">B
+                                        </th>
+                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
+                                            rowspan="1" colspan="1" style="width: 176px;"
+                                            aria-label="CSS grade: activate to sort column ascending">D
                                         </th>
                                     </tr>
                                     </thead>
@@ -103,7 +168,9 @@
                                             <td>{{$user->id}}</td>
                                             <td>{{$user->id}}</td>
                                             <td>{{$user->count}}</td>
-                                            <td>{{$user->id}}</td>
+                                            <td>X</td>
+                                            <td>X</td>
+                                            <td>X</td>
                                         </tr>
                                     @endforeach
                                     </tbody>

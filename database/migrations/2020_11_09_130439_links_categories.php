@@ -15,16 +15,16 @@ class LinksCategories extends Migration
     {
         Schema::create('links_categories', function (Blueprint $table) {
             $table->integer('id');
-            $table->timestamp('fecha')->comment('CURRENT_TIMESTAMP');
-            $table->time('hora');
-            $table->integer('id_gestor');
-            $table->integer('id_cliente');
-            $table->integer('pago');
-            $table->double('importe');
-            $table->integer('porcentaje_realizacion');
-            $table->tinyInteger('realizado');
-            $table->string('forma_pago');
-            $table->string('observaciones');
+            $table->timestamp('date')->comment('CURRENT_TIMESTAMP');
+            $table->time('time');
+            $table->integer('manager_id');
+            $table->integer('client_id');
+            $table->integer('payment');
+            $table->double('amount');
+            $table->integer('percentage_realization');
+            $table->tinyInteger('accomplished');
+            $table->string('payment_form');
+            $table->string('observations');
             $table->date('pay_day');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

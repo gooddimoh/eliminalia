@@ -15,12 +15,12 @@ class Notifications extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->integer('id_usuario');
+            $table->integer('user_id');
             $table->text('name');
-            $table->text('descripcion');
-            $table->string('tipo');
-            $table->tinyInteger('leida');
-            $table->timestamp('fecha');
+            $table->text('description');
+            $table->string('type');
+            $table->tinyInteger('read');
+            $table->timestamp('date');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

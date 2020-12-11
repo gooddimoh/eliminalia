@@ -24,7 +24,7 @@ class Media_Communication_Book extends Model
 
     protected $fillable = [
         'id', 'date', 'media_type', 'Name',
-        'company name', 'cif', 'country', 'city', 'province',
+        'company name', 'tax code', 'country', 'city', 'province',
         'address', 'postal_code', 'phone', 'phone2',
         'e-mail', 'email2', 'phone', 'web', 'observations',
         'language', 'active'

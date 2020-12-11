@@ -15,15 +15,15 @@ class AttachedFiles extends Migration
     {
         Schema::create('attached_files', function (Blueprint $table) {
             $table->integer('id')->primary();
-            $table->date('upload_date');
-            $table->time('upload_time');
-            $table->integer('id_gestor');
+            $table->integer('manager_id');
             $table->integer('customer_id');
-            $table->string('id_global');
+            $table->string('global_id');
             $table->string('filename');
             $table->string('file_extension');
             $table->string('file_path');
             $table->string('kind');
+            $table->date('upload_date');
+            $table->time('upload_time');
             $table->timestamps();
         });
     }

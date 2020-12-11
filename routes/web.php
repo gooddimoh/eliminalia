@@ -43,13 +43,13 @@ Route::get('dashboard/contacts/registration', 'ContactsController@registration')
 Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('inquiries');
 Route::get('dashboard/contacts/list', 'ContactsController@list')->name('contact list');
 
-Route::get('dashboard/customer/registration', 'CustomerController@list')->name('customer.list(SADMIN)');
-Route::get('dashboard/customer/customers list (SADMIN)', 'CustomerController@list')->name('customer.list(SADMIN)');
-Route::get('dashboard/customer/customers list (ADMIN)', 'CustomerController@list')->name('customer.list(SADMIN)');
-Route::get('dashboard/customer/customers list (MANAGER)', 'CustomerController@list')->name('customer.list(MANAGER)');
-Route::get('dashboard/customer/customers list (PARTNER)', 'CustomerController@list')->name('customer.list(PARTNER)');
-Route::get('dashboard/customer/customers list (REGISTRATOR)', 'CustomerController@list')->name('customer.list(REGISTRATOR)');
-Route::get('dashboard/customer/finalizate files (PENDING BILLING) ', 'CustomerController@list')->name('customer.list(PENDING BILLING)');
+Route::get('dashboard/customers/registration', 'CustomerController@registration')->name('customer.registration');
+Route::get('dashboard/customers/list(SADMIN)', 'CustomerController@list_SADMIN')->name('customer.list(SADMIN)');
+Route::get('dashboard/customers/list(ADMIN)', 'CustomerController@list_ADMIN')->name('customer.list(ADMIN)');
+Route::get('dashboard/customers/list(MANAGER)', 'CustomerController@list_MANAGER')->name('customer.list(MANAGER)');
+Route::get('dashboard/customers/list(PARTNER)', 'CustomerController@list_PARTNER')->name('customer.list(PARTNER)');
+Route::get('dashboard/customers/list(REGISTRATOR)', 'CustomerController@list_REGISTRATOR')->name('customer.list(REGISTRATOR)');
+Route::get('dashboard/customers/finalizate_files(PENDING BILLING) ', 'CustomerController@list_PENDING_BILLING')->name('customer.list(PENDING BILLING)');
 
 Route::get('dashboard/partners/list', 'PartnersController@list')->name('partners.list');
 Route::get('dashboard/partners/registration', 'PartnersController@registration')->name('partners.registration');
@@ -98,7 +98,7 @@ Route::post('register', ['uses' => 'Auth\AuthController@postRegister', 'as' => '
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin', 'as' => 'login']);
 Route::post('postlogin', ['uses' => 'Auth\AuthController@postlogin', 'as' => 'postlogin']);
 
-Route::get('dashboard/actionhistory', 'ActionHistory@index')->name('actionhistory');
+Route::get('dashboard/action_history', 'ActionHistory@index')->name('actionhistory');
 
 Route::resource('UserResource', 'UsersController');
 Route::resource('Roles', 'RolesController');

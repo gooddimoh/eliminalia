@@ -16,11 +16,11 @@ class HistoryActions extends Migration
         Schema::create('history_actions', function (Blueprint $table) {
             $table->integer('id');
             $table->date('date');
-            $table->time('hora');
-            $table->integer('id_usuario')->index();
-            $table->integer('id_referencia');
-            $table->string('tipo');
-            $table->string('observaciones');
+            $table->time('time');
+            $table->integer('user_id')->index();
+            $table->integer('reference_id');
+            $table->string('type');
+            $table->string('observations');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

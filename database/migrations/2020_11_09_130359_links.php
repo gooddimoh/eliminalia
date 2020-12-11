@@ -14,19 +14,19 @@ class Links extends Migration
     {
         Schema::create('links', function (Blueprint $table) {
             $table->integer('id');
-            $table->date('fecha');
-            $table->time('hora');
-            $table->date('fecha_modificacion');
-            $table->time('hora_modificacion');
-            $table->integer('id_gestor');
-            $table->integer('id_cliente');
-            $table->string('enlace');
-            $table->string('estado');
-            $table->string('estado_seo');
-            $table->date('fecha_modificacion_seo');
-            $table->timestamp('hora_modificacion_seo');
-            $table->string('tipo_enlace');
-            $table->integer('id_categoria');
+            $table->date('date');
+            $table->time('time');
+            $table->date('modification_date');
+            $table->time('modification_time');
+            $table->integer('manager_id');
+            $table->integer('client_id');
+            $table->string('link');
+            $table->string('state');
+            $table->string('status_seo');
+            $table->date('date_modification_seo');
+            $table->timestamp('seo_modification_time');
+            $table->string('link_type');
+            $table->integer('id_category');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

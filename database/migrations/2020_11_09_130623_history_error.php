@@ -14,9 +14,9 @@ class HistoryError extends Migration
     {
         Schema::create('history_error', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->integer('id_usuario');
+            $table->integer('user_id');
             $table->integer('id_error');
-            $table->date('fecha');
+            $table->date('date');
             $table->time('time');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

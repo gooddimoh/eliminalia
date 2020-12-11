@@ -23,6 +23,14 @@
 @endpush
 
 @section('content')
+    <div class="row">
+        <div class="col-md-12 center">
+            <div class="search-input" style="margin: 60px 100px 60px 100px;">
+                <input class="form-control m-b-5" type="text" placeholder="Search Contact"
+                       style="border-radius: 0px;">
+            </div>
+        </div>
+    </div>
     <div class="panel-body">
         <div class="pagination">
             <div class="panel panel-inverse">
@@ -59,6 +67,11 @@
                                                 type="search" class="form-control form-control-sm" placeholder="Search:"
                                                 aria-controls="data-table-default"></label></div>
                             </div>
+                            <div class="result">
+                                <h4>
+                                    Result number: 61 (COUNT)
+                                </h4>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
@@ -84,7 +97,7 @@
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 339px;"
                                             aria-label="Browser: activate to sort column ascending">
-                                            Name and surname
+                                            Name and Surname
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 306px;"
@@ -101,6 +114,21 @@
                                             aria-label="CSS grade: activate to sort column ascending">
                                             Status
                                         </th>
+                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
+                                            rowspan="1" colspan="1" style="width: 40px;"
+                                            aria-label="CSS grade: activate to sort column ascending">
+                                            T
+                                        </th>
+                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
+                                            rowspan="1" colspan="1" style="width: 40px;"
+                                            aria-label="CSS grade: activate to sort column ascending">
+                                            B
+                                        </th>
+                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
+                                            rowspan="1" colspan="1" style="width: 40px;"
+                                            aria-label="CSS grade: activate to sort column ascending">
+                                            D
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -113,6 +141,11 @@
                                             <td>{{$user->email}}</td>
                                             <td>{{$user->name}}</td>
                                             <td>{{$user->role}}</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>X</td>
+                                            <td>X</td>
+                                            <td>X</td>
                                         </tr>
                                     @endforeach
                                     </tbody>
@@ -121,12 +154,9 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-md-5">
-                                <div class="dataTables_info" id="data-table-default_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries
+                                <div class="dataTables_info" id="data-table-default_info" role="status"
+                                     aria-live="polite">Showing 1 to 10 of 57 entries
                                 </div>
-                                <p>data</p>
-                                <p>data</p>
-                                <p>data</p>
-                                <p>data</p>
                             </div>
                             <div class="col-sm-12 col-md-7">
                                 <div class="dataTables_paginate paging_simple_numbers" id="data-table-default_paginate">

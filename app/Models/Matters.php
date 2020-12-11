@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -7,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Matters extends Model
 {
     use HasFactory;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -21,7 +23,10 @@ class Matters extends Model
         'email_verified_at',
     ];
 
-    protected $fillable = ['id', 'last_date', 'last_minute', 'last_user_id', 'client_id', 'link_id', 'affair', 'finalized', 'visibility'];
+    protected $fillable = [
+        'id', 'last_date', 'last_minute', 'last_user_id',
+        'client_id', 'link_id', 'affair', 'finalized', 'visibility'
+    ];
 
     /**
      * The attributes that should be hidden for arrays.

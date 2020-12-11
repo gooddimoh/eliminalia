@@ -24,7 +24,7 @@ class Comment extends Model
     ];
 
     protected $fillable = [
-        'id', 'id_tarea', 'id_usuario', 'comentario', 'fecha'
+        'id', 'task_id', 'user_id', 'commentary', 'date'
     ];
 
     /**

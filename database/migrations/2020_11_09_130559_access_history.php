@@ -15,13 +15,13 @@ class AccessHistory extends Migration
     {
         Schema::create('access_history', function (Blueprint $table) {
             $table->integer('id');
-            $table->date('fecha');
-            $table->time('hora'); /*time*/
-            $table->integer('id_usuario');
-            $table->string('dispositivo');
-            $table->string('dispositivo_modelo');
-            $table->string('dispositivo_os');
-            $table->string('dispositivo_navegador');
+            $table->date('date');
+            $table->time('time'); /*time*/
+            $table->integer('user_id');
+            $table->string('device');
+            $table->string('model_device');
+            $table->string('device_os');
+            $table->string('browser_device');
             $table->string('ip');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

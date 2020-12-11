@@ -8,8 +8,6 @@ class ActionHistory extends Controller
 {
     public function index()
     {
-        echo '<h1>Action History</h1>';
-        echo '<h1>Action History</h1>';
-        echo '<h1>Action History</h1>';
+        return view('dashboard.admin.actionhistory.actionhistory');
     }
 }

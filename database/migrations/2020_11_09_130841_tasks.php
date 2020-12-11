@@ -12,19 +12,19 @@ class Chores extends Migration
      */
     public function up()
     {
-        Schema::create('chores', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->id('id');
-            $table->string('nombre');
-            $table->text('descripcion');
-            $table->integer('creado_por');
-            $table->integer('para');
-            $table->string('importancia');
-            $table->date('fecha_inicio');
-            $table->date('fecha_final');
-            $table->date('fecha_marca_finalizado');
-            $table->string('estado');
-            $table->integer('grupo');
-            $table->integer('orden');
+            $table->string('name');
+            $table->text('description');
+            $table->integer('created_by');
+            $table->integer('for');
+            $table->string('importance');
+            $table->date('start_date');
+            $table->date('final_date');
+            $table->date('finished_mark_date');
+            $table->string('state');
+            $table->integer('group');
+            $table->integer('order');
             $table->text('log');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
@@ -38,6 +38,6 @@ class Chores extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chores');
+        Schema::dropIfExists('tasks');
     }
 }

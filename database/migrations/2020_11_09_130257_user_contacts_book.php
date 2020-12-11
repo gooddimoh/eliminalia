@@ -16,8 +16,8 @@ class UserContactsBook extends Migration
         Schema::create('user_contacts_book', function (Blueprint $table) {
             $table->integer('id');
             $table->timestamp('date');
-            $table->integer('id_contacto');
-            $table->integer('id_usuario');
+            $table->integer('contact_id');
+            $table->integer('user_id');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

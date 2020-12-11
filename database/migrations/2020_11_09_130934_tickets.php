@@ -14,11 +14,11 @@ class Tickets extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->integer('id');
-            $table->date('fecha');
-            $table->time('hora');
-            $table->integer('id_usuario');
-            $table->integer('id_asunto');
-            $table->string('contenido');
+            $table->date('date');
+            $table->time('time');
+            $table->integer('user_id');
+            $table->integer('case_id');
+            $table->string('content');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

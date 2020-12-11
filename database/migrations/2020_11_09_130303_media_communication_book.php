@@ -19,7 +19,7 @@ class MediaCommunicationBook extends Migration
             $table->string('media_type');
             $table->string('name');
             $table->string('company_name');
-            $table->string('cif');
+            $table->string('Tax Code');
             $table->string('parents');
             $table->string('city');
             $table->string('province');

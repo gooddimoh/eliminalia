@@ -10,7 +10,7 @@
             <div class="col-md-6">
                 <div class="form-group row">
                     <label class="col-form-label">Name*:</label>
-                    <input class="form-control form-control-sm" type="text" name="name" value="" placeholder="Name*:">
+                    <input class="form-control form-control-sm" type="text" name="name" placeholder="Name*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Phone number 1 *:</label>
@@ -116,8 +116,8 @@
                 <div class="form-group row">
                     <label class="col-form-label ">Personal/Company:</label>
                     <select class="form-control form-control-sm" name="personalcompany">
-                        <option value="">PERSONAL</option>
-                        <option value="">COMPANY</option>
+                        <option value="0">PERSONAL</option>
+                        <option value="1">COMPANY</option>
                     </select>
                 </div>
                 <label class="col-form-label form-control-sm"></label>
@@ -184,7 +184,7 @@
             </div>
         </div>
         <div class="row align-right">
-            <button type="submit" class="form-control btn btn-green width-150">CONTACT REGISTER</button>
+            <button type="submit" class="form-control btn btn-green width-150">CONTACT REGISTRATION</button>
         </div>
     </form>
 @endsection
@@ -194,6 +194,9 @@
         margin-right: 10px !important;
     }
 </style>
+<script>
+    {{--    add new textarea   --}}
+</script>
 @push('scripts')
     <script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>
     <script src="{{'assets/js/demo/render.highlight.js'}}"></script>

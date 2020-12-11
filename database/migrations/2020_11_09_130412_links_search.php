@@ -14,11 +14,11 @@ class LinksSearch extends Migration
     {
         Schema::create('links_search', function (Blueprint $table) {
             $table->integer('id');
-            $table->text('enlace');
-            $table->text('texto_a_buscar');
-            $table->tinyInteger('estado');
-            $table->integer('id_usuario');
-            $table->timestamp('fecha_actualizado');
+            $table->text('link');
+            $table->text('text_to_search');
+            $table->tinyInteger('state');
+            $table->integer('user_id');
+            $table->timestamp('date_updated');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

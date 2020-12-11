@@ -5,7 +5,65 @@
 @endpush
 
 @section('content')
-    <p>withdraw_contracts</p>
+    <h1>WITHDRAW CONTRACT</h1>
+    <div class="CUSTOMER">
+        <form action="" id="form">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input class="form-control m-b-5" style="width:100%;" type="text" placeholder="input1">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control m-b-5" style="width:100%;" type="text" placeholder="input1">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control m-b-5" style="width:100%;" type="text" placeholder="input1">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input class="form-control m-b-5" style="width:100%;" type="text" placeholder="input1">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control m-b-5" style="width:100%;" type="text" placeholder="input1">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control m-b-5" style="width:100%;" type="text" placeholder="input1">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                <textarea class="form-control m-b-5" style="width:100%;" name="" id="" cols="30" rows="10">
+
+                </textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn-green" type="button">
+                                COSTUMER PROFILE
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="buttons">
+                                <button class="btn-red" type="button">
+                                    CANCEL REQUEST
+                                </button>
+                                <button class="btn-green" type="button">
+                                    FINISH COSTUMER
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 @endsection
 
 @push('scripts')
