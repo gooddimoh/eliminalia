@@ -13,7 +13,7 @@ class User_Contact_Book extends Model
      *
      * @var array
      */
-    protected $table = 'User_Contacts_Book';
+    protected $table = 'user_contacts_book';
 
     protected $dates = [
         'updated_at',
