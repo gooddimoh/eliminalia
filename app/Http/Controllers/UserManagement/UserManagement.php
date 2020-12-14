@@ -43,9 +43,6 @@ class UserManagement extends Controller
         $role = Role::all()->pluck('title', 'id');
 //        $users = User::all()->pluck('title', 'id');
         $request->all();
-
-        $deleteid = $request->get("delete");
-        User::destroy($deleteid);
         $users = User::all();
         return view('dashboard.admin.usermanagement.create')->with('users', $users);
     }
@@ -57,7 +54,6 @@ class UserManagement extends Controller
         $user = new User;
         $user->name = $data->name;
         $user->password = $data->password;
-//        Storage::putFileAs();
         $user->phone = $data->phone;
         $user->email = $data->email;
         $user->dni = $data->dni;
@@ -67,14 +63,19 @@ class UserManagement extends Controller
         $user->state = $data->state;
         $user->permission_level = $data->permission_level;
         $user->save();
-
+        $directory = preg_replace("[^0-9_A-Z]", "", strtoupper(strip_tags((string)$user->name . "_" . (string)$user->id)));
+        Storage::makeDirectory('/UserDirectories' . strtoupper($directory) . '/public/');
+        Storage::makeDirectory('/UserDirectories' . strtoupper($directory) . '/private/');
+        session()->put('user', (array)$user);
+        var_dump(session()->get('user'));
         return redirect(route('usermanagement.new'));
     }
 
     public function edit(Request $request, User $user)
     {
+        var_dump($request->all());
+        die();
         $id = $request->get("edit");
-
         $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
         $user = User::query()->find($id);
@@ -105,9 +106,10 @@ class UserManagement extends Controller
         return redirect()->route('usermanagement.edit');
     }
 
-    public function destroy(User $user)
+    public function destroy(User $user,Request $request)
     {
-        $user->delete();
+        $deleteid = $request->get("delete");
+        User::destroy($deleteid);
         return back();
     }
 

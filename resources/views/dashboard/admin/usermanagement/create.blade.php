@@ -48,7 +48,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
-                    <select class="form-control form-control-sm height-40 m-r-10" name="permission_level" value="">
+                    <select class="form-control form-control-sm height-40 m-r-10" name="permission_level">
                         <option value="0">Permission Level</option>
                         <option value="1">-----</option>
                         <option value="2">SUPERADMIN:</option>
@@ -74,8 +74,8 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="email"
-                           placeholder="Email (main)*:">
+                    <input id="email" class="form-control form-control-sm height-40 m-r-10" type="email" value=""
+                           name="email" placeholder="Email (main)*:" data->
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">ID:</label>
@@ -102,14 +102,9 @@
                 </div>
             </div>
             <div class="col-md-6 ui-sortable">
-                <div id="data-table-default_filter" class="dataTables_filter">
+                <div class="dataTables_filter">
                     <label class="flex-row">
                         <h4 class="float-left">Search existent user</h4>
-                        <div class="panel">
-                            <h1>Filter</h1>
-                        </div>
-                        <input type="search" class="form-control form-control-sm" placeholder=""
-                               aria-controls="data-table-default">
                     </label>
                 </div>
                 <h1>Search existent user</h1>
@@ -125,59 +120,59 @@
                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-cUsername: circle btn-warning"
                                data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-Username:
-danger"
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-Username: danger"
                                data-click="panel-remove"><i class="fa fa-times"></i></a>
                         </div>
                     </div>
                     <table id="data-table-default"
                            class="table table-striped table-bordered table-td-valign-middle dataTable no-footer dtr-inline"
-                           role="grid" aria-describedby="data-table-default_info" style="width: 1609px;">
-                        <table class="table table-striped m-b-0">
-                            <thead>
+                           role="grid" aria-describedby="data-table-default_info" width="100%">
+                        <thead>
+                        <tr role="row">
+                            <th width="1%" class="sorting_asc" tabindex="0" aria-controls="data-table-default"
+                                rowspan="1" colspan="1" style="width: 0px;" aria-sort="ascending"
+                                aria-label=": activate to sort column descending">ID
+                            </th>
+                            <th width="1%" data-orderable="false" class="sorting_disabled" rowspan="1" colspan="1"
+                                style="width: 30px;" aria-label="">IMG
+                            </th>
+                            <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
+                                rowspan="1" colspan="1" style="width: 272px;"
+                                aria-label="Rendering engine: activate to sort column ascending">Email
+                            </th>
+                            <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
+                                rowspan="1" colspan="1" style="width: 329px;"
+                                aria-label="Browser: activate to sort column ascending">Username:
+                            </th>
+                            <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
+                                rowspan="1" colspan="1" style="width: 329px;"
+                                aria-label="Browser: activate to sort column ascending">Role:
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($users as $user)
                             <tr>
-                                <th>#</th>
-                                <th>Username</th>
-                                <th>Email Address</th>
-                                <th width="1%"></th>
-                                <th width="1%"></th>
-                                <th width="1%"></th>
+                                <td>{{$user->id}}</td>
+                                <td class="with-img">
+                                    <img src=" " class="img-rounded height-30" alt="img">
+                                </td>
+                                <td>{{$user->email}}</td>
+                                <td>{{$user->name}}</td>
+                                <td>SUPERADMIN{{$user->role}}</td>
+                                <td><a class="btn-yellow p-5" style="cursor: pointer;"
+                                       onclick="ajax('edit','{{$user->id}}')">Edit </a></td>
+                                <td><a class="btn-red p-5" style="cursor: pointer;"
+                                       onclick="ajax('delete','{{$user->id}}')"> Delete </a></td>
                             </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($users as $user)
-                                <a href="http://loc.eliminalia.com/dashboard/usermanagement/edit?edit=2">
-                                    <tr>
-                                        <th class="width-60">{{$user->id}}</th>
-                                        <th class="width-60">{{$user->name}}</th>
-                                        <th class="width-60">{{$user->email}}</th>
-                                        <th class="width-60">&nbsp;</th>
-                                        <th class="width-60">
-                                            <a class="red"
-                                               href="http://loc.eliminalia.com/dashboard/usermanagement/new?delete={{$user->id}}">
-                                                Delete
-                                            </a>
-                                        </th>
-                                        <th class="width-60">
-                                            <a class="red"
-                                               href="http://loc.eliminalia.com/dashboard/usermanagement/edit?edit={{$user->id}}">
-                                                Edit
-                                            </a>
-                                        </th>
-                                    </tr>
-                                </a>
-                            @endforeach
-                            </tbody>
-                        </table>
+                        @endforeach
+                        </tbody>
                     </table>
-                    <div class="panel-body">
-                        <!-- begin table-responsive -->
-                    </div>
-                </div>
-                <div class="panel">
-                    <div class="panel-body">
-                        <div id="timeline">
-                            <p>Time Line</p>
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div id="timeline">
+                                <p>Time Line</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -188,29 +183,7 @@ danger"
         legend
     </div>
 @endsection
-{{--<script>--}}
-{{--    $("#form").submit(function (e) {--}}
-{{--        e.preventDefault(); // avoid to execute the actual submit of the form.--}}
-{{--        var form = $(this).serialize();--}}
-{{--        console.log(form);--}}
-{{--        var request = $.ajax({--}}
-{{--            url: "http://loc.eliminalia.com/usermanagement/create",--}}
-{{--            method: "post",--}}
-{{--            data: form,--}}
-{{--            dataType: "html"--}}
-{{--        });--}}
-{{--        request.done(function (view) {--}}
 
-{{--            console.log('success');--}}
-{{--            console.log('tbody');--}}
-
-{{--            $("#tbody").html(view);--}}
-{{--        });--}}
-{{--        request.fail(function (jqXHR, textStatus) {--}}
-{{--            alert("Request failed: " + textStatus);--}}
-{{--        });--}}
-{{--    });--}}
-{{--</script>--}}
 @push('scripts')
     <script src="{{asset('/assets/plugins/jquery-migrate/dist/jquery-migrate.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>
@@ -221,3 +194,31 @@ danger"
     <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
     <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
 @endpush
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+<script type="">
+    ajax(action, id);
+    ajax(action, id);
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': '@csrf'
+        }
+    });
+    function ajax(action, id) {
+        var request = $.ajax({
+            url: "http://loc.eliminalia.com/usermanagement/" + action,
+            method: "POST",
+            data: {action: action, id: id},
+            dataType: "html"
+        });
+        request.done(function (view) {
+            console.log('success');
+            console.log('tbody');
+            $("#tbody").html(view);
+        });
+        request.fail(function (jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
+    }
+</script>

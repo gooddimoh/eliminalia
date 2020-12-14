@@ -22,50 +22,48 @@
             <div id="data-table-default_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                 <div class="row">
                     <div class="col-sm-12">
-                        <table id="data-table-default"
-                               class="table table-striped table-bordered table-td-valign-middle dataTable no-footer dtr-inline"
-                               role="grid" aria-describedby="data-table-default_info" style="width: 1609px;">
+                        <table id="data-table-default" class="table table-striped table-bordered table-td-valign-middle dataTable no-footer dtr-inline" role="grid" aria-describedby="data-table-default_info" style="width: 1609px;">
                             <thead>
                             <tr role="row">
                                 <th width="1%" class="sorting_asc" tabindex="0" aria-controls="data-table-default"
                                     rowspan="1" colspan="1" style="width: 0px;" aria-sort="ascending"
-                                    aria-label=": activate to sort column descending"></th>
+                                    aria-label=": activate to sort column descending">ID</th>
                                 <th width="1%" data-orderable="false" class="sorting_disabled" rowspan="1" colspan="1"
-                                    style="width: 30px;" aria-label=""></th>
+                                    style="width: 30px;" aria-label="">IMG</th>
                                 <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                     rowspan="1" colspan="1" style="width: 272px;"
-                                    aria-label="Rendering engine: activate to sort column ascending">Rendering engine
+                                    aria-label="Rendering engine: activate to sort column ascending">EMAIL
                                 </th>
                                 <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                     rowspan="1" colspan="1" style="width: 329px;"
-                                    aria-label="Browser: activate to sort column ascending">Username:
+                                    aria-label="Browser: activate to sort column ascending">Name:
                                 </th>
                                 <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                     rowspan="1" colspan="1" style="width: 305px;"
-                                    aria-label="Platform(s): activate to sort column ascending">Platform(s)
+                                    aria-label="Platform(s): activate to sort column ascending">Surename
                                 </th>
                                 <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                     rowspan="1" colspan="1" style="width: 239px;"
-                                    aria-label="Engine version: activate to sort column ascending">Engine version
+                                    aria-label="Engine version: activate to sort column ascending">ROLE
                                 </th>
                                 <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                     rowspan="1" colspan="1" style="width: 183px;"
-                                    aria-label="CSS grade: activate to sort column ascending">CSS grade
+                                    aria-label="CSS grade: activate to sort column ascending">Created Date&Time
                                 </th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($users as $user)
-                                <tr class="gradeA even" role="row">
-                                    <td class="f-w-600 text-inverse dtr-control sorting_1" tabindex="0">{{$user->id}}</td>
-                                    <td class="with-img">
-                                        <img src="{{$user->id}}" class="img-rounded height-100">
-                                    </td>
-                                    <td>{{$user->name}}</td>
-                                    <td>{{$user->password}}</td>
+                                <tr>
                                     <td>{{$user->id}}</td>
-                                    <td>{{1}}</td>
-                                    <td>{{2}}</td>
+                                    <td class="with-img">
+                                        <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
+                                    </td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->name}}</td>
+                                    <td>SUPERADMIN{{$user->role}}</td>
+                                    <td>{{$user->role}}</td>
+                                    <td>{{$user->role}}</td>
                                 </tr>
                             @endforeach
                             </tbody>

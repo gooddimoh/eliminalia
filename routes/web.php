@@ -36,8 +36,10 @@ Route::get('dashboard/usermanagement/new', 'UserManagement@create')->name('userm
 Route::get('dashboard/usermanagement/list', 'UserManagement@list')->name('usermanagement.list');
 Route::get('dashboard/usermanagement/edit', 'UserManagement@edit')->name('usermanagement.edit');
 
+Route::post('usermanagement/delete', 'UserManagement@destroy')->name('usermanagement.destroy');
 Route::post('usermanagement/create', 'UserManagement@store')->name('usermanagement.create');
 Route::post('usermanagement/update', 'UserManagement@update')->name('usermanagement.update');
+Route::post('usermanagement/edit', 'UserManagement@edit')->name('usermanagement.edit');
 
 Route::get('dashboard/contacts/registration', 'ContactsController@registration')->name('contact registration');
 Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('inquiries');
