@@ -71,18 +71,21 @@ class UserManagement extends Controller
         return redirect(route('usermanagement.new'));
     }
 
-    public function edit(Request $request, User $user)
+    public function edit(Request $request, User $user, Response $response)
     {
         var_dump($request->all());
-        die();
+        var_dump($request->ajax());
+
+        die('ajax');
+
         $id = $request->get("edit");
         $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
         $table = "<table></table>";
 
-        if (Request::ajax()) {
-
-        }
+        if ($request->ajax()){ }
+        $request->ajax();
+        $response->html();
 
         $user = User::query()->find($id);
         $user = DB::table('users')->where('id', $id)->first();
@@ -98,7 +101,7 @@ class UserManagement extends Controller
         $user = User::where('id', $request->get('id'))->firstOrFail();
         $user->name = $data->name;
         $user->password = $data->password;
-//        Storage::putFileAs();
+        Storage::putFileAs(' ');
         $user->phone = $data->phone;
         $user->email = $data->email;
         $user->dni = $data->dni;

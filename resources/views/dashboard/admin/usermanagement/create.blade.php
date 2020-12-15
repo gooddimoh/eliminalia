@@ -200,12 +200,13 @@
 <script type="">
     ajax(action, id);
     ajax(action, id);
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': '@csrf'
-        }
-    });
+
     function ajax(action, id) {
+        $.ajaxSetup({
+            headers: {
+                'X-CSSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
         var request = $.ajax({
             url: "http://loc.eliminalia.com/usermanagement/" + action,
             method: "POST",
@@ -221,4 +222,5 @@
             alert("Request failed: " + textStatus);
         });
     }
+
 </script>
