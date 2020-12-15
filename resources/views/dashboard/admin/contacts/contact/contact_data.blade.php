@@ -23,53 +23,108 @@
 @endpush
 
 @section('content')
-    <div class="row">
-        <div class="col-md-12 center">
-            <div class="search-input" style="margin: 60px 100px 60px 100px;">
-                <input class="form-control m-b-5" type="text" placeholder="Search Contact" style="border-radius: 0px;">
-            </div>
-        </div>
-    </div>
     <div class="panel-body">
-        <div class="pagination">
-            <div class="panel panel-inverse">
-                <div class="panel-heading">
-                    <h4 class="panel-title">Data Table - Default</h4>
-                    <div class="panel-heading-btn">
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
-                           data-click="panel-expand"><i class="fa fa-expand"></i></a>
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
-                           data-click="panel-reload"><i class="fa fa-redo"></i></a>
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning"
-                           data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
-                           data-click="panel-remove"><i class="fa fa-times"></i></a>
+        <div class="row">
+            <div class="row">
+                <h4 class="panel-title">MODIFY CONTACT</h4>
+                <p>Contact data</p>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-10"></div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group" style="display: flex;">
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark">Not Signed</label>
+                                <input type="checkbox" id="cssCheckbox3" value="" checked>
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark">Signed</label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark">Discarded</label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark">All</label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group" style="display: flex;">
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> No tracking (T) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> No budget (B) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> Doc. not sended (D) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> Doc. sended (D) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> With tracking (T) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                            <div class="checkbox checkbox-css is-valid">
+                                <label for="cssCheckbox3" class="text-dark"> With budget (B) </label>
+                                <input type="checkbox" id="cssCheckbox3" value="">
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="calls">
+            <h1>Calls</h1>
+            <div class="date">
+                <input type="date">
+                <div class="form-group row m-b-15">
+                    <label class="col-form-label col-md-3">Example select</label>
+                    <div class="col-md-9">
+                        <select class="form-control">
+                            <option>00:00</option>
+                            <option>00:15</option>
+                            <option>00:30</option>
+                            <option>00:45</option>
+                            <option>01:00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <div class="panel panel-inverse">
                 <div class="panel-body">
                     <div id="data-table-default_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                <div class="dataTables_length" id="data-table-default_length"><label>
-                                        Show
+                                <div class="dataTables_length" id="data-table-default_length"><label>Show
                                         <select name="data-table-default_length" aria-controls="data-table-default"
                                                 class="custom-select custom-select-sm form-control form-control-sm">
                                             <option value="10">10</option>
                                             <option value="25">25</option>
                                             <option value="50">50</option>
                                             <option value="100">100</option>
-                                        </select> entries</label></div>
+                                        </select> entries</label>
+                                </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
-                                <div id="data-table-default_filter" class="dataTables_filter"><label>
-                                        Search:<input
-                                                type="search" class="form-control form-control-sm" placeholder="Search:"
-                                                aria-controls="data-table-default"></label></div>
-                            </div>
-                            <div class="result">
-                                <h4>
-                                    Result number: 61 (COUNT)
-                                </h4>
+                                <div id="data-table-default_filter" class="dataTables_filter">
+                                    <label> Search: <input type="search" class="form-control form-control-sm"
+                                                           placeholder="Search:"
+                                                           aria-controls="data-table-default"></label></div>
                             </div>
                         </div>
                         <div class="row">
@@ -82,66 +137,56 @@
                                         <th width="1%" class="sorting_asc" tabindex="0"
                                             aria-controls="data-table-default" rowspan="1" colspan="1"
                                             style="width: 0px;" aria-sort="ascending"
-                                            aria-label=": activate to sort column descending">
-                                            Contact ID
+                                            aria-label=": activate to sort column descending">Contact ID
                                         </th>
                                         <th width="1%" data-orderable="false" class="sorting_disabled" rowspan="1"
-                                            colspan="1" style="width: 30px;" aria-label="">2
+                                            colspan="1" style="width: 30px;" aria-label="">Date
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 272px;"
-                                            aria-label="Rendering engine: activate to sort column ascending">
-                                            Date
+                                            aria-label="Rendering engine: activate to sort column ascending">Name and
+                                            surname
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 339px;"
-                                            aria-label="Browser: activate to sort column ascending">
-                                            Name and Surname
+                                            aria-label="Browser: activate to sort column ascending">Company
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 306px;"
-                                            aria-label="Platform(s): activate to sort column ascending">
-                                            Company
+                                            aria-label="Platform(s): activate to sort column ascending">Commercial
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 235px;"
-                                            aria-label="Engine version: activate to sort column ascending">
-                                            Commercial
+                                            aria-label="Engine version: activate to sort column ascending"> Status
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 176px;"
-                                            aria-label="CSS grade: activate to sort column ascending">
-                                            Status
+                                            aria-label="CSS grade: activate to sort column ascending">T
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
-                                            rowspan="1" colspan="1" style="width: 40px;"
-                                            aria-label="CSS grade: activate to sort column ascending">
-                                            T
+                                            rowspan="1" colspan="1" style="width: 176px;"
+                                            aria-label="CSS grade: activate to sort column ascending">B
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
-                                            rowspan="1" colspan="1" style="width: 40px;"
-                                            aria-label="CSS grade: activate to sort column ascending">
-                                            B
-                                        </th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
-                                            rowspan="1" colspan="1" style="width: 40px;"
-                                            aria-label="CSS grade: activate to sort column ascending">
-                                            D
+                                            rowspan="1" colspan="1" style="width: 176px;"
+                                            aria-label="CSS grade: activate to sort column ascending">D
                                         </th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($users as $user)
-                                        <tr>
-                                            <td>{{$user->id}}</td>
-                                            <td class="with-img">
+                                        <tr class="gradeX odd" role="row">
+                                            <td width="1%" class="f-w-600 text-inverse dtr-control sorting_1"
+                                                tabindex="0">
+                                                1
+                                            </td>
+                                            <td width="1%" class="with-img">
                                                 <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
                                             </td>
-                                            <td>{{$user->email}}</td>
-                                            <td>{{$user->name}}</td>
-                                            <td>{{$user->role}}</td>
-                                            <td>...</td>
-                                            <td>...</td>
+                                            <td>{{$user->id}}</td>
+                                            <td>{{$user->id}}</td>
+                                            <td>{{$user->id}}</td>
+                                            <td>{{$user->count}}</td>
                                             <td>X</td>
                                             <td>X</td>
                                             <td>X</td>
@@ -190,9 +235,8 @@
                                                                                   data-dt-idx="6" tabindex="0"
                                                                                   class="page-link">6</a></li>
                                         <li class="paginate_button page-item next" id="data-table-default_next">
-                                            <a href="#" aria-controls="data-table-default" data-dt-idx="7" tabindex="0"
-                                               class="page-link">Next</a>
-                                        </li>
+                                            <a href="#" aria-controls="data-table-default" data-dt-idx="7"
+                                               tabindex="0" class="page-link">Next</a></li>
                                     </ul>
                                 </div>
                             </div>

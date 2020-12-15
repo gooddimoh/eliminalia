@@ -78,9 +78,15 @@ class UserManagement extends Controller
         $id = $request->get("edit");
         $roles = Role::all()->pluck('title', 'id');
         $users = User::all();
+        $table = "<table></table>";
+
+        if (Request::ajax()) {
+
+        }
+
         $user = User::query()->find($id);
         $user = DB::table('users')->where('id', $id)->first();
-        return view('dashboard.admin.usermanagement.edit', compact('user', $user, "users", $users));
+        return view('dashboard.admin.usermanagement.edit', compact('user', $user, "users", $users))->render();
     }
 
     public function update(Request $request, User $user)
@@ -106,7 +112,7 @@ class UserManagement extends Controller
         return redirect()->route('usermanagement.edit');
     }
 
-    public function destroy(User $user,Request $request)
+    public function destroy(User $user, Request $request)
     {
         $deleteid = $request->get("delete");
         User::destroy($deleteid);
