@@ -19,8 +19,7 @@ class ContactBookLink extends Migration
             $table->timestamp('date')->comment('date');
             $table->integer('contact_id');
             $table->integer('link_id');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

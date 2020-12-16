@@ -21,8 +21,7 @@ class HistoryActions extends Migration
             $table->integer('reference_id');
             $table->string('type');
             $table->string('observations');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

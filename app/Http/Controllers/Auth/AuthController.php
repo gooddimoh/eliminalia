@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -33,11 +34,8 @@ class AuthController extends Controller
 
     public function GetRegister(Request $request)
     {
-//        $request->session(['key' => 'value']);
-        $user = User::create($request->all());
-//        echo "1234 GetRegister 1234";
-//        var_dump($request->all());
-//        if success
+        $user = new User();
+//        $user->c
         return view('auth.register');
     }
 

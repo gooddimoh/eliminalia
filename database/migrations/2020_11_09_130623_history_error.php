@@ -18,8 +18,7 @@ class HistoryError extends Migration
             $table->integer('id_error');
             $table->date('date');
             $table->time('time');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

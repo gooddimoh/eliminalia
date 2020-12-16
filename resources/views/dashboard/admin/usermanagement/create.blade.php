@@ -41,12 +41,6 @@
                            value="">
                 </div>
                 <div class="form-group row">
-                    <label class="col-form-label">City:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="city"
-                           placeholder="City:"
-                           value="">
-                </div>
-                <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
                     <select class="form-control form-control-sm height-40 m-r-10" name="permission_level">
                         <option value="0">Permission Level</option>
@@ -78,19 +72,20 @@
                            name="email" placeholder="Email (main)*:" data->
                 </div>
                 <div class="form-group row">
-                    <label class="col-form-label">ID:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="id"
-                           placeholder="ID:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Postal code:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="postalcode"
-                           placeholder="Postal code:">
+                    <label class="col-form-label">City:</label>
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="city"
+                           placeholder="City:"
+                           value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="state"
                            placeholder="State:">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">Postal code:</label>
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="postalcode"
+                           placeholder="Postal code:">
                 </div>
                 <div class="form-group row ">
                     <div class="row-align-right">
@@ -150,37 +145,50 @@
                             </th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tbody">
                         @foreach($users as $user)
-                            <tr>
+                            <tr onclick="redirect();">
                                 <td>{{$user->id}}</td>
                                 <td class="with-img">
-                                    <img src=" " class="img-rounded height-30" alt="img">
+                                    <img src="" class="img-rounded height-30" alt="img">
                                 </td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->name}}</td>
                                 <td>SUPERADMIN{{$user->role}}</td>
-                                <td><a class="btn-yellow p-5" style="cursor: pointer;"
-                                       onclick="ajax('edit','{{$user->id}}')">Edit </a></td>
-                                <td><a class="btn-red p-5" style="cursor: pointer;"
-                                       onclick="ajax('delete','{{$user->id}}')"> Delete </a></td>
+                                <td><a class="btn btn-yellow m-r-5 m-b-5" style="cursor: pointer;"
+                                       onclick="customajax('edit','{{$user->id}}')">Edit </a></td>
+                                <td><a class="btn btn-danger m-r-5 m-b-5" style="cursor: pointer;"
+                                       onclick="customajax('delete','{{$user->id}}')"> Delete </a></td>
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
-                    <div class="panel">
-                        <div class="panel-body">
-                            <div id="timeline">
-                                <p>Time Line</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </form>
     <div class="panel-body">
-        legend
+        <h5>Legend</h5>
+
+        SUPERADMIN(GENERAL): User with all permissions and access to all sections of the application. Is the only user
+        able to delete users, clients, contacts, etc.
+        SUPERADMIN (BCN): Usuario con restricciones de permisos, clientes unicamente del grupo de BARCELONA, sin acceso
+        a las estadísticas, historal de acciones ni partners.
+        SUPERADMIN (KIEV): Usuario con restricciones de permisos, clientes unicamente del grupo de KIEV, sin acceso a
+        las estadísticas, historal de acciones ni partners.
+        SUPERADMIN (CONSULTOR): Usuario con restricciones de permisos, sin acceso a las estadísticas, historal de
+        acciones, partners ni los datos de facturación del cliente.
+        ADMIN: User with access to the contact section, requests for completion, SEO, partners, agenda and customer
+        billing.
+        GESTOR: User with access only to the list of clients that he has assigned. He is in charge of managing the
+        files.
+        REGISTRADOR: User with access to customer registration and modify customers.
+        RECEPCION: User with access to contact registration and modify contacts.
+        COMERCIAL: User with access only to the contact registration, modify contacts and requests for information
+        section.
+        SEO: User who manages SEO cases with access to clients who have been opened an active SEO case.
+        REGISTRADOR SEO: User who can confirm or deny requests for a client to have an active SEO case.
+        PARTNER: User who has access only to customers whose partner is the same as the user.
     </div>
 @endsection
 
@@ -194,33 +202,31 @@
     <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
     <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
 @endpush
+<script>
+    let action = 'new';
 
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous"></script>
-<script type="">
-    ajax(action, id);
-    ajax(action, id);
-
-    function ajax(action, id) {
+    function customajax(action, id) {
         $.ajaxSetup({
             headers: {
-                'X-CSSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                'X-CSSRF-TOKEN': '{{csrf_token()}}'
             }
         });
         var request = $.ajax({
-            url: "http://loc.eliminalia.com/usermanagement/" + action,
+            url: "{{route('usermanagement')}}/" + action,
             method: "POST",
-            data: {action: action, id: id},
+            data: {action: action, id: id, _token: '{{csrf_token()}}'},
             dataType: "html"
         });
         request.done(function (view) {
-            console.log('success');
-            console.log('tbody');
-            $("#tbody").html(view);
+            $("tbody#tbody").html(view);
         });
         request.fail(function (jqXHR, textStatus) {
             alert("Request failed: " + textStatus);
         });
+    }
+
+    function redirect() {
+        alert("redirect");
     }
 
 </script>

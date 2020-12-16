@@ -50,7 +50,7 @@
             <!-- end login-header -->
             <!-- begin login-content -->
             <div class="login-content">
-                <form action="{{route('dashboard')}}" method="GET" class="margin-bottom-0">
+                <form action="{{route('login')}}" method="POST" class="margin-bottom-0">
                     <div class="form-group m-b-15">
                         <input type="text" class="form-control form-control-lg" placeholder="Email Address" required/>
                     </div>

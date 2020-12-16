@@ -46,20 +46,25 @@
             <!-- end register-header -->
             <!-- begin register-content -->
             <div class="register-content">
-                <form action="index.html" method="GET" class="margin-bottom-0">
+                <form action="{{route('register')}}" method="POST" class="margin-bottom-0" name="">
+                    @csrf
                     <label class="control-label">Name <span class="text-danger">*</span></label>
                     <div class="row row-space-10">
                         <div class="col-md-6 m-b-15">
-                            <input type="text" class="form-control" placeholder="First name" required/>
+                            <input type="text" class="form-control" placeholder="First name" name="user['first_name']"
+                                   required/>
                         </div>
                         <div class="col-md-6 m-b-15">
-                            <input type="text" class="form-control" placeholder="Last name" required/>
+                            <input type="text" class="form-control" placeholder="Last name" name="user['last_name']"
+                                   required/>
                         </div>
                     </div>
                     <label class="control-label">Email <span class="text-danger">*</span></label>
                     <div class="row m-b-15">
                         <div class="col-md-12">
-                            <input type="text" class="form-control" placeholder="Email address" required/>
+                            <input type="text" class="form-control" placeholder="Email address"
+                                   name="user['email_address']"
+                                   required/>
                         </div>
                     </div>
                     <label class="control-label">Re-enter Email <span class="text-danger">*</span></label>
@@ -71,7 +76,8 @@
                     <label class="control-label">Password <span class="text-danger">*</span></label>
                     <div class="row m-b-15">
                         <div class="col-md-12">
-                            <input type="password" class="form-control" placeholder="Password" required/>
+                            <input type="password" class="form-control" placeholder="Password" name="user['password']"
+                                   required/>
                         </div>
                     </div>
                     <div class="checkbox checkbox-css m-b-30">
@@ -87,8 +93,7 @@
                     <div class="register-buttons">
                         <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
                     </div>
-                    <div class="m-t-30 m-b-30 p-b-30">
-                        Already a member? Click <a href="login_v3.html">here</a> to login.
+                    <div class="m-t-30 m-b-30 p-b-30"> <a href="login_v3.html">here</a> to login.
                     </div>
                     <hr/>
                     <p class="text-center mb-0">

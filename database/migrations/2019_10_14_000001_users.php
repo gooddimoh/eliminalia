@@ -63,8 +63,7 @@ class Users extends Migration
             $table->integer('permission_level')->nullable();
             $table->integer('payment')->comment("banned")->nullable();
             $table->string('notifiable')->nullable();
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('deleted_at')->nullable();
+            $table->timestamps();
             $table->rememberToken();
         });
     }

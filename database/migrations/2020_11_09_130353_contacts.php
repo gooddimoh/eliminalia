@@ -48,8 +48,7 @@ class Contacts extends Migration
             $table->string('discarded_reason');
             $table->date('date_signed');
             $table->date('discarded_date');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

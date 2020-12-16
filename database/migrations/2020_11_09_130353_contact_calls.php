@@ -23,8 +23,7 @@ class ContactCalls extends Migration
             $table->string('gestion_realizada');
             $table->tinyInteger('llamada_realizada');
             $table->dateTime('fecha_gestion');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

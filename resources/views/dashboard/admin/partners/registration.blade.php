@@ -110,9 +110,40 @@
                         </div>
                         <div class="timeline-body">
                             <div class="timeline-header">
-                                <span class="userimage"><img src="../assets/img/user/user-1.jpg" alt=""></span>
-                                <span class="username"><a href="javascript:;">John Smith</a> <small></small></span>
-                                <span class="views">18 Views</span>
+                                <span class="username">
+                                    <a href="javascript:;">Date:
+                                    <td class="with-form-control">
+                                        <div class="row row-space-10">
+                                            <div class="form-group">
+                                                <label class="col-lg-4 col-form-label"><p>Date:</p></label>
+                                                <div class="col-lg-8">
+                                                <div class="row row-space-10">
+                                                    <div class="col-xs-6 mb-2 mb-sm-0">
+                                                        <input type="text" class="form-control" id="datetimepicker3"
+                                                               placeholder="Min Date">
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <input type="text" class="form-control" id="datetimepicker4"
+                                                               placeholder="Max Date">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                             <div class="form-group">
+                                                <label class="col-lg-4 col-form-label"><p>Date:</p></label>
+                                                <div class="col-lg-8">
+                                                    <div class="input-group date" id="datetimepicker1">
+                                                        <input type="text" class="form-control">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       </div>
+                                    </td>
+                                    </a> <small></small></span>
+                                <span class="views"><a href="javascript:;">Time:</a></span>
                             </div>
                             <div class="timeline-content">
                                 <p>
@@ -122,17 +153,6 @@
                                 </p>
                             </div>
                             <div class="timeline-likes">
-                                <div class="stats">
-<span class="fa-stack fa-fw stats-icon">
-<i class="fa fa-circle fa-stack-2x text-danger"></i>
-<i class="fa fa-heart fa-stack-1x fa-inverse t-plus-1"></i>
-</span>
-                                    <span class="fa-stack fa-fw stats-icon">
-<i class="fa fa-circle fa-stack-2x text-primary"></i>
-<i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
-</span>
-                                    <span class="stats-total">4.3k</span>
-                                </div>
                                 <div class="stats-right">
                                     <span class="stats-text">259 Shares</span>
                                     <span class="stats-text">21 Comments</span>
@@ -147,15 +167,15 @@
                                             class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
                             </div>
                             <div class="timeline-comment-box">
-                                <div class="user"><img src="../assets/img/user/user-13.jpg"></div>
                                 <div class="input">
                                     <form action="">
                                         <div class="input-group">
                                             <input type="text" class="form-control rounded-corner"
                                                    placeholder="Write a comment...">
                                             <span class="input-group-btn p-l-10">
-<button class="btn btn-primary f-s-12 rounded-corner" type="button">Comment</button>
-</span>
+                                            <button class="btn btn-primary f-s-12 rounded-corner"
+                                                    type="button">Send To Time Line</button>
+                                            </span>
                                         </div>
                                     </form>
                                 </div>

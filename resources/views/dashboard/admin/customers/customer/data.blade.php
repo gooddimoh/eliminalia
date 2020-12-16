@@ -34,6 +34,12 @@
                 </div>
             </div>
             <div class="search_engine"></div>
+            <div class="block 1"></div>
+            <div class="block 2 PROFILE STATUS - 75% COMPLETED"></div>
+            <div class="block 3 LINKS STATUS"></div>
+            <div class="block 4 CONTRACTED LINKS"></div>
+            <div class="block 5 TICKETS"></div>
+            <div class="block 6 INTERNAL_MANAGEMENT"></div>
             <div class="info_for_the_manager">
 
             </div>
@@ -61,28 +67,45 @@
             </div>
             <a href="">DELETE CUSTOMER</a>
         </div>
-        @endsection
+    </div>
+    <div class="row">
+        CONTRACTED LINKS
+        <div class="search">
+            <input type="text">
+            <div class="checkboxes">
+                <p><input type="checkbox"> Pending</p>
+                <p><input type="checkbox"> Modified</p>
+                <p><input type="checkbox"> Deleted</p>
+                <p><input type="checkbox"> De-indexed </p>
+                <p><input type="checkbox"> All</p>
+            </div>
+            <div class="table">
 
-        @push('scripts')
-            <script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>
-            <script src="{{'assets/js/demo/render.highlight.js'}}"></script>
-            <script src="{{'assets/plugins/jquery-migrate/dist/jquery-migrate.min.js'}}"></script>
-            <script src="{{'assets/plugins/moment/moment.js'}}"></script>
-            <script src="{{'assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.js'}}"></script>
-            <script src="{{'assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js'}}"></script>
-            <script src="{{'assets/plugins/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js'}}"></script>
-            <script src="{{'assets/plugins/jquery.maskedinput/src/jquery.maskedinput.js'}}"></script>
-            <script src="{{'assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js'}}"></script>
-            <script src="{{'assets/plugins/pwstrength-bootstrap/dist/pwstrength-bootstrap.min.js'}}"></script>
-            <script src="{{'assets/plugins/@danielfarrell/bootstrap-combobox/js/bootstrap-combobox.js'}}"></script>
-            <script src="{{'assets/plugins/bootstrap-select/dist/js/bootstrap-select.min.js'}}"></script>
-            <script src="{{'assets/plugins/tag-it/js/tag-it.min.js'}}"></script>
-            <script src="{{'assets/plugins/bootstrap-daterangepicker/daterangepicker.js'}}"></script>
-            <script src="{{'assets/plugins/select2/dist/js/select2.min.js'}}"></script>
-            <script src="{{'assets/plugins/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js'}}"></script>
-            <script src="{{'assets/plugins/bootstrap-show-password/dist/bootstrap-show-password.js'}}"></script>
-            <script src="{{'assets/plugins/bootstrap-colorpalette/js/bootstrap-colorpalette.js'}}"></script>
-            <script src="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.js'}}"></script>
-            <script src="{{'assets/plugins/clipboard/dist/clipboard.min.js'}}"></script>
-            <script src="{{'assets/js/demo/form-plugins.demo.js'}}"></script>
-    @endpush
+            </div>
+        </div>
+    </div>
+@endsection
+
+@push('scripts')
+    <script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>
+    <script src="{{'assets/js/demo/render.highlight.js'}}"></script>
+    <script src="{{'assets/plugins/jquery-migrate/dist/jquery-migrate.min.js'}}"></script>
+    <script src="{{'assets/plugins/moment/moment.js'}}"></script>
+    <script src="{{'assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.js'}}"></script>
+    <script src="{{'assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js'}}"></script>
+    <script src="{{'assets/plugins/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js'}}"></script>
+    <script src="{{'assets/plugins/jquery.maskedinput/src/jquery.maskedinput.js'}}"></script>
+    <script src="{{'assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js'}}"></script>
+    <script src="{{'assets/plugins/pwstrength-bootstrap/dist/pwstrength-bootstrap.min.js'}}"></script>
+    <script src="{{'assets/plugins/@danielfarrell/bootstrap-combobox/js/bootstrap-combobox.js'}}"></script>
+    <script src="{{'assets/plugins/bootstrap-select/dist/js/bootstrap-select.min.js'}}"></script>
+    <script src="{{'assets/plugins/tag-it/js/tag-it.min.js'}}"></script>
+    <script src="{{'assets/plugins/bootstrap-daterangepicker/daterangepicker.js'}}"></script>
+    <script src="{{'assets/plugins/select2/dist/js/select2.min.js'}}"></script>
+    <script src="{{'assets/plugins/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js'}}"></script>
+    <script src="{{'assets/plugins/bootstrap-show-password/dist/bootstrap-show-password.js'}}"></script>
+    <script src="{{'assets/plugins/bootstrap-colorpalette/js/bootstrap-colorpalette.js'}}"></script>
+    <script src="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.js'}}"></script>
+    <script src="{{'assets/plugins/clipboard/dist/clipboard.min.js'}}"></script>
+    <script src="{{'assets/js/demo/form-plugins.demo.js'}}"></script>
+@endpush

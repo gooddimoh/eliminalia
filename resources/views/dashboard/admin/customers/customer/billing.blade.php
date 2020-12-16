@@ -34,6 +34,12 @@
                 </div>
             </div>
             <div class="search_engine"></div>
+            <div class="block 1"></div>
+            <div class="block 2 PROFILE STATUS - 75% COMPLETED"></div>
+            <div class="block 3 LINKS STATUS"></div>
+            <div class="block 4 CONTRACTED LINKS"></div>
+            <div class="block 5 TICKETS"></div>
+            <div class="block 6 INTERNAL_MANAGEMENT"></div>
             <div class="info_for_the_manager">
 
             </div>

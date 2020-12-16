@@ -58,12 +58,12 @@ return [
             'sub_menu' => [
                 [
                     'url' => '/dashboard/usermanagement/new',
-                    'title' => 'Usermanagement New',
+                    'title' => 'Usermanagement new',
                     'route-name' => 'usermanagement_new'
                 ],
                 [
                     'url' => '/dashboard/usermanagement/list',
-                    'title' => 'Usermanagement List',
+                    'title' => 'Usermanagement list',
                     'route-name' => 'usermanagement_list'
                 ],
             ]
@@ -76,12 +76,12 @@ return [
             'sub_menu' => [
                 [
                     'url' => '/dashboard/contacts/registration',
-                    'title' => 'contact registration',
+                    'title' => 'Contact registration',
                     'route-name' => 'contact_registration'
                 ],
                 [
                     'url' => '/dashboard/contacts/list',
-                    'title' => 'Contact List',
+                    'title' => 'Contact list',
                     'route-name' => 'contact list'
                 ],
                 [
@@ -102,30 +102,37 @@ return [
                 'title' => 'Customer Registration',
                 'route-name' => 'customer_registration'
             ], [
-                'url' => '/dashboard/customer/list (ADMIN)',
-                'title' => 'Customerlist (ADMIN)',
-                'route-name' => 'customerlist(ADMIN)'
-            ], [
-                'url' => '/dashboard/customer/list (MANAGER)',
-                'title' => 'Customer List (MANAGER)',
-                'route-name' => 'customerlist(MANAGER)'
-            ], [
-                'url' => '/dashboard/customer/list (PARTNER)',
-                'title' => 'Customer List (PARTNER)',
-                'route-name' => 'customerlist(PARTNER)'
-            ], [
-                'url' => '/dashboard/customer/list (REGISTRATOR)',
-                'title' => 'Customer List (REGISTRATOR)',
-                'route-name' => 'customerlist(REGISTRATOR)'
-            ], [
-                'url' => '/dashboard/customer/list (SADMIN)',
-                'title' => 'Customer List (SADMIN)',
-                'route-name' => 'customerlist(SADMIN)'
-            ], [
-                'url' => '/dashboard/pending_billing',
-                'title' => 'Pending Billing',
-                'route-name' => 'pending_billing'
-            ]
+                'url' => 'dashboard/customer/list_admin',
+                'title' => 'Customer list (ADMIN)',
+                'route-name' => 'customerlist_admin'
+            ],
+                [
+                    'url' => 'dashboard/customer/list_registration',
+                    'title' => 'Customer list (REGISTRATOR)',
+                    'route-name' => 'customerlist(REGISTRATOR)'
+                ],
+                [
+                    'url' => 'dashboard/customer/list_sadmin',
+                    'title' => 'Customer list (SADMIN)',
+                    'route-name' => 'customerlist(SADMIN)'
+                ], [
+                    'url' => 'dashboard/customer/list_admin',
+                    'title' => 'Customer list (ADMIN)',
+                    'route-name' => 'customerlist(ADMIN)'
+                ],
+                [
+                    'url' => 'dashboard/customer/list_manager',
+                    'title' => 'Customer list (MANAGER)',
+                    'route-name' => 'customerlist(MANAGER)'
+                ], [
+                    'url' => 'dashboard/customer/list_partner',
+                    'title' => 'Customer list (PARTNER)',
+                    'route-name' => 'customerlist(PARTNER)'
+                ], [
+                    'url' => 'dashboard/customer/finalizate_files_pendingbilling',
+                    'title' => 'Pending Billing',
+                    'route-name' => 'pending_billing'
+                ]
             ]
         ],
         [

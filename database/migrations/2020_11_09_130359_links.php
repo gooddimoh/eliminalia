@@ -27,8 +27,7 @@ class Links extends Migration
             $table->timestamp('seo_modification_time');
             $table->string('link_type');
             $table->integer('id_category');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -1,10 +1,13 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contacts extends Model {
+class Contacts extends Model
+{
+
     use HasFactory;
 
     /**
@@ -12,6 +15,8 @@ class Contacts extends Model {
      *
      * @var array
      */
+
+    const COMMERCIAL = 'Didac Sanchez';
 
     protected $table = 'contacts';
 

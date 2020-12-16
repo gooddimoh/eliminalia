@@ -1,28 +1,15 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Relation;
 
-class Customers extends Model
+class Payment extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-
-    const manager = "Ruben Galvez";
-    const personal_company = "Ruben Galvez";
-    const customer_type = "Ruben Galvez";
-    const group = "GENERAL, BARCELONA branch";
-    const native_language = "Ruben Galvez";
-    const partner = "GP TRADERS";
-
-    protected $table = 'customers';
+    protected $table = 'calls_contacts';
 
     protected $dates = [
         'updated_at',
@@ -32,7 +19,15 @@ class Customers extends Model
     ];
 
     protected $fillable = [
-        'id',
+        'id ',
+        'date',
+        'time',
+        'commercial_id',
+        'contact_id',
+        'observations',
+        'done',
+        'call_made',
+        'management_date'
     ];
 
     /**
@@ -45,8 +40,7 @@ class Customers extends Model
         'password', 'remember_token',
     ];
 
-    public function index()
-    {
+    public function Wetransfer(){
+
     }
 }
-

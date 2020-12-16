@@ -18,9 +18,7 @@ class LinksSearch extends Migration
             $table->text('text_to_search');
             $table->tinyInteger('state');
             $table->integer('user_id');
-            $table->timestamp('date_updated');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

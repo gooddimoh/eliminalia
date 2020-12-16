@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Gate;
@@ -41,7 +42,7 @@ class UserManagement extends Controller
     public function create(Request $request)
     {
         $role = Role::all()->pluck('title', 'id');
-//        $users = User::all()->pluck('title', 'id');
+//        $users = User::all()->
         $request->all();
         $users = User::all();
         return view('dashboard.admin.usermanagement.create')->with('users', $users);
@@ -62,34 +63,31 @@ class UserManagement extends Controller
         $user->city = $data->city;
         $user->state = $data->state;
         $user->permission_level = $data->permission_level;
-        $user->save();
+
+        event(new Registered($user = $user->save()));
+
         $directory = preg_replace("[^0-9_A-Z]", "", strtoupper(strip_tags((string)$user->name . "_" . (string)$user->id)));
+
         Storage::makeDirectory('/UserDirectories' . strtoupper($directory) . '/public/');
         Storage::makeDirectory('/UserDirectories' . strtoupper($directory) . '/private/');
+
         session()->put('user', (array)$user);
-        var_dump(session()->get('user'));
         return redirect(route('usermanagement.new'));
     }
 
     public function edit(Request $request, User $user, Response $response)
     {
-        var_dump($request->all());
-        var_dump($request->ajax());
 
-        die('ajax');
-
-        $id = $request->get("edit");
-        $roles = Role::all()->pluck('title', 'id');
+        if ($request->ajax()) {
+            $id = $request->post("id");
+            $roles = Role::all()->pluck('title', 'id');
+            $users = User::all();
+            $user = User::query()->find($id);
+            $user = DB::table('users')->where('id', $id)->first();
+            return redirect('usermanagement.edit');
+        }
         $users = User::all();
-        $table = "<table></table>";
-
-        if ($request->ajax()){ }
-        $request->ajax();
-        $response->html();
-
-        $user = User::query()->find($id);
-        $user = DB::table('users')->where('id', $id)->first();
-        return view('dashboard.admin.usermanagement.edit', compact('user', $user, "users", $users))->render();
+        return view('dashboard.admin.usermanagement.edit', compact('users', $users))->render();
     }
 
     public function update(Request $request, User $user)
@@ -117,9 +115,10 @@ class UserManagement extends Controller
 
     public function destroy(User $user, Request $request)
     {
-        $deleteid = $request->get("delete");
+        $deleteid = $request->post("id");
         User::destroy($deleteid);
-        return back();
+        $users = User::all();
+        return view('dashboard.admin.usermanagement.parts.tbody', compact('users', $users))->render();
     }
 
     public function massDestroy(MassDestroyUserRequest $request)

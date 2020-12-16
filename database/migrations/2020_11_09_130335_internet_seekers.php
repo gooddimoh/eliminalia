@@ -15,8 +15,7 @@ class InternetSeekers extends Migration
     {
         Schema::create('internet_seekers', function (Blueprint $table) {
             $table->id('id');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -19,8 +19,7 @@ class Tickets extends Migration
             $table->integer('user_id');
             $table->integer('case_id');
             $table->string('content');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

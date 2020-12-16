@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use App\Models\Role;
@@ -11,6 +12,20 @@ use Illuminate\Http\Client\Request;
 
 class User extends Model
 {
+    const SUPERADMIN = 0;
+    const ADMIN = 0;
+    const RECEPTION = 0;
+    const MANAGER = 0;
+    const REGISTER = 0;
+    const COMMERCIAL = 0;
+    const SEO = 0;
+    const SEO_REGISTER = 0;
+    const PARTNER = 0;
+
+    const BARCELONA = 0;
+    const KIEV = 0;
+    const CONSULTOR = 0;
+
     use HasFactory;
 
     protected $table = 'users';

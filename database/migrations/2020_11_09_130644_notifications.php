@@ -20,9 +20,7 @@ class Notifications extends Migration
             $table->text('description');
             $table->string('type');
             $table->tinyInteger('read');
-            $table->timestamp('date');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

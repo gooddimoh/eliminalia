@@ -15,8 +15,9 @@ class Billings extends Migration
     {
         Schema::create('billings', function (Blueprint $table) {
             $table->integer('id')->primary();
-//            $table->unsignedInteger('user_id');
-//            $table->foreign('user_id', 'user_id_fk_466020')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id', 'user_id_fk_466020')->references('id')->on('users')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

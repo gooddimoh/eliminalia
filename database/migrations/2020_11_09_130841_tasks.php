@@ -26,8 +26,7 @@ class Chores extends Migration
             $table->integer('group');
             $table->integer('order');
             $table->text('log');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -26,8 +26,7 @@ class LinksCategories extends Migration
             $table->string('payment_form');
             $table->string('observations');
             $table->date('pay_day');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -20,8 +20,7 @@ class ClientInternetSeekers extends Migration
             $table->integer('user_id');
             $table->integer('customer_id');
             $table->integer('internet_search_id');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

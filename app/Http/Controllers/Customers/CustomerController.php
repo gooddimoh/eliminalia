@@ -50,7 +50,7 @@ class CustomerController extends Controller
 
     public function registration()
     {
-        return view("dashboard.admin.customers.costumer-registration");
+        return view("dashboard.admin.customers.customer registration");
     }
 
     public function store()

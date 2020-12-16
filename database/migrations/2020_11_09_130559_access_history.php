@@ -23,8 +23,7 @@ class AccessHistory extends Migration
             $table->string('device_os');
             $table->string('browser_device');
             $table->string('ip');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 
