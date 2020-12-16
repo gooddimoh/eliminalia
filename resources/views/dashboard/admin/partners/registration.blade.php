@@ -119,12 +119,10 @@
                                                 <div class="col-lg-8">
                                                 <div class="row row-space-10">
                                                     <div class="col-xs-6 mb-2 mb-sm-0">
-                                                        <input type="text" class="form-control" id="datetimepicker3"
-                                                               placeholder="Min Date">
+                                                        <input type="text" class="form-control" id="datetimepicker3" placeholder="Min Date">
                                                     </div>
                                                     <div class="col-xs-6">
-                                                        <input type="text" class="form-control" id="datetimepicker4"
-                                                               placeholder="Max Date">
+                                                        <input type="text" class="form-control" id="datetimepicker4" placeholder="Max Date">
                                                     </div>
                                                 </div>
                                             </div>
@@ -180,6 +178,21 @@
                                     </form>
                                 </div>
                             </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-body">
+                            New Time Line Item1
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-body">
+                            New Time Line Item2
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-body">
+                            New Time Line Item2
                         </div>
                     </li>
                     <li>
