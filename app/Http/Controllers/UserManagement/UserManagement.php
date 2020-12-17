@@ -37,7 +37,7 @@ class UserManagement extends Controller
     }
 
     public function list(Request $request)
-    {d
+    {
         $users = User::all();
         return view('dashboard.admin.usermanagement.index', compact('users', $users));
     }
@@ -55,7 +55,7 @@ class UserManagement extends Controller
 
     public function store(Request $request)
     {
-//        updt
+//        update
         $request->validate(['name' => 'required', 'password' => 'required', 'email' => 'required', 'permission_level' => 'required']);
 
         $data = (object)$request->all();

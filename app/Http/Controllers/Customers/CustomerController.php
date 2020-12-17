@@ -15,7 +15,7 @@ class CustomerController extends Controller
     public function list_SADMIN()
     {
         $customers = Customers::all();
-        return view("dashboard.admin.customers.customer list(sadmin)", compact('customers'));
+        return view("dashboard.admin.customer list(sadmin)", compact('customers'));
     }
 
     public function list_ADMIN()
