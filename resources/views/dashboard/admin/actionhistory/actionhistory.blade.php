@@ -76,12 +76,9 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th nowrap="">Table heading</th>
-                                <th nowrap="">Table heading</th>
-                                <th nowrap="">Table heading</th>
-                                <th nowrap="">Table heading</th>
-                                <th nowrap="">Table heading</th>
-                                <th nowrap="">Table heading</th>
+                                <th nowrap="">name</th>
+                                <th nowrap="">Action taken	</th>
+                                <th nowrap="">Date</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -101,15 +98,18 @@
                 </div>
             </div>
         </div>
-        @endsection
-
-        @push('scripts')
-            <script src="{{asset('/assets/plugins/jquery-migrate/dist/jquery-migrate.js')}}"></script>
-            <script src="{{asset('/assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-            <script src="{{asset('/assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-            <script src="{{asset('/assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
-            <script src="{{asset('/assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
-            <script src="{{asset('/assets/js/demo/table-manage-default.demo.js')}}"></script>
-            <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
-            <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
-    @endpush
+    </div>
+    <div class="results">
+        Result number: 0
+    </div>
+@endsection
+@push('scripts')
+    <script src="{{asset('/assets/plugins/jquery-migrate/dist/jquery-migrate.js')}}"></script>
+    <script src="{{asset('/assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('/assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('/assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('/assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('/assets/js/demo/table-manage-default.demo.js')}}"></script>
+    <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
+    <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
+@endpush

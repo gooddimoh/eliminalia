@@ -9,11 +9,9 @@
         <li class="breadcrumb-item"><a href="javascript:;">Extra</a></li>
         <li class="breadcrumb-item active">Timeline</li>
     </ol>
-    <!-- end breadcrumb -->
     <!-- begin page-header -->
     <h1 class="page-header">Timeline <small>header small text goes here...</small></h1>
     <!-- end page-header -->
-
     <ul class="timeline">
         <li>
             <!-- begin timeline-time -->

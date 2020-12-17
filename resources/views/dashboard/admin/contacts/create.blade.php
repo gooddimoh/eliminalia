@@ -35,10 +35,10 @@
                 </div>
                 <div class="form-group row">
                     <div class="form-group row width-300">
-                        <div class="col-md-4">
-                            <label class="col-form-label float-left">Country*:&nbsp;&nbsp;</label>
+                        <div class="col-md-4 m-10">
+                            <label class="col-form-label float-left">Country*:&nbsp;</label>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 m-10">
                             <select class="form-control form-control-sm float-right" name="paymentmethod">
                                 {{--                            @foreach($countryies as $country):--}}
                                 {{--                            <option value="{{$country->id}}">{{$country->name}}</option>--}}
@@ -70,8 +70,6 @@
                     <input class="form-control form-control-sm" type="text" name="commercial"
                            placeholder="Commercial*:">
                 </div>
-            </div>
-            <div class="col-md-6">
                 <div class="form-group row">
                     <label class="col-form-label">Surname:</label>
                     <input class="form-control form-control-sm" type="text" name="surname" placeholder="Surname:">
@@ -123,6 +121,94 @@
                 <label class="col-form-label form-control-sm"></label>
             </div>
             <div class="col-md-6">
+                <h1 class="m-r-40">Call Time Line</h1>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-time">
+                            <span class="date">today</span>
+                            <span class="time">04:20</span>
+                        </div>
+                        <div class="timeline-icon">
+                            <a href="javascript:;">&nbsp;</a>
+                        </div>
+                        <div class="timeline-body">
+                            <div class="timeline-header">
+                                <span class="username">
+                                    <a href="javascript:;">
+                                        <div class="row row-space-10">
+                                            <h4>Calls</h4>
+                                            <div class="form-group">
+                                                <label class="col-lg-4 col-form-label"><p>Date:</p></label>
+                                                <div class="col-lg-8">
+                                                <div class="row row-space-10">
+                                                    <div class="col-xs-6 mb-2 mb-sm-0">
+                                                        <input type="text" class="form-control" id="datetimepicker3"
+                                                               placeholder="min date">
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <input type="text" class="form-control" id="datetimepicker4"
+                                                               placeholder="max date">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                       </div>
+                                    </a>
+                                    <small></small>
+                                </span>
+                            </div>
+                            <div class="timeline-comment-box">
+                                <div class="input">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control rounded-corner"
+                                               placeholder="Write a comment...">
+                                        <span class="input-group-btn p-l-10">
+                                            <button class="btn btn-primary f-s-12 rounded-corner" type="button">Send To Time Line</button>
+                                            </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-icon">
+                            <a href="javascript:;">&nbsp;</a>
+                        </div>
+                        <div class="timeline-body">
+                            New Time Line Item1
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-icon">
+                            <a href="javascript:;">&nbsp;</a>
+                        </div>
+                        <div class="timeline-body">
+                            New Time Line Item2
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-icon">
+                            <a href="javascript:;">&nbsp;</a>
+                        </div>
+                        <div class="timeline-body">
+                            New Time Line Item2
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-icon">
+                            <a href="javascript:;">&nbsp;</a>
+                        </div>
+                        <div class="timeline-icon">
+                            <a href="javascript:;">&nbsp;</a>
+                        </div>
+                        <div class="timeline-body">
+                            Loading...
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
                 <div class="form-group">
                     <div class="custom-control custom-switch mb-1">
                         <input type="checkbox" class="custom-control-input" id="customSwitch1" name="name1"
@@ -130,7 +216,7 @@
                         <label class="custom-control-label" for="customSwitch1">Physical Person</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" disabled="" id="customSwitch2">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch2">
                         <label class="custom-control-label" for="customSwitch2">Legal Person</label>
                     </div>
                 </div>
@@ -152,7 +238,7 @@
                         <option value="3">Other</option>
                     </select>
                 </div>
-                <div class="col-md-12">
+                <div class="row">
                     <br>
                     <label class="col-form-label col-md-2">Case description made by the client:</label>
                     <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
@@ -181,10 +267,14 @@
                     <input type="checkbox" value="4" name="input_type_4">
                     <label>&nbsp;&nbsp;SIGNED</label>
                 </div>
+                <div class="form-group">
+                    <input type="checkbox" value="4" name="input_type_4">
+                    <label> DISCARDED</label>
+                </div>
             </div>
         </div>
         <div class="row align-right">
-            <button type="submit" class="form-control btn btn-green width-150">CONTACT REGISTRATION</button>
+            <button type="submit" class="form-control btn btn-green width-200">CONTACT REGISTRATION</button>
         </div>
     </form>
 @endsection

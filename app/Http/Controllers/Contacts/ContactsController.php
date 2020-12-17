@@ -22,12 +22,6 @@ class ContactsController extends Controller
         // maby use Gate //
 
         $users = User::all();
-        $users = User::all();
-        $users = User::all();
-        $users = User::all();
-        $users = User::all();
-        $users = User::all();
-        $users = User::all();
         var_dump($users);
         return view('admin.users.index', compact('users', $users));
     }

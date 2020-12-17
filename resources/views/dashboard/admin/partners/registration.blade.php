@@ -1,5 +1,5 @@
 @extends('layouts.default')
-
+@section('title', 'PARTNER LIST')
 @section('title', 'Basic Tables')
 {{--There output Contacts data --}}
 
@@ -97,114 +97,7 @@
                     <input type="submit" value="Submit">
                 </div>
             </div>
-            <div class="col-md-6">
-                <ul class="timeline">
-                    <li>
-                        <h1 style="margin-left:64%">Call Time Line</h1>
-                        <div class="timeline-time">
-                            <span class="date">today</span>
-                            <span class="time">04:20</span>
-                        </div>
-                        <div class="timeline-icon">
-                            <a href="javascript:;">&nbsp;</a>
-                        </div>
-                        <div class="timeline-body">
-                            <div class="timeline-header">
-                                <span class="username">
-                                    <a href="javascript:;">Date:
-                                    <td class="with-form-control">
-                                        <div class="row row-space-10">
-                                            <div class="form-group">
-                                                <label class="col-lg-4 col-form-label"><p>Date:</p></label>
-                                                <div class="col-lg-8">
-                                                <div class="row row-space-10">
-                                                    <div class="col-xs-6 mb-2 mb-sm-0">
-                                                        <input type="text" class="form-control" id="datetimepicker3" placeholder="Min Date">
-                                                    </div>
-                                                    <div class="col-xs-6">
-                                                        <input type="text" class="form-control" id="datetimepicker4" placeholder="Max Date">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </div>
-                                             <div class="form-group">
-                                                <label class="col-lg-4 col-form-label"><p>Date:</p></label>
-                                                <div class="col-lg-8">
-                                                    <div class="input-group date" id="datetimepicker1">
-                                                        <input type="text" class="form-control">
-                                                        <div class="input-group-addon">
-                                                            <i class="fa fa-calendar"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                       </div>
-                                    </td>
-                                    </a> <small></small></span>
-                                <span class="views"><a href="javascript:;">Time:</a></span>
-                            </div>
-                            <div class="timeline-content">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis
-                                    quis tincidunt luctus.
-                                    Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
-                                </p>
-                            </div>
-                            <div class="timeline-likes">
-                                <div class="stats-right">
-                                    <span class="stats-text">259 Shares</span>
-                                    <span class="stats-text">21 Comments</span>
-                                </div>
-                            </div>
-                            <div class="timeline-footer">
-                                <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
-                                            class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
-                                <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
-                                            class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
-                                <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
-                                            class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
-                            </div>
-                            <div class="timeline-comment-box">
-                                <div class="input">
-                                    <form action="">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control rounded-corner"
-                                                   placeholder="Write a comment...">
-                                            <span class="input-group-btn p-l-10">
-                                            <button class="btn btn-primary f-s-12 rounded-corner"
-                                                    type="button">Send To Time Line</button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-body">
-                            New Time Line Item1
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-body">
-                            New Time Line Item2
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-body">
-                            New Time Line Item2
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-icon">
-                            <a href="javascript:;">&nbsp;</a>
-                        </div>
-                        <div class="timeline-body">
-                            Loading...
-                        </div>
-                    </li>
-                </ul>
-            </div>
+
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -246,3 +139,5 @@
     <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
     <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
 @endpush
+
+

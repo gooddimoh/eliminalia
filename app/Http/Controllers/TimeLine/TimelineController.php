@@ -1,6 +1,8 @@
 <?php
+
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Timeline;
 
@@ -8,7 +10,8 @@ class TimelineController extends Controller
 {
     public function index()
     {
-
+        $timeline = Timeline::all();
+        return view("dashboard.admin.timeline.index");
     }
 
     public function create()
@@ -18,15 +21,14 @@ class TimelineController extends Controller
 
     public function store(Request $request)
     {
+        // Create Time Line
         $this->create($request->all());
         redirect()->back();
     }
 
     public function timeline()
     {
-//        $timeline = Timeline::all();
-//        return view("dashboard.superadmin.timeline.timeline")->with('timeline', $timeline);
-        return view("dashboard.admin.timeline.index");
+
     }
 
 }

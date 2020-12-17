@@ -1,8 +1,9 @@
 @extends('layouts.default')
-@section('title', 'USER MANAGEMENT LIST')
+@section('title', 'PARTNER LIST')
 @push('css')
     <link href="{{asset('assets/plugins/summernote/dist/summernote.css')}}" rel="stylesheet"/>
 @endpush
+
 @section('content')
     <div class="panel">
         <div class="panel-heading">

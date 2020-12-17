@@ -17,7 +17,7 @@
             <!-- begin timeline-time -->
             <div class="timeline-time">
                 <span class="date">date</span>
-                {{--                <span class="date">{{ $date }}</span>--}}
+                <span class="date">{{ $date }}</span>
             </div>
             <!-- end timeline-time -->
             <!-- begin timeline-icon -->
@@ -35,8 +35,7 @@
                                  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
                                 <p class="text-black">
                                     Collapsible Group Item #1
-                                    <i class="fas fa-lg fa-fw m-r-10 fa-chevron-"
-                                       style="position: absolute; top:20px; right: 20px;"></i>
+                                    <i class="fas fa-lg fa-fw m-r-10 fa-chevron-" style="position: absolute; top:20px; right: 20px;"></i>
                                 </p>
                             </div>
                             <div id="collapseOne" class="collapse show" data-parent="#accordion" style="">
@@ -184,7 +183,7 @@
 @endsection
 
 @section('accordion')
-    <div id="accordion" class="accordion"index.blade.php>
+    <div id="accordion" class="accordion" index.blade.php>
         <!-- begin card -->
         <div class="card bg-dark text-white">
             <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center" data-toggle="collapse"

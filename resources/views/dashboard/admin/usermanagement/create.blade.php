@@ -14,31 +14,26 @@
                 <div class="form-group row">
                     <label class="col-form-label">Name:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" name="name"
-                           placeholder="Name:"
-                           value="">
+                           placeholder="Name:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Phone:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" name="phone"
-                           placeholder="Phone:"
-                           value="">
+                           placeholder="Phone:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label ">Password Confirm:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value=""
-                           placeholder="Password:">
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" placeholder="Password:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">DNI:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" name="dni"
-                           placeholder="DNI:"
-                           value="">
+                           placeholder="dni:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Address:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" name="address"
-                           placeholder="Address:"
-                           value="">
+                           placeholder="Address:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
@@ -58,33 +53,32 @@
             <div class="col-md-3">
                 <div class="form-group row">
                     <label class="col-form-label ">Surname:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="surname"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="surname"
                            placeholder="Surname:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label ">Password:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="password"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="password"
                            placeholder="Password:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email:</label>
-                    <input id="email" class="form-control form-control-sm height-40 m-r-10" type="email" value=""
-                           name="email" placeholder="Email (main)*:" data->
+                    <input id="email" class="form-control form-control-sm height-40 m-r-10" type="email" name="email"
+                           placeholder="Email (main)*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">City:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" name="city"
-                           placeholder="City:"
-                           value="">
+                           placeholder="City:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="state"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="state"
                            placeholder="State:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Postal code:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" value="" name="postalcode"
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="postalcode"
                            placeholder="Postal code:">
                 </div>
                 <div class="form-group row ">
@@ -99,7 +93,7 @@
             <div class="col-md-6 ui-sortable">
                 <div class="dataTables_filter">
                     <label class="flex-row">
-                        <h4 class="float-left">Search existent user</h4>
+                        <h4 class="float-left">Search Existing user</h4>
                     </label>
                 </div>
                 <h1>Search existent user</h1>
@@ -169,26 +163,10 @@
     </form>
     <div class="panel-body">
         <h5>Legend</h5>
-
-        SUPERADMIN(GENERAL): User with all permissions and access to all sections of the application. Is the only user
-        able to delete users, clients, contacts, etc.
-        SUPERADMIN (BCN): Usuario con restricciones de permisos, clientes unicamente del grupo de BARCELONA, sin acceso
-        a las estadísticas, historal de acciones ni partners.
-        SUPERADMIN (KIEV): Usuario con restricciones de permisos, clientes unicamente del grupo de KIEV, sin acceso a
-        las estadísticas, historal de acciones ni partners.
-        SUPERADMIN (CONSULTOR): Usuario con restricciones de permisos, sin acceso a las estadísticas, historal de
-        acciones, partners ni los datos de facturación del cliente.
-        ADMIN: User with access to the contact section, requests for completion, SEO, partners, agenda and customer
-        billing.
-        GESTOR: User with access only to the list of clients that he has assigned. He is in charge of managing the
-        files.
-        REGISTRADOR: User with access to customer registration and modify customers.
-        RECEPCION: User with access to contact registration and modify contacts.
-        COMERCIAL: User with access only to the contact registration, modify contacts and requests for information
-        section.
-        SEO: User who manages SEO cases with access to clients who have been opened an active SEO case.
-        REGISTRADOR SEO: User who can confirm or deny requests for a client to have an active SEO case.
-        PARTNER: User who has access only to customers whose partner is the same as the user.
+        <div class="panel panel-body">
+            <h1>h1. Heading 1</h1>
+            <p>list of roles</p>
+        </div>
     </div>
 @endsection
 
@@ -202,7 +180,7 @@
     <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
     <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
 @endpush
-<script>
+<script type="">
     let action = 'new';
 
     function customajax(action, id) {
@@ -224,9 +202,4 @@
             alert("Request failed: " + textStatus);
         });
     }
-
-    function redirect() {
-        alert("redirect");
-    }
-
 </script>

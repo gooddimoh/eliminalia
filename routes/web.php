@@ -43,6 +43,10 @@ Route::get('dashboard/contacts/registration', 'ContactsController@registration')
 Route::get('dashboard/contacts/inquiries', 'ContactsController@inquiries')->name('inquiries');
 Route::get('dashboard/contacts/list', 'ContactsController@list')->name('contact list');
 
+Route::post('dashboard/contacts/list', 'ContactsController@list')->name('contact list');
+Route::post('dashboard/contacts/list', 'ContactsController@list')->name('contact list');
+Route::post('dashboard/contacts/list', 'ContactsController@list')->name('contact list');
+
 Route::get('dashboard/customer/registration', 'CustomerController@registration')->name('customer.registration');
 Route::get('dashboard/customer/list_sadmin', 'CustomerController@list_sadmin')->name('customerlist.sadmin');
 Route::get('dashboard/customer/list_admin', 'CustomerController@list_admin')->name('customerlist.admin');
@@ -51,14 +55,23 @@ Route::get('dashboard/customer/list_partner', 'CustomerController@list_partner')
 Route::get('dashboard/customer/list_registration', 'CustomerController@list_registator')->name('customerlist.registrator');
 Route::get('dashboard/customer/finalizate_files_pendingbilling', 'CustomerController@list_pending_billing')->name('customerlist.pending_billing');
 
+Route::post('dashboard/customer/finalizate_files_pendingbilling', 'CustomerController@list_pending_billing')->name('customerlist.pending_billing');
+Route::post('dashboard/customer/finalizate_files_pendingbilling', 'CustomerController@list_pending_billing')->name('customerlist.pending_billing');
+Route::post('dashboard/customer/finalizate_files_pendingbilling', 'CustomerController@list_pending_billing')->name('customerlist.pending_billing');
+Route::post('dashboard/customer/finalizate_files_pendingbilling', 'CustomerController@list_pending_billing')->name('customerlist.pending_billing');
+
 Route::get('dashboard/partners/list', 'PartnersController@list')->name('partners.list');
 Route::get('dashboard/partners/registration', 'PartnersController@registration')->name('partners.registration');
 
 Route::get('dashboard/requests/finalizate_files', 'RequestsController@finalizate_files')->name('finalizate_files');
 Route::get('dashboard/requests/withdraw_contracts', 'RequestsController@withdraw_contracts')->name('withdraw_contracts');
 
+Route::post('dashboard/requests/withdraw_contracts', 'RequestsController@withdraw_contracts')->name('withdraw_contracts');
+Route::post('dashboard/requests/withdraw_contracts', 'RequestsController@withdraw_contracts')->name('withdraw_contracts');
+
 Route::post('user/create', 'UsersController@create')->name('user.create');
 Route::post('user/edit', 'UsersController@edit')->name('user.edit');
+Route::post('user/delete', 'UsersController@edit')->name('user.edit');
 Route::post('user/store', 'UsersController@edit')->name('users.store');
 
 Route::get('dashboard/user/edit', 'UsersController@Edit')->name('user.edit');
@@ -67,11 +80,16 @@ Route::get('dashboard/user/store', 'UsersController@Store')->name('user.store');
 Route::get('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
 Route::get('dashboard/timeline/makepost', 'TimeLineController@timelinepost')->name('timeline.post');
 
+Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
+Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
+Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
+Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
+
 Route::get('dashboard/map', 'MainController@Map')->name('Map');
 Route::get('dashboard/map/vector', 'ChartController@mapVector')->name('map-vector');
 
 Route::get('dashboard/calendar', 'MainController@Calendar')->name('calendar');
-//Route::get('dashboard/filemanager', 'FileManager@Filemanager')->name('file.manager');
+Route::get('dashboard/filemanager', 'FileManager@Filemanager')->name('file.manager');
 
 Route::get('dashboard/email/inbox', 'EmailController@inbox')->name('emailinbox');
 Route::get('dashboard/email/compose', 'EmailController@compose')->name('emailcompose');
@@ -107,7 +125,6 @@ Route::get('additem1', 'TestController@additem')->name('additem1');
 Route::get('additem2', 'TestController@additem')->name('additem2');
 Route::get('additem3', 'TestController@additem')->name('additem3');
 Route::get('additem4', 'TestController@additem')->name('additem4');
-
 Route::get('edititem1', 'TestController@edititem')->name('edititem');
 
 // $query = Job::where('status', '=', Job::APPROVED);

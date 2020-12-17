@@ -70,8 +70,6 @@
                             <label for="roles">{{ trans('cruds.user.fields.roles') }}*
                                 <span class="btn btn-info btn-xs select-all">{{ trans('global.select_all') }}</span>
                                 <span class="btn btn-info btn-xs deselect-all">{{ trans('global.deselect_all') }}</span></label>
-                            {{-- User --}}
-                            {{var_dump($users)}}
                             <select name="" id="roles" class="form-control form-control-sm select2"
                                     multiple="multiple" required>
                                 @foreach($roles as $id => $roles)

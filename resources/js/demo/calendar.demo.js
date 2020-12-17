@@ -7,7 +7,7 @@ Website: http://www.seantheme.com/color-admin/admin/
 
 var handleCalendarDemo = function() {
 	// external events
-	var containerEl = document.getElementById('external-events');
+  var containerEl = document.getElementById('external-events');
   var Draggable = FullCalendarInteraction.Draggable;
 	new Draggable(containerEl, {
     itemSelector: '.fc-event',

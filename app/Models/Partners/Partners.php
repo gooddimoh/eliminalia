@@ -45,4 +45,9 @@ class Partners extends Model {
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function TimeLine(){
+
+    }
 }

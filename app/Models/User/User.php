@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use App\Models\Role;
@@ -29,6 +28,9 @@ class User extends Model
     use HasFactory;
 
     protected $table = 'users';
+
+    //    Default role SUPERADMIN
+    protected $role = 'SUPERADMIN';
 
     protected $hidden = [
         'password',
@@ -80,7 +82,6 @@ class User extends Model
 
         $file = $validation['file'];
 
-        // Generate a file name with extension
         $fileName = 'profile-' . time() . '.' . $file->getClientOriginalExtension();
 
         // New Client
@@ -99,6 +100,13 @@ class User extends Model
         $filePath = '/uploads/media/' . $fileName;
         $s3->put($filePath, file_get_contents($file), 'public');
 
+    }
+
+    public function Create()
+    {
+        $this->name = "name";
+        var_dump($this);
+        die();
     }
 
 }

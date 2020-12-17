@@ -24,6 +24,7 @@
 
 @section('content')
     <div class="row">
+        <h1>INQUIRIES</h1>
         <div class="col-md-12 center">
             <div class="search-input" style="margin: 60px 100px 60px 100px;">
                 <input class="form-control m-b-5" type="text" placeholder="Search Contact" style="border-radius: 0px;">
@@ -34,7 +35,7 @@
         <div class="pagination">
             <div class="panel panel-inverse">
                 <div class="panel-heading">
-                    <h4 class="panel-title">Data Table - Default</h4>
+                    <h4 class="panel-title">Data Table - INQUIRIES</h4>
                     <div class="panel-heading-btn">
                         <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
                            data-click="panel-expand"><i class="fa fa-expand"></i></a>
@@ -61,15 +62,16 @@
                                         </select> entries</label></div>
                             </div>
                             <div class="col-sm-12 col-md-6">
-                                <div id="data-table-default_filter" class="dataTables_filter"><label>
-                                        Search:<input
-                                                type="search" class="form-control form-control-sm" placeholder="Search:"
-                                                aria-controls="data-table-default"></label></div>
+                                <div id="data-table-default_filter" class="dataTables_filter">
+                                    <label> Search: <input type="search" class="form-control form-control-sm"
+                                                           placeholder="Search:"
+                                                           aria-controls="data-table-default"></label>
+                                </div>
                             </div>
                             <div class="result">
-                                <h4>
-                                    Result number: 61 (COUNT)
-                                </h4>
+                                <p class="result count">
+                                    Result number: 61
+                                </p>
                             </div>
                         </div>
                         <div class="row">
@@ -86,35 +88,30 @@
                                             Contact ID
                                         </th>
                                         <th width="1%" data-orderable="false" class="sorting_disabled" rowspan="1"
-                                            colspan="1" style="width: 30px;" aria-label="">2
+                                            colspan="1" style="width: 30px;" aria-label="">Date
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 272px;"
                                             aria-label="Rendering engine: activate to sort column ascending">
-                                            Date
+                                            Name and Surname
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 339px;"
                                             aria-label="Browser: activate to sort column ascending">
-                                            Name and Surname
+                                            Company
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 306px;"
                                             aria-label="Platform(s): activate to sort column ascending">
-                                            Company
+                                            Commercial
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
                                             rowspan="1" colspan="1" style="width: 235px;"
                                             aria-label="Engine version: activate to sort column ascending">
-                                            Commercial
-                                        </th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
-                                            rowspan="1" colspan="1" style="width: 176px;"
-                                            aria-label="CSS grade: activate to sort column ascending">
                                             Status
                                         </th>
                                         <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-default"
-                                            rowspan="1" colspan="1" style="width: 40px;"
+                                            rowspan="1" colspan="1" style="width: 176px;"
                                             aria-label="CSS grade: activate to sort column ascending">
                                             T
                                         </th>

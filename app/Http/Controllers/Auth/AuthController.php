@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -15,9 +14,8 @@ class AuthController extends Controller
 
     public function PostLogin(Request $request)
     {
-        print_r($request->get(["name"]));
-        $validate['password'] = bcrypt($request->password);
         $user = User::created($request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']));
+        User::create($request->all());
         $accessToken = $user->createToken('authToken')->accessToken;
         return view('auth.login');
     }

@@ -43,4 +43,9 @@ class Timeline extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function Timeline()
+    {
+        echo "timeline";
+    }
 }

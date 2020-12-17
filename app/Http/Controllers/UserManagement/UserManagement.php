@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Auth\Events\Registered;
@@ -18,11 +17,14 @@ use Illuminate\Support\Facades\DB;
 
 class UserManagement extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request, Response $response)
     {
-        $users = User::all();
+        $users = User::all()->pluck('');
         $roles = Role::all();
         var_dump($users);
+        // role role role role role //
+        $response = '';
+        $request = '';
         if ($request->all()) {
             $view = view('data', compact('post'))->render();
 
@@ -34,7 +36,6 @@ class UserManagement extends Controller
 
     public function list(Request $request)
     {
-
         $users = User::all();
         return view('dashboard.admin.usermanagement.index', compact('users', $users));
     }
@@ -42,7 +43,9 @@ class UserManagement extends Controller
     public function create(Request $request)
     {
         $role = Role::all()->pluck('title', 'id');
-//        $users = User::all()->
+    //   $users = User::all()->   //
+
+    //   role admin and manager   //
         $request->all();
         $users = User::all();
         return view('dashboard.admin.usermanagement.create')->with('users', $users);
@@ -51,25 +54,25 @@ class UserManagement extends Controller
     public function store(Request $request)
     {
         $request->validate(['name' => 'required', 'password' => 'required', 'email' => 'required', 'permission_level' => 'required']);
+
         $data = (object)$request->all();
         $user = new User;
         $user->name = $data->name;
         $user->password = $data->password;
         $user->phone = $data->phone;
         $user->email = $data->email;
-        $user->dni = $data->dni;
+        $user->dni = $data->DNI;
         $user->address = $data->address;
         $user->postal_code = $data->postalcode;
         $user->city = $data->city;
         $user->state = $data->state;
         $user->permission_level = $data->permission_level;
-
-        event(new Registered($user = $user->save()));
-
         $directory = preg_replace("[^0-9_A-Z]", "", strtoupper(strip_tags((string)$user->name . "_" . (string)$user->id)));
-
         Storage::makeDirectory('/UserDirectories' . strtoupper($directory) . '/public/');
         Storage::makeDirectory('/UserDirectories' . strtoupper($directory) . '/private/');
+        $user->save();
+
+        event(new Registered($user = $user->save()));
 
         session()->put('user', (array)$user);
         return redirect(route('usermanagement.new'));
