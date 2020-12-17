@@ -55,6 +55,7 @@ class UserManagement extends Controller
 
     public function store(Request $request)
     {
+//        updt
         $request->validate(['name' => 'required', 'password' => 'required', 'email' => 'required', 'permission_level' => 'required']);
 
         $data = (object)$request->all();
