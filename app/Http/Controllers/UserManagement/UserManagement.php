@@ -37,7 +37,7 @@ class UserManagement extends Controller
     }
 
     public function list(Request $request)
-    {
+    {d
         $users = User::all();
         return view('dashboard.admin.usermanagement.index', compact('users', $users));
     }
