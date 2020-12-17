@@ -34,12 +34,12 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">City:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="country"
+                    <input class="form-control form-control-sm height-40" type="text" name="city"
                            placeholder="City*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Commercial *:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="country"
+                    <input class="form-control form-control-sm height-40" type="text" name="commercial"
                            placeholder="City*:">
                 </div>
                 <div class="form-group row">
@@ -54,17 +54,17 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Company ID:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="Email(secondary)"
+                    <input class="form-control form-control-sm height-40" type="text" name="CompanyID"
                            placeholder="Email(secondary)">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Postal code:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="email"
+                    <input class="form-control form-control-sm height-40" type="text" name="PostalCode"
                            placeholder="Email (secondary):">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
-                    <input class="form-control form-control-sm height-40" type="text" name="companyid" value=""
+                    <input class="form-control form-control-sm height-40" type="text" name="State" value=""
                            placeholder="Company ID:">
                 </div>
                 <div class="form-group row">
@@ -74,27 +74,24 @@
                         <option value="saab">Armenia</option>
                         <option value="mercedes">Algeria</option>
                     </select>
-                    <input type="submit" value="Submit">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Commercial *:</label>
-                    <select id="country" name="country">
+                    <select id="country" name="commercial">
                         <option value="david_castella">Maria Gracia</option>
                         <option value="david_castella">----</option>
                         <option value="maria_gracia">Rikcy Boards</option>
                         <option value="mercedes">Carlo Del Bo</option>
                     </select>
-                    <input type="submit" value="Submit">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Native language *:</label>
-                    <select id="country" name="country">
+                    <select id="country" name="nativelanguage">
                         <option value="david_castella">Maria Gracia</option>
                         <option value="david_castella">----</option>
                         <option value="maria_gracia">Rikcy Boards</option>
                         <option value="mercedes">Carlo Del Bo</option>
                     </select>
-                    <input type="submit" value="Submit">
                 </div>
             </div>
 

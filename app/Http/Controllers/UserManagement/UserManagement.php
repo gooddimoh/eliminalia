@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Auth\Events\Registered;
@@ -21,10 +22,11 @@ class UserManagement extends Controller
     {
         $users = User::all()->pluck('');
         $roles = Role::all();
-        var_dump($users);
-        // role role role role role //
         $response = '';
         $request = '';
+        var_dump($users);
+        // id1,id2,id3,id4,id5,id6;
+        // if role superadmin or admin
         if ($request->all()) {
             $view = view('data', compact('post'))->render();
 
@@ -43,9 +45,9 @@ class UserManagement extends Controller
     public function create(Request $request)
     {
         $role = Role::all()->pluck('title', 'id');
-    //   $users = User::all()->   //
+        //   $users = User::all()->   //
 
-    //   role admin and manager   //
+        //   role admin and manager   //
         $request->all();
         $users = User::all();
         return view('dashboard.admin.usermanagement.create')->with('users', $users);
