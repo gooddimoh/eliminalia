@@ -93,7 +93,7 @@
                     <div class="register-buttons">
                         <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
                     </div>
-                    <div class="m-t-30 m-b-30 p-b-30"> <a href="login_v3.html">here</a> to login.
+                    <div class="m-t-30 m-b-30 p-b-30"> <a href="">here</a> to login.
                     </div>
                     <hr/>
                     <p class="text-center mb-0">
