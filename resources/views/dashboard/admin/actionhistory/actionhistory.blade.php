@@ -76,8 +76,8 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th nowrap="">name</th>
-                                <th nowrap="">Action taken	</th>
+                                <th nowrap="">Name</th>
+                                <th nowrap="">Action taken</th>
                                 <th nowrap="">Date</th>
                             </tr>
                             </thead>

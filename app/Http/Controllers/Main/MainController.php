@@ -2,17 +2,21 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\API\AuthController;
-use App\Models\User;
-use Illuminate\Http\Request;
 use phpDocumentor\Reflection\DocBlock\TagFactory;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Models\Comment;
+use App\Models\User;
 
 class MainController extends Controller {
 
-    public function __construct(){
+    public function __construct()
+    {
     }
 
-    public function index(){
+    public function index()
+    {
+        $comment = Comment::all();
         $post = 'post';
     }
 
@@ -78,7 +82,7 @@ class MainController extends Controller {
         return view('');
     }
 
-    public function Auth()
+    public function Auth(Request $request)
     {
         return view('');
     }

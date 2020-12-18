@@ -162,7 +162,7 @@
             está recibido o no? Solo el SUPER ADMIN.</p>
     </div>
 @endsection
-@endsection
+
 <script>
     var request = $.ajax({
         url: "{{route("usermanagementnew")}}",

@@ -13,6 +13,7 @@
     <h1 class="page-header">Timeline <small>header small text goes here...</small></h1>
     <!-- end page-header -->
     <ul class="timeline">
+        {{-- foreach timeline  --}}
         <li>
             <!-- begin timeline-time -->
             <div class="timeline-time">
@@ -81,47 +82,7 @@
             </div>
             <!-- end timeline-body -->
         </li>
-        <li>
-            <!-- begin timeline-time -->
-            <div class="timeline-time">
-                <span class="date">24 February 2014</span>
-                <span class="time">08:17</span>
-            </div>
-            <!-- end timeline-time -->
-            <!-- begin timeline-icon -->
-            <div class="timeline-icon">
-                <a href="javascript:;">&nbsp;</a>
-            </div>
-            <!-- end timeline-icon -->
-        </li>
-        <li>
-            <!-- begin timeline-icon -->
-            <div class="timeline-icon">
-                <a href="javascript:;">&nbsp;</a>
-            </div>
-            <!-- end timeline-icon -->
-            <!-- begin timeline-body -->
-            <div class="timeline-body">
-                Loading...
-                <div id="accordion" class="accordion">
-                    <div class="card bg-light">
-                        <div class="card-header bg-light-lighter pointer-cursor d-flex align-items-center"
-                             data-toggle="collapse"
-                             data-target="#collapseOne" aria-expanded="false">
-                            <i class="fa fa-circle fa-fw text-blue mr-2 f-s-8"></i> Timeline item
-                        </div>
-                        <div id="collapseOne" class="collapse show" data-parent="#accordion" style="">
-                            <div class="card-body">
-                                It's about request...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- begin timeline-body -->
-        </li>
     </ul>
-
     <!-- end timeline -->
 @endsection
 

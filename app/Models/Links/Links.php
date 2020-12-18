@@ -48,4 +48,8 @@ class Links extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function index(){}
+
 }

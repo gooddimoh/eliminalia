@@ -17,7 +17,6 @@ class CommentsTasks extends Migration
             $table->integer('task_id');
             $table->integer('user_id');
             $table->string('commentary');
-            $table->timestamp('date');
             $table->timestamps();
         });
     }

@@ -5,46 +5,38 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyRoleRequest;
 use App\Http\Requests\StoreRoleRequest;
 use App\Http\Requests\UpdateRoleRequest;
-use App\Models\Permission;
 use App\Models\Role;
-use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Gate;
 
 class RolesController extends Controller {
     public function index()
     {
 
         $roles = Role::all();
-
         return view('admin.roles.index', compact('roles'));
     }
 
     public function create()
     {
-        $permissions = Permission::all()->pluck('title', 'id');
         return view('admin.roles.create', compact('permissions'));
     }
 
     public function store(StoreRoleRequest $request)
     {
-        $role = Role::create($request->all());
-        $role->permissions()->sync($request->input('permissions', []));
-
+        $role = role::create($request->all());
         return redirect()->back();
     }
 
     public function edit(Role $role)
     {
-        $permissions = Permission::all()->pluck('title', 'id');
-        $role->load('permissions');
         return view('admin.roles.edit', compact('permissions', 'role'));
     }
 
     public function update(UpdateRoleRequest $request, Role $role)
     {
         $role->update($request->all());
-        $role->permissions()->sync($request->input('permissions', []));
         return redirect()->route('admin.roles.index');
     }
 

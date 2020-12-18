@@ -102,34 +102,37 @@ return [
                 'title' => 'Customer Registration',
                 'route-name' => 'customer_registration'
             ], [
-                'url' => 'dashboard/customer/list_admin',
+                'url' => '/dashboard/customer/list_admin',
                 'title' => 'Customer list (ADMIN)',
                 'route-name' => 'customerlist_admin'
             ],
                 [
-                    'url' => 'dashboard/customer/list_registration',
+                    'url' => '/dashboard/customer/list_registration',
                     'title' => 'Customer list (REGISTRATOR)',
-                    'route-name' => 'customerlist(REGISTRATOR)'
+                    'route-name' => 'customerlist_REGISTRATOR'
                 ],
                 [
-                    'url' => 'dashboard/customer/list_sadmin',
+                    'url' => '/dashboard/customer/list_sadmin',
                     'title' => 'Customer list (SADMIN)',
-                    'route-name' => 'customerlist(SADMIN)'
-                ], [
-                    'url' => 'dashboard/customer/list_admin',
-                    'title' => 'Customer list (ADMIN)',
-                    'route-name' => 'customerlist(ADMIN)'
+                    'route-name' => 'customerlist_sadmin'
                 ],
                 [
-                    'url' => 'dashboard/customer/list_manager',
+                    'url' => '/dashboard/customer/list_admin',
+                    'title' => 'Customer list (ADMIN)',
+                    'route-name' => 'customerlist_admin'
+                ],
+                [
+                    'url' => '/dashboard/customer/list_manager',
                     'title' => 'Customer list (MANAGER)',
-                    'route-name' => 'customerlist(MANAGER)'
-                ], [
-                    'url' => 'dashboard/customer/list_partner',
+                    'route-name' => 'customerlist_manager'
+                ],
+                [
+                    'url' => '/dashboard/customer/list_partner',
                     'title' => 'Customer list (PARTNER)',
-                    'route-name' => 'customerlist(PARTNER)'
-                ], [
-                    'url' => 'dashboard/customer/finalizate_files_pendingbilling',
+                    'route-name' => 'customerlist_partner'
+                ],
+                [
+                    'url' => '/dashboard/customer/finalizate_files_pendingbilling',
                     'title' => 'Pending Billing',
                     'route-name' => 'pending_billing'
                 ]

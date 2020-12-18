@@ -15,8 +15,7 @@
             </div>
         </div>
         <div class="panel-body">
-            <div id="jstree-default" class="jstree jstree-1 jstree-default" role="tree" aria-multiselectable="true"
-                 tabindex="0" aria-activedescendant="j1_11" aria-busy="false">
+            <div id="jstree-default" class="jstree jstree-1 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="j1_11" aria-busy="false">
                 <ul class="jstree-container-ul jstree-children" role="group">
                     <li role="presentation" data-jstree="{&quot;opened&quot;:true}" aria-selected="false" aria-level="1"
                         aria-labelledby="j1_1_anchor" aria-expanded="true" id="j1_1" class="jstree-node  jstree-open"><i

@@ -27,13 +27,6 @@ class AuthentifcateController extends Controller
         $user = new User();
         $user->name = $request->name;
         $user->save();
-        return response()->json([
-            'status_code' => 200,
-            'message' => 'User created successfully!'
-        ]);
-        if ($validator->fails()) {
-            return response()->json(['status_code' => 400, 'message' => 'Bad Request']);
-        }
 //        return view('admin.users.index', compact('users'));
     }
 

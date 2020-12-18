@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use App\Models\Role;
@@ -52,6 +53,10 @@ class User extends Model
 
     public $timestamps = false;
 
+    public function disproduct()
+    {
+    }
+
     public function Save(array $options = array())
     {
         return parent::save($options);
@@ -102,8 +107,14 @@ class User extends Model
 
     }
 
-    public function Create()
+    public function Create(Request $request)
     {
+        $validatedata = $request->validate([
+            'name' => 'reuired|max:255',
+            'email' => 'reuired|max:255|unique:users',
+            'password' => 'reuired|min:8|max:255'
+        ]);
+
         $this->name = "name";
         var_dump($this);
         die();

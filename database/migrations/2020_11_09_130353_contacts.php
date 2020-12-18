@@ -15,7 +15,6 @@ class Contacts extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id('id');
-            $table->timestamp('fecha');
             $table->string('permission_level');
             $table->integer('id_comercial');
             $table->string('name');
@@ -48,6 +47,7 @@ class Contacts extends Migration
             $table->string('discarded_reason');
             $table->date('date_signed');
             $table->date('discarded_date');
+            $table->date('fecha');
             $table->timestamps();
         });
     }

@@ -15,7 +15,6 @@ class Partners extends Migration
     {
         Schema::create('partners', function (Blueprint $table) {
             $table->integer('id')->primary();
-            $table->timestamp('date');
             $table->string('nombre');
             $table->string('country');
             $table->string('city');

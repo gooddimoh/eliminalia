@@ -25,9 +25,8 @@
 @section('content')
     <div class="panel-body">
         <div class="row">
-            <div class="row">List of all Users
-                <h4 class="panel-title">MODIFY CONTACT</h4>
-                <p>Contact data</p>
+            <div class="row">
+                <h4 class="panel-title">Search Contact</h4>
             </div>
             <div class="row">
                 <div class="form-group">
@@ -82,24 +81,6 @@
                                 <input type="checkbox" id="cssCheckbox3" value="">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="calls">
-            <h1>Calls</h1>
-            <div class="date">
-                <input type="date">
-                <div class="form-group row m-b-15">
-                    <label class="col-form-label col-md-3">Example select</label>
-                    <div class="col-md-9">
-                        <select class="form-control">
-                            <option>00:00</option>
-                            <option>00:15</option>
-                            <option>00:30</option>
-                            <option>00:45</option>
-                            <option>01:00</option>
-                        </select>
                     </div>
                 </div>
             </div>

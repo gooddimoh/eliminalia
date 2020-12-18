@@ -46,7 +46,6 @@ class UserManagement extends Controller
     {
         $role = Role::all()->pluck('title', 'id');
         //   $users = User::all()->   //
-
         //   role admin and manager   //
         $request->all();
         $users = User::all();
@@ -55,16 +54,17 @@ class UserManagement extends Controller
 
     public function store(Request $request)
     {
-//        update
         $request->validate(['name' => 'required', 'password' => 'required', 'email' => 'required', 'permission_level' => 'required']);
-
+        $request->all();
+        '';
+        $request->
         $data = (object)$request->all();
         $user = new User;
         $user->name = $data->name;
         $user->password = $data->password;
         $user->phone = $data->phone;
         $user->email = $data->email;
-        $user->dni = $data->DNI;
+        $user->dni = $data->dni;
         $user->address = $data->address;
         $user->postal_code = $data->postalcode;
         $user->city = $data->city;

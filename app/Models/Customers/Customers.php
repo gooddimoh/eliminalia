@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -45,8 +44,7 @@ class Customers extends Model
         'password', 'remember_token',
     ];
 
-    public function index()
-    {
+    public function index(){
     }
 }
 

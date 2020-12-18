@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">ID:</label>
-                    <input class="form-control form-control-sm" type="text" name="ID" placeholder="ID:">
+                    <input class="form-control form-control-sm" type="text" name="id" placeholder="ID:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Address:</label>
@@ -33,42 +33,32 @@
                     <label class="col-form-label">City:</label>
                     <input class="form-control form-control-sm" type="text" name="city" placeholder="City:">
                 </div>
-                <div class="form-group row">
-                    <div class="form-group row width-300">
-                        <div class="col-md-4 m-10">
-                            <label class="col-form-label float-left">Country*:&nbsp;</label>
-                        </div>
-                        <div class="col-md-8 m-10">
-                            <select class="form-control form-control-sm float-right" name="paymentmethod">
-                                {{--                            @foreach($countryies as $country):--}}
-                                {{--                            <option value="{{$country->id}}">{{$country->name}}</option>--}}
-                                {{--                            @endforeach--}}
-                                <option value="0">Spain</option>
-                                <option value="1">UK</option>
-                            </select>
-                        </div>
+                <div class="form-group row width-300 m-t-10">
+                    <div class="col-md-4">
+                        <label class="col-form-label float-left">Country*:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control float-right" name="country">
+                            <option value="Ukraine">Spain</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Egypt">Egypt</option>
+                        </select>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <div class="form-group row width-300">
-                        <div class="col-md-4">
-                            <label class="col-form-label float-left">Commercial*:&nbsp;&nbsp;</label>
-                        </div>
-                        <div class="col-md-8">
-                            <select class="form-control form-control-sm float-right" name="paymentmethod">
-                                <option value="Aruba">David Castella</option>
-                                <option value="Bahrain">Maria Gracia</option>
-                                <option value="Bahrain">Ricky Bordas</option>
-                                <option value="Bahrain">Antonio Paladino</option>
-                            </select>
-                        </div>
+                <div class="form-group row width-300 m-t-10">
+                    <div class="col-md-4">
+                        <label class="col-form-label float-left">Commercial*:&nbsp;&nbsp;</label>
                     </div>
-                    <input class="form-control form-control-sm" type="text" name="country" placeholder="Country*:">
-                </div>
-                <div class="form-group row">
-                    <label class="col-form-label">Commercial*:</label>
-                    <input class="form-control form-control-sm" type="text" name="commercial"
-                           placeholder="Commercial*:">
+                    <div class="col-md-8">
+                        <select class="form-control form-control-sm float-right" name="paymentmethod">
+                            <option value="Aruba">David Castella</option>
+                            <option value="Bahrain">----</option>
+                            <option value="Bahrain">Maria Gracia</option>
+                            <option value="Bahrain">Ricky Bordas</option>
+                            <option value="Bahrain">Antonio Paladino</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Surname:</label>
@@ -101,7 +91,7 @@
                 <div class="form-group row">
                     <label class="col-form-label">Native language*:</label>
                     <select class="form-control form-control-sm" name="nativelanguage">
-                        <option value="0">Native languge*:</option>
+                        <option value="0">Native languge*:(ES)</option>
                         <option value="1" selected>selected lang</option>
                         <option value="1">SPANISH</option>
                         <option value="2">ENGLISH</option>
@@ -114,14 +104,14 @@
                 <div class="form-group row">
                     <label class="col-form-label ">Personal/Company:</label>
                     <select class="form-control form-control-sm" name="personalcompany">
-                        <option value="0">PERSONAL</option>
+                        <option value="0">COSTUMER</option>
                         <option value="1">COMPANY</option>
                     </select>
                 </div>
                 <label class="col-form-label form-control-sm"></label>
             </div>
             <div class="col-md-6">
-                <h1 class="m-r-40">Call Time Line</h1>
+                <h1 class="m-r-40">Timeline header small text goes here...</h1>
                 <ul class="timeline">
                     <li>
                         <div class="timeline-time">
@@ -141,6 +131,7 @@
                                                 <label class="col-lg-4 col-form-label"><p>Date:</p></label>
                                                 <div class="col-lg-8">
                                                 <div class="row row-space-10">
+                                                    <p>Linked Pickers</p>
                                                     <div class="col-xs-6 mb-2 mb-sm-0">
                                                         <input type="text" class="form-control" id="datetimepicker3"
                                                                placeholder="min date">
@@ -157,6 +148,23 @@
                                     <small></small>
                                 </span>
                             </div>
+                            {{--                            --}}
+                            <div class="form-group row">
+                                <label class="col-lg-4 col-form-label">Linked Pickers</label>
+                                <div class="col-lg-8">
+                                    <div class="row row-space-10">
+                                        <div class="col-xs-6 mb-2 mb-sm-0">
+                                            <input type="text" class="form-control" id="datetimepicker3"
+                                                   placeholder="Min Date">
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <input type="text" class="form-control" id="datetimepicker4"
+                                                   placeholder="Max Date">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{--                            --}}
                             <div class="timeline-comment-box">
                                 <div class="input">
                                     <div class="input-group">
@@ -166,7 +174,6 @@
                                             <button class="btn btn-primary f-s-12 rounded-corner" type="button">Send To Time Line</button>
                                             </span>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -179,39 +186,14 @@
                             New Time Line Item1
                         </div>
                     </li>
-                    <li>
-                        <div class="timeline-icon">
-                            <a href="javascript:;">&nbsp;</a>
-                        </div>
-                        <div class="timeline-body">
-                            New Time Line Item2
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-icon">
-                            <a href="javascript:;">&nbsp;</a>
-                        </div>
-                        <div class="timeline-body">
-                            New Time Line Item2
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-icon">
-                            <a href="javascript:;">&nbsp;</a>
-                        </div>
-                        <div class="timeline-icon">
-                            <a href="javascript:;">&nbsp;</a>
-                        </div>
-                        <div class="timeline-body">
-                            Loading...
-                        </div>
-                    </li>
                 </ul>
             </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <div class="custom-control custom-switch mb-1">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch1" name="name1"
+                        <input type="checkbox" class="custom-control-input " id="customSwitch1" name="name1"
                                placeholder="name1" checked>
                         <label class="custom-control-label" for="customSwitch1">Physical Person</label>
                     </div>
@@ -273,6 +255,13 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="buttons">
+                <input type="text" placeholder="MODIFY DATA">
+                <input type="text" placeholder="CREATE CUSTOMER">
+                <input type="text" placeholder="DELETE CONTACT">
+            </div>
+        </div>
         <div class="row align-right">
             <button type="submit" class="form-control btn btn-green width-200">CONTACT REGISTRATION</button>
         </div>
@@ -284,9 +273,6 @@
         margin-right: 10px !important;
     }
 </style>
-<script>
-    {{--    add new textarea   --}}
-</script>
 @push('scripts')
     <script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>
     <script src="{{'assets/js/demo/render.highlight.js'}}"></script>

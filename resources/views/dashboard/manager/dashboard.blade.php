@@ -699,7 +699,6 @@
 @endsection
 
 @push('scripts')
-    assets
     <script src="{{asset('/assets/plugins/d3/d3.min.js')}}"></script>
     <script src="{{asset('/assets/plugins/nvd3/build/nv.d3.js')}}"></script>
     <script src="{{asset('/assets/plugins/jvectormap-next/jquery-jvectormap.min.js')}}"></script>

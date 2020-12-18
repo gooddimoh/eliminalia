@@ -12,6 +12,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PermissionsController extends Controller
 {
+    public function __construct()
+    {
+
+    }
+
     public function index()
     {
 

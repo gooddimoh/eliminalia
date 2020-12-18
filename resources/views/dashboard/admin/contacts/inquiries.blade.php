@@ -131,9 +131,7 @@
                                     @foreach($users as $user)
                                         <tr>
                                             <td>{{$user->id}}</td>
-                                            <td class="with-img">
-                                                <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
-                                            </td>
+                                            <td>{{$user->date}}</td>
                                             <td>{{$user->email}}</td>
                                             <td>{{$user->name}}</td>
                                             <td>{{$user->role}}</td>

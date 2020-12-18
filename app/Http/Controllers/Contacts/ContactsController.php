@@ -35,8 +35,9 @@ class ContactsController extends Controller
 
     public function store(StoreUserRequest $request)
     {
-        $user = User::create($request->all());
+        $user = new User();
         $user->roles()->sync($request->input('roles', []));
+        $user = User::create($request->all());
         return redirect()->back();
     }
 

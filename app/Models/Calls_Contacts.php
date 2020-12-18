@@ -38,4 +38,6 @@ class Calls_Contacts extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function indexMethod(){}
 }

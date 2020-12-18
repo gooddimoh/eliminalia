@@ -24,14 +24,14 @@ class Access_History extends Model {
 
     protected $fillable = [
         'id',
-        'fecha',
-        'hora',
-        'id_usuario ',
-        'id_cliente',
-        'dispositivo',
-        'dispositivo_modelo',
-        'dispositivo_os',
-        'dispositivo_navegador',
+        'date',
+        'time',
+        'user_id ',
+        'client_id',
+        'device',
+        'model_device',
+        'device_os',
+        'browser_device',
         'ip'
     ];
 

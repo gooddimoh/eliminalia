@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\User;
@@ -10,25 +9,21 @@ class TimelineController extends Controller
 {
     public function index()
     {
-        $timeline = Timeline::all();
+        $timeline = Timeline::all()->zip();
         return view("dashboard.admin.timeline.index");
     }
 
-    public function create()
+    public function create(Request $request)
     {
-
+        $data = $request->all();
+        var_dump($data);
     }
 
     public function store(Request $request)
     {
-        // Create Time Line
+
         $this->create($request->all());
         redirect()->back();
-    }
-
-    public function timeline()
-    {
-
     }
 
 }

@@ -17,13 +17,12 @@ class UsersController extends Controller
 {
     public function index()
     {
-
+        User::all();
         return $users = User::all()->jsonSerialize();
     }
 
     public function create(Request $request)
     {
-
         $user = User::create($request->all());
         var_dump($user);
         $roles = Role::all()->pluck('title', 'id');
@@ -33,13 +32,7 @@ class UsersController extends Controller
 
     public function store(StoreUserRequest $request, Response $response)
     {
-        $request->validate([
-            'firstname' => 'required',
-            'lastname' => 'required',
-            'password' => 'required',
-            'email' => 'required'
-        ]);
-
+        $request->validate(['firstname' => 'required', 'lastname' => 'required', 'password' => 'required', 'email' => 'required']);
         $request->pjax();
         $response->isOk();
         $user = User::create($request->all());

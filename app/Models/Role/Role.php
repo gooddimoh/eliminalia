@@ -5,8 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\User;
 
-class Role extends Model
-{
+class Role extends Model {
     use SoftDeletes;
 
     const ROLE_ADMIN = 'ROLE_ADMIN';
@@ -30,12 +29,5 @@ class Role extends Model
     public function users()
     {
         return $this->belongsToMany(User::class);
-        //
-        //
-    }
-
-    public function permissions()
-    {
-        return $this->belongsToMany(Permission::class);
     }
 }
