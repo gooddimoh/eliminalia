@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyUserRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
+use App\Models\Timeline;
 use App\Notifications\UserApprovedNotification;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -30,7 +31,8 @@ class ContactsController extends Controller
     {
         $roles = Role::all()->pluck('title', 'id');
         $user = 'user';
-        return view('admin.users.create', compact('roles', 'user'));
+        $timelines = Timeline::all();
+        return view('dashboard.admin.contacts.create', compact('roles', 'user', 'timelines'));
     }
 
     public function store(StoreUserRequest $request)

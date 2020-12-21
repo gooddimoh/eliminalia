@@ -126,6 +126,7 @@ CREATE TABLE `agenda_medios_comunicacion`
 INSERT INTO `agenda_medios_comunicacion` (`id`, `fecha`, `tipo_medio_comunicacion`, `nombre`, `nombre_empresa`, `cif`,
                                           `pais`, `ciudad`, `provincia`, `direccion`, `codigo_postal`, `telefono`,
                                           `telefono2`, `email`, `email2`, `web`, `observaciones`, `idioma`, `activo`)
+
 VALUES (1, '2016-12-13 16:10:14', 'TELEVISION', 'Antena 3',
         'Atresmedia Corporaci&oacute;n de Medios de Comunicaci&oacute;n, S.A', 'A-78 839271', 'Spain',
         'San Sebasti&aacute;n de los Reyes', 'Madrid', 'A. Isla Graciosa 13', '28703', '916230500', '', '', '',

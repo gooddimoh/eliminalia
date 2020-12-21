@@ -51,11 +51,12 @@
             <!-- begin login-content -->
             <div class="login-content">
                 <form action="{{route('login')}}" method="POST" class="margin-bottom-0">
+                    @csrf
                     <div class="form-group m-b-15">
-                        <input type="text" class="form-control form-control-lg" placeholder="Email Address" required/>
+                        <input type="text" class="form-control form-control-lg" name="email" placeholder="Email Address" required/>
                     </div>
                     <div class="form-group m-b-15">
-                        <input type="password" class="form-control form-control-lg" placeholder="Password" required/>
+                        <input type="password" class="form-control form-control-lg" name="password" placeholder="Password" required/>
                     </div>
                     <div class="checkbox checkbox-css m-b-30">
                         <input type="checkbox" id="remember_me_checkbox" value=""/>

@@ -6,13 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 class Users extends Migration
 {
-
     /**
      * Run the migrations.
      *
      * @return void
      **/
-
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {

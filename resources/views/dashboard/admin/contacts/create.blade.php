@@ -11,10 +11,16 @@
                 <div class="form-group row">
                     <label class="col-form-label">Name*:</label>
                     <input class="form-control form-control-sm" type="text" name="name" placeholder="Name*:">
+                    <input class="form-control form-control-sm" type="text" name="surename1" placeholder="surename1*:">
+                    <input class="form-control form-control-sm" type="text" name="surename2" placeholder="surename2*:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Phone number 1 *:</label>
                     <input class="form-control form-control-sm" type="text" name="phonenumber1" value=""
+                           placeholder="Phone number 1*:">
+                    <input class="form-control form-control-sm" type="text" name="email" value=""
+                           placeholder="Phone number 1*:">
+                    <input class="form-control form-control-sm" type="text" name="emailconfirmate" value=""
                            placeholder="Phone number 1*:">
                 </div>
                 <div class="form-group row">
@@ -22,43 +28,15 @@
                     <input class="form-control form-control-sm" type="text" name="email" placeholder="Email (main)*:">
                 </div>
                 <div class="form-group row">
-                    <label class="col-form-label">ID:</label>
-                    <input class="form-control form-control-sm" type="text" name="id" placeholder="ID:">
-                </div>
-                <div class="form-group row">
                     <label class="col-form-label">Address:</label>
                     <input class="form-control form-control-sm" type="text" name="address" placeholder="Address">
+                    <input class="form-control form-control-sm" type="text" name="state" placeholder=state">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">City:</label>
                     <input class="form-control form-control-sm" type="text" name="city" placeholder="City:">
-                </div>
-                <div class="form-group row width-300 m-t-10">
-                    <div class="col-md-4">
-                        <label class="col-form-label float-left">Country*:</label>
-                    </div>
-                    <div class="col-md-8">
-                        <select class="form-control float-right" name="country">
-                            <option value="Ukraine">Spain</option>
-                            <option value="Ukraine">Ukraine</option>
-                            <option value="Thailand">Thailand</option>
-                            <option value="Egypt">Egypt</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group row width-300 m-t-10">
-                    <div class="col-md-4">
-                        <label class="col-form-label float-left">Commercial*:&nbsp;&nbsp;</label>
-                    </div>
-                    <div class="col-md-8">
-                        <select class="form-control form-control-sm float-right" name="paymentmethod">
-                            <option value="Aruba">David Castella</option>
-                            <option value="Bahrain">----</option>
-                            <option value="Bahrain">Maria Gracia</option>
-                            <option value="Bahrain">Ricky Bordas</option>
-                            <option value="Bahrain">Antonio Paladino</option>
-                        </select>
-                    </div>
+                    <input class="form-control form-control-sm" type="text" name="postalcode" placeholder="postalcode:">
+                    <input class="form-control form-control-sm" type="text" name="country" placeholder="country:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Surname:</label>
@@ -108,6 +86,35 @@
                         <option value="1">COMPANY</option>
                     </select>
                 </div>
+
+                <div class="form-group row width-300 m-t-10">
+                    <div class="col-md-4">
+                        <label class="col-form-label float-left">Country*:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control float-right" name="country">
+                            <option value="Ukraine">Spain</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Egypt">Egypt</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row width-300 m-t-10">
+                    <div class="col-md-4">
+                        <label class="col-form-label float-left">Commercial*:&nbsp;&nbsp;</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control form-control-sm float-right" name="paymentmethod">
+                            <option value="Aruba">David Castella</option>
+                            <option value="Bahrain">----</option>
+                            <option value="Bahrain">Maria Gracia</option>
+                            <option value="Bahrain">Ricky Bordas</option>
+                            <option value="Bahrain">Antonio Paladino</option>
+                        </select>
+                    </div>
+                </div>
+
                 <label class="col-form-label form-control-sm"></label>
             </div>
             <div class="col-md-6">
@@ -127,44 +134,26 @@
                                     <a href="javascript:;">
                                         <div class="row row-space-10">
                                             <h4>Calls</h4>
-                                            <div class="form-group">
-                                                <label class="col-lg-4 col-form-label"><p>Date:</p></label>
-                                                <div class="col-lg-8">
+                                       <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label">Linked Pickers</label>
+                                            <div class="col-lg-8">
                                                 <div class="row row-space-10">
-                                                    <p>Linked Pickers</p>
                                                     <div class="col-xs-6 mb-2 mb-sm-0">
                                                         <input type="text" class="form-control" id="datetimepicker3"
-                                                               placeholder="min date">
+                                                               placeholder="Min Date">
                                                     </div>
                                                     <div class="col-xs-6">
                                                         <input type="text" class="form-control" id="datetimepicker4"
-                                                               placeholder="max date">
+                                                               placeholder="Max Date">
                                                     </div>
                                                 </div>
                                             </div>
-                                            </div>
+                                        </div>
                                        </div>
                                     </a>
                                     <small></small>
                                 </span>
                             </div>
-                            {{--                            --}}
-                            <div class="form-group row">
-                                <label class="col-lg-4 col-form-label">Linked Pickers</label>
-                                <div class="col-lg-8">
-                                    <div class="row row-space-10">
-                                        <div class="col-xs-6 mb-2 mb-sm-0">
-                                            <input type="text" class="form-control" id="datetimepicker3"
-                                                   placeholder="Min Date">
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <input type="text" class="form-control" id="datetimepicker4"
-                                                   placeholder="Max Date">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{--                            --}}
                             <div class="timeline-comment-box">
                                 <div class="input">
                                     <div class="input-group">
@@ -178,14 +167,17 @@
                             </div>
                         </div>
                     </li>
+                    @foreach($timelines as $timeline):
                     <li>
                         <div class="timeline-icon">
                             <a href="javascript:;">&nbsp;</a>
                         </div>
                         <div class="timeline-body">
-                            New Time Line Item1
+                            {{$timeline->text}}
                         </div>
                     </li>
+                    @endforeach
+
                 </ul>
             </div>
         </div>
@@ -223,35 +215,47 @@
                 <div class="row">
                     <br>
                     <label class="col-form-label col-md-2">Case description made by the client:</label>
-                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
-                              name="textarea1"></textarea>
+                    <textarea class="form-control" rows="3" placeholder="Case description made by the client:"
+                              name="Case1">
+
+                    </textarea>
+                    <textarea class="form-control" rows="3" placeholder="Case description made by the client:"
+                              name="Keywords">
+
+                    </textarea>
+                    <textarea class="form-control" rows="3" placeholder="Case description made by the client:"
+                              name="Searchs">
+
+                    </textarea>
                     <label class="col-form-label col-md-2">Info for the manager:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the manager:"
-                              name="textarea2"></textarea>
+                    <textarea class="form-control" rows="6" placeholder="Info for the manager:" name="info1">
+
+                    </textarea>
                     <label class="col-form-label col-md-2">Info for the commercial:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:"
-                              name="textarea3"></textarea>
+                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:" name="links">
+
+                    </textarea>
                 </div>
                 <br>
                 <div class="form-group">
                     <input type="checkbox" value="0" name="input_type_0">
-                    <label>FIRST CONTACT DONE</label>
+                    <label> STEV 1: FIRST CONTACT DONE </label>
                 </div>
                 <div class="form-group">
                     <input type="checkbox" value="1" name="input_type_1">
-                    <label>TRACKING DONE</label>
+                    <label> STEV 2:TRACKING DONE: (yes/no) </label>
                 </div>
                 <div class="form-group">
                     <input type="checkbox" value="3" name="input_type_3">
-                    <label>&nbsp;&nbsp;DOCUMENTATION SENDED</label>
+                    <label>&nbsp;STEV 3: DOCUMENTATION SENDED </label>
                 </div>
                 <div class="form-group">
                     <input type="checkbox" value="4" name="input_type_4">
-                    <label>&nbsp;&nbsp;SIGNED</label>
+                    <label>&nbsp;STEV 4: SIGNED </label>
                 </div>
                 <div class="form-group">
                     <input type="checkbox" value="4" name="input_type_4">
-                    <label> DISCARDED</label>
+                    <label> STEV 5: DISCARDED </label>
                 </div>
             </div>
         </div>
@@ -261,6 +265,35 @@
                 <input type="text" placeholder="CREATE CUSTOMER">
                 <input type="text" placeholder="DELETE CONTACT">
             </div>
+        </div>
+        <div class="steps">
+            {{--            <div class="nav-wizards-container">--}}
+            {{--                <nav class="nav nav-wizards-1 mb-2">--}}
+            {{--                    <div class="nav-item col">--}}
+            {{--                        <a class="nav-link completed" href="#">--}}
+            {{--                            <div class="nav-no">1</div>--}}
+            {{--                            <div class="nav-text">Completed step</div>--}}
+            {{--                        </a>--}}
+            {{--                    </div>--}}
+            {{--                    <div class="nav-item col">--}}
+            {{--                        <a class="nav-link active" href="#">--}}
+            {{--                            <div class="nav-no">3</div>--}}
+            {{--                            <div class="nav-text">Active step</div>--}}
+            {{--                        </a>--}}
+            {{--                    </div>--}}
+            {{--                    <div class="nav-item col">--}}
+            {{--                        <a class="nav-link disabled" href="#">--}}
+            {{--                            <div class="nav-no">5</div>--}}
+            {{--                            <div class="nav-text">Last step</div>--}}
+            {{--                        </a>--}}
+            {{--                    </div>--}}
+            {{--                </nav>--}}
+            {{--            </div>--}}
+            {{--            <div class="card">--}}
+            {{--                <div class="card-body">--}}
+            {{--                    wizard content here--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
         </div>
         <div class="row align-right">
             <button type="submit" class="form-control btn btn-green width-200">CONTACT REGISTRATION</button>

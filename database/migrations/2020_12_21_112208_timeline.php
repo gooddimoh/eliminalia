@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Countries extends Migration {
+class Timeline extends Migration
+{
     /**
      * Run the migrations.
      *
@@ -12,11 +13,13 @@ class Countries extends Migration {
      */
     public function up()
     {
-        Schema::create('countries', function (Blueprint $table) {
+        Schema::create('timeline', function (Blueprint $table) {
             $table->increments('id');
+            $table->increments('date');
+            $table->increments('time');
+            $table->increments('text');
             $table->string('name')->nullable();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -27,13 +30,6 @@ class Countries extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('countries');
+        Schema::dropIfExists('timeline');
     }
-
-    public function index(){}
-    public function index1(){}
-    public function index2(){}
-    public function index3(){}
-    public function index4(){}
-
 }

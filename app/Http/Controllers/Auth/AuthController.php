@@ -5,14 +5,14 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class AuthController extends Controller
-{
-    public function GetLogin()
+class AuthController extends Controller {
+
+    public function getlogin()
     {
         return view('auth.login');
     }
 
-    public function PostLogin(Request $request)
+    public function postlogin(Request $request)
     {
         $user = User::created($request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']));
         User::create($request->all());
@@ -20,17 +20,17 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function Store()
+    public function store()
     {
         echo "its store request";
     }
 
-    public function GetLogout(Request $request)
+    public function getlogout(Request $request)
     {
         var_dump($request->all());
     }
 
-    public function GetRegister(Request $request)
+    public function getregister(Request $request)
     {
         $user = new User();
 //        $user->c

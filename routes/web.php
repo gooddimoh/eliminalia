@@ -78,7 +78,7 @@ Route::post('user/store', 'UsersController@edit')->name('users.store');
 Route::get('dashboard/user/edit', 'UsersController@Edit')->name('user.edit');
 Route::get('dashboard/user/store', 'UsersController@Store')->name('user.store');
 
-Route::get('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
+Route::get('dashboard/timeline', 'TimelineController@index')->name('timeline');
 Route::get('dashboard/timeline/makepost', 'TimeLineController@timelinepost')->name('timeline.post');
 
 Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');

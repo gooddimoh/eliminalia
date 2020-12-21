@@ -17,4 +17,10 @@ class UserRoles extends Model
         'email_verified_at',
     ];
 
+    public function index(){}
+
+    public function index1(){}
+    public function index2(){}
+    public function index3(){}
+    public function index4(){}
 }

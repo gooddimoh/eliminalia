@@ -16,7 +16,7 @@ class AccessHistory extends Migration
         Schema::create('access_history', function (Blueprint $table) {
             $table->integer('id');
             $table->date('date');
-            $table->time('time'); /*time*/
+            $table->time('time');
             $table->integer('user_id');
             $table->string('device');
             $table->string('model_device');

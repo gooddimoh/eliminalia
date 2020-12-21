@@ -9,7 +9,7 @@ class TimelineController extends Controller
 {
     public function index()
     {
-        $timeline = Timeline::all()->zip();
+        $timeline = Timeline::all();
         return view("dashboard.admin.timeline.index");
     }
 

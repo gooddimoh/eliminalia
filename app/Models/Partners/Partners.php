@@ -50,4 +50,6 @@ class Partners extends Model {
     public function TimeLine(){
 
     }
+
+    public function index(){}
 }

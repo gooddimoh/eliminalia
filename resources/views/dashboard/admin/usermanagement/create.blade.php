@@ -13,13 +13,11 @@
             <div class="col-md-3">
                 <div class="form-group row">
                     <label class="col-form-label">Name:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="name"
-                           placeholder="Name:">
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="name" placeholder="Name:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Phone:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="phone"
-                           placeholder="Phone:">
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="phone" placeholder="Phone:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Password Confirm:</label>
@@ -27,13 +25,11 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">DNI:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="dni"
-                           placeholder="dni:">
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="dni" placeholder="dni:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Address:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="address"
-                           placeholder="Address:">
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="address" placeholder="Address:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>

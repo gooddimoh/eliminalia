@@ -1,11 +1,10 @@
 <?php
-namespace App\Models;
+namespace App\Models\Email;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Relation;
 
-class Payment extends Model
+class Email extends Model
 {
     use HasFactory;
 
@@ -30,17 +29,9 @@ class Payment extends Model
         'management_date'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
 
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function indexMethod(){}
 
-    public function Wetransfer(){}
     public function index(){}
 
     public function index1(){}

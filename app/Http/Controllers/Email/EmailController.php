@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -9,16 +8,19 @@ class EmailController extends Controller
 {
     public function inbox(Request $request)
     {
-        return view('email.email-inbox');
+        $email = Email::all();
+        return view('email.email-inbox', compact('email', $email));
     }
 
     public function compose(Request $request)
     {
-        return view('email.email-compose');
+        $email = Email::all();
+        return view('email.email-compose', compact('email', $email));
     }
 
     public function detail(Request $request)
     {
-        return view('email.email-detail');
+        $email = Email::all();
+        return view('email.email-detail', compact('email', $email));
     }
 }

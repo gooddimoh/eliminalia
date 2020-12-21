@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Callendar extends Model {
+class Calendar extends Model {
     use HasFactory;
 
     /**
@@ -49,7 +49,7 @@ class Callendar extends Model {
     {
         $events = [];
 
-        $callendar = Callendar::all();
+        $callendar = Calendar::all();
 
         foreach ($this->source as $source) {
             foreach ($source['model']::all() as $source) {
@@ -70,5 +70,11 @@ class Callendar extends Model {
             }
         }
     }
+
+    public function index1(){}
+    public function index2(){}
+    public function index3(){}
+    public function index4(){}
+
 }
 

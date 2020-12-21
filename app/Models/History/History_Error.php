@@ -34,4 +34,11 @@ class History_Error extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function index(){}
+
+    public function index1(){}
+    public function index2(){}
+    public function index3(){}
+    public function index4(){}
 }

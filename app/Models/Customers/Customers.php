@@ -44,7 +44,11 @@ class Customers extends Model
         'password', 'remember_token',
     ];
 
-    public function index(){
-    }
+    public function index(){}
+
+    public function index1(){}
+    public function index2(){}
+    public function index3(){}
+    public function index4(){}
 }
 

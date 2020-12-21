@@ -14,7 +14,6 @@ class ContactBook extends Migration
     {
         Schema::create('contact_book', function (Blueprint $table) {
             $table->id('id')->autoIncrement();
-            $table->timestamp('date');
             $table->string('contact_type');
             $table->string('communication_media_id');
             $table->string('company_name');
@@ -36,6 +35,7 @@ class ContactBook extends Migration
             $table->string('observations');
             $table->string('language');
             $table->tinyInteger('active');
+            $table->timestamp('date');
             $table->timestamps();
         });
     }

@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Gate;
@@ -22,14 +22,16 @@ class UserManagement extends Controller
     {
         $users = User::all()->pluck('');
         $roles = Role::all();
+        $model = Mole::all();
         $response = '';
         $request = '';
         var_dump($users);
-        // id1,id2,id3,id4,id5,id6;
-        // if role superadmin or admin
+
+        // id1,id2,id3,id4,id5,id6; //
+        // if role superadmin or admin //
+
         if ($request->all()) {
             $view = view('data', compact('post'))->render();
-
             response()->stream('');
             return response()->json(['html' => $view]);
         }

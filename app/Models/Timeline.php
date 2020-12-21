@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -22,12 +23,8 @@ class Timeline extends Model
         'id ',
         'date',
         'time',
-        'commercial_id',
-        'contact_id',
-        'observations',
-        'done',
+        'text',
         'timeline',
-        'management_date'
     ];
 
     /**
@@ -40,13 +37,20 @@ class Timeline extends Model
         'password', 'remember_token',
     ];
 
-    public function Timeline()
+    public function timeline()
     {
         echo "timeline";
     }
 
-    public function Create()
+    public function create()
     {
         echo "timeline";
     }
+
+    public function index(){}
+
+    public function index1(){}
+    public function index2(){}
+    public function index3(){}
+    public function index4(){}
 }

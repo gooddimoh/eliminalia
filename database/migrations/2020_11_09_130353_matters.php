@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Asuntos extends Migration
+class Matters extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Asuntos extends Migration
      */
     public function up()
     {
-        Schema::create('asuntos', function (Blueprint $table) {
+        Schema::create('matters', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('last_date');
             $table->string('last_minute');
@@ -33,6 +33,6 @@ class Asuntos extends Migration
      */
     public function down()
     {
-        Schema::drop('asuntos');
+        Schema::drop('matters');
     }
 }

@@ -55,7 +55,6 @@ class Search extends Model {
 
     }
 
-
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -74,7 +73,7 @@ class Search extends Model {
         return parent::save($options);
     }
 
-    public function Roles()
+    public function roles()
     {
         return $this->belongsToMany(Role::class);
     }
