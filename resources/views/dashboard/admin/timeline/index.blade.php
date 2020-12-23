@@ -68,12 +68,12 @@
                 <div class="timeline-comment-box">
                     <div class="user"><img src="/assets/img/user/user-13.jpg"/></div>
                     <div class="input">
-                        <form action="">
+                        <form action="{{route('timeline.create')}}" method="post">
                             <div class="input-group">
                                 <input type="text" class="form-control rounded-corner"
                                        placeholder="Write a comment..."/>
                                 <span class="input-group-btn p-l-10">
-								<button class="btn btn-primary f-s-12 rounded-corner" type="button">Comment</button>
+                                    <button class="btn btn-primary f-s-12 rounded-corner" type="submit">Comment</button>
 								</span>
                             </div>
                         </form>
@@ -82,6 +82,20 @@
             </div>
             <!-- end timeline-body -->
         </li>
+        @foreach($timelines as $timeline)
+            <li>
+                <div class="timeline-icon">
+                    <a href="javascript:;">&nbsp;</a>
+                </div>
+                <div class="timeline-time">
+                    <span class="date">{{$timeline->date}}</span>
+                    <span class="time">{{$timeline->time}}</span>
+                </div>
+                <div class="timeline-body">
+                    {{$timeline->text}}
+                </div>
+            </li>
+        @endforeach
     </ul>
     <!-- end timeline -->
 @endsection

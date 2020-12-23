@@ -79,18 +79,19 @@
                                 <th nowrap="">Name</th>
                                 <th nowrap="">Action taken</th>
                                 <th nowrap="">Date</th>
+                                <th nowrap="">Time</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
+                            @foreach($datas as $data)
+                                <tr>
+                                    <td>{{$data->id}}</td>
+                                    <td>{{$data->name}}</td>
+                                    <td>{{$data->action_taken}}</td>
+                                    <td>{{$data->date}}</td>
+                                    <td>{{$data->Time}}</td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -99,8 +100,16 @@
             </div>
         </div>
     </div>
+    <div class="paggination">
+        {{$item = 10}}
+        <a href="">{{$item}}</a>
+        <a href="">{{$item}}</a>
+        <a href="">{{$item}}</a>
+        <a href="">{{$item}}</a>
+    </div>
     <div class="results">
-        Result number: 0
+        {{$count = 10}}
+        Result number: {{ $count }}
     </div>
 @endsection
 @push('scripts')

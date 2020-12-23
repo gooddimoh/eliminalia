@@ -5595,8 +5595,8 @@ input[type=button].btn-block {
 
 .custom-control-input:checked ~ .custom-control-label::before {
     color: #FFFFFF;
-    border-color: #348fe2;
-    background-color: #348fe2;
+    border-color: #7ba43b;
+    background-color: #7ba43b;
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
@@ -23642,13 +23642,13 @@ hr {
 
 .nav.nav-wizards-1 .nav-item .nav-link.active,
 .nav.nav-wizards-1 .nav-item .nav-link.completed {
-    color: #348fe2;
+    color: #90ca4b;
 }
 
 .nav.nav-wizards-1 .nav-item .nav-link.active .nav-no,
 .nav.nav-wizards-1 .nav-item .nav-link.completed .nav-no {
-    border-color: #348fe2;
-    color: #348fe2;
+    border-color: #7fa742;
+    color: #7ba43b;
 }
 
 .nav.nav-wizards-1 .nav-item .nav-link.active:after,
@@ -23677,7 +23677,7 @@ hr {
 
 .nav.nav-wizards-1 .nav-item .nav-link:after {
     width: 0%;
-    background: #348fe2;
+    background: #7ba43b;
     right: 0;
     transition: all 0.2s linear;
 }
@@ -29571,7 +29571,7 @@ hr {
     top: 5px;
     bottom: 5px;
     width: 5px;
-    background: #2d353c;
+    background: #7aa43b;
     left: 20%;
     margin-left: -2.5px;
 }

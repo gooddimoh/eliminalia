@@ -46,6 +46,8 @@ class UserManagement extends Controller
 
     public function create(Request $request)
     {
+        echo "echo";
+        die("");
         $role = Role::all()->pluck('title', 'id');
         //   $users = User::all()->   //
         //   role admin and manager   //
@@ -57,10 +59,8 @@ class UserManagement extends Controller
     public function store(Request $request)
     {
         $request->validate(['name' => 'required', 'password' => 'required', 'email' => 'required', 'permission_level' => 'required']);
-        $request->all();
-        '';
-        $request->
         $data = (object)$request->all();
+
         $user = new User;
         $user->name = $data->name;
         $user->password = $data->password;
@@ -72,6 +72,7 @@ class UserManagement extends Controller
         $user->city = $data->city;
         $user->state = $data->state;
         $user->permission_level = $data->permission_level;
+
         $directory = preg_replace("[^0-9_A-Z]", "", strtoupper(strip_tags((string)$user->name . "_" . (string)$user->id)));
         Storage::makeDirectory('/UserDirectories' . strtoupper($directory) . '/public/');
         Storage::makeDirectory('/UserDirectories' . strtoupper($directory) . '/private/');
@@ -95,15 +96,13 @@ class UserManagement extends Controller
             return redirect('usermanagement.edit');
         }
         $users = User::all();
-        return view('dashboard.admin.usermanagement.edit', compact('users', $users))->render();
+        return view('dashboard.admin.usermanagement.edit', compact('users', $users));
     }
 
     public function update(Request $request, User $user)
     {
         $request->validate(['name' => 'required', 'password' => 'required', 'email' => 'required']);
         $data = (object)$request->all();
-        echo "die";
-        die();
         $user = User::where('id', $request->get('id'))->firstOrFail();
         $user->name = $data->name;
         $user->password = $data->password;

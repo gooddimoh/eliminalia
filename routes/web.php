@@ -81,7 +81,7 @@ Route::get('dashboard/user/store', 'UsersController@Store')->name('user.store');
 Route::get('dashboard/timeline', 'TimelineController@index')->name('timeline');
 Route::get('dashboard/timeline/makepost', 'TimeLineController@timelinepost')->name('timeline.post');
 
-Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
+Route::post('dashboard/timeline/create', 'TimelineController@create')->name('timeline.create');
 Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
 Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
 Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');

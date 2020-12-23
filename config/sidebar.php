@@ -58,12 +58,12 @@ return [
             'sub_menu' => [
                 [
                     'url' => '/dashboard/usermanagement/new',
-                    'title' => 'Usermanagement new',
+                    'title' => 'Usermanagement New',
                     'route-name' => 'usermanagement_new'
                 ],
                 [
                     'url' => '/dashboard/usermanagement/list',
-                    'title' => 'Usermanagement list',
+                    'title' => 'Usermanagement List',
                     'route-name' => 'usermanagement_list'
                 ],
             ]
@@ -76,12 +76,12 @@ return [
             'sub_menu' => [
                 [
                     'url' => '/dashboard/contacts/registration',
-                    'title' => 'Contact registration',
+                    'title' => 'Contact Registration',
                     'route-name' => 'contact_registration'
                 ],
                 [
                     'url' => '/dashboard/contacts/list',
-                    'title' => 'Contact list',
+                    'title' => 'Contact List',
                     'route-name' => 'contact list'
                 ],
                 [

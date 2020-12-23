@@ -17,11 +17,9 @@ use App\Models\Countries;
 
 class ContactsController extends Controller
 {
-
-    public function Index()
+    public function index()
     {
         // maby use Gate //
-
         $users = User::all();
         var_dump($users);
         return view('admin.users.index', compact('users', $users));
@@ -30,9 +28,10 @@ class ContactsController extends Controller
     public function create()
     {
         $roles = Role::all()->pluck('title', 'id');
-        $user = 'user';
+        $user = User::all()->pluck('');
+        $users = User::all();
         $timelines = Timeline::all();
-        return view('dashboard.admin.contacts.create', compact('roles', 'user', 'timelines'));
+        return view('dashboard.admin.contacts.create', compact('roles', 'users'))->with('timelines', $timelines, 'user', $user);
     }
 
     public function store(StoreUserRequest $request)
@@ -40,14 +39,16 @@ class ContactsController extends Controller
         $user = new User();
         $user->roles()->sync($request->input('roles', []));
         $user = User::create($request->all());
+        die();
         return redirect()->back();
     }
 
     public function list()
     {
-        //    $role = Role::all();
-        //    $user = User::all();
-        //    $role = '';
+        //$role = Role::all();
+        //$user = User::all();
+        //$role = '';
+
         $users = User::all();
         return view('dashboard.admin.contacts.index', compact('users'));
     }
@@ -61,7 +62,8 @@ class ContactsController extends Controller
         $data4 = '';
         $data5 = $data1 . $data2 . $data3 . $data4;
         $roles = 'role';
-        return view('dashboard.admin.contacts.create', compact('countries', $countries));
+        $timelines = Timeline::all();
+        return view('dashboard.admin.contacts.create', compact('countries', $countries))->with('timelines', $timelines);
     }
 
     public function inquiries()
@@ -86,13 +88,11 @@ class ContactsController extends Controller
 
     public function update(UserRequest $request, User $user)
     {
-
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'required|max:255',
             'price' => 'required|max:255'
         ]);
-
         $approved = $user->approved;
         $user->update($request->all());
         $user->roles()->sync($request->input('roles', []));

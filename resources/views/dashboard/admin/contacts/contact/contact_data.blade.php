@@ -25,7 +25,8 @@
 @section('content')
     <div class="panel-body">
         <div class="row">
-            <div class="row">List of all Users
+            <div class="row">
+                <p>List of all Users</p>
                 <h4 class="panel-title">MODIFY CONTACT</h4>
                 <p>Contact data</p>
             </div>
