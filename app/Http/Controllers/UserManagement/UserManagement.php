@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Auth\Events\Registered;
@@ -46,11 +47,12 @@ class UserManagement extends Controller
 
     public function create(Request $request)
     {
-        echo "echo";
-        die("");
-        $role = Role::all()->pluck('title', 'id');
+        //        echo "echo";
+        //        die("");
+        //        $role = Role::all()->pluck('title', 'id');
         //   $users = User::all()->   //
         //   role admin and manager   //
+
         $request->all();
         $users = User::all();
         return view('dashboard.admin.usermanagement.create')->with('users', $users);

@@ -27824,6 +27824,7 @@ hr {
     border: none;
     box-shadow: none;
     border-radius: 3px;
+    padding: 10px;
 }
 
 .panel > .table-bordered,

@@ -67,10 +67,8 @@
                            placeholder="Email (main)*:">
                 </div>
                 <div class="form-group row">
-                    <p><label class="col-form-label">&nbsp;</label></p>
                     <label class="col-form-label">City:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="city"
-                           placeholder="City:">
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="city" placeholder="City:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
@@ -84,8 +82,7 @@
                 </div>
                 <div class="form-group row ">
                     <div class="row-align-right">
-                        <button type="submit" class="form-control btn btn-green m-t-40 m-l-40"
-                                style="margin-left: 155px!important;margin-top:34px!important;border-radius:0px!important;padding-top:8px;">
+                        <button type="submit" class="form-control btn btn-green m-t-40 m-l-40" style="margin-left: 155px!important;margin-top:34px!important;border-radius:0px!important;padding-top:8px;">
                             NEW USER
                         </button>
                     </div>
