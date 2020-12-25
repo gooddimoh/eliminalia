@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Timeline;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -16,6 +17,7 @@ use App\Models\Role;
 use App\Models\User;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\DB;
+use function Sodium\compare;
 
 class UserManagement extends Controller
 {
@@ -47,15 +49,16 @@ class UserManagement extends Controller
 
     public function create(Request $request)
     {
-        //        echo "echo";
-        //        die("");
-        //        $role = Role::all()->pluck('title', 'id');
+        //   echo "echo";
+        //   die("");
+        //   $role = Role::all()->pluck('title', 'id');
         //   $users = User::all()->   //
         //   role admin and manager   //
 
         $request->all();
         $users = User::all();
-        return view('dashboard.admin.usermanagement.create')->with('users', $users);
+        $timelines = Timeline::all();
+        return view('dashboard.admin.usermanagement.create', compare('timelines', $timelines))->with('users', $users);
     }
 
     public function store(Request $request)
@@ -82,6 +85,8 @@ class UserManagement extends Controller
 
         event(new Registered($user = $user->save()));
 
+        notify(new InvoicePaid($invoice));
+        no
         session()->put('user', (array)$user);
         return redirect(route('usermanagement.new'));
     }
@@ -90,11 +95,14 @@ class UserManagement extends Controller
     {
 
         if ($request->ajax()) {
+
             $id = $request->post("id");
+
             $roles = Role::all()->pluck('title', 'id');
-            $users = User::all();
+            $users = User::all()->
             $user = User::query()->find($id);
             $user = DB::table('users')->where('id', $id)->first();
+
             return redirect('usermanagement.edit');
         }
         $users = User::all();

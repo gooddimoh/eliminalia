@@ -21,7 +21,6 @@ class User extends Model
     const SEO = 0;
     const SEO_REGISTER = 0;
     const PARTNER = 0;
-
     const BARCELONA = 0;
     const KIEV = 0;
     const CONSULTOR = 0;
@@ -30,7 +29,6 @@ class User extends Model
 
     protected $table = 'users';
 
-    //    Default role SUPERADMIN
     protected $role = 'SUPERADMIN';
 
     protected $hidden = [

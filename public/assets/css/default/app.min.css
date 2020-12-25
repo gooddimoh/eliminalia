@@ -5595,8 +5595,8 @@ input[type=button].btn-block {
 
 .custom-control-input:checked ~ .custom-control-label::before {
     color: #FFFFFF;
-    border-color: #7ba43b;
-    background-color: #7ba43b;
+    border-color: #348fe2;
+    background-color: #348fe2;
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
@@ -23642,13 +23642,13 @@ hr {
 
 .nav.nav-wizards-1 .nav-item .nav-link.active,
 .nav.nav-wizards-1 .nav-item .nav-link.completed {
-    color: #90ca4b;
+    color: #348fe2;
 }
 
 .nav.nav-wizards-1 .nav-item .nav-link.active .nav-no,
 .nav.nav-wizards-1 .nav-item .nav-link.completed .nav-no {
-    border-color: #7fa742;
-    color: #7ba43b;
+    border-color: #348fe2;
+    color: #348fe2;
 }
 
 .nav.nav-wizards-1 .nav-item .nav-link.active:after,
@@ -23677,7 +23677,7 @@ hr {
 
 .nav.nav-wizards-1 .nav-item .nav-link:after {
     width: 0%;
-    background: #7ba43b;
+    background: #348fe2;
     right: 0;
     transition: all 0.2s linear;
 }
@@ -29572,7 +29572,7 @@ hr {
     top: 5px;
     bottom: 5px;
     width: 5px;
-    background: #7aa43b;
+    background: #2d353c;
     left: 20%;
     margin-left: -2.5px;
 }
@@ -44234,24 +44234,18 @@ body ul.wysihtml5-toolbar .glyphicon.glyphicon-picture:before {
 .width-350 {
     width: 350px !important;
 }
-
 .width-400 {
     width: 400px !important;
 }
-
 .width-450 {
     width: 450px !important;
 }
-
 .width-500 {
     width: 500px !important;
 }
-
 .width-550 {
     width: 550px !important;
 }
-
 .width-600 {
     width: 600px !important;
 }
-
