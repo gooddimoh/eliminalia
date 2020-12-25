@@ -84,9 +84,12 @@ class UserManagement extends Controller
         $user->save();
 
         event(new Registered($user = $user->save()));
+        event();
+
+        notify();
 
         notify(new InvoicePaid($invoice));
-        no
+
         session()->put('user', (array)$user);
         return redirect(route('usermanagement.new'));
     }
