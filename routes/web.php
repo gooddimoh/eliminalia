@@ -27,7 +27,8 @@ Route::get('/forgot-password', function () {
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'web', 'role:superadmin', 'auth', 'role:manager']], function () {
 
 });
-
+//...
+//...
 // USER MANAGEMENT //
 Route::get('dashboard/usermanagement', 'UserManagement@usermanagement')->name('user.management');
 Route::get('dashboard/usermanagement/new', 'UserManagement@create')->name('usermanagement.new');
