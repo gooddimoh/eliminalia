@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 class StatisticController extends Controller {
 
+    public function index(){}
+
     public function contact()
     {
         echo 'contact';
@@ -20,4 +22,7 @@ class StatisticController extends Controller {
     {
         echo 'general';
     }
+
+    public function destroy(){}
+
 }

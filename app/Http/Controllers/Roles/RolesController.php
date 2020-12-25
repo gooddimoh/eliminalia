@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Gate;
 
 class RolesController extends Controller {
+
     public function index()
     {
         $roles = Role::all();
@@ -56,4 +57,5 @@ class RolesController extends Controller {
         Role::whereIn('id', request('ids'))->delete();
         return response(null, Response::HTTP_NO_CONTENT);
     }
+
 }

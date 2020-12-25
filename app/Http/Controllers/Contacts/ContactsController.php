@@ -15,8 +15,8 @@ use App\Models\Role;
 use App\Models\User;
 use App\Models\Countries;
 
-class ContactsController extends Controller
-{
+class ContactsController extends Controller {
+
     public function index()
     {
         // maby use Gate //

@@ -86,4 +86,5 @@ class MainController extends Controller {
     {
         return view('');
     }
+
 }

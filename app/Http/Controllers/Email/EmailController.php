@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Email;
 
-class EmailController extends Controller
-{
+class EmailController extends Controller {
     public function inbox(Request $request)
     {
         $email = Email::all();

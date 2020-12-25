@@ -41,17 +41,17 @@ class UsersController extends Controller
         redirect()->back();
     }
 
-//    public function input(){
-//        $this->validate($request){
-//            $this->validate($request), [ 'product_name' => 'required|max:255' ]
-//        }
-//
-//        return view();
-//    });
+    //    public function input(){
+    //        $this->validate($request){
+    //            $this->validate($request), [ 'product_name' => 'required|max:255' ]
+    //        }
+    //
+    //        return view();
+    //    });
 
     public function edit(User $user)
     {
-//        abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+    //   abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         $roles = Role::all()->pluck('title', 'id');
         $user->load('roles');
 
