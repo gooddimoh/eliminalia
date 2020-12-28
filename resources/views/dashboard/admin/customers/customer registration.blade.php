@@ -2,6 +2,7 @@
 
 @section('title', 'CONTACT REGISTRATION')
 {{--There output Contacts data --}}
+
 @section('content')
     <form method="post" action="{{route('contacts.create')}}" class="col-xl-12">
         @csrf
@@ -178,12 +179,14 @@
         </div>
     </form>
 @endsection
+
 <style type="text/css">
     .form-group {
         margin-bottom: 0px !important;
         margin-right: 10px !important;
     }
 </style>
+
 @push('scripts')
 <script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>
 <script src="{{'assets/js/demo/render.highlight.js'}}"></script>

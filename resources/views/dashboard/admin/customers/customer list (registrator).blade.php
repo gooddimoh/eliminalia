@@ -62,6 +62,7 @@
             <a href="">DELETE CUSTOMER</a>
         </div>
         @endsection
+
 @push('scripts')
 <script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>
 <script src="{{'assets/js/demo/render.highlight.js'}}"></script>

@@ -58,7 +58,7 @@ class UserManagement extends Controller
         $request->all();
         $users = User::all();
         $timelines = Timeline::all();
-        return view('dashboard.admin.usermanagement.create', compare('timelines', $timelines))->with('users', $users);
+        return view('dashboard.admin.usermanagement.create')->with('users', $users);
     }
 
     public function store(Request $request)
@@ -82,12 +82,13 @@ class UserManagement extends Controller
         Storage::makeDirectory('/UserDirectories' . strtoupper($directory) . '/public/');
         Storage::makeDirectory('/UserDirectories' . strtoupper($directory) . '/private/');
         $user->save();
+        $invoice = '';
 
-        event(new Registered($user = $user->save()));
-        event();
-        notify(new InvoicePaid($invoice));
-        notify(new InvoicePaid($invoice));
-        notify(new InvoicePaid($invoice));
+//        event(new Registered($user = $user->save()));
+//        event();
+//        notify(new InvoicePaid($invoice));
+//        notify(new InvoicePaid($invoice));
+//        notify(new InvoicePaid($invoice));
 
         session()->put('user', (array)$user);
         return redirect(route('usermanagement.new'));

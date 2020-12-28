@@ -24,16 +24,36 @@
                 <div class="form-group row">
                     <label class="col-form-label">Password Confirm:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" placeholder="Password:">
+                    <div class="form-group row" id="pwd-default-container">
+                        <label class="col-lg-4 col-form-label" for="pwstrength-default">Password</label>
+                        <div class="col-lg-8">
+                            {{--                            <input type="password" name="pwstrength-default" id="pwstrength-default" class="form-control mb-2">--}}
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div id="pwstrength-default-text" class="text-muted f-w-600 f-s-11">Start typing
+                                        password...
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="pwstrength-default-progress" class="pwstrength-progress">
+                                        <div class="progress ">
+                                            <div class="progress-bar-striped progress-bar bg-success" style="min-width: 1px; width: 100%;">
+                                                <span class="password-verdict" style="white-space: nowrap;">Very Strong</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">DNI:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="dni"
-                           placeholder="dni:">
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="dni" placeholder="dni:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Address:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="address"
-                           placeholder="Address:">
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="address" placeholder="Address:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Permission Level:</label>
@@ -58,8 +78,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label ">Password:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="password"
-                           placeholder="Password:">
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="password" placeholder="Password:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Email:</label>
@@ -72,8 +91,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">State:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="state"
-                           placeholder="State:">
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="state" placeholder="State:">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Postal code:</label>
@@ -147,10 +165,8 @@
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->name}}</td>
                                 <td>SUPERADMIN{{$user->role}}</td>
-                                <td><a class="btn btn-yellow m-r-5 m-b-5" style="cursor: pointer;"
-                                       onclick="customajax('edit','{{$user->id}}')">Edit </a></td>
-                                <td><a class="btn btn-danger m-r-5 m-b-5" style="cursor: pointer;"
-                                       onclick="customajax('delete','{{$user->id}}')"> Delete </a></td>
+                                <td><a class="btn btn-yellow m-r-5 m-b-5" style="cursor: pointer;" onclick="customajax('edit','{{$user->id}}')">Edit </a></td>
+                                <td><a class="btn btn-danger m-r-5 m-b-5" style="cursor: pointer;" onclick="customajax('delete','{{$user->id}}')"> Delete </a></td>
                             </tr>
                         @endforeach
                         </tbody>

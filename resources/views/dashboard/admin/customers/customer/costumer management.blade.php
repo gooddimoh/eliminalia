@@ -3,6 +3,7 @@
 @push('css')
     <link href="{{asset('assets/plugins/summernote/dist/summernote.css')}}" rel="stylesheet"/>
 @endpush
+
 @section('content')
     <div class="panel">
         <div class="panel-heading">
@@ -78,6 +79,7 @@
         </div>
     </div>
 @endsection
+
 @push('scripts')
     <script src="{{asset('/assets/plugins/jquery-migrate/dist/jquery-migrate.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>

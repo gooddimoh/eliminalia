@@ -84,6 +84,21 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="text-box-for-download-links">
+                    <p>FILE FORM UPLOAD</p>
+                    <div id="dropzone">
+                        <form action="/upload" class="dropzone needsclick" id="demo-upload">
+                            <div class="dz-message needsclick">
+                                Drop files <b>here</b> or <b>click</b> to upload.<br/>
+                                <span class="dz-note needsclick">
+                        (This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)
+                      </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="pagination">
             <div class="panel panel-inverse">

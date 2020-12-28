@@ -9,21 +9,18 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Client\Request;
+//use File
 
 class User extends Model
 {
     const SUPERADMIN = 0;
+    const ADMIN_SUCURSAL = 0;
     const ADMIN = 0;
-    const RECEPTION = 0;
-    const MANAGER = 0;
-    const REGISTER = 0;
-    const COMMERCIAL = 0;
-    const SEO = 0;
-    const SEO_REGISTER = 0;
+    const ALTA_CONTRATOS = 0;
+    const RASTREADOR = 0;
+    const COMERCIAL = 0;
     const PARTNER = 0;
-    const BARCELONA = 0;
-    const KIEV = 0;
-    const CONSULTOR = 0;
+    const MANAGER = 0;
 
     use HasFactory;
 
@@ -79,29 +76,22 @@ class User extends Model
 
     public function UploadFiles(Request $request)
     {
-        $validation = $request->validate([
-            'file' => 'required|file|image|mimes:jpeg,png,gif,jpg|max:2048'
+        $request->validate([
+            'file' => 'required|mimes:csv,txt,xlx,xls,pdf|max:2048'
         ]);
 
-        $file = $validation['file'];
+        $fileModel = new File;
 
-        $fileName = 'profile-' . time() . '.' . $file->getClientOriginalExtension();
+        if ($request->file()) {
+            $fileName = time() . '_' . $request->file->getClientOriginalName();
+            $filePath = $request->file('file')->storeAs('uploads', $fileName, 'public');
 
-        // New Client
-        // Create ID Client
-        // Links Public Documents
+            $fileModel->name = time() . '_' . $request->file->getClientOriginalName();
+            $fileModel->file_path = '/storage/' . $filePath;
+            $fileModel->save();
 
-        // Create Automatic Folders
-        // Links
-        // Public Documents
-        // Private Documents (Internal)
-
-        // Client Documents (public)
-        // Private Documents (internal)
-
-        $s3 = Storage::disk('s3');
-        $filePath = '/uploads/media/' . $fileName;
-        $s3->put($filePath, file_get_contents($file), 'public');
+            return back()->with('success', 'File has been uploaded.')->with('file', $fileName);
+        }
 
     }
 

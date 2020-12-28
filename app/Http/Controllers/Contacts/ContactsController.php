@@ -15,7 +15,8 @@ use App\Models\Role;
 use App\Models\User;
 use App\Models\Countries;
 
-class ContactsController extends Controller {
+class ContactsController extends Controller
+{
 
     public function index()
     {
@@ -31,7 +32,7 @@ class ContactsController extends Controller {
         $user = User::all()->pluck('');
         $users = User::all();
         $timelines = Timeline::all();
-        return view('dashboard.admin.contacts.create', compact('roles', 'users'))->with('timelines', $timelines, 'user', $user);
+        return view('dashboard.admin.contacts.create', compact('roles', 'users', 'user', 'timelines'));
     }
 
     public function store(StoreUserRequest $request)
