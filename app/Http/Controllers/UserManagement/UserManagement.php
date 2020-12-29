@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Timeline;
@@ -19,8 +18,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\DB;
 use function Sodium\compare;
 
-class UserManagement extends Controller
-{
+class UserManagement extends Controller {
+
     public function index(Request $request, Response $response)
     {
         $users = User::all()->pluck('');
@@ -61,8 +60,7 @@ class UserManagement extends Controller
         return view('dashboard.admin.usermanagement.create')->with('users', $users);
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $request->validate(['name' => 'required', 'password' => 'required', 'email' => 'required', 'permission_level' => 'required']);
         $data = (object)$request->all();
 
@@ -146,4 +144,5 @@ class UserManagement extends Controller
         User::whereIn('id', request('ids'))->delete();
         return response(null, Response::HTTP_NO_CONTENT);
     }
+
 }

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -15,8 +14,7 @@ use App\Models\Role;
 use App\Models\User;
 use App\Models\Countries;
 
-class ContactsController extends Controller
-{
+class ContactsController extends Controller {
 
     public function index()
     {

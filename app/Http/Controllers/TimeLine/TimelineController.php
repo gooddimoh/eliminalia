@@ -18,6 +18,12 @@ class TimelineController extends Controller
 
     //   var_dump($request->all());
     //   var_dump($request->pjax());
+
+        $request->all();
+        $request->ajax();
+        $request->pjax();
+
+
     //   $timelines = Timeline::all();
     //   var_dump($request);
     //   var_dump($timelines);
