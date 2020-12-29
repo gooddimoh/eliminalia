@@ -21,14 +21,20 @@
 
 @section('content')
     <div class="heading">
-        <h1>CUSTOMER DATA</h1>
+        <h1>CUSTOMER REGISTRATION</h1>
+        <h1>Customer Data</h1>
     </div>
-    <div class="row"></div>
-    <div class="row"></div>
-    <div class="row"></div>
-    <div class="row"></div>
-    <div class="row"></div>
-    <div class="row"></div>
+    <div class="row">
+        <div class="inputs-group">
+            <input type="text"><input type="text"><input type="text">
+        </div>
+        <div class="inputs-group">
+            <input type="text"><input type="text"><input type="text">
+        </div>
+    </div>
+    <textarea name="" id="" cols="30" rows="10">
+
+    </textarea>
 @endsection
 
 @push('scripts')

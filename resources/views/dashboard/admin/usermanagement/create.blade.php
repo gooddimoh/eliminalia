@@ -24,7 +24,7 @@
                     <div class="form-group row" id="pwd-default-container">
                         <label class="col-lg-4 col-form-label" for="pwstrength-default">Password</label>
                         <div class="col-lg-8">
-                            {{--                            <input type="password" name="pwstrength-default" id="pwstrength-default" class="form-control mb-2">--}}
+                            <input type="password" name="pwstrength-default" id="pwstrength-default" class="form-control mb-2">
                             <div class="row align-items-center">
                                 <div class="col-md-6">
                                     <div id="pwstrength-default-text" class="text-muted f-w-600 f-s-11">Start typing
@@ -162,8 +162,12 @@
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->name}}</td>
                                 <td>SUPERADMIN{{$user->role}}</td>
-                                <td><a class="btn btn-yellow m-r-5 m-b-5" style="cursor: pointer;" onclick="customajax('edit','{{$user->id}}')">Edit </a></td>
-                                <td><a class="btn btn-danger m-r-5 m-b-5" style="cursor: pointer;" onclick="customajax('delete','{{$user->id}}')"> Delete </a></td>
+                                <td>
+                                    <a class="btn btn-yellow m-r-5 m-b-5" style="cursor: pointer;" onclick="customajax('edit','{{$user->id}}')">Edit </a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger m-r-5 m-b-5" style="cursor: pointer;" onclick="customajax('delete','{{$user->id}}')">
+                                        Delete </a></td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -188,8 +192,8 @@
     <script src="{{asset('/assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
     <script src="{{asset('/assets/js/demo/table-manage-default.demo.js')}}"></script>
-    <script src="{{asset('assets/plugins/summernote/dist/summernote.min.js')}}"></script>
-    <script src="{{asset('assets/js/demo/form-summernote.demo.js')}}"></script>
+    <script src="{{asset('/assets/plugins/summernote/dist/summernote.min.js')}}"></script>
+    <script src="{{asset('/assets/js/demo/form-summernote.demo.js')}}"></script>
 @endpush
 <script type="">
     let action = 'new';

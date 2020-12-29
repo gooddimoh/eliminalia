@@ -5,6 +5,7 @@
 @endpush
 
 @section('content')
+
     <h1>FINISH CUSTOMER</h1>
     <div class="CUSTOMER">
         <form action="" id="form">
@@ -64,6 +65,7 @@
             </div>
         </form>
     </div>
+
 @endsection
 
 @push('scripts')

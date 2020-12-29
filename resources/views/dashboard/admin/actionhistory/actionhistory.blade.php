@@ -100,6 +100,32 @@
             </div>
         </div>
     </div>
+    <div class="result">
+        <table>
+            <caption>Council budget (in £) 2018</caption>
+            <thead>
+            <tr>
+                <th scope="col">Items</th>
+                <th scope="col">Expenditure</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Name</th>
+                <th scope="row">Action Taken</th>
+                <td>3,000</td>
+            </tr>
+            <tr>
+                <th scope="row">Date</th>
+                <th scope="row">Time</th>
+                <td>18,000</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="result">
+            Result number: 138536
+        </div>
+    </div>
     <div class="paggination">
         {{$item = 10}}
         <a href="">{{$item}}</a>

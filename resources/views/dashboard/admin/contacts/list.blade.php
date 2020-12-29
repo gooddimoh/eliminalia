@@ -12,14 +12,11 @@
     <link href="{{'assets/plugins/tag-it/css/jquery.tagit.css'}}" rel="stylesheet"/>
     <link href="{{'assets/plugins/bootstrap-daterangepicker/daterangepicker.css'}}" rel="stylesheet"/>
     <link href="{{'assets/plugins/select2/dist/css/select2.min.css'}}" rel="stylesheet"/>
-    <link href="{{'assets/plugins/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'}}"
-          rel="stylesheet"/>
+    <link href="{{'assets/plugins/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'}}" rel="stylesheet"/>
     <link href="{{'assets/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css'}}" rel="stylesheet"/>
     <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.css'}}" rel="stylesheet"/>
-    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-fontawesome.css'}}"
-          rel="stylesheet"/>
-    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-glyphicons.css'}}"
-          rel="stylesheet"/>
+    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-fontawesome.css'}}" rel="stylesheet"/>
+    <link href="{{'assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-glyphicons.css'}}" rel="stylesheet"/>
 @endpush
 
 @section('content')
@@ -107,8 +104,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <div class="dataTables_length" id="data-table-default_length"><label>Show
-                                        <select name="data-table-default_length" aria-controls="data-table-default"
-                                                class="custom-select custom-select-sm form-control form-control-sm">
+                                        <select name="data-table-default_length" aria-controls="data-table-default" class="custom-select custom-select-sm form-control form-control-sm">
                                             <option value="10">10</option>
                                             <option value="25">25</option>
                                             <option value="50">50</option>
@@ -118,9 +114,9 @@
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div id="data-table-default_filter" class="dataTables_filter">
-                                    <label> Search: <input type="search" class="form-control form-control-sm"
-                                                           placeholder="Search:"
-                                                           aria-controls="data-table-default"></label></div>
+                                    <label> Search:
+                                        <input type="search" class="form-control form-control-sm" placeholder="Search:" aria-controls="data-table-default"></label>
+                                </div>
                             </div>
                         </div>
                         <div class="row">

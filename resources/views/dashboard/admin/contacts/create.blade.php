@@ -408,32 +408,6 @@
             <div class="links"></div>
         </div>
         <br>
-        <ul class="nav nav-pills mb-2">
-            <li class="nav-item">
-                <a href="#nav-pills-tab-1" data-toggle="tab" class="nav-link active">
-                    <span class="d-sm-none">Pills 1</span>
-                    <span class="d-sm-block d-none">Pills Tab 1</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#nav-pills-tab-2" data-toggle="tab" class="nav-link">
-                    <span class="d-sm-none">Pills 2</span>
-                    <span class="d-sm-block d-none">Pills Tab 2</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#nav-pills-tab-3" data-toggle="tab" class="nav-link">
-                    <span class="d-sm-none">Pills 3</span>
-                    <span class="d-sm-block d-none">Pills Tab 3</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#nav-pills-tab-4" data-toggle="tab" class="nav-link">
-                    <span class="d-sm-none">Pills 4</span>
-                    <span class="d-sm-block d-none">Pills Tab 4</span>
-                </a>
-            </li>
-        </ul>
         <div class="text-box-for-download-links">
             <p>FILE FORM UPLOAD</p>
             <div id="dropzone">
@@ -487,4 +461,4 @@
         $("#company_form").show();
         $("#physical_form").hide();
     });
-</script>
+</script>d

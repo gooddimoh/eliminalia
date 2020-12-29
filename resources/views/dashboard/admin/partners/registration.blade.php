@@ -123,7 +123,9 @@
         <div class="row -align-right">
             <button type="submit" class="form-control btn btn-green width-250">PARTNER REGISTRATION</button>
         </div>
+        <h1>Partner Data</h1>
     </form>
+
 @endsection
 
 @push('scripts')
