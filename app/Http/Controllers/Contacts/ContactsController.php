@@ -71,7 +71,7 @@ class ContactsController extends Controller {
         return view('dashboard.admin.contacts.inquiries', compact('users'));
     }
 
-    public function edit(Reques $request, User $user, Response $response)
+    public function edit(Request $request, User $user, Response $response)
     {
         $roles = Role::all()->pluck('title', 'id');
         $roles->load('roles');
@@ -103,7 +103,6 @@ class ContactsController extends Controller {
 
     public function show(User $user)
     {
-
         $user->load('roles');
         return view('admin.users.show', compact('user'));
     }

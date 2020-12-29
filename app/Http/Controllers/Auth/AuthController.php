@@ -33,7 +33,6 @@ class AuthController extends Controller {
     public function getregister(Request $request)
     {
         $user = new User();
-//        $user->c
         return view('auth.register');
     }
 
