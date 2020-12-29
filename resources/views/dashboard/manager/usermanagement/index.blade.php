@@ -6,6 +6,7 @@
 
 @section('content')
     <div class="panel">
+        @csrf
         <div class="panel-heading">
             <h4 class="panel-title">UserManagement List</h4>
             <div class="panel-heading-btn">

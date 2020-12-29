@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <form id="physical_form" action="" class="form-1">
+                <form id="physical_form" action="physical" class="physical">
                     <h2>Physical Form</h2>
                     <div class="row">
                         <div class="col-md-12">
@@ -164,7 +164,7 @@
                         </div>
                     </div>
                 </form>
-                <form id="company_form" action="" class="form-1">
+                <form id="company_form" action="company" class="company">
                     <h2>Company Form</h2>
                     <div class="row">
                         <div class="col-md-4">

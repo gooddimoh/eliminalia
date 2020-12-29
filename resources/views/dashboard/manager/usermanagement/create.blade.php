@@ -7,7 +7,6 @@
 @section('content')
     <form method="post" action="{{route('user.create')}}" class="col-xl-12">
         @csrf
-        {{ csrf_field() }}
         <div class="row">
             <div class="col-md-3">
                 <h4>New User Data</h4>
@@ -131,6 +130,8 @@
             </div>
         </div>
     </form>
+@endsection
+
 @section('legend')
     <div class="legend">
         <h1>Legend</h1>
@@ -162,6 +163,7 @@
             está recibido o no? Solo el SUPER ADMIN.</p>
     </div>
 @endsection
+
 <script>
     var request = $.ajax({
         url: "{{route("usermanagementnew")}}",
@@ -176,6 +178,7 @@
         alert("Request failed: " + textStatus);
     });
 </script>
+
 @push('scripts')
     <script src="{{asset('/assets/plugins/jquery-migrate/dist/jquery-migrate.js')}}"></script>
     <script src="{{asset('/assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>

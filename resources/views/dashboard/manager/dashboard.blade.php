@@ -25,8 +25,7 @@
             <span>1 Jun 2020 - 7 Jun 2020</span>
             <b class="caret"></b>
         </a>
-        <div class="text-muted f-w-600 mt-2 mt-sm-0">compared to <span
-                    id="daterange-prev-date">24 Mar-30 Apr 2020</span></div>
+        <div class="text-muted f-w-600 mt-2 mt-sm-0">compared to <span id="daterange-prev-date">24 Mar-30 Apr 2020</span></div>
     </div>
     <!-- end daterange-filter -->
     <!-- begin row -->
