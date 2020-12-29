@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\User;
@@ -16,6 +15,7 @@ class TimelineController extends Controller
 
     public function create(Request $request)
     {
+
     //   var_dump($request->all());
     //   var_dump($request->pjax());
     //   $timelines = Timeline::all();
