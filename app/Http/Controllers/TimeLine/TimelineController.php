@@ -16,7 +16,6 @@ class TimelineController extends Controller
 
     public function create(Request $request)
     {
-
     //   var_dump($request->all());
     //   var_dump($request->pjax());
     //   $timelines = Timeline::all();
@@ -39,3 +38,6 @@ class TimelineController extends Controller
     }
 
 }
+
+//commit
+//commit
