@@ -5,7 +5,6 @@
 @endpush
 
 @section('content')
-
     <form method="post" action="{{route('contactsupdate')}}" class="col-xl-12">
         @csrf
         <div class="row">
@@ -131,7 +130,6 @@
             <button type="submit" class="form-control btn btn-green col-md-6">CONTACT REGISTER</button>
         </div>
     </form>
-
 @endsection
 
 @section('legend')
