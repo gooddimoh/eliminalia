@@ -9,7 +9,7 @@
     <form method="POST" class="col-md-12" action="{{route('timeline.create')}}">
         @csrf
         {{--        <h1>Contact Data {{$user->id}}</h1>--}}
-        {{--        {{if complite add class complete yellow red }}--}}
+        {{--        {{  if complite add class complete yellow red }}--}}
         <div class="row">
             <div class="col-md-12">
                 <div class="steps">
@@ -63,11 +63,9 @@
                             <input type="checkbox" class="custom-control-input" id="company" name="company" value="company">
                             <label class="custom-control-label m-r-40" for="company">Company</label>
                         </div>
-                    </div>
-                    <div class="col-md-6">
                         <div class="form-group row">
+                            <span><label class="col-form-label">Native language*:&nbsp;</label></span>
                             <div class="form-group custom-control custom-switch mb-1 m-10 flex-align-right">
-                                <label class="col-form-label">Native language*:</label>
                                 <select class="form-control form-control-sm float-right" name="nativelanguage">
                                     <option value="0">Native languge*:(ES)&nbsp;</option>
                                     <option value="1" selected>SPANISH</option>
@@ -78,8 +76,8 @@
                                     <option value="6">ITALIAN</option>
                                 </select>
                             </div>
+                            <span><label class="col-form-label">Commercial*:&nbsp;</label></span>
                             <div class="form-group custom-control custom-switch mb-1 m-10 flex-align-right">
-                                <label class="col-form-label">Commercial*:&nbsp;</label>
                                 <select class="form-control form-control-sm float-right" name="paymentmethod">
                                     <option value="Aruba">David Castella</option>
                                     <option value="Bahrain">----</option>
@@ -94,78 +92,64 @@
             </div>
             <div class="col-md-6">
                 <form id="physical_form" action="physical" class="physical">
-                    <h2>Physical Form</h2>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="row col-md-4">
-                                    <label class="col-form-label">Name*:</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="name">
-                                </div>
-                                <div class="row col-md-4">
-                                    <label class="col-form-label">Surname*:1</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="surename1">
-                                </div>
-                                <div class="row col-md-4">
-                                    <label class="col-form-label">Surname*:2</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="surename2">
-                                </div>
-                            </div>
+                    <h2>PHYSICAL</h2>
+                    <div class="row col-md-12">
+                        <div class="col-md-4">
+                            <label class="col-form-label">Name*:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="name">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">Surname*:1</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="surename1">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">Surname*:2</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="surename2">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="row col-md-4">
-                                    <label class="col-form-label">Phone*:</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="phonenumber1" value="">
-                                </div>
-                                <div class="row col-md-4">
-                                    <label class="col-form-label">Email*:</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="email" value="">
-                                </div>
-                                <div class="row col-md-4">
-                                    <label class="col-form-label">Email Confirmation*:</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="emailconfirmate" value="">
-                                </div>
-                            </div>
+                    <div class="row form-group col-md-12">
+                        <div class="col-md-4">
+                            <label class="col-form-label">Phone*:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="phonenumber1" value="">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">Email*:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="email" value="">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">Email Confirmation*:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="emailconfirmate" value="">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-md-12" style="margin:0; padding:0;">
-                            <div class="row" style="margin:0">
-                                <div class="col-md-7">
-                                    <label class="col-form-label">Address:</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="Address:" value="">
-                                </div>
-                                <div class="col-md-4">
-                                    <label class="col-form-label">State*:</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="State" value="">
-                                </div>
-                            </div>
+                    <div class="row form-group col-md-12">
+                        <div class="col-md-7">
+                            <label class="col-form-label">Address:</label>
+                            <input class="form-control form-control-sm height-40" name="Address:" value="">
+                        </div>
+                        <div class="col-md-5">
+                            <label class="col-form-label">State*:</label>
+                            <input class="form-control form-control-sm height-40" name="State" type="text" value="">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-md-12" style="margin:0; padding:0;">
-                            <div class="row" style="margin:0">
-                                <div class="col-md-4">
-                                    <label class="col-form-label">City:</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="Address:" value="">
-                                </div>
-                                <div class="col-md-4">
-                                    <label class="col-form-label">Postal Code*:</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="State" value="">
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="col-form-label">Country*:</label>
-                                    <input class="form-control form-control-sm height-40" type="text" name="State" value="">
-                                </div>
-                            </div>
+                    <div class="row form-group col-md-12">
+                        <div class="col-md-4">
+                            <label class="col-form-label">City:</label>
+                            <input class="form-control form-control-sm height-40" style="margin: 0px!important; padding: 0px;" type="text" name="Address:" value="">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">Postal Code*:</label>
+                            <input class="form-control form-control-sm height-40" style="margin: 0px!important; padding: 0px;" type="text" name="State" value="">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="col-form-label">Country*:</label>
+                            <input class="form-control form-control-sm height-40" style="margin: 0px!important; padding: 0px;" type="text" name="State" value="">
                         </div>
                     </div>
                 </form>
+                <br>
+                <br>
                 <form id="company_form" action="company" class="company">
-                    <h2>Company Form</h2>
+                    <h2>COMPANY</h2>
                     <div class="row">
                         <div class="col-md-4">
                             <label class="col-form-label">Company Name:</label>
@@ -185,7 +169,6 @@
                             <label class="col-form-label">Postal Code:</label>
                             <input class="form-control form-control-sm height-40" type="text" name="postal_code">
                         </div>
-                        <br/>
                         <div class="col-md-4">
                             <label class="col-form-label">Country:</label>
                             <select class="form-control height-40" name="country">
@@ -197,72 +180,64 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group row col-md-12">
-                            <div class="col-md-3">
-                                <label class="col-form-label">Date Company:</label>
-                                <input class="form-control form-control-sm height-40" type="text" name="company_name">
-                            </div>
-                            <div class="col-md-3">
-                                <label class="col-form-label">Ficsal Code:</label>
-                                <input class="form-control form-control-sm height-40" type="text" name="ficsal_code">
-                            </div>
-                            <div class="col-md-3">
-                                <label class="col-form-label">Ficsal Code:</label>
-                                <input class="form-control form-control-sm height-40" type="text" name="address">
-                            </div>
-                            <div class="col-md-3">
-                                <label class="col-form-label">Ficsal Code:</label>
-                                <input class="form-control form-control-sm height-40" type="text" name="state">
-                            </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">Date Company Name:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="company_name">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">Ficsal Code:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="ficsal_code">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">Address:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="address">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">State:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="state">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-12 row">
-                            <div class="col-md-4">
-                                <label class="col-form-label">City Code:</label>
-                                <input class="form-control form-control-sm height-40 m-t-10" type="text" name="city">
-                            </div>
-                            <div class="col-md-4">
-                                <label class="col-form-label">Postal Code:</label>
-                                <input class="form-control form-control-sm height-40 m-t-10" type="text" name="postal_code">
-                            </div>
-                            <div class="col-md-4">
-                                <label class="col-form-label">Country:</label>
-                                <select class="form-control height-40 m-t-10" name="country">
-                                    <option value="Ukraine">Spain</option>
-                                    <option value="Ukraine">Ukraine</option>
-                                    <option value="Thailand">Thailand</option>
-                                    <option value="Egypt">Egypt</option>
-                                </select>
-                            </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">City Code:</label>
+                            <input class="form-control form-control-sm height-40 m-t-10" type="text" name="city">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">Postal Code:</label>
+                            <input class="form-control form-control-sm height-40 m-t-10" type="text" name="postal_code">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">Country:</label>
+                            <select class="form-control height-40 m-t-10" name="country">
+                                <option value="Ukraine">Spain</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Egypt">Egypt</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-12 row">
-                            <div class="col-md-4">
-                                <label class="col-form-label">PHONE 1:</label>
-                                <input class="form-control form-control-sm height-40" type="text" name="company_phone" value="">
-                            </div>
-                            <div class="col-md-4">
-                                <label class="col-form-label">EMAIL:</label>
-                                <input class="form-control form-control-sm height-40" type="text" name="company_email" value="">
-                            </div>
-                            <div class="col-md-4">
-                                <label class="col-form-label">EMAIL CONFIRMATE:</label>
-                                <input class="form-control form-control-sm height-40" type="text" name="company_email_confirmate" value="">
-                            </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">PHONE 1:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="company_phone" value="">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">EMAIL:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="company_email" value="">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">EMAIL CONFIRMATE:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="company_email_confirmate" value="">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-md-12 row">
-                            <div class="col-md-4">
-                                <label class="col-form-label">CONTACT_PERSON:</label>
-                                <input class="form-control form-control-sm height-40" type="text" name="contact_person">
-                            </div>
-                            <div class="col-md-4">
-                                <label class="col-form-label">EMAIL_CONTACT:</label>
-                                <input class="form-control form-control-sm height-40" type="text" name="email_contact">
-                            </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label class="col-form-label">CONTACT_PERSON:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="contact_person">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="col-form-label">EMAIL_CONTACT:</label>
+                            <input class="form-control form-control-sm height-40" type="text" name="email_contact">
                         </div>
                     </div>
                 </form>
@@ -279,43 +254,41 @@
                             <a href="javascript:;">&nbsp;</a>
                         </div>
                         <div class="timeline-body">
-                            <div class="timeline-header">
+                            <form action="{{route("fileupload")}}" class="row col-md-12 input-group" type="post">
+                                <div class="timeline-header">
                                 <span class="username">
                                     <a href="javascript:;">
                                         <div class="row row-space-10">
-                                            <div class="row">
-                                             <label class="col-lg-4">Calls</label>
-                                            </div>
                                            <div class="form-group row">
-                                                <div class="col-lg-8">
-
-                                                 </div>
+                                                <div class="col-lg-8"> </div>
                                             </div>
-                                            <div class="col-lg-8">
+                                            <div class="col-md-12">
                                                 <div class="row row-space-10">
-                                                    <div class="col-xs-6 mb-2 mb-sm-0">
-                                                        <input type="text" class="form-control" id="datetimepicker3" placeholder="Min Date">
+                                                   <span class="col-md-2">Calls</span>
+                                                    <div class="col-md-4">
+                                                        <input type="date" class="form-control" name="date" id="input_type_date">
                                                     </div>
-                                                    <div class="col-xs-6">
-                                                        <input type="text" class="form-control" id="datetimepicker4" placeholder="Max Date">
+                                                    &nbsp;
+                                                    <div class="col-md-4">
+                                                        <input type="time" class="form-control" name="time" id="input_type_date">
                                                     </div>
                                                 </div>
                                             </div>
                                        </div>
                                     </a>
-                                    <small></small>
                                 </span>
-                            </div>
-                            <div class="timeline-comment-box">
-                                <div class="input">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control rounded-corner" placeholder="Write a comment...">
-                                        <span class="input-group-btn p-l-10">
-                                            <button class="btn btn-primary f-s-12 rounded-corner" type="submit">Send To Time Line</button>
-                                        </span>
+                                </div>
+                                <div class="timeline-comment-box">
+                                    <div class="input">
+                                        <div class="input-group">
+                                            <input type="text" class="col-md-8 form-control m-l-4 p-r-4 rounded-corner" placeholder="Write a comment..." name="text" value="Write a comment...">
+                                            <button class="col-md-4 btn btn-primary input-group-btn m-l-4 p-r-4 f-s-12 rounded-corner" type="submit">
+                                                Send To Time Line
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </li>
                     @foreach($timelines as $timeline)
@@ -376,26 +349,19 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="checkbox checkbox-css">
-                    <input type="checkbox" id="cssCheckbox1"/>
+                    <input type="checkbox" id="budget"/>
                     <label for="cssCheckbox1">Checkbox1</label>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="checkbox checkbox-css">
-                    <input type="checkbox" id="cssCheckbox2"/>
+                    <input type="checkbox" id="payment"/>
                     <label for="cssCheckbox2">Checkbox2</label>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="checkbox checkbox-css">
-                    <input type="checkbox modal show hide" id="fileupload"/>
-                    <label for="cssCheckbox3">Checkbox3</label>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <h5>Show Hide Modal for File upload</h5>
-                <div class="checkbox checkbox-css">
-                    <input type="checkbox modal show hide" id="fileupload"/>
+                    <input type="checkbox" id="cssCheckbox3"/>
                     <label for="cssCheckbox3">Checkbox3</label>
                 </div>
             </div>
@@ -408,15 +374,19 @@
             <div class="links"></div>
         </div>
         <br>
+        <div class="col-md-12">
+            <div class="checkbox checkbox-css">
+                <input type="checkbox" class="show-modal" onclick="showmodal('fileupload')" id="showmodal"/>
+                <label for="showmodal">Show Hide Modal for File upload</label>
+            </div>
+        </div>
         <div class="text-box-for-download-links">
             <p>FILE FORM UPLOAD</p>
             <div id="dropzone">
-                <form action="/upload" class="dropzone needsclick" id="demo-upload">
+                <form action="{{ route('fileupload') }}" class="dropzone needsclick" id="fileupload">
                     <div class="dz-message needsclick">
                         Drop files <b>here</b> or <b>click</b> to upload.<br/>
-                        <span class="dz-note needsclick">
-                        (This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)
-                      </span>
+                        <span class="dz-note needsclick"> (This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.) </span>
                     </div>
                 </form>
             </div>
@@ -426,7 +396,6 @@
         </div>
     </form>
 @endsection
-
 <style type="text/css">
     .form-group {
         margin-bottom: 0px !important;
@@ -442,11 +411,24 @@
         align-content: flex-end;
     }
 
+    input.form-control.form-control-sm.height-40 {
+        border-radius: 0px;
+    }
+
+    .row {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .col-md-4 {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
     /* action type complete */
     /* action type orange */
     /* action type black dont */
 </style>
-
 @push('scripts')
     <script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>
     <script src="{{'assets/js/demo/render.highlight.js'}}"></script>
@@ -461,4 +443,14 @@
         $("#company_form").show();
         $("#physical_form").hide();
     });
-</script>d
+
+    $("#fileupload").click(function () {
+        $("form#fileupload").hide();
+    });
+
+    function showmodal(action) {
+        alert
+        $(action).show();
+    }
+
+</script>

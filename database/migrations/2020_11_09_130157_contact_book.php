@@ -35,7 +35,6 @@ class ContactBook extends Migration
             $table->string('observations');
             $table->string('language');
             $table->tinyInteger('active');
-            $table->timestamp('date');
             $table->timestamps();
         });
     }

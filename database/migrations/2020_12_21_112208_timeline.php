@@ -15,10 +15,9 @@ class Timeline extends Migration
     {
         Schema::create('timeline', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->date('date');
-            $table->time('time');
-            $table->text('text');
+            $table->string('date');
+            $table->string('time');
+            $table->string('text');
             $table->timestamps();
         });
     }

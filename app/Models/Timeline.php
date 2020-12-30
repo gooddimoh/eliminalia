@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -20,11 +19,9 @@ class Timeline extends Model
     ];
 
     protected $fillable = [
-        'id ',
         'date',
         'time',
         'text',
-        'timeline',
     ];
 
     /**
@@ -42,15 +39,11 @@ class Timeline extends Model
         echo "timeline";
     }
 
-    public function create()
-    {
-        echo "timeline";
-    }
-
     public function index(){}
 
     public function index1(){}
     public function index2(){}
     public function index3(){}
     public function index4(){}
+
 }

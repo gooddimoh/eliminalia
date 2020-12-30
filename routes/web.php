@@ -87,6 +87,9 @@ Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline
 Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
 Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
 
+Route::post('dashboard/fileupload', 'FileUpload@fileupload')->name('fileupload');
+Route::get('dashboard/fileupload', 'FileUpload@fileupload')->name('fileupload');
+
 Route::get('dashboard/map', 'MainController@Map')->name('Map');
 Route::get('dashboard/map/vector', 'ChartController@mapVector')->name('map-vector');
 

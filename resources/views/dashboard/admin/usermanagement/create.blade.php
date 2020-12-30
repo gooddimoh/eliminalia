@@ -21,26 +21,56 @@
                 <div class="form-group row">
                     <label class="col-form-label">Password Confirm:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" placeholder="Password:">
-                    <div class="form-group row" id="pwd-default-container">
-                        <label class="col-lg-4 col-form-label" for="pwstrength-default">Password</label>
-                        <div class="col-lg-8">
-                            <input type="password" name="pwstrength-default" id="pwstrength-default" class="form-control mb-2">
-                            <div class="row align-items-center">
-                                <div class="col-md-6">
-                                    <div id="pwstrength-default-text" class="text-muted f-w-600 f-s-11">Start typing
-                                        password...
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div id="pwstrength-default-progress" class="pwstrength-progress">
-                                        <div class="progress ">
-                                            <div class="progress-bar-striped progress-bar bg-success" style="min-width: 1px; width: 100%;">
-                                                <span class="password-verdict" style="white-space: nowrap;">Very Strong</span>
+                    <div class="panel panel-inverse" data-sortable-id="form-plugins-9" data-init="true">
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered">Company
+                                <input type="password" name="pwstrength-default" id="pwstrength-default" class="form-control mb-2">
+                                <div class="form-group row" id="pwd-default-container">
+                                    <label class="col-lg-4 col-form-label" for="pwstrength-default">Password</label>
+                                    <div class="col-lg-8">
+                                        <input type="password" name="pwstrength-default" id="pwstrength-default" class="form-control mb-2">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6">
+                                                <div id="pwstrength-default-text" class="text-muted f-w-600 f-s-11">
+                                                    Start typing password...
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div id="pwstrength-default-progress" class="pwstrength-progress">
+                                                    <div class="progress ">
+                                                        <div class="progress-bar-striped progress-bar bg-success" style="min-width: 1px; width: 100%;">
+                                                            <span class="password-verdict" style="white-space: nowrap;">Very Strong</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="form-group row" id="pwd-popover-container">
+                                    <label class="col-lg-4 col-form-label" for="password-input-group">With
+                                        Popover</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" name="pwstrength-popover" id="pwstrength-popover" class="form-control mb-2" data-original-title="" title="">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6">
+                                                <div id="pwstrength-popover-text" class="text-muted f-w-600 f-s-11">
+                                                    Start typing password...
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div id="pwstrength-popover-progress" class="pwstrength-progress">
+                                                    <div class="progress ">
+                                                        <div class="progress-bar-striped progress-bar bg-danger" style="min-width: 1px; width: 1%;">
+                                                            <span class="password-verdict" style="white-space: nowrap;"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -69,12 +99,11 @@
             </div>
             <div class="col-md-3">
                 <div class="form-group row">
-                    <label class="col-form-label ">Surname:</label>
-                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="surname"
-                           placeholder="Surname:">
+                    <label class="col-form-label">Surname:</label>
+                    <input class="form-control form-control-sm height-40 m-r-10" type="text" name="surname" placeholder="Surname:">
                 </div>
                 <div class="form-group row">
-                    <label class="col-form-label ">Password:</label>
+                    <label class="col-form-label">Password:</label>
                     <input class="form-control form-control-sm height-40 m-r-10" type="text" name="password" placeholder="Password:">
                 </div>
                 <div class="form-group row">

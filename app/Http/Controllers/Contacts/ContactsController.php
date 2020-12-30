@@ -55,10 +55,13 @@ class ContactsController extends Controller {
     public function registration()
     {
         $countries = Countries::all();
+
         $data1 = '';
         $data2 = '';
         $data3 = '';
         $data4 = '';
+
+        $data = 'data';
         $data5 = $data1 . $data2 . $data3 . $data4;
         $roles = 'role';
         $timelines = Timeline::all();
