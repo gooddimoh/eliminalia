@@ -47,6 +47,7 @@ class Users extends Migration
             $table->string('billing_profile')->nullable();
             $table->string('contract_paid')->nullable();
             $table->string('demo')->nullable();
+            //****commit****//
             $table->string('contact_id')->nullable();
             $table->string('client_type')->nullable();
             $table->string('seg_monthly_import')->nullable();
