@@ -292,7 +292,7 @@
                         </div>
                     </li>
                     @foreach($timelines as $timeline)
-                        <li>
+                    <li>
                             <div class="timeline-icon">
                                 <a href="javascript:;">&nbsp;</a>
                             </div>
