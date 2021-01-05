@@ -98,6 +98,8 @@
             <div class="col-md-6">
                 <form id="physical_form" action="physical" class="physical">
                     <h2>PHYSICAL</h2>
+                    <h2>dsasda1234</h2>
+{{--                    ss--}}
                     <div class="row form-group col-md-12">
                         <div class="col-md-4">
                             <label class="col-form-label">Name*:</label>
