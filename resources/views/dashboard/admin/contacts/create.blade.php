@@ -8,8 +8,13 @@
 @section('content')
     <form method="POST" class="col-md-12" action="{{route('timeline.create')}}">
         @csrf
+
         {{--        <h1>Contact Data {{$user->id}}</h1>--}}
         {{--        {{  if complite add class complete yellow red }}--}}
+        {{--      action type complete --}}
+        {{--      action type yellow --}}
+        {{--      action type black dont   --}}
+
         <div class="row">
             <div class="col-md-12">
                 <div class="steps">
@@ -22,14 +27,14 @@
                             </a>
                         </div>
                         <div class="nav-item col">
-                            <a class="nav-link disabled" href="#">
+                            <a class="nav-link yellow disabled" href="#">
                                 <div class="nav-no">2</div>
                                 <div class="nav-text">Active step</div>
                                 <div class="nav-text">TRACKING</div>
                             </a>
                         </div>
                         <div class="nav-item col">
-                            <a class="nav-link disabled" href="#">
+                            <a class="nav-link black disabled" href="#">
                                 <div class="nav-no">3</div>
                                 <div class="nav-text">Last step</div>
                                 <div class="nav-text">DOCUMENTATION SENDED</div>
@@ -124,11 +129,11 @@
                     <div class="row form-group col-md-12">
                         <div class="col-md-7">
                             <label class="col-form-label">Address:</label>
-                            <input class="form-control form-control-sm height-40" name="Address:" value="">
+                            <input class="form-control form-control-sm height-40" type="text" name="Address:">
                         </div>
                         <div class="col-md-5">
                             <label class="col-form-label">State*:</label>
-                            <input class="form-control form-control-sm height-40" name="State" type="text" value="">
+                            <input class="form-control form-control-sm height-40" type="text" name="State">
                         </div>
                     </div>
                     <div class="row form-group col-md-12">
@@ -278,7 +283,7 @@
                                     </a>
                                 </span>
                                 </div>
-                                <div class="timeline-comment-box">
+                                <div class="timeline-comment-box width-600">
                                     <div class="input">
                                         <div class="input-group">
                                             <input type="text" class="col-md-8 form-control m-l-4 p-r-4 rounded-corner" placeholder="Write a comment..." name="text" value="Write a comment...">
@@ -292,7 +297,7 @@
                         </div>
                     </li>
                     @foreach($timelines as $timeline)
-                    <li>
+                        <li>
                             <div class="timeline-icon">
                                 <a href="javascript:;">&nbsp;</a>
                             </div>
@@ -425,9 +430,6 @@
         padding: 0 !important;
     }
 
-    /* action type complete */
-    /* action type orange */
-    /* action type black dont */
 </style>
 @push('scripts')
     <script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>

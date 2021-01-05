@@ -12,8 +12,7 @@
                 <h4>New User Data</h4>
                 <div class="form-group row">
                     <label class="col-form-label">Username:</label>
-                    <input class="form-control form-control-sm" type="text" name="username" placeholder="Username:"
-                           value="">
+                    <input class="form-control form-control-sm" type="text" name="username" placeholder="Username:" value="">
                 </div>
                 <div class="form-group row">
                     <label class="col-form-label">Name:</label>
