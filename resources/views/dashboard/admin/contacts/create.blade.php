@@ -98,7 +98,7 @@
             <div class="col-md-6">
                 <form id="physical_form" action="physical" class="physical">
                     <h2>PHYSICAL</h2>
-                    <div class="row col-md-12">
+                    <div class="row form-group col-md-12">
                         <div class="col-md-4">
                             <label class="col-form-label">Name*:</label>
                             <input class="form-control form-control-sm height-40" type="text" name="name">
