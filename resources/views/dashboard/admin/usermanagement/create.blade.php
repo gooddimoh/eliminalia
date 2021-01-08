@@ -197,9 +197,7 @@
                                 <td>
                                     <a class="btn btn-yellow m-r-5 m-b-5" style="cursor: pointer;" onclick="customajax('edit','{{$user->id}}')">Edit </a>
                                 </td>
-                                <td>
-                                    <a class="btn btn-danger m-r-5 m-b-5" style="cursor: pointer;" onclick="customajax('delete','{{$user->id}}')">
-                                        Delete </a></td>
+                                <td><a class="btn btn-danger m-r-5 m-b-5" style="cursor: pointer;" onclick="customajax('delete','{{$user->id}}')"> Delete </a></td>
                             </tr>
                         @endforeach
                         </tbody>

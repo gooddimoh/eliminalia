@@ -6,7 +6,7 @@
 
 @section('content')
     <form method="post" action="{{route('usermanagement.update')}}" class="col-xl-12">
-        {{--    <form method="post" action="{{route('usermanagement.update')}}" class="col-xl-12">--}}
+        {{-- <form method="post" action="{{route('usermanagement.update')}}" class="col-xl-12"> --}}
         @csrf
         <div class="row">
             <div class="col-md-3">
