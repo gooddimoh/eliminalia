@@ -33,10 +33,7 @@ class AuthentifcateController extends Controller
 
     public function login(Request $request)
     {
-
-        $validator = \Illuminate\Validation\Validator::class;
-
-        $validator = Validator::make($request);
+        $validator = $request->validate(['xml','jpg','png']);
     }
 
 }
