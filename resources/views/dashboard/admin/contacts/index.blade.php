@@ -25,8 +25,9 @@
 @section('content')
     <div class="panel-body">
         <div class="row">
-            <div class="row">List of all Users
+            <div class="row">
                 <h4 class="panel-title">MODIFY CONTACT</h4>
+                <p>List of all Users</p>
                 <p>Contact data</p>
             </div>
             <div class="row">
@@ -38,48 +39,46 @@
                     <div class="row">
                         <div class="form-group" style="display: flex;">
                             <div class="checkbox checkbox-css is-valid">
-                                <label for="cssCheckbox3" class="text-dark">Not Signed</label>
-                                <input type="checkbox" id="cssCheckbox3" value="" checked>
+                                <label for="notsigned" class="text-dark">Not Signed</label>
+                                <input type="checkbox" id="notsigned" value="" checked>
                             </div>
                             <div class="checkbox checkbox-css is-valid">
-                                <label for="cssCheckbox3" class="text-dark">Signed</label>
-                                <input type="checkbox" id="cssCheckbox3" value="">
+                                <label for="signed" class="text-dark">Signed</label>
+                                <input type="checkbox" id="signed" value="">
                             </div>
                             <div class="checkbox checkbox-css is-valid">
-                                <label for="cssCheckbox3" class="text-dark">Discarded</label>
-                                <input type="checkbox" id="cssCheckbox3" value="">
+                                <label for="discarded" class="text-dark">Discarded</label>
+                                <input type="checkbox" id="discarded" value="">
                             </div>
                             <div class="checkbox checkbox-css is-valid">
-                                <label for="cssCheckbox3" class="text-dark">All</label>
-                                <input type="checkbox" id="cssCheckbox3" value="">
+                                <label for="all" class="text-dark">All</label>
+                                <input type="checkbox" id="all" value="">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="form-group" style="display: flex;">
                             <div class="checkbox checkbox-css is-valid">
-                                <label for="cssCheckbox3" class="text-dark"> No tracking (T) </label>
-                                <input type="checkbox" id="cssCheckbox3" value="">
+                                <label for="notracking" class="text-dark"> No tracking (T) </label>
+                                <input type="checkbox" id="notracking" value="">
                             </div>
                             <div class="checkbox checkbox-css is-valid">
-                                <label for="cssCheckbox3" class="text-dark"> No budget (B) </label>
-                                <input type="checkbox" id="cssCheckbox3" value="">
+                                <label for="nobudget" class="text-dark"> No budget (B) </label>
+                                <input type="checkbox" id="nobudget" value="">
                             </div>
                             <div class="checkbox checkbox-css is-valid">
-                                <label for="cssCheckbox3" class="text-dark"> Doc. not sended (D) </label>
-                                <input type="checkbox" id="cssCheckbox3" value="">
+                                <label for="docnotsended" class="text-dark"> Doc. not sended (D) </label>
+                                <input type="checkbox" id="docnotsended" value="">
                             </div>
                             <div class="checkbox checkbox-css is-valid">
-                                <label for="cssCheckbox3" class="text-dark"> Doc. sended (D) </label>
-                                <input type="checkbox" id="cssCheckbox3" value="">
+                                <label for="docsended" class="text-dark"> Doc. sended (D) </label>
+                                <input type="checkbox" id="docsended" value="">
                             </div>
                             <div class="checkbox checkbox-css is-valid">
-                                <label for="cssCheckbox3" class="text-dark"> With tracking (T) </label>
-                                <input type="checkbox" id="cssCheckbox3" value="">
+                                <label for="withtracking" class="text-dark"> With tracking (T) </label>
+                                <input type="checkbox" id="withtracking" value="">
                             </div>
                             <div class="checkbox checkbox-css is-valid">
-                                <label for="cssCheckbox3" class="text-dark"> With budget (B) </label>
-                                <input type="checkbox" id="cssCheckbox3" value="">
+                                <label for="withbudget" class="text-dark"> With budget (B) </label>
+                                <input type="checkbox" id="withbudget" value="">
                             </div>
                         </div>
                     </div>
@@ -87,22 +86,23 @@
             </div>
         </div>
         <div class="calls">
-            <h1>Calls</h1>
-            <div class="date">
-                <input type="date">
-                <div class="form-group row m-b-15">
-                    <label class="col-form-label col-md-3">Example select</label>
-                    <div class="col-md-9">
-                        <select class="form-control">
-                            <option>00:00</option>
-                            <option>00:15</option>
-                            <option>00:30</option>
-                            <option>00:45</option>
-                            <option>01:00</option>
-                        </select>
+            <form action="{{route('calls')}}">
+                <h1>Calls</h1>
+                <div class="date col-md-6">
+                    <div class="form-group row m-b-15">
+                        <label class="col-form-label">Time</label><input type="date">
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>00:00</option>
+                                <option>00:15</option>
+                                <option>00:30</option>
+                                <option>00:45</option>
+                                <option>01:00</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="pagination">
             <div class="panel panel-inverse">
@@ -110,21 +110,20 @@
                     <div id="data-table-default_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                <div class="dataTables_length" id="data-table-default_length"><label>Show
-                                        <select name="data-table-default_length" aria-controls="data-table-default"
-                                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <div class="dataTables_length" id="data-table-default_length">
+                                    <label>Show
+                                        <select name="data-table-default_length" aria-controls="data-table-default" class="custom-select custom-select-sm form-control form-control-sm">
                                             <option value="10">10</option>
                                             <option value="25">25</option>
                                             <option value="50">50</option>
                                             <option value="100">100</option>
-                                        </select> entries</label>
+                                        </select>entries
+                                    </label>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div id="data-table-default_filter" class="dataTables_filter">
-                                    <label> Search: <input type="search" class="form-control form-control-sm"
-                                                           placeholder="Search:"
-                                                           aria-controls="data-table-default"></label></div>
+                                    <label> Search: <input type="search" class="form-control form-control-sm" placeholder="Search:" aria-controls="data-table-default"></label></div>
                             </div>
                         </div>
                         <div class="row">
@@ -183,10 +182,12 @@
                                             <td width="1%" class="with-img">
                                                 <img src="../assets/img/user/user-1.jpg" class="img-rounded height-30">
                                             </td>
-                                            <td>{{$user->id}}</td>
-                                            <td>{{$user->id}}</td>
-                                            <td>{{$user->id}}</td>
-                                            <td>{{$user->count}}</td>
+                                            <td>{{$user->id}} Contact ID</td>
+                                            <td>{{$user->id}} Date</td>
+                                            <td>{{$user->id}} Name and surname</td>
+                                            <td>{{$user->count}} Company</td>
+                                            <td>Status</td>
+                                            <td>Company</td>
                                             <td>X</td>
                                             <td>X</td>
                                             <td>X</td>

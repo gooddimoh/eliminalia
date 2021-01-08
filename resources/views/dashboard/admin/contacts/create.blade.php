@@ -99,7 +99,7 @@
                 <form id="physical_form" action="physical" class="physical">
                     <h2>PHYSICAL</h2>
                     <h2>dsasda1234</h2>
-{{--                    ss--}}
+                    {{-- ssssss --}}
                     <div class="row form-group col-md-12">
                         <div class="col-md-4">
                             <label class="col-form-label">Name*:</label>
@@ -270,12 +270,11 @@
                                                 <div class="col-lg-8"> </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="row row-space-10">
+                                                <div class="row row-space-12">
                                                    <span class="col-md-2">Calls</span>
                                                     <div class="col-md-4">
                                                         <input type="date" class="form-control" name="date" id="input_type_date">
                                                     </div>
-                                                    &nbsp;
                                                     <div class="col-md-4">
                                                         <input type="time" class="form-control" name="time" id="input_type_date">
                                                     </div>
@@ -345,7 +344,7 @@
                 </div>
                 <div class="col-md-4">
                     <label class="col-form-label">Keywords</label>
-                    <textarea class="form-control" rows="10" name="Keywords" value="keyword1;keyword2;keyword3;keyword4;" placeholder="keyword1;keyword2;keyword3;keyword4;"></textarea>
+                    <textarea class="form-control" rows="10" name="Keywords" value="keyword1;keyword2;keyword3;keyword4;keyword5;" placeholder="keyword1;keyword2;keyword3;keyword4;"></textarea>
                 </div>
                 <div class="col-md-4">
                     <label class="col-form-label">Searchs</label>
@@ -431,7 +430,6 @@
         margin: 0 !important;
         padding: 0 !important;
     }
-
 </style>
 @push('scripts')
     <script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>
@@ -456,5 +454,4 @@
         alert
         $(action).show();
     }
-
 </script>

@@ -36,7 +36,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div id="pwstrength-default-progress" class="pwstrength-progress">
+                                                <div id="pwstrength-default-progress" class="pwstrength-progress">Start typing password...
                                                     <div class="progress ">
                                                         <div class="progress-bar-striped progress-bar bg-success" style="min-width: 1px; width: 100%;">
                                                             <span class="password-verdict" style="white-space: nowrap;">Very Strong</span>
@@ -56,6 +56,9 @@
                                             <div class="col-md-6">
                                                 <div id="pwstrength-popover-text" class="text-muted f-w-600 f-s-11">
                                                     Start typing password...
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div id="pwstrength-default-progress" class="pwstrength-progress"><div class="progress "><div class="progress-bar-striped progress-bar bg-success" style="min-width: 1px; width: 100%;"><span class="password-verdict" style="white-space: nowrap;">Very Strong</span></div></div></div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

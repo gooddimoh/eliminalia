@@ -14,14 +14,15 @@ class AuthController extends Controller {
 
     public function postlogin(Request $request)
     {
-        $user = User::created($request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']));
+        $request->validate(['name' => 'required|max:555', 'email' => 'email|required|unique:users', 'password' => 'required|confirmed']);
         User::create($request->all());
-        $accessToken = $user->createToken('authToken')->accessToken;
+
         return view('auth.login');
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        var_dump($request);
         echo "its store request";
     }
 

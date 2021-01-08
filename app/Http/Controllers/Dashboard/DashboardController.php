@@ -8,5 +8,7 @@ class DashboardController extends Controller
     public function Index()
     {
         return view("index");
+
+        return redirect()->back();
     }
 }

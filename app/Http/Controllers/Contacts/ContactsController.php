@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -14,7 +15,8 @@ use App\Models\Role;
 use App\Models\User;
 use App\Models\Countries;
 
-class ContactsController extends Controller {
+class ContactsController extends Controller
+{
 
     public function index()
     {
@@ -115,6 +117,11 @@ class ContactsController extends Controller {
         abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         $user->delete();
         return back();
+    }
+
+    public function list_registator()
+    {
+
     }
 
     public function MassDestroy(MassDestroyUserRequest $request)

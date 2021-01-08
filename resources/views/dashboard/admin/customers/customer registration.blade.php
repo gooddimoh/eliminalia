@@ -125,13 +125,12 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="width-150">
+                <div class="form-group row width-300 m-t-10">
                     <label class="col-form-label">Budget:</label>
-                    <input class="form-control form-control-sm width-80" type="number" name="budget"
-                           placeholder="CURRENCY" value="2">
+                    <input class="form-control form-control-sm width-80" type="number" name="budget" placeholder="CURRENCY" value="2">
                 </div>
-                <div class="width-150">
-                    <label class="col-form-label">Payment method:</label>
+                <div class="form-group row width-300 m-t-10">
+                    <label class="col-form-label float-right">Payment method:</label>
                     <select class="form-control form-control-sm" name="paymentmethod">
                         <option value="0">Wire transfer</option>
                         <option value="1">Check</option>
@@ -141,15 +140,12 @@
                 </div>
                 <div class="row">
                     <br>
-                    <label class="col-form-label col-md-2">Case description made by the client:</label>
-                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:"
-                              name="textarea1"></textarea>
-                    <label class="col-form-label col-md-2">Info for the manager:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the manager:"
-                              name="textarea2"></textarea>
-                    <label class="col-form-label col-md-2">Info for the commercial:</label>
-                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:"
-                              name="textarea3"></textarea>
+                    <label class="col-md-2 col-form-label">Case description made by the client:</label>
+                    <textarea class="form-control" rows="6" placeholder="Case description made by the client:" name="textarea1"></textarea>
+                    <label class="col-md-2 col-form-label">Info for the manager:</label>
+                    <textarea class="form-control" rows="6" placeholder="Info for the manager:" name="textarea2"></textarea>
+                    <label class="col-md-2 col-form-label">Info for the commercial:</label>
+                    <textarea class="form-control" rows="6" placeholder="Info for the commercial:" name="textarea3"></textarea>
                 </div>
                 <br>
                 <div class="form-group">
@@ -174,7 +170,8 @@
                 </div>
             </div>
         </div>
-        <div class="row align-right">
+        <div class="row align-right">Calls
+
             <button type="submit" class="form-control btn btn-green width-200">CONTACT REGISTRATION</button>
         </div>
     </form>
@@ -188,6 +185,6 @@
 </style>
 
 @push('scripts')
-<script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>
-<script src="{{'assets/js/demo/render.highlight.js'}}"></script>
+    <script src="{{'assets/plugins/highlight.js/highlight.min.js'}}"></script>
+    <script src="{{'assets/js/demo/render.highlight.js'}}"></script>
 @endpush

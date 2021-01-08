@@ -87,6 +87,9 @@ Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline
 Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
 Route::post('dashboard/timeline', 'TimelineController@Timeline')->name('timeline');
 
+Route::post('Calls/calls', 'Calls@calls')->name('calls');
+Route::post('Calls/calls', 'Calls@calls')->name('calls');
+
 Route::post('dashboard/fileupload', 'FileUpload@fileupload')->name('fileupload');
 Route::get('dashboard/fileupload', 'FileUpload@fileupload')->name('fileupload');
 
