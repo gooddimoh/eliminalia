@@ -20,6 +20,7 @@ class Tickets extends Migration
             $table->integer('case_id');
             $table->string('content');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

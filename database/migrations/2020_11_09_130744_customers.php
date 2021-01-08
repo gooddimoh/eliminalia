@@ -29,6 +29,7 @@ class Customers extends Migration {
             $table->string('observations');
             $table->tinyInteger('active');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

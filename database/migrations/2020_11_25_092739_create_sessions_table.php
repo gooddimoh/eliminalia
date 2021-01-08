@@ -20,6 +20,7 @@ class CreateSessionsTable extends Migration
             $table->text('payload');
             $table->integer('last_activity')->index();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
