@@ -71,6 +71,7 @@
                 <span class="label">5</span>
             </a>
             <div class="dropdown-menu media-list dropdown-menu-right">
+                Notification in cycle
                 <div class="dropdown-header">NOTIFICATIONS (5) <p>Costume Notification</p></div>
                 <a href="javascript:;" class="dropdown-item media">
                     <div class="media-left">
@@ -86,7 +87,6 @@
                         <div class="text-muted f-s-10">3 minutes ago</div>
                     </div>
                 </a>
-
                 <div class="dropdown-footer text-center">
                     <a href="javascript:;">View more</a>
                 </div>

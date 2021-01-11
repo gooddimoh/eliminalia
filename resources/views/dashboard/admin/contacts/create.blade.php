@@ -29,29 +29,29 @@
                         <div class="nav-item col">
                             <a class="nav-link yellow disabled" href="#">
                                 <div class="nav-no">2</div>
-                                <div class="nav-text">Active step</div>
-                                <div class="nav-text">TRACKING</div>
+                                <div class="nav-text text-black">Active step</div>
+                                <div class="nav-text text-black">TRACKING</div>
                             </a>
                         </div>
                         <div class="nav-item col">
                             <a class="nav-link black disabled" href="#">
                                 <div class="nav-no">3</div>
-                                <div class="nav-text">Last step</div>
-                                <div class="nav-text">DOCUMENTATION SENDED</div>
+                                <div class="nav-text text-black">Last step</div>
+                                <div class="nav-text text-black">DOCUMENTATION SENDED</div>
                             </a>
                         </div>
                         <div class="nav-item col">
                             <a class="nav-link disabled" href="#">
                                 <div class="nav-no">4</div>
-                                <div class="nav-text">Last step</div>
-                                <div class="nav-text">SIGNED</div>
+                                <div class="nav-text text-black">Last step</div>
+                                <div class="nav-text text-black">SIGNED</div>
                             </a>
                         </div>
                         <div class="nav-item col">
                             <a class="nav-link disabled" href="#">
                                 <div class="nav-no">5</div>
-                                <div class="nav-text">Last step</div>
-                                <div class="nav-text">DISCARDED</div>
+                                <div class="nav-text text-black">Last step</div>
+                                <div class="nav-text text-black">DISCARDED</div>
                             </a>
                         </div>
                     </nav>
@@ -59,195 +59,193 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <div class="row form-group">
-                    <div class="col-md-6">
+            <div class="container row col-md-12">
+                <div class="row col-md-4 form-group custom-control custom-switch mb-1 m-10 flex-align-right">
+                    <input type="checkbox" class="m-l-20 custom-control-input" id="physical" name="physical" value="physical">
+                    <label class="custom-control-label m-l-40 m-r-40" for="physical">Physical Person</label>
+                    <input type="checkbox" class="custom-control-input" id="company" name="company" value="company">
+                    <label class="custom-control-label m-r-40" for="company">Company</label>
+                </div>
+                <div class="langs">
+                    <div class="input-group">
+                        <span><label class="col-form-label">Native language*:&nbsp;</label></span>
                         <div class="form-group custom-control custom-switch mb-1 m-10 flex-align-right">
-                            <input type="checkbox" class="custom-control-input" id="physical" name="physical" value="physical">
-                            <label class="custom-control-label m-r-40" for="physical">Physical Person</label>
-                            <input type="checkbox" class="custom-control-input" id="company" name="company" value="company">
-                            <label class="custom-control-label m-r-40" for="company">Company</label>
+                            <select class="form-control form-control-sm float-right" name="nativelanguage">
+                                <option value="0">Native languge*:(ES)&nbsp;</option>
+                                <option value="1" selected>SPANISH</option>
+                                <option value="2">ENGLISH</option>
+                                <option value="3">ENGLISH</option>
+                                <option value="4">FRENCH</option>
+                                <option value="5">DEUTSCH</option>
+                                <option value="6">ITALIAN</option>
+                            </select>
                         </div>
-                        <div class="form-group row">
-                            <span><label class="col-form-label">Native language*:&nbsp;</label></span>
-                            <div class="form-group custom-control custom-switch mb-1 m-10 flex-align-right">
-                                <select class="form-control form-control-sm float-right" name="nativelanguage">
-                                    <option value="0">Native languge*:(ES)&nbsp;</option>
-                                    <option value="1" selected>SPANISH</option>
-                                    <option value="2">ENGLISH</option>
-                                    <option value="3">ENGLISH</option>
-                                    <option value="4">FRENCH</option>
-                                    <option value="5">DEUTSCH</option>
-                                    <option value="6">ITALIAN</option>
-                                </select>
-                            </div>
-                            <span><label class="col-form-label">Commercial*:&nbsp;</label></span>
-                            <div class="form-group custom-control custom-switch mb-1 m-10 flex-align-right">
-                                <select class="form-control form-control-sm float-right" name="paymentmethod">
-                                    <option value="Aruba">David Castella</option>
-                                    <option value="Bahrain">----</option>
-                                    <option value="Bahrain">Maria Gracia</option>
-                                    <option value="Bahrain">Ricky Bordas</option>
-                                    <option value="Bahrain">Antonio Paladino</option>
-                                </select>
-                            </div>
+                        <span><label class="col-form-label">Commercial*:&nbsp;</label></span>
+                        <div class="form-group custom-control custom-switch mb-1 m-10 flex-align-right">
+                            <select class="form-control form-control-sm float-right" name="paymentmethod">
+                                <option value="Aruba">David Castella</option>
+                                <option value="Bahrain">----</option>
+                                <option value="Bahrain">Maria Gracia</option>
+                                <option value="Bahrain">Ricky Bordas</option>
+                                <option value="Bahrain">Antonio Paladino</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <form id="physical_form" action="physical" class="physical">
-                    <h2>PHYSICAL</h2>
-                    <h2>dsasda1234</h2>
-                    {{-- ssssss --}}
-                    <div class="row form-group col-md-12">
-                        <div class="col-md-4">
-                            <label class="col-form-label">Name*:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="name">
+                <div class="forms">
+                    <form id="physical_form" action="physical" class="physical">
+                        <h2>PHYSICAL</h2>
+                        <div class="row form-group col-md-12">
+                            <div class="col-md-4">
+                                <label class="col-form-label">Name*:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="name">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Surname*:1</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="surename1">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Surname*:2</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="surename2">
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Surname*:1</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="surename1">
+                        <div class="row form-group col-md-12">
+                            <div class="col-md-4">
+                                <label class="col-form-label">Phone*:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="phonenumber1" value="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Email*:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="email" value="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Email Confirmation*:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="emailconfirmate" value="">
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Surname*:2</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="surename2">
+                        <div class="row form-group col-md-12">
+                            <div class="col-md-7">
+                                <label class="col-form-label">Address:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="address">
+                            </div>
+                            <div class="col-md-5">
+                                <label class="col-form-label">State*:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="State">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row form-group col-md-12">
-                        <div class="col-md-4">
-                            <label class="col-form-label">Phone*:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="phonenumber1" value="">
+                        <div class="row form-group col-md-12">
+                            <div class="col-md-4">
+                                <label class="col-form-label">City:</label>
+                                <input class="form-control form-control-sm height-40" style="margin: 0px!important; padding: 0px;" type="text" name="address" value="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Postal Code*:</label>
+                                <input class="form-control form-control-sm height-40" style="margin: 0px!important; padding: 0px;" type="text" name="postalcode" value="">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-form-label">Country*:</label>
+                                <input class="form-control form-control-sm height-40" style="margin: 0px!important; padding: 0px;" type="text" name="country" value="">
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Email*:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="email" value="">
+                    </form>
+                    <br>
+                    <br>
+                    <form id="company_form" action="company" class="company">
+                        <h2>COMPANY</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-form-label">Company Name:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="company_name">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Ficsal Code:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="ficsal_code">
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Email Confirmation*:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="emailconfirmate" value="">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-form-label">City:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="city">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Postal Code:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="postal_code">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Country:</label>
+                                <select class="form-control height-40" name="country">
+                                    <option value="Ukraine">Spain</option>
+                                    <option value="Ukraine">Ukraine</option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Egypt">Egypt</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row form-group col-md-12">
-                        <div class="col-md-7">
-                            <label class="col-form-label">Address:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="Address:">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-form-label">Date Company Name:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="company_name">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Ficsal Code:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="ficsal_code">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Address:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="address">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">State:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="state">
+                            </div>
                         </div>
-                        <div class="col-md-5">
-                            <label class="col-form-label">State*:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="State">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-form-label">City Code:</label>
+                                <input class="form-control form-control-sm height-40 m-t-10" type="text" name="city">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Postal Code:</label>
+                                <input class="form-control form-control-sm height-40 m-t-10" type="text" name="postal_code">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">Country:</label>
+                                <select class="form-control height-40 m-t-10" name="country">
+                                    <option value="Ukraine">Spain</option>
+                                    <option value="Ukraine">Ukraine</option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Egypt">Egypt</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row form-group col-md-12">
-                        <div class="col-md-4">
-                            <label class="col-form-label">City:</label>
-                            <input class="form-control form-control-sm height-40" style="margin: 0px!important; padding: 0px;" type="text" name="Address:" value="">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-form-label">PHONE 1:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="company_phone" value="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">EMAIL:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="company_email" value="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">EMAIL CONFIRMATE:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="company_email_confirmate" value="">
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Postal Code*:</label>
-                            <input class="form-control form-control-sm height-40" style="margin: 0px!important; padding: 0px;" type="text" name="State" value="">
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label class="col-form-label">CONTACT_PERSON:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="contact_person">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label">EMAIL_CONTACT:</label>
+                                <input class="form-control form-control-sm height-40" type="text" name="email_contact">
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <label class="col-form-label">Country*:</label>
-                            <input class="form-control form-control-sm height-40" style="margin: 0px!important; padding: 0px;" type="text" name="State" value="">
-                        </div>
-                    </div>
-                </form>
-                <br>
-                <br>
-                <form id="company_form" action="company" class="company">
-                    <h2>COMPANY</h2>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label class="col-form-label">Company Name:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="company_name">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Ficsal Code:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="ficsal_code">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label class="col-form-label">City:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="city">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Postal Code:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="postal_code">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Country:</label>
-                            <select class="form-control height-40" name="country">
-                                <option value="Ukraine">Spain</option>
-                                <option value="Ukraine">Ukraine</option>
-                                <option value="Thailand">Thailand</option>
-                                <option value="Egypt">Egypt</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label class="col-form-label">Date Company Name:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="company_name">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Ficsal Code:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="ficsal_code">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Address:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="address">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">State:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="state">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label class="col-form-label">City Code:</label>
-                            <input class="form-control form-control-sm height-40 m-t-10" type="text" name="city">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Postal Code:</label>
-                            <input class="form-control form-control-sm height-40 m-t-10" type="text" name="postal_code">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">Country:</label>
-                            <select class="form-control height-40 m-t-10" name="country">
-                                <option value="Ukraine">Spain</option>
-                                <option value="Ukraine">Ukraine</option>
-                                <option value="Thailand">Thailand</option>
-                                <option value="Egypt">Egypt</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label class="col-form-label">PHONE 1:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="company_phone" value="">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">EMAIL:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="company_email" value="">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">EMAIL CONFIRMATE:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="company_email_confirmate" value="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-4">
-                            <label class="col-form-label">CONTACT_PERSON:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="contact_person">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="col-form-label">EMAIL_CONTACT:</label>
-                            <input class="form-control form-control-sm height-40" type="text" name="email_contact">
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
             <div class="col-md-6">
                 <h1 class="m-l-40">Timeline</h1>
@@ -356,19 +354,19 @@
             <div class="col-md-12">
                 <div class="checkbox checkbox-css">
                     <input type="checkbox" id="budget"/>
-                    <label for="cssCheckbox1">Checkbox1</label>
+                    <label for="cssCheckbox1">Case</label>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="checkbox checkbox-css">
                     <input type="checkbox" id="payment"/>
-                    <label for="cssCheckbox2">Checkbox2</label>
+                    <label for="cssCheckbox2">Keywords</label>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="checkbox checkbox-css">
                     <input type="checkbox" id="cssCheckbox3"/>
-                    <label for="cssCheckbox3">Checkbox3</label>
+                    <label for="cssCheckbox3">Searchs</label>
                 </div>
             </div>
         </div>
