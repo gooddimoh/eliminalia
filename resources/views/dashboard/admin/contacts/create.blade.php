@@ -27,7 +27,7 @@
                             </a>
                         </div>
                         <div class="nav-item col">
-                            <a class="nav-link yellow disabled" href="#">
+                            <a class="nav-link disabled" href="#">
                                 <div class="nav-no">2</div>
                                 <div class="nav-text text-black">Active step</div>
                                 <div class="nav-text text-black">TRACKING</div>
